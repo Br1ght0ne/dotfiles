@@ -2,6 +2,10 @@
 # Apps to autostart
 # =========
 
+# === Theme ===
+exec --no-startup-id wal -R -t
+exec --no-startup-id feh --bg-fill $HOME/.current_wallpaper
+
 # Notifications
 exec --no-startup-id /bin/dunst &
 
@@ -243,7 +247,3 @@ client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
-# === Theme ===
-exec --no-startup-id sleep 2
-exec --no-startup-id /bin/wal -R
-exec --no-startup-id /bin/feh --bg-fill $HOME/.current_wallpaper
