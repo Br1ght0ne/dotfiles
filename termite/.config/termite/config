@@ -1,0 +1,50 @@
+[options]
+audible_bell = false
+clickable_url = true
+dynamic_title = true
+#font = Iosevka Medium 11
+font = Inconsolata 12
+mouse_autohide = true
+scroll_on_output = false
+#scroll_on_keystroke = true
+scrollback_lines = 10000
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = rgba(0, 0, 0, 0.3)
+
+# black
+color0  = #000000
+color8  = #4d4d4d
+
+# red
+color1  = #cc0403
+color9  = #3e0605
+
+# green
+color2  = #339562
+color10 = #339562
+
+# yellow
+color3  = #b43637
+color11 = #fffd00
+
+# blue
+color4  = #6f8172
+color12 = #0026ff
+
+# magenta
+color5  = #339562
+color13 = #339562
+
+# cyan
+color6  = #0dcdcd
+color14 = #14ffff
+
+# white
+color7  = #e5e5e5
+color15 = #ffffff
