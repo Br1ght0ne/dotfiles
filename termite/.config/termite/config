@@ -2,8 +2,7 @@
 audible_bell = false
 clickable_url = true
 dynamic_title = true
-#font = Iosevka Medium 11
-font = Inconsolata 12
+font = Source Code Pro 10
 mouse_autohide = true
 scroll_on_output = false
 #scroll_on_keystroke = true
