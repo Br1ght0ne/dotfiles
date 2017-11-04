@@ -11,6 +11,7 @@ exec --no-startup-id /bin/dunst &
 
 # MPD & ncmpcpp
 exec --no-startup-id /bin/mpd --no-daemon &
+exec --no-startup-id /bin/mpd-notification &
 exec --no-startup-id /bin/termite -t "ncmpcpp" -e "ncmpcpp"
 
 # Telegram
