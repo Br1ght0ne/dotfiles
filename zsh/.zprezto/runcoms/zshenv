@@ -1,0 +1,20 @@
+#
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+export PATH=/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/home/brightone/bin:/home/brightone/bin
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+export DEFAULT_USER='brightone'
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export TERMINAl=termite
+export EDITOR="/bin/emacs"
+export VISUAL=$EDITOR
+export LANG="en_US.UTF-8"
