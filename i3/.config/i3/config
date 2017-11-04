@@ -1,0 +1,267 @@
+# i3 config by BrightOne
+# Last review: 22.05.17
+
+# === Autostart ===
+exec --no-startup-id /bin/dunst -print > $(HOME)/.dunst_history &
+exec --no-startup-id /bin/telegram-desktop &
+exec --no-startup-id /bin/termite -t "ncmpcpp" -e "ncmpcpp"
+exec --no-startup-id /bin/clipmenud &
+exec --no-startup-id /bin/mpd --no-daemon &
+exec --no-startup-id /bin/unclutter --timeout 3 &
+exec --no-startup-id /bin/compton -b
+exec --no-startup-id /bin/nm-applet &
+exec --no-startup-id /bin/SoundWireServer &
+exec --no-startup-id /bin/polybar -r simple &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+
+# === Variables ===
+  set $arrow_u 111
+  set $arrow_l 113
+  set $arrow_r 114
+  set $arrow_d 116
+  set $w 25
+  set $e 26
+  set $r 27
+  set $o 32
+  set $p 33
+  set $a 38
+  set $s 39
+  set $d 40
+  set $f 41
+  set $h 43
+  set $j 44
+  set $k 45
+  set $l 46
+  set $semicolon 47
+  set $z 52
+  set $x 53
+  set $c 54
+  set $v 55
+  set $b 56
+  set $m 58
+  set $space 65
+  set $mod Mod4
+
+
+# === Font ===
+  font pango:Prelude Bold 10
+
+
+# === Shortcuts ===
+
+  floating_modifier $mod
+
+  bindcode $mod+$o open
+
+  # Terminal
+  bindsym $mod+Return exec termite
+  bindsym $mod+Shift+Return exec termite -t "Floating terminal"
+  for_window [class="Termite" title="Floating terminal"] floating enable
+  
+  # Kill window: mod+Shift+Q
+  bindcode $mod+Shift+24 kill
+
+
+  bindcode $mod+$d exec LANG=en_US.UTF-8 rofi -show drun
+  bindcode $mod+Shift+$d exec LANG=en_US.UTF-8 rofi -show run
+  bindcode $mod+Shift+$w exec LANG=en_US.UTF-8 rofi -show window
+  bindcode $mod+$p exec LC_ALL=en_US.UTF-8 passmenu
+  bindcode $mod+Shift+$v exec LC_ALL=en_US.UTF-8 clipmenu
+  bindcode $mod+Shift+$p exec LC_ALL=en_US.UTF-8 passmenu --type
+  bindcode $mod+Shift+$s exec /home/brightone/bin/soundprofile.sh
+
+  # scrot
+  bindsym Print exec scrot -z -d 1
+
+  # Focus windows
+  bindcode $mod+$j         focus left
+  bindcode $mod+$arrow_l   focus left
+  bindcode $mod+$k         focus down
+  bindcode $mod+$arrow_d   focus down
+  bindcode $mod+$l         focus up
+  bindcode $mod+$arrow_u   focus up
+  bindcode $mod+$semicolon focus right
+  bindcode $mod+$arrow_r   focus right
+
+
+  # Move between windows
+  bindcode $mod+Shift+$j         move left
+  bindcode $mod+Shift+$arrow_l   move left
+  bindcode $mod+Shift+$k         move down
+  bindcode $mod+Shift+$arrow_d   move down
+  bindcode $mod+Shift+$l         move up
+  bindcode $mod+Shift+$arrow_u   move up
+  bindcode $mod+Shift+$semicolon move right
+  bindcode $mod+Shift+$arrow_r   move right
+
+
+  # Split containers
+  bindcode $mod+$h split h
+  bindcode $mod+$v split v
+
+
+  # Layout
+  bindcode $mod+$s layout stacking
+  bindcode $mod+$w layout tabbed
+  bindcode $mod+$e layout toggle split
+
+
+  # Floating windows
+  bindcode $mod+Shift+$space floating toggle
+  bindcode $mod+$space focus mode_toggle
+
+  # Workspaces
+  set $workspace1 "1:    "
+  set $workspace2 "2:    "
+  set $workspace3 "3:    "
+  set $workspace4 "4:    "
+  set $workspace5 "5:    "
+  set $workspace6 "6:    "
+  set $workspace7 "7:    "
+
+  bindsym $mod+1 workspace $workspace1
+  bindsym $mod+2 workspace $workspace2
+  bindsym $mod+3 workspace $workspace3
+  bindsym $mod+4 workspace $workspace4
+  bindsym $mod+5 workspace $workspace5
+  bindsym $mod+6 workspace $workspace6
+  bindsym $mod+7 workspace $workspace7
+  bindsym $mod+8 workspace 8
+  bindsym $mod+9 workspace 9
+  bindsym $mod+0 workspace 10
+
+  bindsym $mod+Shift+1 move container to workspace $workspace1
+  bindsym $mod+Shift+2 move container to workspace $workspace2
+  bindsym $mod+Shift+3 move container to workspace $workspace3
+  bindsym $mod+Shift+4 move container to workspace $workspace4
+  bindsym $mod+Shift+5 move container to workspace $workspace5
+  bindsym $mod+Shift+6 move container to workspace $workspace6
+  bindsym $mod+Shift+7 move container to workspace $workspace7
+  bindsym $mod+Shift+8 move container to workspace 8
+  bindsym $mod+Shift+9 move container to workspace 9
+  bindsym $mod+Shift+0 move container to workspace 10
+
+  assign [class="Termite" title="^~"] $workspace1
+  assign [class="Firefox"] $workspace2
+  assign [class="^(Atom|jetbrains)"] $workspace3
+  assign [class="Steam"] $workspace4
+  assign [class="^(Viber|Telegram|discord|Signal)"] $workspace5
+  assign [class="^(Gimp|Krita)"] $workspace6
+  for_window [instance="SoundWireServer"] move scratchpad
+  assign [class="Termite" title="ncmpcpp"] $workspace7
+#for_window [class="^(Firefox|TelegramDesktop)"] focus
+  for_window [class="Genymotion Player"] floating enable
+
+
+  # Music keys (mouse)
+  bindsym XF86AudioNext exec --no-startup-id mpc next
+  bindsym XF86AudioPrev exec --no-startup-id mpc prev
+
+
+  # Keyboard layout
+  bindcode $mod+$z exec --no-startup-id setxkbmap us
+  bindcode $mod+$x exec --no-startup-id setxkbmap ru
+  bindcode $mod+$c exec --no-startup-id setxkbmap ua
+
+
+  # Scratchpad
+  bindsym $mod+Shift+minus move scratchpad
+  bindsym $mod+minus scratchpad show
+
+
+  # Self-naming
+  bindcode $mod+$a focus parent
+  bindcode $mod+$f fullscreen toggle
+  bindcode $mod+Shift+$c reload
+  bindcode $mod+Shift+$r restart
+  bindcode $mod+$m exec --no-startup-id i3-msg workspace $workspace7\; 
+  bindsym --whole-window button9 floating toggle
+  bindsym --whole-window button8 kill
+
+
+#disable title bars
+    for_window [class="^.*"] border pixel 1
+    for_window [class="i3-frame"] border none
+    for_window [class="Termite"] border pixel 0
+#gaps
+    smart_gaps on
+    smart_borders on
+    gaps inner 20
+    gaps outer 3
+
+
+# === i3bar ===
+
+
+bindsym ISO_Next_Group exec pkill -RTMIN+1 i3blocks
+
+
+focus_follows_mouse no
+
+
+#bar {
+#i3bar_command i3bar -t
+#status_command i3blocks
+#
+#position top
+#
+#font pango:Prelude Bord, FontAwesome 9
+#
+#strip_workspace_numbers yes
+#colors {
+#separator #66666680
+#background #00030e50
+#statusline #dddddd
+#focused_workspace #0088CC #0088CC #ffffff
+#active_workspace #333333 #333333 #ffffff
+#inactive_workspace #33333360 #33333360 #88888860
+#urgent_workspace #2f343a #900000 #ffffff
+#}
+#}
+
+
+# === Modes ===
+
+
+  # System control
+  bindsym $mod+Pause exec setxkbmap us, mode "$mode_system";
+  set $Locker /home/brightone/bin/lock.sh
+  set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+  mode "$mode_system" {
+      bindcode 46 exec --no-startup-id $Locker, mode "default"
+      bindcode 26 exec --no-startup-id i3-msg exit, mode "default"
+      bindcode 39 exec --no-startup-id $Locker && systemctl suspend, mode "default"
+      bindcode 43 exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+      bindcode 27 exec --no-startup-id systemctl reboot, mode "default"
+      bindcode Shift+39 exec --no-startup-id systemctl poweroff -i, mode "default"
+      bindsym Return mode "default"
+      bindsym Escape mode "default"
+  }
+
+
+  # Resize mode
+  mode "resize" {
+    bindcode $j         resize shrink width 10 px or 10 ppt
+    bindcode $j         resize shrink width 10 px or 10 ppt
+    bindcode $arrow_l   resize shrink width 10 px or 10 ppt
+    bindcode $k         resize grow height 10 px or 10 ppt
+    bindcode $arrow_d   resize grow height 10 px or 10 ppt
+    bindcode $l         resize shrink height 10 px or 10 ppt
+    bindcode $arrow_u   resize shrink height 10 px or 10 ppt
+    bindcode $semicolon resize grow width 10 px or 10 ppt
+    bindcode $arrow_r   resize grow width 10 px or 10 ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+  }
+  bindcode $mod+$r mode "resize"
+
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
+
+# === Theme ===
+exec --no-startup-id sleep 2
+exec --no-startup-id /bin/wal -R
+exec --no-startup-id /bin/feh --bg-fill $HOME/.current_wallpaper
