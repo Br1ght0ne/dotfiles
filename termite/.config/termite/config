@@ -3,6 +3,7 @@ audible_bell = false
 clickable_url = true
 dynamic_title = true
 font = Source Code Pro 10
+# font = DejaVu Sans Mono Book 10
 mouse_autohide = true
 scroll_on_output = false
 #scroll_on_keystroke = true
