@@ -20,7 +20,7 @@ values."
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-enable-lazy-installation 'nil
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
@@ -33,10 +33,9 @@ values."
    '(
      auto-completion
      better-defaults
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+     (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
      colors
+     csv
      emacs-lisp
      git
      github
@@ -46,11 +45,9 @@ values."
      magit
      magit-gitflow
      markdown
-     (org :variables
-          org-enable-reveal-js-support t)
+     (org :variables org-enable-reveal-js-support t)
      pdf-tools
-     (python :variables
-          python-enable-yapf-format-on-save t)
+     (python :variables python-enable-yapf-format-on-save t)
      ranger
      shell
      syntax-checking
@@ -72,7 +69,7 @@ values."
    ;; `used-but-keep-unused' installs only the used packages but won't uninstall
    ;; them if they become unused. `all' installs *all* packages supported by
    ;; Spacemacs and never uninstall them. (default is `used-only')
-   dotspacemacs-install-packages 'used-only))
+   dotspacemacs-install-packages 'used-but-keep-unused))
 
 (defun dotspacemacs/init ()
   "Initialization function.
@@ -329,14 +326,11 @@ you should place your code here."
                      (or (getenv "CFLAGS") "-ansi -pedantic -Wall -g")
                      buffer-file-name
                      (file-name-sans-extension buffer-file-name)) t))
+
   (spacemacs/set-leader-keys "cs" 'compile-and-run-file)
   (spacemacs/set-leader-keys "gp" 'magit-push)
 
   (set-frame-parameter (selected-frame) 'alpha (cons 90 90))
-  (set-face-attribute 'default nil
-                      :font "Source Code Pro"
-                      :foreground "white")
-  (setq paradox-github-token "1a252e21464fe83e141bf2c7b9a6f3610201a106")
 
   (set-terminal-parameter nil 'background-mode 'dark)
   (set-frame-parameter nil 'background-mode 'dark)
