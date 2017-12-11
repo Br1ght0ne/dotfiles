@@ -23,7 +23,7 @@ line-color = #f00
 
 modules-left = i3 title
 modules-center = date
-modules-right = keyboard pkg mpd pavolume 
+modules-right = keyboard battery pkg mpd pavolume 
 ; border-size = 5
 ; border-color = #00000000
 
@@ -133,43 +133,43 @@ format-disconnected = <label-disconnected>
 label-connected =  %essid%
 label-disconnected = 
 
-#[module/battery]
-#type = internal/battery
-#
-#; This is useful in case the battery never reports 100% charge
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
 #full-at = 99
-#
+
 #; Use the following command to list batteries and adapters:
 #; $ ls -1 /sys/class/power_supply/
-#battery = BAT0
-#adapter = AC
+battery = BAT1
+adapter = ACAD
 #
-#format-charging = <animation-charging> <label-charging>
-#format-discharging = <ramp-capacity> <label-discharging>
-#format-full = <label-full>
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <label-full>
 #
-#label-charging = %percentage%%
-#label-discharging = %percentage%%
-#label-full =  %percentage%%
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full =  %percentage%%
 #
-#format-discharging-underline = ${colors.color2}
-#format-full-underline = ${colors.color2}
+format-discharging-underline = ${colors.color2}
+format-full-underline = ${colors.color2}
 #
-#ramp-capacity-0 = 
-#ramp-capacity-1 = 
-#ramp-capacity-2 = 
-#ramp-capacity-3 = 
-#ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 #
 #; Only applies if <animation-charging> is used
-#animation-charging-0 = 
-#animation-charging-1 = 
-#animation-charging-2 = 
-#animation-charging-3 = 
-#animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 #
 #; Framerate in milliseconds
-#animation-charging-framerate = 500
+animation-charging-framerate = 500
 
 [module/date]
 type = internal/date
