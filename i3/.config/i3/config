@@ -3,8 +3,8 @@
 # =========
 
 # === Theme ===
-exec --no-startup-id wal -R -t &
-exec --no-startup-id feh --bg-fill $HOME/.current_wallpaper &
+exec --no-startup-id wal -R -t
+exec --no-startup-id feh --bg-fill $HOME/wallpaper.png
 
 # Notifications
 exec --no-startup-id /bin/dunst &
@@ -213,8 +213,8 @@ gaps outer      3
 # =====
 
 # Power
-bindsym  $mod+Pause                 exec setxkbmap us, mode "$mode_power";
-set      $Locker                    /home/brightone/bin/lock.sh
+bindsym  $mod+End                   exec setxkbmap us, mode "$mode_power";
+set      $Locker                    $HOME/bin/lock.sh
 set      $mode_power                System (l)ock, log(o)ut, (s)uspend, (h)ibernate, (r)eboot, (S)hutdown
 mode "$mode_power" {
     bindcode $l                     exec --no-startup-id $Locker, mode "default"

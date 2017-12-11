@@ -10,7 +10,6 @@ sigsend () {
 alias sigsd='sigsend "+380953477459"'
 # wal -R & 2>/dev/null
 
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" > /dev/null
 PURE_CMD_MAX_EXEC_TIME=15
 bindkey "^R" history-incremental-search-backward
 
