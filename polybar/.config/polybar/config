@@ -137,7 +137,7 @@ label-disconnected = 
 type = internal/battery
 
 ; This is useful in case the battery never reports 100% charge
-#full-at = 99
+full-at = 99
 
 #; Use the following command to list batteries and adapters:
 #; $ ls -1 /sys/class/power_supply/
@@ -152,7 +152,7 @@ label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full =  %percentage%%
 #
-format-discharging-underline = ${colors.color2}
+format-discharging-underline = ${colors.color3}
 format-full-underline = ${colors.color2}
 #
 ramp-capacity-0 = 
