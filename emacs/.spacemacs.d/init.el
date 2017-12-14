@@ -34,8 +34,8 @@ values."
      auto-completion
      better-defaults
      (c-c++ :variables
-            c-c++-default-mode-for-headers
-            'c++-mode c-c++-enable-clang-support t)
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      colors
      emacs-lisp
      git
@@ -43,6 +43,11 @@ values."
      (ivy :variables
           magit-completing-read-function 'ivy-completing-read
           projectile-completion-system 'ivy)
+     (latex :variables
+            TeX-view-program-selection '((output-pdf "Zathura"))
+            TeX-source-correlate-mode t
+            TeX-source-correlate-start-server t
+            TeX-source-correlate-method 'synctex)
      lua
      markdown
      (org :variables
