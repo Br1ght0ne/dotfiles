@@ -27,41 +27,43 @@ values."
    ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.emacs.d/layers")
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
      auto-completion
      better-defaults
-     (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      colors
-     csv
      emacs-lisp
      git
      github
      (ivy :variables
           magit-completing-read-function 'ivy-completing-read
           projectile-completion-system 'ivy)
-     javascript
+     (latex :variables
+            TeX-view-program-selection '((output-pdf "Zathura"))
+            TeX-source-correlate-mode t
+            TeX-source-correlate-start-server t
+            TeX-source-correlate-method 'synctex)
      lua
-     magit
-     magit-gitflow
      markdown
-     (org :variables org-enable-reveal-js-support t)
+     (org :variables
+          org-enable-reveal-js-support t)
      (python :variables
              python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
      ranger
      shell
      syntax-checking
-     version-control
-     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(regex-tool)
+   dotspacemacs-additional-packages '()
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -197,19 +199,6 @@ values."
    dotspacemacs-auto-save-file-location 'cache
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
-   ;; If non nil, `helm' will try to minimize the space it uses. (default nil)
-   dotspacemacs-nil
-   ;; if non nil, the header is hidden when there is only one source.
-   ;; (default nil)
-   dotspacemacs-nil
-   ;; define the position to display `helm', options are `bottom', `top',
-   ;; `left', or `right'. (default 'bottom)
-   dotspacemacs-'bottom
-   ;; Controls fuzzy matching in helm. If set to `always', force fuzzy matching
-   ;; in all non-asynchronous sources. If set to `source', preserve individual
-   ;; source settings. Else, disable fuzzy matching in all sources.
-   ;; (default 'always)
-   dotspacemacs-'always
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content. (default nil)
    dotspacemacs-enable-paste-transient-state nil
