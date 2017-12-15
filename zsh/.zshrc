@@ -12,7 +12,6 @@ alias sigsd='sigsend "+380953477459"'
 
 PURE_CMD_MAX_EXEC_TIME=15
 bindkey "^R" history-incremental-search-backward
-
 export VISUAL=emacsclient
 export EDITOR="$VISUAL"
 #eval $(thefuck --alias)

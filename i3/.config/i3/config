@@ -214,7 +214,11 @@ gaps outer      3
 
 # Power
 bindsym  $mod+End                   exec setxkbmap us, mode "$mode_power";
+<<<<<<< Updated upstream
 set      $Locker                    $HOME/bin/lock.sh
+=======
+set      $Locker                    "$HOME/.config/i3/lock.sh -l blur"
+>>>>>>> Stashed changes
 set      $mode_power                System (l)ock, log(o)ut, (s)uspend, (h)ibernate, (r)eboot, (S)hutdown
 mode "$mode_power" {
     bindcode $l                     exec --no-startup-id $Locker, mode "default"
