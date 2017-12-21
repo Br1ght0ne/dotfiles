@@ -8,6 +8,10 @@ sigsend () {
 }
 
 alias sigsd='sigsend "+380953477459"'
+
+alias ec='emacsclient'
+alias ecc='emacsclient -c'
+
 # wal -R & 2>/dev/null
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" > /dev/null
