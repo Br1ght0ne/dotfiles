@@ -12,6 +12,8 @@ alias sigsd='sigsend "+380953477459"'
 alias ec='emacsclient'
 alias ecc='emacsclient -c'
 
+alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
+
 # wal -R & 2>/dev/null
 
 PURE_CMD_MAX_EXEC_TIME=15
