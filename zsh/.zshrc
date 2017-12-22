@@ -8,11 +8,16 @@ sigsend () {
 }
 
 alias sigsd='sigsend "+380953477459"'
+
+alias ec='emacsclient'
+alias ecc='emacsclient -c'
+
 # wal -R & 2>/dev/null
 
 PURE_CMD_MAX_EXEC_TIME=15
 bindkey "^R" history-incremental-search-backward
-export VISUAL=emacsclient
+
+export VISUAL=emacs
 export EDITOR="$VISUAL"
 #eval $(thefuck --alias)
 #unsetopt correct_all
