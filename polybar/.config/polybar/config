@@ -221,7 +221,7 @@ icon-play = 
 icon-next = 
 
 label-song = %title%
-label-song-maxlen = 50
+label-song-maxlen = 25
 label-song-ellipsis = true
 
 format-offline =
