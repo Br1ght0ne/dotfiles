@@ -1,0 +1,4 @@
+**/mpd/database
+**/mpd/log
+**/mpd/pid
+**/nohup.out
