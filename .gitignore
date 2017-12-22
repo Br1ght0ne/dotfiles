@@ -2,3 +2,4 @@
 **/mpd/log
 **/mpd/pid
 **/nohup.out
+**/*.log
