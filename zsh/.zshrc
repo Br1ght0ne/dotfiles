@@ -23,3 +23,4 @@ export VISUAL=emacs
 export EDITOR="$VISUAL"
 #eval $(thefuck --alias)
 #unsetopt correct_all
+export GPG_TTY=$(tty)
