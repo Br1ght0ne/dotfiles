@@ -4,7 +4,7 @@
 
 # === Theme ===
 exec --no-startup-id wal -R -t
-exec --no-startup-id feh --bg-fill $HOME/wallpaper.png
+exec --no-startup-id feh --bg-fill /home/$(whoami)/wallpaper.png
 
 # Notifications
 exec --no-startup-id /bin/dunst &
