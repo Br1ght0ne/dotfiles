@@ -190,7 +190,7 @@ for_window [class="^.*"] border pixel 1
 for_window [class="^[tT]ermite"] border pixel 0
 
 # Window assignment
-assign     [class="^[fF]irefox"]                              $workspace2
+assign     [class="^([fF]irefox|[qQ]utebrowser)"]             $workspace2
 assign     [class="^[eE]macs"]                                $workspace3
 assign     [class="^[sS]team"]                                $workspace4
 assign     [class="^([tT]elegram|[dD]iscord|[sS]ignal)"]      $workspace5
