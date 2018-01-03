@@ -21,9 +21,9 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-modules-left = i3 title
+modules-left = i3 title keyboard
 modules-center = date
-modules-right = keyboard battery pkg mpd pavolume 
+modules-right = battery wireless mpd pavolume 
 ; border-size = 5
 ; border-color = #00000000
 
@@ -126,12 +126,12 @@ interval = 600
 
 [module/wireless]
 type = internal/network
-interface = wlp0s18f2u5
+interface = wlp2s0
 format-connected = <label-connected>
-format-connected-underline = ${colors.color2}
 format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.color3}
 label-connected =  %essid%
-label-disconnected = 
+label-disconnected =  offline
 
 [module/battery]
 type = internal/battery
@@ -153,6 +153,7 @@ label-discharging = %percentage%%
 label-full =  %percentage%%
 #
 format-discharging-underline = ${colors.color3}
+format-charging-underline = ${colors.color2}
 format-full-underline = ${colors.color2}
 #
 ramp-capacity-0 = 
@@ -181,7 +182,7 @@ time = %H:%M:%S
 
 label = %time% | %date%
 
-label-underline = ${colors.color3}
+label-underline = ${colors.color2}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -192,7 +193,7 @@ blacklist-2 = caps lock
 label-layout = %name%
 label-layout-padding = 1
 
-format-underline = ${colors.color2}
+; format-underline = ${colors.color3}
 
 [settings]
 screenchange-reload = true
@@ -203,8 +204,7 @@ margin-bottom = 0
 
 [module/title]
 type = internal/xwindow
-label-maxlen = 30
-format-underline = ${colors.color2}
+label-maxlen = 25
 
 [module/mpd]
 type = internal/mpd
@@ -212,23 +212,24 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 
-format-online = <icon-prev> <toggle> <icon-stop> <icon-next> <label-song>
-
 icon-prev = 
 icon-stop = 
 icon-pause = 
 icon-play = 
 icon-next = 
 
-label-song = %title%
-label-song-maxlen = 25
-label-song-ellipsis = true
+format-online = <icon-prev> <toggle> <icon-stop> <icon-next> <label-song>
+format-online-padding = 1
 
-format-offline =
+label-song = %title%
+label-song-maxlen = 20
+label-song-ellipsis = true
 
 format-playing-underline = ${colors.color2}
 format-paused-underline = ${colors.color4}
-format-online-padding = 1
+
+format-stopped =  stopped
+format-stopped-underline = ${colors.color3}
 
 [module/pkg]
 type = custom/script
@@ -260,7 +261,6 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/pavolume.sh --up
 scroll-down = ~/.config/polybar/pavolume.sh --down
-format-underline = ${colors.color2}
 
 [module/compton]
 type = custom/script
