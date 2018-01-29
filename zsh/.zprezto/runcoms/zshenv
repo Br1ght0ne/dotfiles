@@ -13,6 +13,7 @@ fi
 export PATH=/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/home/brightone/bin:/home/brightone/bin
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
 export DEFAULT_USER='brightone'
+export PATH=$PATH:/home/brightone/.gem/ruby/2.5.0/bin
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export TERMINAl=termite
 export EDITOR="/bin/emacs"
