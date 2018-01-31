@@ -11,7 +11,7 @@ exec --no-startup-id /bin/dunst &
 
 # MPD & ncmpcpp
 exec --no-startup-id /bin/mpd --no-daemon &
-exec --no-startup-id /bin/mpd-notification &
+# exec --no-startup-id /bin/mpd-notification &
 #exec --no-startup-id /bin/termite -t "ncmpcpp" -e "ncmpcpp"
 
 # Telegram
@@ -72,8 +72,8 @@ set $arrow_r 114
 set $arrow_d 116
 
 # Terminal
-bindsym  $mod+Return                exec termite
-bindsym  $mod+Shift+Return          exec termite -t "Floating terminal"
+bindsym  $mod+Return                exec st -c 'st'
+bindsym  $mod+Shift+Return          exec st -c 'st-floating'
 
 bindcode $mod+Shift+$q              kill
 
@@ -187,7 +187,7 @@ focus_follows_mouse no
 
 # Borders
 for_window [class="^.*"] border pixel 1
-for_window [class="^[tT]ermite"] border pixel 0
+for_window [class="^([tT]ermite|[sS]t)"] border pixel 0
 
 # Window assignment
 assign     [class="^([fF]irefox|[qQ]utebrowser)"]             $workspace2
@@ -198,7 +198,7 @@ assign     [class="^([gG]imp|[kK]rita)"]                      $workspace6
 assign     [class="^[tT]ermite" title="ncmpcpp"]              $workspace7
 
 # Floating
-for_window [class="^[tT]ermite" title="Floating terminal"]    floating enable
+for_window [class="^([sS]t-floating|bitwarden)"]              floating enable
 
 # Gaps
 smart_gaps      on
