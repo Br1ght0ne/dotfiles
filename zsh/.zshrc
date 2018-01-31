@@ -1,5 +1,11 @@
-ENABLE_CORRECTION="true"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
 alias pg="ps aux | grep"
+alias v='vim'
+alias e='emacsclient -a vim'
 
 #alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
 
