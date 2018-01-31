@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='emacs-client'
-export VISUAL='emacs-client'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -44,8 +44,6 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  ~/bin
-  ~/.yarn/bin
   $path
 )
 
