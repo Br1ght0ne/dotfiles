@@ -1067,7 +1067,7 @@ c.spellcheck.languages = []
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool
-c.statusbar.hide = True
+c.statusbar.hide = False
 
 ## Padding for the statusbar.
 ## Type: Padding
