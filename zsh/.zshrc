@@ -3,9 +3,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+. "$HOME/.zsh_aliases"
+
 alias pg="ps aux | grep"
 alias v='vim'
-alias e='emacsclient -a vim'
+alias e='emacsclient -a vim -t'
+alias se='sudo emacsclient -a vim -t'
+alias ec='emacsclient -c -a vim'
+alias sec='sudo emacsclient -c -a vim'
+alias git='hub'
 
 #alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
 

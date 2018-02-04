@@ -1,0 +1,4 @@
+org2pdf() {
+    out=`basename $1 .org`
+    pandoc -s "$1" -o "${out}.pdf" --pdf-engine=xelatex -V mainfont="Open Sans" -V geometry:margin=1in
+}
