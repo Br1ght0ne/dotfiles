@@ -12,13 +12,12 @@ exec --no-startup-id /bin/dunst &
 # MPD & ncmpcpp
 exec --no-startup-id /bin/mpd --no-daemon &
 # exec --no-startup-id /bin/mpd-notification &
-#exec --no-startup-id /bin/termite -t "ncmpcpp" -e "ncmpcpp"
 
 # Telegram
 exec --no-startup-id /bin/telegram-desktop &
 
 # Clipmenu
-exec --no-startup-id /bin/clipmenud &
+exec --no-startup-id /bin/clipit &
 
 # Hide mouse after 3 seconds of inactivity
 exec --no-startup-id /bin/unclutter --timeout 3 &
@@ -28,9 +27,10 @@ exec --no-startup-id /bin/compton -b
 
 # Tray
 exec --no-startup-id /bin/nm-applet &
+exec --no-startup-id /bin/volumeicon &
 
 # Polybar
-exec --no-startup-id /bin/polybar -r simple &
+exec --no-startup-id /bin/polybar &
 
 # Gnome keyring
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
@@ -215,13 +215,13 @@ gaps outer      3
 
 # Power
 bindsym  $mod+End                   exec setxkbmap us, mode "$mode_power";
-set      $Locker                    "$HOME/.config/i3/lock.sh -l blur"
+set      $Locker                    ${HOME}/.config/i3/lock.sh
 set      $mode_power                System (l)ock, log(o)ut, (s)uspend, (h)ibernate, (r)eboot, (S)hutdown
 mode "$mode_power" {
     bindcode $l                     exec --no-startup-id $Locker, mode "default"
     bindcode $o                     exec --no-startup-id i3-msg exit, mode "default"
     bindcode $s                     exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindcode $h                     exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindcode $h                     exec --no-startup-id $Locker && systemctl hibernate -i, mode "default"
     bindcode $r                     exec --no-startup-id systemctl reboot, mode "default"
     bindcode Shift+$s               exec --no-startup-id systemctl poweroff -i, mode "default"
     bindsym  Return                 mode "default"
