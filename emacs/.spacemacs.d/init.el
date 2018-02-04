@@ -314,7 +314,10 @@ you should place your code here."
 
   (add-hook 'c-c++-mode-hook 'flycheck-mode)
 
-  (setq-default evil-escape-key-sequence "kj")
+  (add-hook 'org-mode-hook 'flyspell-mode)
+  (add-hook 'org-mode-hook 'visual-line-mode)
+
+  (setq-default evil-escape-key-sequence "jk")
   (setq-default evil-escape-delay 0.5)
 
   (setq-default vc-follow-symlinks t)
