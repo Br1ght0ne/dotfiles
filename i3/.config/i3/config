@@ -30,7 +30,7 @@ exec --no-startup-id /bin/nm-applet &
 exec --no-startup-id /bin/volumeicon &
 
 # Polybar
-exec --no-startup-id /bin/polybar &
+exec --no-startup-id /bin/polybar -r simple &
 
 # Gnome keyring
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
@@ -72,26 +72,26 @@ set $arrow_r 114
 set $arrow_d 116
 
 # Terminal
-bindsym  $mod+Return                exec st -c 'st'
-bindsym  $mod+Shift+Return          exec st -c 'st-floating'
+bindsym  $mod+Return                exec --no-startup-id st -c 'st'
+bindsym  $mod+Shift+Return          exec --no-startup-id st -c 'st-floating'
 
 bindcode $mod+Shift+$q              kill
 
 # Rofi
-bindcode $mod+$d                    exec LANG=en_US.UTF-8 rofi -show drun
-bindcode $mod+Shift+$d              exec LANG=en_US.UTF-8 rofi -show run
-bindcode $mod+Shift+$w              exec LANG=en_US.UTF-8 rofi -show window
+bindcode $mod+$d                    exec --no-startup-id LANG=en_US.UTF-8 rofi -show drun
+bindcode $mod+Shift+$d              exec --no-startup-id LANG=en_US.UTF-8 rofi -show run
+bindcode $mod+Shift+$w              exec --no-startup-id LANG=en_US.UTF-8 rofi -show window
 
 # Pasmenu and dmenu (together with rofi-dmenu from AUR)
-bindcode $mod+$p                    exec LC_ALL=en_US.UTF-8 passmenu
-bindcode $mod+Shift+$v              exec LC_ALL=en_US.UTF-8 clipmenu
-bindcode $mod+Shift+$p              exec LC_ALL=en_US.UTF-8 passmenu --type
+bindcode $mod+$p                    exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu
+bindcode $mod+Shift+$v              exec --no-startup-id LC_ALL=en_US.UTF-8 clipmenu
+bindcode $mod+Shift+$p              exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu --type
 
 # Restart Polybar
-bindcode $mod+Shift+$b              exec polyrestart
+bindcode $mod+Shift+$b              exec --no-startup-id polyrestart
 
 # Scrot
-bindsym  Print                       exec scrot -z -d 1
+bindsym  Print                      exec --no-startup-id scrot -z -d 1
 
 # Focus windows
 bindcode $mod+$j                    focus left
@@ -214,7 +214,7 @@ gaps outer      3
 # =====
 
 # Power
-bindsym  $mod+End                   exec setxkbmap us, mode "$mode_power";
+bindsym  $mod+End                   exec --no-startup-id setxkbmap us, mode "$mode_power";
 set      $Locker                    ${HOME}/.config/i3/lock.sh
 set      $mode_power                System (l)ock, log(o)ut, (s)uspend, (h)ibernate, (r)eboot, (S)hutdown
 mode "$mode_power" {
