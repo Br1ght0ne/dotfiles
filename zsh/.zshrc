@@ -11,7 +11,9 @@ alias e='emacsclient -a vim -t'
 alias se='sudo emacsclient -a vim -t'
 alias ec='emacsclient -c -a vim'
 alias sec='sudo emacsclient -c -a vim'
+
 alias git='hub'
+compdef hub=git
 
 #alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
 
