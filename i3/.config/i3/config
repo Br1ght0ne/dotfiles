@@ -77,6 +77,10 @@ bindsym  $mod+Shift+Return          exec --no-startup-id st -c 'st-floating'
 
 bindcode $mod+Shift+$q              kill
 
+# Screenshots
+bindcode $mod+Print                 exec --no-startup-id scrot
+bindcode $mod+Shift+Print           exec --no-startup-id scrot -s
+
 # Rofi
 bindcode $mod+$d                    exec --no-startup-id LANG=en_US.UTF-8 rofi -show drun
 bindcode $mod+Shift+$d              exec --no-startup-id LANG=en_US.UTF-8 rofi -show run
