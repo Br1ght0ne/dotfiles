@@ -1,37 +1,17 @@
 ;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration.
-You should not put any user code in this function besides modifying the variable
-values."
   (setq-default
-   ;; Base distribution to use. This is a layer contained in the directory
-   ;; `+distribution'. For now available distributions are `spacemacs-base'
-   ;; or `spacemacs'. (default 'spacemacs)
    dotspacemacs-distribution 'spacemacs
-   ;; Lazy installation of layers (i.e. layers are installed only when a file
-   ;; with a supported type is opened). Possible values are `all', `unused'
-   ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
-   ;; not listed in variable `dotspacemacs-configuration-layers'), `all' will
-   ;; lazy install any layer that support lazy installation even the layers
-   ;; listed in `dotspacemacs-configuration-layers'. `nil' disable the lazy
-   ;; installation feature and you have to explicitly list a layer in the
-   ;; variable `dotspacemacs-configuration-layers' to install it.
-   ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'nil
-   ;; If non-nil then Spacemacs will ask for confirmation before installing
-   ;; a layer lazily. (default t)
+   dotspacemacs-enable-lazy-installation 'unused
    dotspacemacs-ask-for-lazy-installation t
-   ;; If non-nil layers with lazy install support are lazy installed.
-   ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '("~/.emacs.d/layers")
-   ;; List of configuration layers to load.
+   ;; dotspacemacs-configuration-layer-path '("~/.emacs.d/layers")
+
    dotspacemacs-configuration-layers
    '(
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-help-tooltip t)
      better-defaults
      bibtex
      (c-c++ :variables
@@ -53,15 +33,14 @@ values."
             TeX-source-correlate-start-server t
             TeX-source-correlate-method 'synctex)
      markdown
-     (org :variables
-          org-enable-reveal-js-support t)
+     org
      (python :variables
-             python-enable-yapf-format-on-save f
              python-test-runner 'pytest)
      ranger
      ruby
      shell
-     search-engine
+     (spell-checking :variables
+                    spell-checking-enable-by-default nil)
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
      )
@@ -244,6 +223,7 @@ values."
    dotspacemacs-show-transient-state-color-guide t
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
    dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-theme 'spacemacs
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
@@ -321,6 +301,7 @@ you should place your code here."
   (setq-default vc-follow-symlinks t)
 
   (with-eval-after-load 'org
+    (setq-default org-enable-reveal-js-support t)
     (setq-default org-agenda-files (list "~/Nextcloud/org"))
     (setq-default org-todo-keywords (list "TODO" "WAIT" "|" "DONE"))
     (add-hook 'org-mode-hook
@@ -361,7 +342,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (general aurel company-emacs-eclim eclim rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby dired-ranger xml+ parsebib biblio biblio-core flycheck-elm elm-mode org-ref key-chord helm-bibtex counsel-pydoc counsel-dash bind-key auctex company evil flycheck avy ht markdown-mode alert magit git-commit ghub let-alist org-plus-contrib engine-mode ivy-bibtex helm-make yaml-mode wgrep web-beautify smex pdf-tools tablist lua-mode livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ivy-hydra csv-mode counsel-projectile counsel swiper ivy company-tern tern coffee-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle shell-pop restart-emacs regex-tool ranger rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox ox-reveal orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word company-statistics company-c-headers column-enforce-mode color-theme-solarized color-identifiers-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-ac-ispell)))
+    (org-projectile yasnippet smartparens highlight goto-chg helm helm-core gh marshal projectile epl magit-popup with-editor async hydra f powerline dash org-mime general aurel company-emacs-eclim eclim rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby dired-ranger xml+ parsebib biblio biblio-core flycheck-elm elm-mode org-ref key-chord helm-bibtex counsel-pydoc counsel-dash bind-key auctex company evil flycheck avy ht markdown-mode alert magit git-commit ghub let-alist org-plus-contrib engine-mode ivy-bibtex helm-make yaml-mode wgrep web-beautify smex pdf-tools tablist lua-mode livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ivy-hydra csv-mode counsel-projectile counsel swiper ivy company-tern tern coffee-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle shell-pop restart-emacs regex-tool ranger rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox ox-reveal orgit org-present org-pomodoro org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word company-statistics company-c-headers column-enforce-mode color-theme-solarized color-identifiers-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-ac-ispell)))
  '(paradox-github-token t t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -369,3 +350,30 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
+ '(custom-safe-themes
+   (quote
+    ("2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "8e64e4964de19e5ea4cacd72d586bccc75fad853db16e7a62053b7cf05757899" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "907a09c81c3e051f632d27e02432721c8109fa8a03a4c9619f7d9d80b575eeb8" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(evil-want-Y-yank-to-eol nil)
+ '(package-selected-packages
+   (quote
+    (flyspell-correct-ivy flyspell-correct company-quickhelp auto-dictionary org-projectile yasnippet smartparens highlight goto-chg helm helm-core gh marshal projectile epl magit-popup with-editor async hydra f powerline dash org-mime general aurel company-emacs-eclim eclim rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby dired-ranger xml+ parsebib biblio biblio-core flycheck-elm elm-mode org-ref key-chord helm-bibtex counsel-pydoc counsel-dash bind-key auctex company evil flycheck avy ht markdown-mode alert magit git-commit ghub let-alist org-plus-contrib engine-mode ivy-bibtex helm-make yaml-mode wgrep web-beautify smex pdf-tools tablist lua-mode livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ivy-hydra csv-mode counsel-projectile counsel swiper ivy company-tern tern coffee-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle shell-pop restart-emacs regex-tool ranger rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox ox-reveal orgit org-present org-pomodoro org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word company-statistics company-c-headers column-enforce-mode color-theme-solarized color-identifiers-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-ac-ispell)))
+ '(paradox-github-token t t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
