@@ -56,7 +56,7 @@ values."
      (org :variables
           org-enable-reveal-js-support t)
      (python :variables
-             python-enable-yapf-format-on-save t
+             python-enable-yapf-format-on-save f
              python-test-runner 'pytest)
      ranger
      ruby
@@ -314,13 +314,18 @@ you should place your code here."
 
   (add-hook 'c-c++-mode-hook 'flycheck-mode)
 
-  (add-hook 'org-mode-hook 'flyspell-mode)
-  (add-hook 'org-mode-hook 'visual-line-mode)
 
   (setq-default evil-escape-key-sequence "jk")
   (setq-default evil-escape-delay 0.5)
 
   (setq-default vc-follow-symlinks t)
+
+  (with-eval-after-load 'org
+    (setq-default org-agenda-files (list "~/Nextcloud/org"))
+    (setq-default org-todo-keywords (list "TODO" "WAIT" "|" "DONE"))
+    (add-hook 'org-mode-hook
+              (progn 'flyspell-mode
+                     'visual-line-mode)))
 
   (defun compile-and-run-file ()
     (interactive)
@@ -356,7 +361,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (company-emacs-eclim eclim rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby dired-ranger xml+ parsebib biblio biblio-core flycheck-elm elm-mode org-ref key-chord helm-bibtex counsel-pydoc counsel-dash bind-key auctex company evil flycheck avy ht markdown-mode alert magit git-commit ghub let-alist org-plus-contrib engine-mode ivy-bibtex helm-make yaml-mode wgrep web-beautify smex pdf-tools tablist lua-mode livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ivy-hydra csv-mode counsel-projectile counsel swiper ivy company-tern tern coffee-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle shell-pop restart-emacs regex-tool ranger rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox ox-reveal orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word company-statistics company-c-headers column-enforce-mode color-theme-solarized color-identifiers-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-ac-ispell)))
+    (general aurel company-emacs-eclim eclim rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby dired-ranger xml+ parsebib biblio biblio-core flycheck-elm elm-mode org-ref key-chord helm-bibtex counsel-pydoc counsel-dash bind-key auctex company evil flycheck avy ht markdown-mode alert magit git-commit ghub let-alist org-plus-contrib engine-mode ivy-bibtex helm-make yaml-mode wgrep web-beautify smex pdf-tools tablist lua-mode livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ivy-hydra csv-mode counsel-projectile counsel swiper ivy company-tern tern coffee-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle shell-pop restart-emacs regex-tool ranger rainbow-mode rainbow-identifiers rainbow-delimiters popwin persp-mode pcre2el paradox ox-reveal orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word company-statistics company-c-headers column-enforce-mode color-theme-solarized color-identifiers-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-ac-ispell)))
  '(paradox-github-token t t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
