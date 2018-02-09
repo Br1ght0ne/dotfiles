@@ -77,6 +77,9 @@ bindsym  $mod+Shift+Return          exec --no-startup-id st -c 'st-floating'
 
 bindcode $mod+Shift+$q              kill
 
+# Webcam
+bindcode $mod+$c                    exec --no-startup-id camtoggle
+
 # Screenshots
 bindcode $mod+Print                 exec --no-startup-id scrot
 bindcode $mod+Shift+Print           exec --no-startup-id scrot -s
@@ -204,6 +207,10 @@ assign     [class="^[tT]ermite" title="ncmpcpp"]              $workspace7
 
 # Floating
 for_window [class="^([sS]t-floating|bitwarden)"]              floating enable
+
+# Webcam
+for_window [title="video0 - mpv"]                              floating enable
+for_window [title="video0 - mpv"]                              sticky enable
 
 # Gaps
 smart_gaps      on
