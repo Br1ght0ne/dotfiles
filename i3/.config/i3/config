@@ -85,8 +85,8 @@ bindsym  $mod+Shift+Return          exec --no-startup-id st -c 'st-floating'
 bindcode $mod+Shift+$q              kill
 
 # Screenshots
-bindcode $mod+Print                 exec --no-startup-id scrot
-bindcode $mod+Shift+Print           exec --no-startup-id scrot -s
+bindsym $mod+Print       --release  exec scrot -e 'mv $f ~/Nextcloud/Screenshots'
+bindsym $mod+Shift+Print --release  exec scrot -s -e 'mv $f ~/Nextcloud/Screenshots'
 
 # Rofi
 bindcode $mod+$d                    exec --no-startup-id LANG=en_US.UTF-8 rofi -show drun
