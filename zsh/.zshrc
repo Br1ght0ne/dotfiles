@@ -15,6 +15,8 @@ alias sec='sudo emacsclient -c -a vim'
 alias git='hub'
 compdef hub=git
 
+compdef trizen=pacman
+
 #alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
 
 # wal -R & 2>/dev/null
