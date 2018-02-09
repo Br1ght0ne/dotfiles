@@ -48,6 +48,7 @@ set $q 24
 set $w 25
 set $e 26
 set $r 27
+set $t 28
 set $o 32
 set $p 33
 set $a 38
@@ -76,6 +77,9 @@ bindsym  $mod+Return                exec --no-startup-id st -c 'st'
 bindsym  $mod+Shift+Return          exec --no-startup-id st -c 'st-floating'
 
 bindcode $mod+Shift+$q              kill
+
+# Trans
+bindcode $mod+$t                    exec --no-startup-id trans-notify
 
 # Screenshots
 bindcode $mod+Print                 exec --no-startup-id scrot
