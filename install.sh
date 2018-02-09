@@ -18,7 +18,7 @@ pkg_installed() {
 install_trizen() {
 	git clone https://aur.archlinux.org/trizen.git
 	cd trizen
-	makepkg -si
+	makepkg -si --noconfirm
 	cd ..
 	rm -rf trizen
 }
@@ -29,7 +29,7 @@ get_aur_helper() {
 	elif command_exists pacaur; then
 		HELPER=pacaur
 	else
-		echo "No supported AUR helper found. Install trizen? [Y/n]: "
+		printf "No supported AUR helper found. Install trizen? [Y/n]: "
 		read choice
 		case choice in
 			n|N)
