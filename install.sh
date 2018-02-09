@@ -1,12 +1,10 @@
 #!/bin/bash
 
+SRCDIR=`dirname $0`
+
 if ! type "stow" &> /dev/null; then
-  echo "Install GNU Stow first."
+	echo "Install GNU Stow first."
 else
-  if [[ $PWD = "$HOME/dotfiles ]]; then
-    stow cava dunst i3 neofetch polybar ranger rofi termite vis zsh
-    echo "Done. Happy usage!"
-  else
-    echo "You should clone this repo to ~/dotfiles for stow to work correctly. Sorry :("
-  fi
+	find $SRCDIR -maxdepth 1 -not -name '_*' -not -name '.*' -type d -printf "%f\n" | xargs stow -t $HOME
+	echo "Done. Happy usage!"
 fi
