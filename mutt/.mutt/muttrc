@@ -1,0 +1,14 @@
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+# Personal Gmail
+source "gpg -d ~/.mutt/personal.gmail.gpg 2> /dev/null |"
+
+# Work mail
+source "gpg -d ~/.mutt/work.mail.gpg 2> /dev/null |"
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set move = no
+set imap_keepalive = 900

@@ -1,0 +1,11 @@
+set imap_user = "filalex77@gmail.com"
+set imap_pass = "owzvriwiiwvsuezf"
+set from = "filalex77@gmail.com"
+set realname = "Oleksii Filonenko"
+set hostname = gmail.com
+set folder = "imaps://filalex77@imap.gmail.com:993"
+set spoolfile = "imaps://filalex77@imap.gmail.com/INBOX"
+set postponed = "imaps://filalex77@imap.gmail.com/[Gmail]/Drafts"
+set record = "imaps://filalex77@imap.gmail.com/[Gmail]/Sent Mail"
+set smtp_url = "smtp://filalex77@smtp.gmail.com:587"
+set smtp_pass = "owzvriwiiwvsuezf"
