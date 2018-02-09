@@ -123,7 +123,7 @@ label-disconnected = D
 [module/external_ip]
 type = custom/script
 format-underline = ${colors.cyan}
-exec = ~/.config/polybar/external_ip.sh
+exec = ~/bin/external_ip.sh
 interval = 600
 
 [module/wireless]
@@ -239,7 +239,7 @@ interval = 60
 format = <label>
 format-underline = ${colors.color3}
 label = "%output:0:30%"
-exec = ~/.config/polybar/pkg.sh
+exec = ~/bin/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 
@@ -258,21 +258,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = custom/script
 interval = 0.2
 label = %output%
-exec = ~/.config/polybar/pavolume.sh
+exec = ~/bin/pavolume.sh
 click-right = exec pavucontrol
-click-left = ~/.config/polybar/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/pavolume.sh --up
-scroll-down = ~/.config/polybar/pavolume.sh --down
+click-left = ~/bin/pavolume.sh --togmute
+scroll-up = ~/bin/pavolume.sh --up
+scroll-down = ~/bin/pavolume.sh --down
 
-[module/compton]
-type = custom/script
-
-exec = ~/.config/polybar/compton.sh
-click-left = ~/.config/polybar/compton-toggle.sh
-interval = 5
-
-[module/linux]
-type = custom/script
-
-exec = ~/.config/polybar/linux.sh
-format-underline = ${colors.green}
