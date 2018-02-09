@@ -3,3 +3,5 @@
 **/mpd/pid
 **/nohup.out
 **/*.log
+**/qutebrowser/quickmarks
+**/qutebrowser/bookmarks/*
