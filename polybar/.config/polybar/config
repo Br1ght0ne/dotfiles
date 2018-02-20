@@ -223,8 +223,8 @@ icon-next = 
 format-online =<label-song>  <icon-prev> <toggle> <icon-stop> <icon-next>
 format-online-padding = 1
 
-label-song = %title%
-label-song-maxlen = 20
+label-song = %artist% - %title%
+label-song-maxlen = 64
 label-song-ellipsis = true
 
 format-playing-underline = ${colors.color2}
