@@ -5,6 +5,7 @@ fi
 
 . "$HOME/.zsh_aliases"
 
+alias hiber="sudo systemctl hibernate -i"
 alias pg="ps aux | grep"
 alias v='vim'
 alias e='emacsclient -a vim -t'
