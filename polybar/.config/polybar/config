@@ -220,7 +220,7 @@ icon-pause = 
 icon-play = 
 icon-next = 
 
-format-online = <icon-prev> <toggle> <icon-stop> <icon-next> <label-song>
+format-online =<label-song>  <icon-prev> <toggle> <icon-stop> <icon-next>
 format-online-padding = 1
 
 label-song = %title%
