@@ -101,8 +101,14 @@ bindcode $mod+$p                    exec --no-startup-id LC_ALL=en_US.UTF-8 pass
 bindcode $mod+Shift+$v              exec --no-startup-id LC_ALL=en_US.UTF-8 clipmenu
 bindcode $mod+Shift+$p              exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu --type
 
+# MPD
+bindcode $mod+Shift+$s              exec --no-startup-id mpc stop
+bindcode $mod+$n                    exec --no-startup-id mpc next
+bindcode $mod+Shift+$n              exec --no-startup-id mpc prev
+bindcode $mod+Shift+$m              exec --no-startup-id mpc toggle
+
 # Restart Polybar
-bindcode $mod+Shift+$b              exec --no-startup-id polyrestart
+bindcode $mod+Shift+$b              exec --no-startup-id polyrestart.sh
 
 # Scrot
 bindsym  Print                      exec --no-startup-id scrot -z -d 1
