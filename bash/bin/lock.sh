@@ -1,1 +1,2 @@
-i3lock -i /home/$(whoami)/wallpaper.png -t
+#!/bin/bash
+i3lock -i "$HOME/wallpaper.png" -t
