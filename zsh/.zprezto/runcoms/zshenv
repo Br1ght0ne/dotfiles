@@ -10,10 +10,17 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export PATH=/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/home/brightone/bin:/home/brightone/bin
 export DEFAULT_USER='brightone'
+export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:$HOME/bin:$HOME/.local/bin"
+
+# Java
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+
+# Node
 export PATH=$PATH:/home/brightone/.yarn/bin
+
+# Ruby
 export PATH=$PATH:/home/brightone/.gem/ruby/2.5.0/bin
 
 # Rust
@@ -23,8 +30,6 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # Go
 export PATH=$PATH:$HOME/go/bin
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
-export TERMINAl=termite
+# Editor
 export EDITOR="/bin/emacs"
 export VISUAL=$EDITOR
-export LANG="en_US.UTF-8"
