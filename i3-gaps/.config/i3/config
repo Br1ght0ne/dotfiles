@@ -88,8 +88,8 @@ bindcode $mod+Shift+$q              kill
 bindcode $mod+$t                    exec --no-startup-id trans-notify
 
 # Screenshots
-bindsym $mod+Print       --release  exec scrot -e 'mv $f ~/Nextcloud/Screenshots'
-bindsym $mod+Shift+Print --release  exec scrot -s -e 'mv $f ~/Nextcloud/Screenshots'
+bindsym $mod+$i          --release  exec --no-startup-id maim.sh
+bindsym $mod+Shift+$i    --release  exec --no-startup-id maim.sh -s
 
 # Rofi
 bindcode $mod+$d                    exec --no-startup-id LANG=en_US.UTF-8 rofi -show drun
