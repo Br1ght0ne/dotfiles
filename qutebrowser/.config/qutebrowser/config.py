@@ -1249,6 +1249,7 @@ c.url.incdec_segments = ['path', 'query']
 c.url.searchengines = {
         'DEFAULT': 'https://duckduckgo.com/?q={}',
         'i': 'https://duckduckgo.com/?q={}&iar=images&iax=images&ia=images',
+        'g': 'https://github.com/{}',
         'red': 'https://reddit.com/r/{}',
         'osm': 'http://www.openstreetmap.org/search?query={}',
         'tpb': 'http://thepiratebay.org/search/{}',
