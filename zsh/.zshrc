@@ -17,9 +17,9 @@ alias git='hub'
 compdef hub=git
 
 alias pass='gopass'
-compdef gopass=pass
+#compdef gopass=pass
 
-compdef trizen=pacman
+#compdef trizen=pacman
 
 #alias ncmpcpp='ncmpcpp -b ~/.config/ncmpcpp/bindings'
 

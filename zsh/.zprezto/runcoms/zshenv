@@ -15,7 +15,7 @@ export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm
 
 # Java
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export JAVA_HOME=/usr/lib/jvm/openjdk
 
 # Node
 export PATH=$PATH:/home/brightone/.yarn/bin
