@@ -5,6 +5,17 @@ fi
 
 . "$HOME/.zsh_aliases"
 
+#=== ALIASES & FUNCS ===#
+
+stream() {
+	if [ $# -eq 0 ]; then
+		q=best
+	else
+		q=$2
+	fi
+	streamlink $1 best
+}
+
 alias hiber="sudo systemctl hibernate -i"
 alias pg="ps aux | grep"
 alias v='vim'
