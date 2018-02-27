@@ -2,4 +2,4 @@
 
 killall polybar
 nohup polybar -r simple &
-# nohup polybar -r bottom &
+nohup polybar -r external &
