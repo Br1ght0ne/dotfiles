@@ -44,6 +44,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 set $mod Mod4
 floating_modifier $mod
 
+set $tab 23
 set $q 24
 set $w 25
 set $e 26
@@ -69,10 +70,10 @@ set $x 53
 set $c 54
 set $v 55
 set $b 56
-set $m 58
-set $n 59
-set $m 60
-set $space 65
+set $n 57
+set $m 68
+set $comma 59
+set $period 60
 set $arrow_u 111
 set $arrow_l 113
 set $arrow_r 114
@@ -190,13 +191,18 @@ bindsym  $mod+Shift+8               move container to workspace $workspace8
 bindsym  $mod+Shift+9               move container to workspace 9
 bindsym  $mod+Shift+0               move container to workspace 10
 
+# Move between workspaces
+bindcode $mod+$tab workspace back_and_forth
+bindcode $mod+$comma workspace prev_on_output
+bindcode $mod+$period workspace next_on_output
+
 bindcode $mod+$a                    focus parent
 bindcode $mod+$f                    fullscreen toggle
 bindcode $mod+Shift+$c              reload
 bindcode $mod+Shift+$r              restart
-bindcode $mod+$m                    exec --no-startup-id i3-msg workspace $workspace7\; 
+#bindcode $mod+$m                    exec --no-startup-id i3-msg workspace $workspace7\; 
 bindsym  --whole-window button9     floating toggle
-bindsym  --whole-window button8     kill
+#bindsym  --whole-window button8     kill
 
 
 
