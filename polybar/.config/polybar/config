@@ -5,8 +5,9 @@ color2 = #3d9060
 color3 = #cb251a
 color4 = #698284
 
-[bar/simple]
+[bar/external]
 locale = en_US.UTF-8
+monitor = VGA1
 
 ; width = 90%
 height = 32
@@ -23,7 +24,41 @@ line-color = #f00
 
 modules-left = i3 title keyboard
 modules-center = date
-modules-right = battery wireless mpd pavolume 
+modules-right = battery wireless mpd
+; border-size = 5
+; border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 1.5
+
+font-0 = Iosevka Light:pixelsize=10;1
+font-1 = FontAwesome:size=11;2
+
+#override-redirect = true
+#wm-restack = i3
+
+[bar/simple]
+locale = en_US.UTF-8
+monitor = LVDS1
+
+; width = 90%
+height = 32
+; offset-x = 55%
+offset-y = 0
+bottom = false
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+modules-left = i3 title keyboard
+modules-center = date
+modules-right = battery wireless mpd
 ; border-size = 5
 ; border-color = #00000000
 
@@ -128,7 +163,7 @@ interval = 600
 
 [module/wireless]
 type = internal/network
-interface = wlp2s0
+interface = wlp3s0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.color3}
@@ -143,8 +178,8 @@ full-at = 99
 
 #; Use the following command to list batteries and adapters:
 #; $ ls -1 /sys/class/power_supply/
-battery = BAT1
-adapter = ACAD
+battery = BAT0
+adapter = AC
 #
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
