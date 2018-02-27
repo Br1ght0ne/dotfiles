@@ -19,6 +19,9 @@ exec --no-startup-id /bin/telegram-desktop &
 # Clipmenu
 exec --no-startup-id /bin/clipit &
 
+# Wicd
+exec --no-startup-id /bin/wicd-client --tray &
+
 # Hide mouse after 3 seconds of inactivity
 exec --no-startup-id /bin/unclutter --timeout 3 &
 
@@ -27,13 +30,17 @@ exec --no-startup-id /bin/compton -b
 
 # Tray
 exec --no-startup-id /bin/nm-applet &
-exec --no-startup-id /bin/volumeicon &
+#exec --no-startup-id /bin/volumeicon &
+exec --no-startup-id /bin/pa-applet &
 
 # Polybar
 exec --no-startup-id /bin/polybar -r simple &
 
 # Gnome keyring
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+# Bluetooth
+exec --no-startup-id /bin/bluetooth off &
 
 
 
@@ -97,9 +104,9 @@ bindcode $mod+Shift+$d              exec --no-startup-id LANG=en_US.UTF-8 rofi -
 bindcode $mod+Shift+$w              exec --no-startup-id LANG=en_US.UTF-8 rofi -show window
 
 # Pasmenu and dmenu (together with rofi-dmenu from AUR)
-bindcode $mod+$p                    exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu
+bindcode $mod+$p                    exec --no-startup-id LC_ALL=en_US.UTF-8 rofi-pass
 bindcode $mod+Shift+$v              exec --no-startup-id LC_ALL=en_US.UTF-8 clipmenu
-bindcode $mod+Shift+$p              exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu --type
+# bindcode $mod+Shift+$p              exec --no-startup-id LC_ALL=en_US.UTF-8 passmenu --type
 
 # MPD
 bindcode $mod+Shift+$s              exec --no-startup-id mpc stop
@@ -109,6 +116,21 @@ bindcode $mod+Shift+$m              exec --no-startup-id mpc toggle
 
 # Restart Polybar
 bindcode $mod+Shift+$b              exec --no-startup-id polyrestart.sh
+
+# Audio
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% || pactl set-sink-volume 0 -- +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% || pactl set-sink-volume 0 -- -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+
+# Screensaver
+bindsym XF86Screensaver exec xscreensaver-command -activate
+
+# Bluetooth
+bindsym $mod+XF86AudioMicMute exec --no-startup-id bluetooth toggle
+
+# Brightness
+bindsym $mod+XF86AudioRaiseVolume exec brightnessctl set 10%+
+bindsym $mod+XF86AudioLowerVolume exec brightnessctl set 10%-
 
 # Scrot
 bindsym  Print                      exec --no-startup-id scrot -z -d 1
@@ -179,6 +201,15 @@ bindsym  $mod+8                     workspace $workspace8
 # bindsym  $mod+9                     workspace 9
 # bindsym  $mod+0                     workspace 10
 
+workspace $workspace1 output LVDS1
+workspace $workspace2 output LVDS1
+workspace $workspace3 output LVDS1
+workspace $workspace4 output LVDS1
+workspace $workspace5 output VGA1
+workspace $workspace6 output VGA1
+workspace $workspace7 output VGA1
+workspace $workspace8 output VGA1
+
 bindsym  $mod+Shift+1               move container to workspace $workspace1
 bindsym  $mod+Shift+2               move container to workspace $workspace2
 bindsym  $mod+Shift+3               move container to workspace $workspace3
@@ -242,8 +273,8 @@ mode "$mode_power" {
     bindcode $o                     exec --no-startup-id i3-msg exit, mode "default"
     bindcode $s                     exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindcode $h                     exec --no-startup-id $Locker && systemctl hibernate -i, mode "default"
-    bindcode $r                     exec --no-startup-id systemctl reboot, mode "default"
-    bindcode Shift+$s               exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindcode $r                     exec --no-startup-id sudo reboot, mode "default"
+    bindcode Shift+$s               exec --no-startup-id sudo poweroff -i, mode "default"
     bindsym  Return                 mode "default"
     bindsym  Escape                 mode "default"
 }
@@ -268,4 +299,3 @@ client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
-
