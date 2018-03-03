@@ -13,4 +13,5 @@ global:
   - https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext
   - https://vk.com/js/api/openapi.js
   content.plugins: true
+  hints.mode: letter
   tabs.position: top
