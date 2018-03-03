@@ -1,2 +1,2 @@
 #!/bin/bash
-i3lock -i "$HOME/wallpaper.png" -t
+i3lock -c 002b36
