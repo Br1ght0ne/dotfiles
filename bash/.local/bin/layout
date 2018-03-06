@@ -1,0 +1,25 @@
+#!/bin/bash
+
+MAP_DIR="$HOME/.xmodmap"
+
+LAYOUT=$1
+case "$LAYOUT" in
+dvp)
+	setxkbmap us -variant dvp
+	;;
+*)
+	setxkbmap "$LAYOUT"
+	;;
+esac
+printf "Set layout %s.\n" "$LAYOUT"
+
+BASE_MAP_FILE="$MAP_DIR/base.map"
+xmodmap "$BASE_MAP_FILE"
+printf "Loaded base map.\n"
+
+ADD_MAP_FILE="$MAP_DIR/$LAYOUT.map"
+if [ -f "$ADD_MAP_FILE" ]
+then
+	xmodmap "$ADD_MAP_FILE"
+	printf "Loaded additional map %s.\n" $(basename $ADD_MAP_FILE)
+fi

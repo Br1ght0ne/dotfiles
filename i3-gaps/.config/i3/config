@@ -42,6 +42,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Bluetooth
 exec --no-startup-id /bin/bluetooth off &
 
+# Keyboard layout
+exec --no-startup-id /home/$(whoami)/.local/bin/layout us
+
 
 
 # ===========
@@ -165,9 +168,10 @@ bindcode $mod+$w                    layout tabbed
 bindcode $mod+$e                    layout toggle split
 
 # Keyboard layout
-bindcode $mod+$z                    exec --no-startup-id setxkbmap us
-bindcode $mod+$x                    exec --no-startup-id setxkbmap ru
-bindcode $mod+$c                    exec --no-startup-id setxkbmap ua
+bindcode $mod+$z                    exec --no-startup-id /home/$(whoami)/.local/bin/layout us
+bindcode $mod+$x                    exec --no-startup-id /home/$(whoami)/.local/bin/layout ru
+bindcode $mod+$c                    exec --no-startup-id /home/$(whoami)/.local/bin/layout ua
+bindcode $mod+94                    exec --no-startup-id /home/$(whoami)/.local/bin/layout dvp
 
 # Resize mode
 bindcode $mod+$r                    mode "resize"
