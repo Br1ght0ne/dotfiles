@@ -1,35 +1,30 @@
-#
-# Defines environment variables.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export DEFAULT_USER='brightone'
-export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:$HOME/bin:$HOME/.local/bin"
+#=== CUSTOM VARS ===#
 
-# Java
-export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
-export JAVA_HOME=/usr/lib/jvm/openjdk
-
-# Node
-export PATH=$PATH:/home/brightone/.yarn/bin
-
-# Ruby
-export PATH=$PATH:/home/brightone/.gem/ruby/2.5.0/bin
-
-# Rust
-export PATH=$PATH:$HOME/.cargo/bin
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+# Editor
+export EDITOR="vim"
+export VISUAL=$EDITOR
 
 # Go
 export PATH=$PATH:$HOME/go/bin
 
-# Editor
-export EDITOR="/bin/emacs"
-export VISUAL=$EDITOR
+# GPG
+export GPG_TTY=$(tty)
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/openjdk
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+
+# Node
+export PATH=$PATH:/home/brightone/.yarn/bin
+
+# Path
+export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:$HOME/.local/bin"
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"

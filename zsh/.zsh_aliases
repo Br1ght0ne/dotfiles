@@ -2,3 +2,27 @@ org2pdf() {
     out=`basename $1 .org`
     pandoc -s "$1" -o "${out}.pdf" --pdf-engine=xelatex -V mainfont="Open Sans" -V geometry:margin=1in
 }
+
+stream() {
+  q="$1"
+	if [ -z "$q" ]; then
+		q='best'
+	fi
+	streamlink "$1" "$q"
+}
+
+alias e='emacsclient -a vim -t'
+alias ec='emacsclient -c -a vim'
+alias git='hub'
+alias hiber='sudo systemctl hibernate -i'
+alias pass='gopass'
+alias pg='ps aux | grep'
+alias q='qutebrowser'
+alias r='ranger'
+alias se='sudo emacsclient -a vim -t'
+alias sec='sudo emacsclient -c -a vim'
+alias v='vim'
+
+compdef hub=git
+compdef gopass=pass
+# compdef trizen=pacman
