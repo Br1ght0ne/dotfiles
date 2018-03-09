@@ -14,4 +14,19 @@ global:
   - https://vk.com/js/api/openapi.js
   content.plugins: true
   hints.mode: letter
-  tabs.position: top
+  hints.next_regexes:
+  - \bnext\b
+  - \bmore\b
+  - \bnewer\b
+  - \b[>→≫]\b
+  - \b(>>|»)\b
+  - \bcontinue\b
+  - \b[сС]лед\.?\b
+  hints.prev_regexes:
+  - \bprev(ious)?\b
+  - \bback\b
+  - \bolder\b
+  - \b[<←≪]\b
+  - \b(<<|«)\b
+  - \bПред\.?\b
+  tabs.position: left
