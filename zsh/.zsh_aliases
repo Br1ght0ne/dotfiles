@@ -14,6 +14,7 @@ alias r='ranger'
 alias se='sudo emacsclient -a vim -t'
 alias sec='sudo emacsclient -c -a vim'
 alias v='vim'
+alias weechat="env WEECHAT_PASSPHRASE=$(gpg2 --decrypt ~/.password-store/weechat-secure.gpg 2>/dev/null) weechat"
 
 compdef hub=git
 compdef gopass=pass

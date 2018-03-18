@@ -1,10 +1,19 @@
 #!/bin/bash
 
+RET_URL=0
+
+while getopts "u" OPT; do
+	case ${OPT} in
+		u)
+			RET_URL=${OPTARG}
+			;;
+	esac
+done
+shift $((OPTIND-1))
+
 service="$1"
 nick="$2"
 quality="$3"
-
-declare -A qualities=( [144p]=1 [240p]=1 [360p]=1 [480p]=1 [720p]=1 [720p60]=1 [best]=1 )
 
 if [ -n "$service" ]; then
 	case "$service" in
@@ -23,12 +32,7 @@ else
 	host="twitch.tv"
 fi
 
-if [ -n "$quality" ]; then
-	if [ -z "${qualities[$quality]}" ]; then
-		>2 printf "Wrong quality: %s. Setting to best.\n" "$quality"
-		quality="best"
-	fi
-else
+if [ -z "$quality" ]; then
 	quality="best"
 fi
 	
@@ -43,5 +47,12 @@ case "$nick" in
 		;;
 esac
 
-streamlink "$host"/"$nick" "$quality"
+url="$host"/"$nick" 
+
+if [[ ! $RET_URL ]]
+then
+	echo $url
+else
+	streamlink $url "$quality"
+fi
 

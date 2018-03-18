@@ -1,0 +1,48 @@
+#compdef str
+
+_str_qualities() {
+	case $words[2] in
+		twitch | tw)
+			local url=$(str -u $words[2] $words[3])
+			;;
+		youtube | yt)
+			local url="$words[3]"
+			;;
+	esac
+	qualities=$(youtube-dl "$url" -F --no-warnings \
+		| tail +6 \
+		| awk '{printf "%s ", $1}' \
+		| sed 's/__source_//')
+}
+
+_str() {
+	local curcontext="$curcontext" state line
+	typeset -A opt_args
+
+	_arguments \
+		"1: :->service"\
+		"2: :->nick"\
+		"3: :->quality"
+	
+	case $state in
+		service)
+			_arguments "1:service:(twitch youtube)"
+			;;
+		nick)
+			case $words[2] in
+				twitch | tw)
+					_arguments "2:nick:(baumi gog)"
+					;;
+				youtube | yt)
+					_arguments "2:url or id:"
+					;;
+			esac
+			;;
+		quality)
+			_str_qualities
+			_arguments "3:quality:($qualities)"
+			;;
+	esac
+}
+
+_str "$@"

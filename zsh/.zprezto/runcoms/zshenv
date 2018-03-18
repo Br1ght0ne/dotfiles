@@ -29,7 +29,7 @@ export LEDGER_FILE=$HOME/nextcloud/accounting/personal.ledger
 export PATH=$PATH:/home/brightone/.yarn/bin
 
 # Path
-export PATH="$PATH:/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin"
 
 # Rust
 export PATH=$PATH:$HOME/.cargo/bin
