@@ -7,7 +7,7 @@
 **/qutebrowser/bookmarks/*
 
 # IRC
-**/irc.conf
-**/plugins.conf
-**/certs/*.pem
-**/*.weechatlog
+**/.weechat/irc.conf
+**/.weechat/plugins.conf
+**/.weechat/certs/*.pem
+**/.weechat/logs

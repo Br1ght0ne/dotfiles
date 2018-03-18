@@ -1,1 +1,0 @@
-2018-03-18 12:52:46	=!=	Call to API errored in command url:https://matrix.org/_matrix/client/r0/sync?timeout=55000&access_token=[redacted]&full%5Fstate=false&since=s475213570%5F413145827%5F258299%5F107087108%5F44444003%5F257287%5F4917424%5F4937138%5F6579&filter=%7B%7D, maybe timeout?
