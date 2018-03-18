@@ -14,7 +14,7 @@ print_info() {
     info "Model" model
     info "Kernel" kernel
     # info "Uptime" uptime
-    # info "Packages" packages
+    info "Packages" packages
     info "Shell" shell
     # info "Resolution" resolution
     # info "DE" de
