@@ -11,3 +11,4 @@
 **/.weechat/plugins.conf
 **/.weechat/certs/*.pem
 **/.weechat/logs
+**/.weechat/sec.conf
