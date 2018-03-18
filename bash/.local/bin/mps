@@ -9,7 +9,12 @@ if [ -z "$mode" ]; then
 	mode="video"
 fi
 
-if [ "$mode" != "video" ] && [ "$mode" != "audio" ]; then
+first_letter=${mode:0:1}
+if [ "$first_letter" = "v" ]; then
+	mode="video"
+elif [ "$first_letter" = "a" ]; then
+	mode="audio"
+else
 	printf "Wrong mode: %s. Aborting.\n" "$mode"
 	exit 1
 fi

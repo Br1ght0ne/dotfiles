@@ -1,0 +1,47 @@
+#!/bin/bash
+
+service="$1"
+nick="$2"
+quality="$3"
+
+declare -A qualities=( [144p]=1 [240p]=1 [360p]=1 [480p]=1 [720p]=1 [720p60]=1 [best]=1 )
+
+if [ -n "$service" ]; then
+	case "$service" in
+		"tw" | "twitch")
+			host="twitch.tv"
+			;;
+		"yt" | "youtube")
+			host="youtube.com"
+			;;
+		*)
+			>2 printf "Wrong service: %s. Setting to twitch.tv.\n" "$service"
+			host="twitch.tv"
+			;;
+	esac
+else
+	host="twitch.tv"
+fi
+
+if [ -n "$quality" ]; then
+	if [ -z "${qualities[$quality]}" ]; then
+		>2 printf "Wrong quality: %s. Setting to best.\n" "$quality"
+		quality="best"
+	fi
+else
+	quality="best"
+fi
+	
+case "$nick" in
+	"baumi")
+		nick="l34um1"
+		;;
+	"gog")
+		nick="gogcom"
+		;;
+	*)
+		;;
+esac
+
+streamlink "$host"/"$nick" "$quality"
+
