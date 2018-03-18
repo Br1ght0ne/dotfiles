@@ -2,6 +2,10 @@
 # Apps to autostart
 # =========
 
+# Audio
+exec --no-startup-id /bin/pulseaudio -Dk &
+exec --no-startup-id /bin/mpd &
+
 # === Theme ===
 exec --no-startup-id wal -R -t
 exec --no-startup-id feh --bg-fill /home/$(whoami)/wallpaper.png
@@ -15,15 +19,12 @@ exec --no-startup-id /home/$(whoami)/appimages/wire.AppImage &
 # Clipmenu
 exec --no-startup-id /bin/clipit &
 
-# Wicd
-exec --no-startup-id /bin/wicd-client --tray &
+# Network
+exec --no-startup-id /bin/nm-applet &
 
 # Hide mouse after 3 seconds of inactivity
 exec --no-startup-id /bin/unclutter -idle 3 &
 
-# Audio
-# exec --no-startup-id /bin/pulseaudio &
-exec --no-startup-id /bin/mpd &
 
 # Compositor
 exec --no-startup-id /bin/compton -b
@@ -112,6 +113,9 @@ bindcode $mod+Shift+$q              kill
 # Trans
 bindcode $mod+$t                    exec --no-startup-id trans-notify
 
+# Webcam
+bindcode $mod+$o                    exec --no-startup-id /home/$(whoami)/.local/bin/camtoggle
+
 # Screenshots
 bindcode $mod+$i                    exec --no-startup-id /home/$(whoami)/.local/bin/maim.sh
 bindcode $mod+Shift+$i 		    exec --no-startup-id /home/$(whoami)/.local/bin/maim.sh -s
@@ -144,14 +148,14 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% || pactl set-sink-
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # Screensaver
-bindsym XF86Screensaver exec xscreensaver-command -activate
+bindsym XF86Screensaver exec --no-startup-id xscreensaver-command -activate
 
 # Bluetooth
 bindsym $mod+XF86AudioMicMute exec --no-startup-id bluetooth toggle
 
 # Brightness
-bindsym $mod+XF86AudioRaiseVolume exec brightnessctl set 10%+
-bindsym $mod+XF86AudioLowerVolume exec brightnessctl set 10%-
+bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id brightnessctl set 10%+
+bindsym $mod+XF86AudioLowerVolume exec --no-startup-id brightnessctl set 10%-
 
 # Touchpad
 bindsym XF86TouchpadToggle exec --no-startup-id /home/$(whoami)/.local/bin/toggle-touchpad &
@@ -232,7 +236,6 @@ workspace $workspace5 output VGA1
 workspace $workspace6 output VGA1
 workspace $workspace7 output VGA1
 workspace $workspace8 output VGA1
-workspace $workspace9 output LVDS1
 
 bindsym  $mod+Shift+1               move container to workspace $workspace1
 bindsym  $mod+Shift+2               move container to workspace $workspace2
@@ -254,7 +257,6 @@ bindcode $mod+$a                    focus parent
 bindcode $mod+$f                    fullscreen toggle
 bindcode $mod+Shift+$c              reload
 bindcode $mod+Shift+$r              restart
-#bindcode $mod+$m                    exec --no-startup-id i3-msg workspace $workspace7\; 
 bindsym  --whole-window button9     floating toggle
 #bindsym  --whole-window button8     kill
 
@@ -280,6 +282,10 @@ assign     [class="^[tT]ermite" title="ncmpcpp"]              $workspace7
 
 # Floating
 for_window [class="^([sS]t-floating|bitwarden)"]              floating enable
+
+# Webcam window
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
 
 # Gaps
 smart_gaps      on
