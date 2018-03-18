@@ -1,0 +1,783 @@
+2018-03-18 00:04:51		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2018-03-18 00:04:51		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2018-03-18 00:04:51		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2018-03-18 00:04:51		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2018-03-18 00:04:51		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, relay, script, trigger, xfer
+2018-03-18 00:06:22		irc: server twitch added
+2018-03-18 00:07:16		[core]
+2018-03-18 00:07:16		  away     eval     mouse    repeat   version
+2018-03-18 00:07:16		  bar      filter   mute     save     wait   
+2018-03-18 00:07:16		  buffer   help     plugin   secure   window 
+2018-03-18 00:07:16		  color    history  print    set    
+2018-03-18 00:07:16		  command  input    proxy    unset  
+2018-03-18 00:07:16		  cursor   key      quit     upgrade
+2018-03-18 00:07:16		  debug    layout   reload   uptime 
+2018-03-18 00:07:16		[fset]
+2018-03-18 00:07:16		  fset
+2018-03-18 00:07:16		[fifo]
+2018-03-18 00:07:16		  fifo
+2018-03-18 00:07:16		[xfer]
+2018-03-18 00:07:16		  me  xfer
+2018-03-18 00:07:16		[exec]
+2018-03-18 00:07:16		  exec
+2018-03-18 00:07:16		[alias]
+2018-03-18 00:07:16		  AAWAY    C        K        Q        V      
+2018-03-18 00:07:16		  alias    CHAT     KB       REDRAW   W      
+2018-03-18 00:07:16		  AME      CL       LEAVE    SAY      WC     
+2018-03-18 00:07:16		  AMSG     CLOSE    M        SIGNOFF  WI     
+2018-03-18 00:07:16		  ANICK    EXIT     MSGBUF   T        WII    
+2018-03-18 00:07:16		  BEEP     IG       MUB      UB       WW     
+2018-03-18 00:07:16		  BYE      J        N        UMODE  
+2018-03-18 00:07:16		[logger]
+2018-03-18 00:07:16		  logger
+2018-03-18 00:07:16		[script]
+2018-03-18 00:07:16		  script
+2018-03-18 00:07:16		[trigger]
+2018-03-18 00:07:16		  trigger
+2018-03-18 00:07:16		[relay]
+2018-03-18 00:07:16		  relay
+2018-03-18 00:07:17		[buflist]
+2018-03-18 00:07:17		  buflist
+2018-03-18 00:07:17		[irc]
+2018-03-18 00:07:17		  admin       list        sanick    
+2018-03-18 00:07:17		  allchan     lusers      sapart    
+2018-03-18 00:07:17		  allpv       map         saquit    
+2018-03-18 00:07:17		  allserv     me          server    
+2018-03-18 00:07:17		  ban         mode        service   
+2018-03-18 00:07:17		  cap         motd        servlist  
+2018-03-18 00:07:17		  connect     msg         squery    
+2018-03-18 00:07:17		  ctcp        names       squit     
+2018-03-18 00:07:17		  cycle       nick        stats     
+2018-03-18 00:07:17		  dcc         notice      summon    
+2018-03-18 00:07:17		  dehalfop    notify      time      
+2018-03-18 00:07:17		  deop        op          topic     
+2018-03-18 00:07:17		  devoice     oper        trace     
+2018-03-18 00:07:17		  die         part        unban     
+2018-03-18 00:07:17		  disconnect  ping        unquiet   
+2018-03-18 00:07:17		  halfop      pong        userhost  
+2018-03-18 00:07:17		  ignore      query       users     
+2018-03-18 00:07:17		  info        quiet       version   
+2018-03-18 00:07:17		  invite      quote       voice     
+2018-03-18 00:07:17		  ison        reconnect   wallchops 
+2018-03-18 00:07:17		  join        rehash      wallops   
+2018-03-18 00:07:17		  kick        remove      who       
+2018-03-18 00:07:17		  kickban     restart     whois     
+2018-03-18 00:07:17		  kill        sajoin      whowas    
+2018-03-18 00:07:17		  links       samode    
+2018-03-18 00:07:17		[charset]
+2018-03-18 00:07:17		  charset
+2018-03-18 00:07:31		[core]
+2018-03-18 00:07:31		  away     eval     mouse    repeat   version
+2018-03-18 00:07:31		  bar      filter   mute     save     wait   
+2018-03-18 00:07:31		  buffer   help     plugin   secure   window 
+2018-03-18 00:07:31		  color    history  print    set    
+2018-03-18 00:07:31		  command  input    proxy    unset  
+2018-03-18 00:07:31		  cursor   key      quit     upgrade
+2018-03-18 00:07:31		  debug    layout   reload   uptime 
+2018-03-18 00:07:31		[fset]
+2018-03-18 00:07:31		  fset
+2018-03-18 00:07:31		[fifo]
+2018-03-18 00:07:31		  fifo
+2018-03-18 00:07:31		[xfer]
+2018-03-18 00:07:31		  me  xfer
+2018-03-18 00:07:31		[exec]
+2018-03-18 00:07:31		  exec
+2018-03-18 00:07:31		[alias]
+2018-03-18 00:07:31		  AAWAY    C        K        Q        V      
+2018-03-18 00:07:31		  alias    CHAT     KB       REDRAW   W      
+2018-03-18 00:07:31		  AME      CL       LEAVE    SAY      WC     
+2018-03-18 00:07:31		  AMSG     CLOSE    M        SIGNOFF  WI     
+2018-03-18 00:07:31		  ANICK    EXIT     MSGBUF   T        WII    
+2018-03-18 00:07:31		  BEEP     IG       MUB      UB       WW     
+2018-03-18 00:07:31		  BYE      J        N        UMODE  
+2018-03-18 00:07:31		[logger]
+2018-03-18 00:07:31		  logger
+2018-03-18 00:07:31		[script]
+2018-03-18 00:07:31		  script
+2018-03-18 00:07:31		[trigger]
+2018-03-18 00:07:31		  trigger
+2018-03-18 00:07:31		[relay]
+2018-03-18 00:07:31		  relay
+2018-03-18 00:07:31		[buflist]
+2018-03-18 00:07:31		  buflist
+2018-03-18 00:07:31		[irc]
+2018-03-18 00:07:31		  admin       list        sanick    
+2018-03-18 00:07:31		  allchan     lusers      sapart    
+2018-03-18 00:07:31		  allpv       map         saquit    
+2018-03-18 00:07:31		  allserv     me          server    
+2018-03-18 00:07:31		  ban         mode        service   
+2018-03-18 00:07:31		  cap         motd        servlist  
+2018-03-18 00:07:31		  connect     msg         squery    
+2018-03-18 00:07:31		  ctcp        names       squit     
+2018-03-18 00:07:31		  cycle       nick        stats     
+2018-03-18 00:07:31		  dcc         notice      summon    
+2018-03-18 00:07:31		  dehalfop    notify      time      
+2018-03-18 00:07:31		  deop        op          topic     
+2018-03-18 00:07:31		  devoice     oper        trace     
+2018-03-18 00:07:31		  die         part        unban     
+2018-03-18 00:07:31		  disconnect  ping        unquiet   
+2018-03-18 00:07:31		  halfop      pong        userhost  
+2018-03-18 00:07:31		  ignore      query       users     
+2018-03-18 00:07:31		  info        quiet       version   
+2018-03-18 00:07:31		  invite      quote       voice     
+2018-03-18 00:07:31		  ison        reconnect   wallchops 
+2018-03-18 00:07:31		  join        rehash      wallops   
+2018-03-18 00:07:31		  kick        remove      who       
+2018-03-18 00:07:31		  kickban     restart     whois     
+2018-03-18 00:07:31		  kill        sajoin      whowas    
+2018-03-18 00:07:31		  links       samode    
+2018-03-18 00:07:31		[charset]
+2018-03-18 00:07:31		  charset
+2018-03-18 00:08:14		[core]  /key  list|listdefault|listdiff [<context>]
+2018-03-18 00:08:14		              bind <key> [<command> [<args>]]
+2018-03-18 00:08:14		              bindctxt <context> <key> [<command> [<args>]]
+2018-03-18 00:08:14		              unbind <key>
+2018-03-18 00:08:14		              unbindctxt <context> <key>
+2018-03-18 00:08:14		              reset <key>
+2018-03-18 00:08:14		              resetctxt <context> <key>
+2018-03-18 00:08:14		              resetall -yes [<context>]
+2018-03-18 00:08:14		              missing [<context>]
+2018-03-18 00:08:14		bind/unbind keys
+2018-03-18 00:08:14		       list: list all current keys (without argument, this list is displayed)
+2018-03-18 00:08:14		listdefault: list default keys
+2018-03-18 00:08:14		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2018-03-18 00:08:14		    context: name of context ("default" or "search")
+2018-03-18 00:08:14		       bind: bind a command to a key or display command bound to key (for context "default")
+2018-03-18 00:08:14		   bindctxt: bind a command to a key or display command bound to key, for given context
+2018-03-18 00:08:14		    command: command (many commands can be separated by semicolons)
+2018-03-18 00:08:14		     unbind: remove a key binding (for context "default")
+2018-03-18 00:08:14		 unbindctxt: remove a key binding for given context
+2018-03-18 00:08:14		      reset: reset a key to default binding (for context "default")
+2018-03-18 00:08:14		  resetctxt: reset a key to default binding, for given context
+2018-03-18 00:08:14		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2018-03-18 00:08:14		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2018-03-18 00:08:14		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2018-03-18 00:08:14		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2018-03-18 00:08:14		          *: any area on screen
+2018-03-18 00:08:14		       chat: chat area (any buffer)
+2018-03-18 00:08:14		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2018-03-18 00:08:14		     bar(*): any bar
+2018-03-18 00:08:14		   bar(xxx): bar "xxx"
+2018-03-18 00:08:14		    item(*): any bar item
+2018-03-18 00:08:14		  item(xxx): bar item "xxx"
+2018-03-18 00:08:14		Wildcard "*" is allowed in key to match many mouse events.
+2018-03-18 00:08:14		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2018-03-18 00:08:14		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2018-03-18 00:08:14		Examples:
+2018-03-18 00:08:14		  key alt-t to toggle nicklist bar:
+2018-03-18 00:08:14		    /key bind meta-t /bar toggle nicklist
+2018-03-18 00:08:14		  key alt-r to jump to #weechat IRC channel:
+2018-03-18 00:08:14		    /key bind meta-r /buffer #weechat
+2018-03-18 00:08:14		  restore default binding for key alt-r:
+2018-03-18 00:08:14		    /key reset meta-r
+2018-03-18 00:08:14		  key "tab" to stop search in buffer:
+2018-03-18 00:08:14		    /key bindctxt search ctrl-I /input search_stop
+2018-03-18 00:08:14		  middle button of mouse on a nick to retrieve info on nick:
+2018-03-18 00:08:14		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2018-03-18 00:11:27		[irc]  /server  list|listfull [<server>]
+2018-03-18 00:11:27		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2018-03-18 00:11:27		                copy|rename <server> <new_name>
+2018-03-18 00:11:27		                reorder <server> [<server>...]
+2018-03-18 00:11:27		                open <server>|-all [<server>...]
+2018-03-18 00:11:27		                del|keep <server>
+2018-03-18 00:11:27		                deloutq|jump|raw
+2018-03-18 00:11:27		list, add or remove IRC servers
+2018-03-18 00:11:27		    list: list servers (without argument, this list is displayed)
+2018-03-18 00:11:27		listfull: list servers with detailed info for each server
+2018-03-18 00:11:27		     add: add a new server
+2018-03-18 00:11:27		  server: server name, for internal and display use
+2018-03-18 00:11:27		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2018-03-18 00:11:27		   -temp: add a temporary server (not saved)
+2018-03-18 00:11:27		  option: set option for server (for boolean option, value can be omitted)
+2018-03-18 00:11:27		nooption: set boolean option to 'off' (for example: -nossl)
+2018-03-18 00:11:27		    copy: duplicate a server
+2018-03-18 00:11:27		  rename: rename a server
+2018-03-18 00:11:27		 reorder: reorder list of servers
+2018-03-18 00:11:27		    open: open the server buffer without connecting
+2018-03-18 00:11:27		    keep: keep server in config file (for temporary servers only)
+2018-03-18 00:11:27		     del: delete a server
+2018-03-18 00:11:27		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2018-03-18 00:11:27		    jump: jump to server buffer
+2018-03-18 00:11:27		     raw: open buffer with raw IRC data
+2018-03-18 00:11:27		Examples:
+2018-03-18 00:11:27		  /server listfull
+2018-03-18 00:11:27		  /server add freenode chat.freenode.net
+2018-03-18 00:11:27		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2018-03-18 00:11:27		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2018-03-18 00:11:27		  /server copy freenode freenode-test
+2018-03-18 00:11:27		  /server rename freenode-test freenode2
+2018-03-18 00:11:27		  /server reorder freenode2 freenode
+2018-03-18 00:11:27		  /server del freenode
+2018-03-18 00:11:27		  /server deloutq
+2018-03-18 00:11:41		[core]
+2018-03-18 00:11:41		  away     eval     mouse    repeat   version
+2018-03-18 00:11:41		  bar      filter   mute     save     wait   
+2018-03-18 00:11:41		  buffer   help     plugin   secure   window 
+2018-03-18 00:11:41		  color    history  print    set    
+2018-03-18 00:11:41		  command  input    proxy    unset  
+2018-03-18 00:11:41		  cursor   key      quit     upgrade
+2018-03-18 00:11:41		  debug    layout   reload   uptime 
+2018-03-18 00:11:41		[fset]
+2018-03-18 00:11:41		  fset
+2018-03-18 00:11:41		[fifo]
+2018-03-18 00:11:41		  fifo
+2018-03-18 00:11:41		[xfer]
+2018-03-18 00:11:41		  me  xfer
+2018-03-18 00:11:41		[exec]
+2018-03-18 00:11:41		  exec
+2018-03-18 00:11:41		[alias]
+2018-03-18 00:11:41		  AAWAY    C        K        Q        V      
+2018-03-18 00:11:41		  alias    CHAT     KB       REDRAW   W      
+2018-03-18 00:11:41		  AME      CL       LEAVE    SAY      WC     
+2018-03-18 00:11:41		  AMSG     CLOSE    M        SIGNOFF  WI     
+2018-03-18 00:11:41		  ANICK    EXIT     MSGBUF   T        WII    
+2018-03-18 00:11:41		  BEEP     IG       MUB      UB       WW     
+2018-03-18 00:11:41		  BYE      J        N        UMODE  
+2018-03-18 00:11:41		[logger]
+2018-03-18 00:11:41		  logger
+2018-03-18 00:11:41		[script]
+2018-03-18 00:11:41		  script
+2018-03-18 00:11:41		[trigger]
+2018-03-18 00:11:41		  trigger
+2018-03-18 00:11:41		[relay]
+2018-03-18 00:11:41		  relay
+2018-03-18 00:11:41		[buflist]
+2018-03-18 00:11:41		  buflist
+2018-03-18 00:11:41		[irc]
+2018-03-18 00:11:41		  admin       list        sanick    
+2018-03-18 00:11:41		  allchan     lusers      sapart    
+2018-03-18 00:11:41		  allpv       map         saquit    
+2018-03-18 00:11:41		  allserv     me          server    
+2018-03-18 00:11:41		  ban         mode        service   
+2018-03-18 00:11:41		  cap         motd        servlist  
+2018-03-18 00:11:41		  connect     msg         squery    
+2018-03-18 00:11:41		  ctcp        names       squit     
+2018-03-18 00:11:41		  cycle       nick        stats     
+2018-03-18 00:11:41		  dcc         notice      summon    
+2018-03-18 00:11:41		  dehalfop    notify      time      
+2018-03-18 00:11:41		  deop        op          topic     
+2018-03-18 00:11:41		  devoice     oper        trace     
+2018-03-18 00:11:41		  die         part        unban     
+2018-03-18 00:11:41		  disconnect  ping        unquiet   
+2018-03-18 00:11:41		  halfop      pong        userhost  
+2018-03-18 00:11:41		  ignore      query       users     
+2018-03-18 00:11:41		  info        quiet       version   
+2018-03-18 00:11:41		  invite      quote       voice     
+2018-03-18 00:11:41		  ison        reconnect   wallchops 
+2018-03-18 00:11:41		  join        rehash      wallops   
+2018-03-18 00:11:41		  kick        remove      who       
+2018-03-18 00:11:41		  kickban     restart     whois     
+2018-03-18 00:11:41		  kill        sajoin      whowas    
+2018-03-18 00:11:41		  links       samode    
+2018-03-18 00:11:41		[charset]
+2018-03-18 00:11:41		  charset
+2018-03-18 00:11:43		All servers:
+2018-03-18 00:11:43		 * twitch [connected], 1 channel, 0 pv
+2018-03-18 00:11:58		[irc]  /server  list|listfull [<server>]
+2018-03-18 00:11:58		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2018-03-18 00:11:58		                copy|rename <server> <new_name>
+2018-03-18 00:11:58		                reorder <server> [<server>...]
+2018-03-18 00:11:58		                open <server>|-all [<server>...]
+2018-03-18 00:11:58		                del|keep <server>
+2018-03-18 00:11:58		                deloutq|jump|raw
+2018-03-18 00:11:58		list, add or remove IRC servers
+2018-03-18 00:11:58		    list: list servers (without argument, this list is displayed)
+2018-03-18 00:11:58		listfull: list servers with detailed info for each server
+2018-03-18 00:11:58		     add: add a new server
+2018-03-18 00:11:58		  server: server name, for internal and display use
+2018-03-18 00:11:58		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2018-03-18 00:11:58		   -temp: add a temporary server (not saved)
+2018-03-18 00:11:58		  option: set option for server (for boolean option, value can be omitted)
+2018-03-18 00:11:58		nooption: set boolean option to 'off' (for example: -nossl)
+2018-03-18 00:11:58		    copy: duplicate a server
+2018-03-18 00:11:58		  rename: rename a server
+2018-03-18 00:11:58		 reorder: reorder list of servers
+2018-03-18 00:11:58		    open: open the server buffer without connecting
+2018-03-18 00:11:58		    keep: keep server in config file (for temporary servers only)
+2018-03-18 00:11:58		     del: delete a server
+2018-03-18 00:11:58		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2018-03-18 00:11:58		    jump: jump to server buffer
+2018-03-18 00:11:58		     raw: open buffer with raw IRC data
+2018-03-18 00:11:58		Examples:
+2018-03-18 00:11:58		  /server listfull
+2018-03-18 00:11:58		  /server add freenode chat.freenode.net
+2018-03-18 00:11:58		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2018-03-18 00:11:58		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2018-03-18 00:11:58		  /server copy freenode freenode-test
+2018-03-18 00:11:58		  /server rename freenode-test freenode2
+2018-03-18 00:11:58		  /server reorder freenode2 freenode
+2018-03-18 00:11:58		  /server del freenode
+2018-03-18 00:11:58		  /server deloutq
+2018-03-18 00:12:17	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2018-03-18 00:12:22	=!=	irc: you can not delete server "twitch" because you are connected to. Try "/disconnect twitch" before.
+2018-03-18 00:12:34		irc: server twitch has been deleted
+2018-03-18 00:13:42		irc: server twitch added
+2018-03-18 00:29:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, relay, script, trigger, xfer
+2018-03-18 00:30:45		Filter "irc_smart" added:
+2018-03-18 00:30:45		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2018-03-18 00:44:14		script: downloading list of scripts...
+2018-03-18 00:44:15		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 00:44:15		script: script "iset.pl" can not be installed because plugin "perl" is not loaded
+2018-03-18 00:44:36	=!=	Error: unknown command "/weeget" (type /help for help)
+2018-03-18 00:44:50		script: script "perl" not found
+2018-03-18 00:44:56		script: script "iset.pl" can not be installed because plugin "perl" is not loaded
+2018-03-18 00:45:46		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 00:45:46		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 00:46:05	=!=	Error: unknown command "/iser" (type /help for help)
+2018-03-18 00:46:15		perl: loading script "/home/brightone/.weechat/perl/iset.pl"
+2018-03-18 00:46:15		perl: registered script "iset", version 4.3 (Interactive Set for configuration options)
+2018-03-18 00:46:15		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2018-03-18 00:46:15		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2018-03-18 00:46:15		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2018-03-18 00:46:15		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2018-03-18 00:49:27		Option changed: irc.server.twitch.autoconnect = on  (default if null: off)
+2018-03-18 00:50:09		Option changed: irc.server.twitch.autojoin = "#gogcom,#l34um1"  (default if null: "")
+2018-03-18 00:51:53	=!=	Error: unknown command "/dc" (type /help for help)
+2018-03-18 00:52:08		perl scripts loaded: iset
+2018-03-18 00:52:08		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 00:52:08		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 00:57:02		perl scripts loaded: iset
+2018-03-18 00:57:02		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 00:57:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 00:58:50		Options saved to sec.conf
+2018-03-18 00:58:50		Options saved to weechat.conf
+2018-03-18 00:58:50		Options saved to plugins.conf
+2018-03-18 00:58:50		Options saved to charset.conf
+2018-03-18 00:58:50		Options saved to logger.conf
+2018-03-18 00:58:50		Options saved to exec.conf
+2018-03-18 00:58:50		Options saved to trigger.conf
+2018-03-18 00:58:50		Options saved to alias.conf
+2018-03-18 00:58:50		Options saved to buflist.conf
+2018-03-18 00:58:50		Options saved to fifo.conf
+2018-03-18 00:58:50		Options saved to xfer.conf
+2018-03-18 00:58:50		Options saved to irc.conf
+2018-03-18 00:58:50		Options saved to relay.conf
+2018-03-18 00:58:50		Options saved to iset.conf
+2018-03-18 00:58:50		Options saved to script.conf
+2018-03-18 00:58:50		Options saved to fset.conf
+2018-03-18 00:59:25		All servers:
+2018-03-18 00:59:25		 * twitch [connected], 2 channels, 0 pv
+2018-03-18 01:13:41	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2018-03-18 01:13:41	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2018-03-18 01:13:54		All servers:
+2018-03-18 01:13:54		 * twitch [connected], 2 channels, 0 pv
+2018-03-18 01:14:54		irc: server chat.freenode.net/6697 added
+2018-03-18 01:15:07	=!=	irc: server "chat.freenode.net/6697" already exists, can't add it!
+2018-03-18 01:15:15		irc: server chat.freenode.net/6697 has been deleted
+2018-03-18 01:15:19		irc: server chat.freenode.net/6697 added
+2018-03-18 01:15:23		irc: server chat.freenode.net/6697 has been deleted
+2018-03-18 01:15:25	=!=	irc: server "chat.freenode.net/6697" not found for "server del" command
+2018-03-18 01:15:32		irc: server chat.freenode.net/6697 added
+2018-03-18 01:16:04		perl scripts loaded: iset
+2018-03-18 01:16:04		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 01:16:04		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 01:16:16		irc: server chat.freenode.net/6697 has been deleted
+2018-03-18 01:16:45		irc: server freenode added
+2018-03-18 01:28:26	=!=	Error: unknown command "/dc" (type /help for help)
+2018-03-18 01:43:33		perl scripts loaded: iset
+2018-03-18 01:43:33		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 01:43:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 01:44:43		perl scripts loaded: iset
+2018-03-18 01:44:43		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 01:44:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 01:45:50		Option changed: weechat.look.buffer_time_format = "“%H:%M:%S”"  (default: "%H:%M:%S")
+2018-03-18 01:46:13	=!=	Error: failed to set option "weechat.look.separator_horizontal"
+2018-03-18 01:46:41		Option changed: weechat.bar.nicklist.hidden = on  (default: off)
+2018-03-18 02:04:40	=!=	Error: unknown command "/qyut" (type /help for help)
+2018-03-18 02:04:50	=!=	Too few arguments for command "/query" (help on command: /help query)
+2018-03-18 10:55:28		perl scripts loaded: iset
+2018-03-18 10:55:28		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 10:55:28		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 10:55:39	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2018-03-18 10:55:42		[irc]  /server  list|listfull [<server>]
+2018-03-18 10:55:42		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2018-03-18 10:55:42		                copy|rename <server> <new_name>
+2018-03-18 10:55:42		                reorder <server> [<server>...]
+2018-03-18 10:55:42		                open <server>|-all [<server>...]
+2018-03-18 10:55:42		                del|keep <server>
+2018-03-18 10:55:42		                deloutq|jump|raw
+2018-03-18 10:55:42		list, add or remove IRC servers
+2018-03-18 10:55:42		    list: list servers (without argument, this list is displayed)
+2018-03-18 10:55:42		listfull: list servers with detailed info for each server
+2018-03-18 10:55:42		     add: add a new server
+2018-03-18 10:55:42		  server: server name, for internal and display use
+2018-03-18 10:55:42		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2018-03-18 10:55:42		   -temp: add a temporary server (not saved)
+2018-03-18 10:55:42		  option: set option for server (for boolean option, value can be omitted)
+2018-03-18 10:55:42		nooption: set boolean option to 'off' (for example: -nossl)
+2018-03-18 10:55:42		    copy: duplicate a server
+2018-03-18 10:55:42		  rename: rename a server
+2018-03-18 10:55:42		 reorder: reorder list of servers
+2018-03-18 10:55:42		    open: open the server buffer without connecting
+2018-03-18 10:55:42		    keep: keep server in config file (for temporary servers only)
+2018-03-18 10:55:42		     del: delete a server
+2018-03-18 10:55:42		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2018-03-18 10:55:42		    jump: jump to server buffer
+2018-03-18 10:55:42		     raw: open buffer with raw IRC data
+2018-03-18 10:55:42		Examples:
+2018-03-18 10:55:42		  /server listfull
+2018-03-18 10:55:42		  /server add freenode chat.freenode.net
+2018-03-18 10:55:42		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2018-03-18 10:55:42		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2018-03-18 10:55:42		  /server copy freenode freenode-test
+2018-03-18 10:55:42		  /server rename freenode-test freenode2
+2018-03-18 10:55:42		  /server reorder freenode2 freenode
+2018-03-18 10:55:42		  /server del freenode
+2018-03-18 10:55:42		  /server deloutq
+2018-03-18 10:56:13		irc: server snoonet added
+2018-03-18 10:58:58		All servers:
+2018-03-18 10:58:58		 * twitch [connected], 2 channels, 0 pv
+2018-03-18 10:58:58		   freenode
+2018-03-18 10:58:58		 * snoonet [connected], 0 channels, 0 pv
+2018-03-18 10:59:03		[irc]  /server  list|listfull [<server>]
+2018-03-18 10:59:03		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2018-03-18 10:59:03		                copy|rename <server> <new_name>
+2018-03-18 10:59:03		                reorder <server> [<server>...]
+2018-03-18 10:59:03		                open <server>|-all [<server>...]
+2018-03-18 10:59:03		                del|keep <server>
+2018-03-18 10:59:03		                deloutq|jump|raw
+2018-03-18 10:59:03		list, add or remove IRC servers
+2018-03-18 10:59:03		    list: list servers (without argument, this list is displayed)
+2018-03-18 10:59:03		listfull: list servers with detailed info for each server
+2018-03-18 10:59:03		     add: add a new server
+2018-03-18 10:59:03		  server: server name, for internal and display use
+2018-03-18 10:59:03		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2018-03-18 10:59:03		   -temp: add a temporary server (not saved)
+2018-03-18 10:59:03		  option: set option for server (for boolean option, value can be omitted)
+2018-03-18 10:59:03		nooption: set boolean option to 'off' (for example: -nossl)
+2018-03-18 10:59:03		    copy: duplicate a server
+2018-03-18 10:59:03		  rename: rename a server
+2018-03-18 10:59:03		 reorder: reorder list of servers
+2018-03-18 10:59:03		    open: open the server buffer without connecting
+2018-03-18 10:59:03		    keep: keep server in config file (for temporary servers only)
+2018-03-18 10:59:03		     del: delete a server
+2018-03-18 10:59:03		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2018-03-18 10:59:03		    jump: jump to server buffer
+2018-03-18 10:59:03		     raw: open buffer with raw IRC data
+2018-03-18 10:59:03		Examples:
+2018-03-18 10:59:03		  /server listfull
+2018-03-18 10:59:03		  /server add freenode chat.freenode.net
+2018-03-18 10:59:03		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2018-03-18 10:59:03		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2018-03-18 10:59:03		  /server copy freenode freenode-test
+2018-03-18 10:59:03		  /server rename freenode-test freenode2
+2018-03-18 10:59:03		  /server reorder freenode2 freenode
+2018-03-18 10:59:03		  /server del freenode
+2018-03-18 10:59:03		  /server deloutq
+2018-03-18 10:59:10		All servers:
+2018-03-18 10:59:10		Server: twitch [connected]
+2018-03-18 10:59:10		  addresses. . . . . . : 'irc.chat.twitch.tv/6667'
+2018-03-18 10:59:10		  proxy. . . . . . . . :   ('')
+2018-03-18 10:59:10		  ipv6 . . . . . . . . :   (on)
+2018-03-18 10:59:10		  ssl. . . . . . . . . :   (off)
+2018-03-18 10:59:10		  ssl_cert . . . . . . :   ('')
+2018-03-18 10:59:10		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2018-03-18 10:59:10		  ssl_dhkey_size . . . :   (2048)
+2018-03-18 10:59:10		  ssl_fingerprint. . . :   ('')
+2018-03-18 10:59:10		  ssl_verify . . . . . :   (on)
+2018-03-18 10:59:10		  password . . . . . . : (hidden)
+2018-03-18 10:59:10		  capabilities . . . . :   ('')
+2018-03-18 10:59:10		  sasl_mechanism . . . :   ('plain')
+2018-03-18 10:59:10		  sasl_username. . . . :   ('')
+2018-03-18 10:59:10		  sasl_password. . . . :   (hidden)
+2018-03-18 10:59:10		  sasl_key. .  . . . . :   ('')
+2018-03-18 10:59:10		  sasl_timeout . . . . :   (15 seconds)
+2018-03-18 10:59:10		  sasl_fail. . . . . . :   ('continue')
+2018-03-18 10:59:10		  autoconnect. . . . . : on
+2018-03-18 10:59:10		  autoreconnect. . . . :   (on)
+2018-03-18 10:59:10		  autoreconnect_delay. :   (10 seconds)
+2018-03-18 10:59:10		  nicks. . . . . . . . : 'brightone_'
+2018-03-18 10:59:10		  nicks_alternate. . . :   (on)
+2018-03-18 10:59:10		  username . . . . . . : 'brightone_'
+2018-03-18 10:59:10		  realname . . . . . . :   ('')
+2018-03-18 10:59:10		  local_hostname . . . :   ('')
+2018-03-18 10:59:10		  usermode . . . . . . :   ('')
+2018-03-18 10:59:10		  command. . . . . . . :   ('')
+2018-03-18 10:59:10		  command_delay. . . . :   (0 seconds)
+2018-03-18 10:59:10		  autojoin . . . . . . : '#gogcom,#l34um1'
+2018-03-18 10:59:10		  autorejoin . . . . . :   (off)
+2018-03-18 10:59:10		  autorejoin_delay . . :   (30 seconds)
+2018-03-18 10:59:10		  connection_timeout . :   (60 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_high :   (2 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_low. :   (2 seconds)
+2018-03-18 10:59:10		  away_check . . . . . :   (0 minutes)
+2018-03-18 10:59:10		  away_check_max_nicks :   (25)
+2018-03-18 10:59:10		  msg_kick . . . . . . :   ('')
+2018-03-18 10:59:10		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  notify . . . . . . . :   ('')
+2018-03-18 10:59:10		Server: freenode [not connected]
+2018-03-18 10:59:10		  addresses. . . . . . : 'chat.freenode.net/6697'
+2018-03-18 10:59:10		  proxy. . . . . . . . :   ('')
+2018-03-18 10:59:10		  ipv6 . . . . . . . . :   (on)
+2018-03-18 10:59:10		  ssl. . . . . . . . . : on
+2018-03-18 10:59:10		  ssl_cert . . . . . . :   ('')
+2018-03-18 10:59:10		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2018-03-18 10:59:10		  ssl_dhkey_size . . . :   (2048)
+2018-03-18 10:59:10		  ssl_fingerprint. . . :   ('')
+2018-03-18 10:59:10		  ssl_verify . . . . . :   (on)
+2018-03-18 10:59:10		  password . . . . . . :   (hidden)
+2018-03-18 10:59:10		  capabilities . . . . :   ('')
+2018-03-18 10:59:10		  sasl_mechanism . . . :   ('plain')
+2018-03-18 10:59:10		  sasl_username. . . . :   ('')
+2018-03-18 10:59:10		  sasl_password. . . . :   (hidden)
+2018-03-18 10:59:10		  sasl_key. .  . . . . :   ('')
+2018-03-18 10:59:10		  sasl_timeout . . . . :   (15 seconds)
+2018-03-18 10:59:10		  sasl_fail. . . . . . :   ('continue')
+2018-03-18 10:59:10		  autoconnect. . . . . :   (off)
+2018-03-18 10:59:10		  autoreconnect. . . . :   (on)
+2018-03-18 10:59:10		  autoreconnect_delay. :   (10 seconds)
+2018-03-18 10:59:10		  nicks. . . . . . . . :   ('brightone,brightone1,brightone2,brightone3,brightone4')
+2018-03-18 10:59:10		  nicks_alternate. . . :   (on)
+2018-03-18 10:59:10		  username . . . . . . :   ('brightone')
+2018-03-18 10:59:10		  realname . . . . . . :   ('')
+2018-03-18 10:59:10		  local_hostname . . . :   ('')
+2018-03-18 10:59:10		  usermode . . . . . . :   ('')
+2018-03-18 10:59:10		  command. . . . . . . :   ('')
+2018-03-18 10:59:10		  command_delay. . . . :   (0 seconds)
+2018-03-18 10:59:10		  autojoin . . . . . . :   ('')
+2018-03-18 10:59:10		  autorejoin . . . . . :   (off)
+2018-03-18 10:59:10		  autorejoin_delay . . :   (30 seconds)
+2018-03-18 10:59:10		  connection_timeout . :   (60 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_high :   (2 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_low. :   (2 seconds)
+2018-03-18 10:59:10		  away_check . . . . . :   (0 minutes)
+2018-03-18 10:59:10		  away_check_max_nicks :   (25)
+2018-03-18 10:59:10		  msg_kick . . . . . . :   ('')
+2018-03-18 10:59:10		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  notify . . . . . . . :   ('')
+2018-03-18 10:59:10		Server: snoonet [connected]
+2018-03-18 10:59:10		  addresses. . . . . . : 'irc.snoonet.org/6697'
+2018-03-18 10:59:10		  proxy. . . . . . . . :   ('')
+2018-03-18 10:59:10		  ipv6 . . . . . . . . :   (on)
+2018-03-18 10:59:10		  ssl. . . . . . . . . : on
+2018-03-18 10:59:10		  ssl_cert . . . . . . :   ('')
+2018-03-18 10:59:10		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2018-03-18 10:59:10		  ssl_dhkey_size . . . :   (2048)
+2018-03-18 10:59:10		  ssl_fingerprint. . . :   ('')
+2018-03-18 10:59:10		  ssl_verify . . . . . :   (on)
+2018-03-18 10:59:10		  password . . . . . . :   (hidden)
+2018-03-18 10:59:10		  capabilities . . . . :   ('')
+2018-03-18 10:59:10		  sasl_mechanism . . . :   ('plain')
+2018-03-18 10:59:10		  sasl_username. . . . :   ('')
+2018-03-18 10:59:10		  sasl_password. . . . :   (hidden)
+2018-03-18 10:59:10		  sasl_key. .  . . . . :   ('')
+2018-03-18 10:59:10		  sasl_timeout . . . . :   (15 seconds)
+2018-03-18 10:59:10		  sasl_fail. . . . . . :   ('continue')
+2018-03-18 10:59:10		  autoconnect. . . . . :   (off)
+2018-03-18 10:59:10		  autoreconnect. . . . :   (on)
+2018-03-18 10:59:10		  autoreconnect_delay. :   (10 seconds)
+2018-03-18 10:59:10		  nicks. . . . . . . . :   ('brightone,brightone1,brightone2,brightone3,brightone4')
+2018-03-18 10:59:10		  nicks_alternate. . . :   (on)
+2018-03-18 10:59:10		  username . . . . . . :   ('brightone')
+2018-03-18 10:59:10		  realname . . . . . . :   ('')
+2018-03-18 10:59:10		  local_hostname . . . :   ('')
+2018-03-18 10:59:10		  usermode . . . . . . :   ('')
+2018-03-18 10:59:10		  command. . . . . . . :   ('')
+2018-03-18 10:59:10		  command_delay. . . . :   (0 seconds)
+2018-03-18 10:59:10		  autojoin . . . . . . :   ('')
+2018-03-18 10:59:10		  autorejoin . . . . . :   (off)
+2018-03-18 10:59:10		  autorejoin_delay . . :   (30 seconds)
+2018-03-18 10:59:10		  connection_timeout . :   (60 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_high :   (2 seconds)
+2018-03-18 10:59:10		  anti_flood_prio_low. :   (2 seconds)
+2018-03-18 10:59:10		  away_check . . . . . :   (0 minutes)
+2018-03-18 10:59:10		  away_check_max_nicks :   (25)
+2018-03-18 10:59:10		  msg_kick . . . . . . :   ('')
+2018-03-18 10:59:10		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2018-03-18 10:59:10		  notify . . . . . . . :   ('')
+2018-03-18 11:00:28	=!=	Error: unknown command "/msh" (type /help for help)
+2018-03-18 11:03:44		irc: server freenode has been deleted
+2018-03-18 11:04:52		irc: server freenode added
+2018-03-18 11:05:14		irc: server freenode has been deleted
+2018-03-18 11:05:34	=!=	Error: option "irc.server.freenode.addresses" not found
+2018-03-18 11:05:45		irc: server freenode added
+2018-03-18 11:05:55		Option changed: irc.server.freenode.ssl = on  (default if null: off)
+2018-03-18 11:06:02		Option changed: irc.server.freenode.ssl_verify = on  (default if null: on)
+2018-03-18 11:06:13		Option changed: irc.server.freenode.ssl_cert = "%h/certs/freenode.pem"  (default if null: "")
+2018-03-18 11:06:22		Option changed: irc.server.freenode.sasl_mechanism = external  (default if null: plain)
+2018-03-18 11:10:52		Option changed: irc.server.freenode.autojoin = "#qutebrowser"  (default if null: "")
+2018-03-18 11:10:58	=!=	Too few arguments for command "/dcc" (help on command: /help dcc)
+2018-03-18 11:11:01		[irc]  /dcc  chat <nick>
+2018-03-18 11:11:01		             send <nick> <file>
+2018-03-18 11:11:01		start a DCC (file transfer or direct chat)
+2018-03-18 11:11:01		nick: nick
+2018-03-18 11:11:01		file: filename (on local host)
+2018-03-18 11:11:01		Examples:
+2018-03-18 11:11:01		  chat with nick "toto":
+2018-03-18 11:11:01		    /dcc chat toto
+2018-03-18 11:11:01		  send file "/home/foo/bar.txt" to nick "toto":
+2018-03-18 11:11:01		    /dcc send toto /home/foo/bar.txt
+2018-03-18 11:11:08	=!=	Error: unknown command "/d" (type /help for help)
+2018-03-18 11:11:15		perl scripts loaded: iset
+2018-03-18 11:11:15		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:11:15		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 11:11:28		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2018-03-18 11:11:35		perl scripts loaded: iset
+2018-03-18 11:11:35		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:11:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, relay, script, trigger, xfer
+2018-03-18 11:12:08		List of bars:
+2018-03-18 11:12:08		  input: window, bottom, height: 1
+2018-03-18 11:12:08		  title: window, top, height: 1
+2018-03-18 11:12:08		  status: window, bottom, height: 1
+2018-03-18 11:12:08		  nicklist: (hidden) window, right, width: auto
+2018-03-18 11:12:08		  isetbar: (hidden) window, top, height: 3
+2018-03-18 11:12:08		  fset: window, top, height: 3
+2018-03-18 11:12:08		  buflist: root, left, width: auto
+2018-03-18 11:12:19		[core]  /bar  list|listfull|listitems
+2018-03-18 11:12:19		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2018-03-18 11:12:19		              default [input|title|status|nicklist]
+2018-03-18 11:12:19		              del <name>|-all
+2018-03-18 11:12:19		              set <name> <option> <value>
+2018-03-18 11:12:19		              hide|show|toggle <name>
+2018-03-18 11:12:19		              scroll <name> <window> <scroll_value>
+2018-03-18 11:12:19		manage bars
+2018-03-18 11:12:19		         list: list all bars
+2018-03-18 11:12:19		     listfull: list all bars (verbose)
+2018-03-18 11:12:19		    listitems: list all bar items
+2018-03-18 11:12:19		          add: add a new bar
+2018-03-18 11:12:19		         name: name of bar (must be unique)
+2018-03-18 11:12:19		         type:   root: outside windows,
+2018-03-18 11:12:19		               window: inside windows, with optional conditions (see below)
+2018-03-18 11:12:19		   conditions: the conditions to display the bar:
+2018-03-18 11:12:19		                 active: on active window
+2018-03-18 11:12:19		               inactive: on inactive windows
+2018-03-18 11:12:19		               nicklist: on windows with nicklist
+2018-03-18 11:12:19		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2018-03-18 11:12:19		               without conditions, the bar is always displayed
+2018-03-18 11:12:19		     position: bottom, top, left or right
+2018-03-18 11:12:19		         size: size of bar (in chars)
+2018-03-18 11:12:19		    separator: 1 for using separator (line), 0 or nothing means no separator
+2018-03-18 11:12:19		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2018-03-18 11:12:19		      default: create a default bar (all default bars if no bar name is given)
+2018-03-18 11:12:19		          del: delete a bar (or all bars with -all)
+2018-03-18 11:12:19		          set: set a value for a bar property
+2018-03-18 11:12:19		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2018-03-18 11:12:19		        value: new value for option
+2018-03-18 11:12:19		         hide: hide a bar
+2018-03-18 11:12:19		         show: show an hidden bar
+2018-03-18 11:12:19		       toggle: hide/show a bar
+2018-03-18 11:12:19		       scroll: scroll bar
+2018-03-18 11:12:19		       window: window number (use '*' for current window or for root bars)
+2018-03-18 11:12:19		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2018-03-18 11:12:19		Examples:
+2018-03-18 11:12:19		  create a bar with time, buffer number + name, and completion:
+2018-03-18 11:12:19		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2018-03-18 11:12:19		  hide a bar:
+2018-03-18 11:12:19		    /bar hide mybar
+2018-03-18 11:12:19		  scroll nicklist 10 lines down on current buffer:
+2018-03-18 11:12:19		    /bar scroll nicklist * y+10
+2018-03-18 11:12:19		  scroll to end of nicklist on current buffer:
+2018-03-18 11:12:19		    /bar scroll nicklist * ye
+2018-03-18 11:12:54		List of bars:
+2018-03-18 11:12:54		  input: window, bottom, height: 1
+2018-03-18 11:12:54		  title: window, top, height: 1
+2018-03-18 11:12:54		  status: window, bottom, height: 1
+2018-03-18 11:12:54		  nicklist: window, right, width: auto
+2018-03-18 11:12:54		  isetbar: (hidden) window, top, height: 3
+2018-03-18 11:12:54		  fset: window, top, height: 3
+2018-03-18 11:12:54		  buflist: root, left, width: auto
+2018-03-18 11:16:22		Option changed: irc.server.freenode.autojoin = "#qutebrowser,#archlinux"  (default if null: "")
+2018-03-18 11:17:15		Option changed: irc.server.freenode.autojoin = "#qutebrowser,#archlinux,#voidlinux"  (default if null: "")
+2018-03-18 11:19:54		Option changed: irc.server.snoonet.autoconnect = on  (default if null: off)
+2018-03-18 11:20:05		Option changed: irc.server.snoonet.autojoin = "#linuxmasterrace"  (default if null: "")
+2018-03-18 11:22:16		Option changed: irc.server.snoonet.autoconnect = off  (default if null: off)
+2018-03-18 11:25:11		perl scripts loaded: iset
+2018-03-18 11:25:11		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:25:11		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2018-03-18 11:26:05		lua: loading script "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:26:05	=!=	lua: unable to execute file "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:26:05	=!=	lua: error: /home/brightone/.weechat/lua/matrix.lua:46: module 'cjson' not found:
+2018-03-18 11:26:05		no field package.preload['cjson']
+2018-03-18 11:26:05		no file '/usr/share/lua/5.3/cjson.lua'
+2018-03-18 11:26:05		no file '/usr/share/lua/5.3/cjson/init.lua'
+2018-03-18 11:26:05		no file '/usr/lib/lua/5.3/cjson.lua'
+2018-03-18 11:26:05		no file '/usr/lib/lua/5.3/cjson/init.lua'
+2018-03-18 11:26:05		no file './cjson.lua'
+2018-03-18 11:26:05		no file './cjson/init.lua'
+2018-03-18 11:26:05		no file '/usr/lib/lua/5.3/cjson.so'
+2018-03-18 11:26:05		no file '/usr/lib/lua/5.3/loadall.so'
+2018-03-18 11:26:05		no file './cjson.so'
+2018-03-18 11:26:39		perl scripts loaded: iset
+2018-03-18 11:26:39		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:26:39		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2018-03-18 11:26:45		lua: loading script "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:26:45		lua: registered script "matrix", version 3 (Matrix.org chat plugin)
+2018-03-18 11:26:45		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2018-03-18 11:26:45		Please set your username and password using the settings system and then type /matrix connect
+2018-03-18 11:26:53		lua: loading script "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:26:53	=!=	lua: unable to register script "matrix" (another script already exists with this name)
+2018-03-18 11:26:53	=!=	lua: unable to call function "info_get", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_is_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_set_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to call function "config_get_plugin", script is not initialized (script: -)
+2018-03-18 11:26:53	=!=	lua: unable to execute file "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:26:53	=!=	lua: error: /home/brightone/.weechat/lua/matrix.lua:3353: bad argument #1 to 'tonumber' (value expected)
+2018-03-18 11:27:37		Option changed: plugins.var.lua.matrix.user = "@brightone:matrix.org"
+2018-03-18 11:27:55		Option changed: plugins.var.lua.matrix.password = "i9oatkAzZIZenTRaRSJP8EDO"
+2018-03-18 11:28:04		matrix: Connecting to homeserver URL: https://matrix.org/
+2018-03-18 11:52:31		matrix: Unloading
+2018-03-18 11:52:31		matrix: done cleaning up!
+2018-03-18 11:52:31	=!=	Room got closed: !taHehKIyFVXdTLFcNV:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !liSMaPmhIAVOyCHhdT:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !GiBpZSGcdzTfkNXmer:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !DObiMOmfwEzDqnipJA:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !CbWGSqXrUpGnRUglfe:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !dROTPfYyJcafwwICPX:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !SudviOJlimDvrGdFCY:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !kwXtsBRUrdTHlFPzqa:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !XXmPwxJAJXDQzaElMj:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !lMeNnmbijxYtToJDmK:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !BYbVwPMVsEdfkVeSxU:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !ZMgvByrYLCEzyPRysC:matrix.org
+2018-03-18 11:52:31	=!=	Room got closed: !jHfZzOoYTSVHYamClX:matrix.org
+2018-03-18 11:52:31		lua: scripts unloaded
+2018-03-18 11:52:33		perl scripts loaded: iset
+2018-03-18 11:52:33		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:52:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2018-03-18 11:52:48		lua: loading script "/home/brightone/.weechat/lua/matrix.lua"
+2018-03-18 11:52:48		lua: registered script "matrix", version 3 (Matrix.org chat plugin)
+2018-03-18 11:52:48		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2018-03-18 11:52:48		matrix: Connecting to homeserver URL: https://matrix.org/
+2018-03-18 11:53:41		matrix: Unloading
+2018-03-18 11:53:41		matrix: done cleaning up!
+2018-03-18 11:53:41		lua: scripts unloaded
+2018-03-18 11:53:43		perl scripts loaded: iset
+2018-03-18 11:53:43		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2018-03-18 11:53:43		matrix: Connecting to homeserver URL: https://matrix.org/
+2018-03-18 11:53:43		lua scripts loaded: matrix
+2018-03-18 11:53:43		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 11:53:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2018-03-18 12:36:58		matrix: Unloading
+2018-03-18 12:36:58		matrix: done cleaning up!
+2018-03-18 12:36:58		lua: scripts unloaded
+2018-03-18 12:46:59		perl scripts loaded: iset
+2018-03-18 12:46:59		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2018-03-18 12:46:59		matrix: Connecting to homeserver URL: https://matrix.org/
+2018-03-18 12:46:59		lua scripts loaded: matrix
+2018-03-18 12:46:59		script: 348 scripts for WeeChat 2.0.1
+2018-03-18 12:46:59		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer

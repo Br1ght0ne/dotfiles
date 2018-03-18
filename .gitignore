@@ -5,3 +5,9 @@
 **/*.log
 **/qutebrowser/quickmarks
 **/qutebrowser/bookmarks/*
+
+# IRC
+**/irc.conf
+**/plugins.conf
+**/certs/*.pem
+**/*.weechatlog

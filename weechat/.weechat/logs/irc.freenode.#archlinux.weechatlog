@@ -1,0 +1,320 @@
+2018-03-18 11:16:28	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 11:16:28	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 11:16:28	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 11:16:29	--	Channel #archlinux: 1723 nicks (3 ops, 0 voices, 1720 normals)
+2018-03-18 11:16:30	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 11:16:35	MrElendig	it doesn't support gnu/linux
+2018-03-18 11:16:37	MrElendig	sadly
+2018-03-18 11:16:44	-->	damke (~damke@unaffiliated/damke) has joined #archlinux
+2018-03-18 11:16:46	MrElendig	despite their promise of many years ago
+2018-03-18 11:16:51	dminca	awww :'( but I saw on their forums that it works with Play on Linux
+2018-03-18 11:16:58	MrElendig	"work"
+2018-03-18 11:17:04	dminca	ah... :(
+2018-03-18 11:17:05	MrElendig	and play on linux is pretty horrid
+2018-03-18 11:17:11	grish	it is
+2018-03-18 11:17:15	dminca	MrElendig yes... I saw
+2018-03-18 11:17:28	MrElendig	check the wine db for poe
+2018-03-18 11:17:46	MrElendig	sad that they have osX support but not gnu/linux
+2018-03-18 11:17:47	dminca	will do, thank you MrElendig
+2018-03-18 11:18:14	grish	what is a gist for?
+2018-03-18 11:18:24	MrElendig	and with steam gnu/linux support is not that hard
+2018-03-18 11:18:37	MrElendig	gist is a pastebin
+2018-03-18 11:18:37	-->	lucenera (~Unknown@193.180.164.58) has joined #archlinux
+2018-03-18 11:18:44	MrElendig	a pretty awesome one too
+2018-03-18 11:18:47	grish	wish i could get shellshock live running on arch
+2018-03-18 11:18:49	grish	ah i see
+2018-03-18 11:18:57	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-03-18 11:19:12	-->	amelliaa (~amelliaa@46.166.142.221) has joined #archlinux
+2018-03-18 11:19:25	lucenera	Does anyone know why when I close transmission-gtk, does Chromium start?
+2018-03-18 11:19:50	<--	CaptainCrunch (~Unknown@HSI-KBW-046-005-019-034.hsi8.kabel-badenwuerttemberg.de) has quit (Quit: leaving)
+2018-03-18 11:19:58	MrElendig	because you have made some hook or something
+2018-03-18 11:20:25	<--	NolanSyKinsley (~NolanSyKi@2606:6000:5112:df00:558c:7186:2302:6d73) has quit (Remote host closed the connection)
+2018-03-18 11:20:32	MrElendig	or you ran with the remote controlled enabled, exposed to the internet, and you are now pwnd
+2018-03-18 11:22:07	-->	Dries007 (~Dries007@ptr-1led7hg7hpys1m8iqx2.18120a2.ip6.access.telenet.be) has joined #archlinux
+2018-03-18 11:22:13	dminca	ultimately pwned
+2018-03-18 11:22:38	<--	tuxi3 (~manjaro-i@a89-183-68-251.net-htp.de) has quit (Quit: leaving)
+2018-03-18 11:22:53	MrElendig	https://torrentfreak.com/bittorrent-client-transmission-suffers-remote-takeover-vulnerability-180116/
+2018-03-18 11:22:54	@phrik	Title: BitTorrent Client Transmission Suffers Remote Takeover Vulnerability - TorrentFreak (at torrentfreak.com)
+2018-03-18 11:24:00	mercury^	Hi.  My system locked up (most commands did not finish and I could not abort them).  Now after a reboot fsck on the home partition causes the system to lock up in the same way once checking of the directory structure begins.  I can still mount the partition.  What could cause this?  Is the drive faulty?
+2018-03-18 11:25:06	MrElendig	maybe
+2018-03-18 11:25:08	--	irc: disconnected from server
+2018-03-18 11:25:25	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 11:25:25	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 11:25:25	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 11:25:25	--	Channel #archlinux: 1723 nicks (3 ops, 0 voices, 1720 normals)
+2018-03-18 11:25:27	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 11:25:58	mercury^	Is that guaranteed not to lock up in the same way?
+2018-03-18 11:26:13	MrElendig	do it from a live cd
+2018-03-18 11:26:19	MrElendig	not from the running system
+2018-03-18 11:26:37	--	irc: disconnected from server
+2018-03-18 11:26:54	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 11:26:54	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 11:26:54	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 11:26:54	--	Channel #archlinux: 1722 nicks (3 ops, 0 voices, 1719 normals)
+2018-03-18 11:26:56	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 11:27:00	-->	timewalker (~timewalke@eth0.nu) has joined #archlinux
+2018-03-18 11:27:47	mercury^	In case that finds no faults, what else could be the problem?
+2018-03-18 11:27:55	MrElendig	corrupt fs
+2018-03-18 11:28:06	mercury^	But why would that lock up fsck?
+2018-03-18 11:28:33	<--	xfc83e_ (~xfc83e@185.128.40.162) has quit (Ping timeout: 264 seconds)
+2018-03-18 11:28:41	mercury^	Or more specifically, lock up the system when fsck runs.
+2018-03-18 11:28:49	MrElendig	ends up in a hang state/infinite loop/triggers a <insert any of the typical crappy C code bugs here>
+2018-03-18 11:28:52	<--	W1lkins (~W1lkins@cpc115144-livi7-2-0-cust253.18-2.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2018-03-18 11:29:04	lucenera	Is Deluge better?
+2018-03-18 11:29:10	MrElendig	lucenera: worse
+2018-03-18 11:29:23	MrElendig	lucenera: I suggest actually reading the article
+2018-03-18 11:29:36	lucenera	MrElendig: What can I use?
+2018-03-18 11:29:41	grish	which client do you recommend MrElendig 
+2018-03-18 11:29:45	MrElendig	lucenera: only silly people who enabled the remote interface with no auth got in trouble
+2018-03-18 11:29:59	MrElendig	lucenera: it's like running a mailserver with no password or whatever
+2018-03-18 11:30:02	mercury^	I still do not see why I would not be able to abort fsck.  It seems more like a driver bug to me.
+2018-03-18 11:30:19	MrElendig	or leaving your apartment in the middle of the city unlocked all day
+2018-03-18 11:31:10	-->	Bakerboy (~gordy@91.156.159.143.dyn.plus.net) has joined #archlinux
+2018-03-18 11:31:33	<--	finkata (~finkata@gateway/tor-sasl/finkata) has quit (Remote host closed the connection)
+2018-03-18 11:32:03	-->	kartongsaft (~kartongsa@c-8b6470d5.013-15-736b7610.cust.bredbandsbolaget.se) has joined #archlinux
+2018-03-18 11:32:05	-->	finkata (~finkata@gateway/tor-sasl/finkata) has joined #archlinux
+2018-03-18 11:32:22	-->	mmfood3 (~mmfood@46.246.67.211) has joined #archlinux
+2018-03-18 11:32:31	<--	Fulgen (~Fulgen@078132083207.public.t-mobile.at) has quit (Remote host closed the connection)
+2018-03-18 11:32:36	<--	most_enter (~most_ente@178-191-143-34.adsl.highway.telekom.at) has quit (Quit: Leaving)
+2018-03-18 11:33:24	<--	Ex6TenZ (~Ex6TenZ@193.180.164.58) has quit (Quit: G⃒j⃒o⃒r⃒ E⃒n⃒ E⃒n⃒d⃒r⃒i⃒n⃒g⃒... D⃒r⃒e⃒p⃒ D⃒e⃒g⃒ S⃒e⃒l⃒v⃒)
+2018-03-18 11:33:38	<--	jcarl43 (~jcarl@S01061c1b689d9d2f.vc.shawcable.net) has quit (Quit: WeeChat 2.0.1)
+2018-03-18 11:33:42	Boobuigi	Remote control.  What could possibly go wrong?
+2018-03-18 11:34:23	-->	jayvee (~quassel@pi.narnia.network) has joined #archlinux
+2018-03-18 11:34:56	MrElendig	the rtorrent one is way worse
+2018-03-18 11:34:57	<--	fcuk112 (~Frank@cpc77042-warw18-2-0-cust832.3-2.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2018-03-18 11:35:11	MrElendig	because that can be pwnd without the user using blank or 123456 as the password
+2018-03-18 11:35:17	-->	xfc83e (~xfc83e@185.128.40.162) has joined #archlinux
+2018-03-18 11:35:26	Boobuigi	rtorrent has a remote control?  it's cli.  why wouldn't you just ssh?
+2018-03-18 11:35:28	MrElendig	!g ars rtorrent
+2018-03-18 11:35:29	@phrik	MrElendig: Hackers exploiting rTorrent to install Unix coin miner ... - Ars Technica <https://arstechnica.com/information-technology/2018/03/hackers-exploiting-rtorrent-to-install-unix-coin-miner-have-netted-4k-so-far/>
+2018-03-18 11:35:31	-->	Fulgen (~Fulgen@078132083207.public.t-mobile.at) has joined #archlinux
+2018-03-18 11:35:39	MrElendig	see ^
+2018-03-18 11:36:07	Boobuigi	haha, “popular”.  thanks, ars tech
+2018-03-18 11:37:03	MrElendig	rtorrent if fairly popular still
+2018-03-18 11:37:28	MrElendig	has something like a 40% market share on one of the trackers I commonly use
+2018-03-18 11:37:56	MrElendig	about the same as utorrent
+2018-03-18 11:38:46	<--	silkworm_ (~silkworm@81.171.81.226) has quit (Remote host closed the connection)
+2018-03-18 11:39:03	Boobuigi	holy hell, this exploit is like christmas morning.
+2018-03-18 11:39:09	-->	silkworm_ (~silkworm@81.171.81.226) has joined #archlinux
+2018-03-18 11:39:11	<--	amelliaa (~amelliaa@46.166.142.221) has quit (Quit: -)
+2018-03-18 11:39:16	Boobuigi	... at a rich kid's house.
+2018-03-18 11:39:28	lucenera	MrElendig: I think it has nothing to do with remote control. In fact it is deactivated. Rather, it happens to me whenever I open a torrent or magnet file from Chromium.
+2018-03-18 11:39:30	MrElendig	quite a few nas boxes etc uses rtorrent as the backend
+2018-03-18 11:39:34	MrElendig	+too
+2018-03-18 11:39:46	<--	dre_ (~dre_@118-92-27-195.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2018-03-18 11:39:57	Boobuigi	oh yeah, and pretty much all the seedboxes
+2018-03-18 11:40:16	Boobuigi	(in my world, at least)
+2018-03-18 11:40:55	<--	Junde (~Junde@180.166.98.62) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-18 11:40:58	MrElendig	most of the seedboxes on this tracker uses transmission
+2018-03-18 11:41:13	MrElendig	or a fork anyway, with part of it rewritten for zomgspeed
+2018-03-18 11:41:34	lucenera	MrElendig: Chromium opens the file with transmission-gtk. When I close transmission-gtk, another Chromium window opens.
+2018-03-18 11:41:52	MrElendig	check your desktop file for magnet links
+2018-03-18 11:41:58	-->	outsidecontext (~outsideco@2a02:810b:c340:1a44:79e3:4324:bca7:35a5) has joined #archlinux
+2018-03-18 11:42:00	-->	GrandApe (~caveman@unaffiliated/mahmoud) has joined #archlinux
+2018-03-18 11:42:14	<--	opthomasprime (~thomas@p54852AE0.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-03-18 11:42:46	lucenera	MrElendig: I understood that something has to do with xdg-xxx (open, mime, etc), but I do not know how to do it. Any suggestions?
+2018-03-18 11:42:53	-->	opthomasprime (~thomas@p54852AE0.dip0.t-ipconnect.de) has joined #archlinux
+2018-03-18 11:42:53	MrElendig	and your wm/de default app settings
+2018-03-18 11:43:06	MrElendig	!aw default applications
+2018-03-18 11:43:07	@phrik	MrElendig: Default applications - https://wiki.archlinux.org/index.php/Default_applications
+2018-03-18 11:43:52	<--	mercury^ (~mercury^@unaffiliated/mercury/x-4708934) has quit (Quit: leaving)
+2018-03-18 11:44:24	lucenera	the first time I hit a torrent link, Chromium asked me if I wanted to use xdg-open or something. I said yes. Since then he has opened those files with transmission.
+2018-03-18 11:47:18	-->	strang3quark (~quark@154.46.103.87.rev.vodafone.pt) has joined #archlinux
+2018-03-18 11:47:33	drathir	mime type editor maybe could help or its chromejunk issue...
+2018-03-18 11:48:00	<--	enoq (~bernhard@2a02:8388:6a87:b080:649f:9456:c1b1:28e4) has left #archlinux
+2018-03-18 11:49:13	-->	wastack (~wastack@86FF546E.dsl.pool.telekom.hu) has joined #archlinux
+2018-03-18 11:50:14	<--	jellyb (~h.novak@unaffiliated/jellyb) has quit (Quit: KVIrc 4.9.3 Aria http://www.kvirc.net/)
+2018-03-18 11:50:42	-->	m47h4r (~m47h4r@188.34.193.26) has joined #archlinux
+2018-03-18 11:51:39	-->	windel (~windel@2001:984:3702:1:314c:4eae:f34d:4b09) has joined #archlinux
+2018-03-18 11:52:00	m47h4r	hello, i have a problem with headphone jack. when not playing anything (music or video) any external device will be disconnected. i can't figure out where is the problem. can someone please help me?
+2018-03-18 11:52:10	<--	lucenera (~Unknown@193.180.164.58) has left #archlinux
+2018-03-18 11:52:24	<--	Purec (~Purec@unaffiliated/purec) has quit (Ping timeout: 260 seconds)
+2018-03-18 11:52:32	--	irc: disconnected from server
+2018-03-18 11:52:49	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 11:52:49	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 11:52:49	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 11:52:49	--	Channel #archlinux: 1720 nicks (3 ops, 0 voices, 1717 normals)
+2018-03-18 11:52:49	m47h4r	and then if i play something it reconnects again (problem is disconnecting will cause a bad loud sound)
+2018-03-18 11:52:51	-->	Purec (~Purec@unaffiliated/purec) has joined #archlinux
+2018-03-18 11:52:51	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 11:53:12	Namarrgon	are you using lmt or some other powersaving scripts?
+2018-03-18 11:53:35	-->	orivej (~orivej@185.65.134.162) has joined #archlinux
+2018-03-18 11:53:41	--	irc: disconnected from server
+2018-03-18 11:53:58	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 11:53:58	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 11:53:58	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 11:53:58	--	Channel #archlinux: 1723 nicks (3 ops, 0 voices, 1720 normals)
+2018-03-18 11:54:00	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 11:54:15	Namarrgon	make sure that it wasn't enabled for any ofthe audio devices
+2018-03-18 11:54:58	-->	Forlorn (~Forlorn@unaffiliated/forlorn) has joined #archlinux
+2018-03-18 11:55:01	Namarrgon	https://wiki.archlinux.org/index.php/Power_management#Audio
+2018-03-18 11:55:02	@phrik	Title: Power management - ArchWiki (at wiki.archlinux.org)
+2018-03-18 11:55:04	-->	menace (~somenym@unaffiliated/menace) has joined #archlinux
+2018-03-18 11:55:34	m47h4r	thanks i'll try that out
+2018-03-18 11:55:47	-->	Hering (~hering@p54975CF4.dip0.t-ipconnect.de) has joined #archlinux
+2018-03-18 11:56:05	drathir	Namarrgon: yea that changes upstream ones...
+2018-03-18 11:56:12	-->	cewood (~cewood@ip5b40d28f.dynamic.kabel-deutschland.de) has joined #archlinux
+2018-03-18 11:56:20	Namarrgon	did they enable it by default now?
+2018-03-18 11:56:51	-->	xy2_ (~xy2_@94.239.177.175) has joined #archlinux
+2018-03-18 11:57:10	<--	darkis8 (~dark@81.92.27.129) has quit (Quit: leaving)
+2018-03-18 11:57:26	m47h4r	no, there is no such file
+2018-03-18 11:57:37	Namarrgon	not yet
+2018-03-18 11:57:42	Namarrgon	disable it and try again
+2018-03-18 11:57:49	<--	grish (~grish@unaffiliated/grish) has quit (Quit: WeeChat 2.0.1)
+2018-03-18 11:58:13	drathir	Namarrgon: looks like yes have the same issue with one of past upgrades on both Realtek ALC662 VIA VT1708S  devices...
+2018-03-18 11:58:29	--	def_jam is now known as eb0t
+2018-03-18 11:58:39	m47h4r	using 0 would disable it, is that right?
+2018-03-18 11:58:43	Namarrgon	yes
+2018-03-18 11:58:47	Namarrgon	drathir: oh great...
+2018-03-18 11:59:44	-->	darkis8 (~dark@81.92.27.129) has joined #archlinux
+2018-03-18 11:59:56	m47h4r	i haven't read this page of wiki unfortunately, don't get mad for this question please :) do i need to restart any service ?
+2018-03-18 12:00:10	Namarrgon	reload the module or reboot
+2018-03-18 12:00:47	drathir	Namarrgon: everytime i start mpv even speakers muted and only play at headphones separate output to speakers ones the speakers loudly but shortly pitch sounded the same in past always happen on booting when audio loaded same sound...
+2018-03-18 12:00:51	--	wreo is now known as wxza
+2018-03-18 12:01:06	drathir	Namarrgon: powersaving trick fix that...
+2018-03-18 12:01:16	-->	thevishy (~nishant@106.51.105.97) has joined #archlinux
+2018-03-18 12:01:44	<--	m47h4r (~m47h4r@188.34.193.26) has quit (Quit: leaving)
+2018-03-18 12:02:01	-->	tecuani (~tecuani@dslb-188-096-095-205.188.096.pools.vodafone-ip.de) has joined #archlinux
+2018-03-18 12:02:03	<--	dczheng (~dczheng@180.166.98.62) has quit (Quit: WeeChat 1.9.1)
+2018-03-18 12:02:09	<--	mpan (~mpan@31-178-172-78.dynamic.chello.pl) has quit (Quit: Reconnecting)
+2018-03-18 12:02:34	-->	dczheng (~dczheng@180.166.98.62) has joined #archlinux
+2018-03-18 12:02:45	drathir	Namarrgon: as on notebook not much noticable at night on headphones powershocked 5.1speakers ARE noticable ^^
+2018-03-18 12:03:17	-->	m47h4r (~m47h4r@188.34.193.26) has joined #archlinux
+2018-03-18 12:03:45	m47h4r	ok apparently that was the problem!
+2018-03-18 12:04:13	drathir	Namarrgon: two different devices server/notebook the same symptoms...
+2018-03-18 12:04:22	drathir	!next
+2018-03-18 12:04:23	@phrik	Another satisfied customer! NEXT!
+2018-03-18 12:04:23	Namarrgon	CONFIG_SND_HDA_POWER_SAVE_DEFAULT=10
+2018-03-18 12:04:26	--	wxza is now known as wreo
+2018-03-18 12:04:29	Namarrgon	yeah, it's on
+2018-03-18 12:04:31	m47h4r	Namarrgon: thank you
+2018-03-18 12:04:36	drathir	Namarrgon: ^^
+2018-03-18 12:04:46	<--	wreo (wreo@gateway/vpn/privateinternetaccess/wreo) has quit (Remote host closed the connection)
+2018-03-18 12:05:25	-->	murray (~murray@dyndsl-089-166-215-201.ewe-ip-backbone.de) has joined #archlinux
+2018-03-18 12:05:31	m47h4r	once again i believe in knowledge :D can u imagine i did a fresh install just for this problem?:(
+2018-03-18 12:06:12	<--	nl6720 (~nl6720@unaffiliated/nl6720) has quit (Ping timeout: 240 seconds)
+2018-03-18 12:06:17	drathir	Namarrgon: interesting is that kinda hw issue must be...
+2018-03-18 12:06:22	Ingar	m47h4r: a fresh install usually isn't that bad (if you saved your /home ;)
+2018-03-18 12:06:53	Namarrgon	i don't know how that pm stuff works on windows but i've never heard anyone complain about popping noises there
+2018-03-18 12:07:02	-->	emilsp (~emilsp@freenode/staff/emilsp) has joined #archlinux
+2018-03-18 12:07:18	darnir	Quick, if stupid question. How do I get my (ZSH) shell to rescan $PATH and ensure it knows about all the executables in it?
+2018-03-18 12:07:23	<--	random-nick (~random-ni@unaffiliated/random-nick) has quit (Read error: Connection reset by peer)
+2018-03-18 12:07:24	m47h4r	Ingar: yes indeed :) specially if using i3 :D everything just works the same way it did
+2018-03-18 12:07:26	drathir	m47h4r: est part of any arch problems mostly theam easy fixable...
+2018-03-18 12:07:31	Namarrgon	drathir: 'rehash'
+2018-03-18 12:07:34	drathir	est/best*
+2018-03-18 12:08:01	m47h4r	Namarrgon: popping noises when unpluggin jack?
+2018-03-18 12:08:02	-->	vldn (~vldn@2a01:c22:bc2e:3200:82e2:6829:3864:5f3d) has joined #archlinux
+2018-03-18 12:08:19	drathir	darnir: just zsh in cmd ?
+2018-03-18 12:08:37	darnir	I wrote a wrapper script around an existing binary and put it earlier in the $PATH. But the shell doesn't seem to recognize it, unless I open a new window. And the directory was already in $PATH when I started the current shell
+2018-03-18 12:09:04	drathir	Namarrgon: not suprised if m$ even dont know about that feauture ;p
+2018-03-18 12:09:24	darnir	drathir: That will start zsh. I want to somehow force it to rescan $PATH so it caches wrapper scripts
+2018-03-18 12:09:51	<--	kartongsaft (~kartongsa@c-8b6470d5.013-15-736b7610.cust.bredbandsbolaget.se) has quit (Quit: leaving)
+2018-03-18 12:10:26	-->	cjy (~creation@115.41.212.188) has joined #archlinux
+2018-03-18 12:11:38	-->	venmx (~pactadmin@host31-48-151-7.range31-48.btcentralplus.com) has joined #archlinux
+2018-03-18 12:11:56	Namarrgon	oh
+2018-03-18 12:12:01	Namarrgon	darnir: 'rehash'
+2018-03-18 12:12:16	<--	Guest37229 (~zeus@197.239.35.132) has quit (Read error: Connection reset by peer)
+2018-03-18 12:12:39	-->	wuji2016 (~Thunderbi@223.104.105.208) has joined #archlinux
+2018-03-18 12:12:48	darnir	Namarrgon: Thanks!
+2018-03-18 12:12:48	-->	lucenera (~Unknown@193.180.164.58) has joined #archlinux
+2018-03-18 12:12:50	<--	timewalker (~timewalke@eth0.nu) has quit (Quit: Changing server)
+2018-03-18 12:12:55	darnir	That's useful 
+2018-03-18 12:13:12	lucenera	how can I reset xdg-open associations?
+2018-03-18 12:14:10	-->	kartongsaft (~kartongsa@c-8b6470d5.013-15-736b7610.cust.bredbandsbolaget.se) has joined #archlinux
+2018-03-18 12:14:36	<--	nikheizen (~n@d75-156-48-222.bchsia.telus.net) has quit (Quit: leaving)
+2018-03-18 12:14:38	<--	m47h4r (~m47h4r@188.34.193.26) has quit (Quit: leaving)
+2018-03-18 12:16:13	-->	kenden (~dsps@79-67-159-106.dynamic.dsl.as9105.com) has joined #archlinux
+2018-03-18 12:17:56	<--	Coffeinflash (~Coffeinfl@pC19F1325.dip0.t-ipconnect.de) has quit (Quit: Quit)
+2018-03-18 12:18:38	-->	timewalker (~timewalke@eth0.nu) has joined #archlinux
+2018-03-18 12:19:27	drathir	Ingar: /home /root /etc and You mostly set...
+2018-03-18 12:19:40	<--	timewalker (~timewalke@eth0.nu) has quit (Client Quit)
+2018-03-18 12:19:42	<--	raster (~raster@enlightenment/developer/raster) has quit (Quit: Gettin' stinky!)
+2018-03-18 12:21:08	-->	binTrl (~binaryTra@gateway/tor-sasl/binarytraveller) has joined #archlinux
+2018-03-18 12:21:13	kewl_fft	I am moving from GRUB to systemd-boot, much simpler, I took this opportunity to improve the wiki https://wiki.archlinux.org/index.php/Systemd-boot if you are interested
+2018-03-18 12:21:14	@phrik	Title: systemd-boot - ArchWiki (at wiki.archlinux.org)
+2018-03-18 12:21:31	drathir	kewl_fft: my condolences...
+2018-03-18 12:21:37	<--	kenden (~dsps@79-67-159-106.dynamic.dsl.as9105.com) has quit (Ping timeout: 256 seconds)
+2018-03-18 12:21:55	kewl_fft	drathir, you don't recommend?
+2018-03-18 12:22:07	-->	random-nick (~random-ni@unaffiliated/random-nick) has joined #archlinux
+2018-03-18 12:22:15	-->	rumble (~grumble@freenode/staff/grumble) has joined #archlinux
+2018-03-18 12:22:20	drathir	kewl_fft: lests say not fan of systemd thing ^^ ;p
+2018-03-18 12:23:03	kewl_fft	drathir, I am not either but eventually not fan of GRUB neither
+2018-03-18 12:23:09	<--	strang3quark (~quark@154.46.103.87.rev.vodafone.pt) has quit (Ping timeout: 264 seconds)
+2018-03-18 12:23:13	--	grumble is now known as Guest75212
+2018-03-18 12:23:13	<--	Guest75212 (~grumble@freenode/staff/grumble) has quit (Killed (tolkien.freenode.net (Nickname regained by services)))
+2018-03-18 12:23:13	--	rumble is now known as grumble
+2018-03-18 12:23:37	kewl_fft	drathir, then because systemd is already there...
+2018-03-18 12:23:38	ZekeS	efistub for life
+2018-03-18 12:23:56	<--	cjy (~creation@115.41.212.188) has left #archlinux
+2018-03-18 12:24:27	<--	wuji2016 (~Thunderbi@223.104.105.208) has quit (Ping timeout: 240 seconds)
+2018-03-18 12:24:31	kewl_fft	ZekeS yes systemd-boot is EFISTUB with a menu that's about it
+2018-03-18 12:24:33	-->	horseface (~horseface@pa49-185-234-174.pa.vic.optusnet.com.au) has joined #archlinux
+2018-03-18 12:25:15	drathir	kewl_fft: knock in the wood - cant complain about grub its just working even with paranoid full encryption...
+2018-03-18 12:25:17	horseface	Hey guys please help me I cannot understand what the hell it is trying to say here.
+2018-03-18 12:25:53	horseface	https://wiki.archlinux.org/index.php/Systemd-boot#Adding_boot_entries
+2018-03-18 12:25:54	@phrik	Title: systemd-boot - ArchWiki (at wiki.archlinux.org)
+2018-03-18 12:26:11	<--	binTrl (~binaryTra@gateway/tor-sasl/binarytraveller) has quit (Ping timeout: 268 seconds)
+2018-03-18 12:26:58	kewl_fft	horseface, I haven't improved this one yet it is indeed quite convoluted but nothing special just adding files with an entry
+2018-03-18 12:27:09	-->	W1lkins (~W1lkins@cpc115144-livi7-2-0-cust253.18-2.cable.virginm.net) has joined #archlinux
+2018-03-18 12:27:13	-->	Zillolo (~Zillolo@2001:4c50:49a:fa00:8ad7:f6ff:fe7f:8ae7) has joined #archlinux
+2018-03-18 12:27:27	horseface	I see.
+2018-03-18 12:27:49	-->	Guest37229 (~zeus@197.239.35.36) has joined #archlinux
+2018-03-18 12:28:11	kewl_fft	it is ultra simple compared to GRUB but more limited
+2018-03-18 12:28:21	<--	Fulgen (~Fulgen@078132083207.public.t-mobile.at) has quit (Quit: Leaving)
+2018-03-18 12:28:28	<--	7ITAABYCA (~BrainDama@unaffiliated/braindamage) has quit (Quit: 	  				 	 	 	    		  	   		  		)
+2018-03-18 12:28:44	-->	Fulgen (~Fulgen@078132083207.public.t-mobile.at) has joined #archlinux
+2018-03-18 12:28:50	-->	BrainDamage (~BrainDama@unaffiliated/braindamage) has joined #archlinux
+2018-03-18 12:28:51	horseface	What do I put at options root=PARTUUID= and rootfstype=   ?
+2018-03-18 12:29:01	kewl_fft	GRUB works fine but it is such a factory
+2018-03-18 12:29:02	horseface	I mean the cryptroot uuid or the not .
+2018-03-18 12:29:14	drathir	kewl_fft: osprober = mostly no need to edit anything will autodetect any os present...
+2018-03-18 12:29:59	kewl_fft	horseface: you can use root=LABEL= as well
+2018-03-18 12:30:08	horseface	Oh okay cool.
+2018-03-18 12:30:12	horseface	That's easier.
+2018-03-18 12:30:34	horseface	And my / in encrypted... Do I need to put anything more in there?
+2018-03-18 12:30:49	<--	voidead (~voidead@unaffiliated/voidead) has quit (Quit: dead)
+2018-03-18 12:31:31	horseface	I set my label on my cryptroot device...
+2018-03-18 12:31:43	horseface	Does that entry need the original one?
+2018-03-18 12:32:00	<--	ralpheeee (ralpheeee@gateway/vpn/privateinternetaccess/ralpheeee) has quit (Quit: WeeChat 2.0.1)
+2018-03-18 12:32:06	kewl_fft	horseface, I havent tried with encryption
+2018-03-18 12:32:12	horseface	I see 
+2018-03-18 12:32:25	-->	ralpheeee (ralpheeee@gateway/vpn/privateinternetaccess/ralpheeee) has joined #archlinux
+2018-03-18 12:33:57	<--	GrandApe (~caveman@unaffiliated/mahmoud) has quit (Ping timeout: 264 seconds)
+2018-03-18 12:34:11	kewl_fft	drathir, I agree but it does stuff in the background I prefer to know exactly what is going on
+2018-03-18 12:34:27	-->	Repentinus (~repentinu@fsfe/repentinus) has joined #archlinux
+2018-03-18 12:35:01	-->	editicalu_ (~editicalu@2a02:a03f:4a8d:5f00:dc3f:6b76:92f:ed29) has joined #archlinux
+2018-03-18 12:35:23	-->	timewalk2r (~timewalke@eth0.nu) has joined #archlinux
+2018-03-18 12:35:30	kewl_fft	eventually this is more to use EFISTUB which is quite clean
+2018-03-18 12:36:15	-->	binTrl (~binaryTra@gateway/tor-sasl/binarytraveller) has joined #archlinux
+2018-03-18 12:36:55	<--	editicalu (~editicalu@82.102.19.218) has quit (Ping timeout: 256 seconds)
+2018-03-18 12:36:57	--	editicalu_ is now known as editicalu
+2018-03-18 12:36:59	--	irc: disconnected from server
+2018-03-18 12:47:15	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #archlinux
+2018-03-18 12:47:15	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: https://ptpb.pw https://gist.github.com https://bpaste.net | Become an official Arch Tester: https://goo.gl/48qpvG | If you didn't read the topic you will be eaten by a grue | libxfont is no longer in the repos, remove it from your system | Stephen Hawking, may your legacy live on forever"
+2018-03-18 12:47:15	--	Topic set by Mion on Wed, 14 Mar 2018 11:05:52
+2018-03-18 12:47:15	--	Channel #archlinux: 1727 nicks (3 ops, 0 voices, 1724 normals)
+2018-03-18 12:47:17	--	Channel created on Sun, 15 Feb 2004 07:08:31
+2018-03-18 12:47:24	jayvee	anyway, will post all the details in the bug
+2018-03-18 12:47:27	Namarrgon	jayvee: then you should go throug the bugtracker, yes
+2018-03-18 12:47:44	drathir	teraflops: or if good remember vlc record to file too was option...
+2018-03-18 12:48:14	-->	darkis8 (~dark@81.92.27.129) has joined #archlinux
+2018-03-18 12:48:42	teraflops	yeah but I'm not that desperate for using vlc
+2018-03-18 12:49:12	<--	vldn (~vldn@2a01:c22:bc2e:3200:82e2:6829:3864:5f3d) has quit (Ping timeout: 240 seconds)
+2018-03-18 12:49:17	drathir	teraflops: ++
+2018-03-18 12:50:11	<--	mongy (~dean@unaffiliated/duffydack) has quit (Quit: leaving)
+2018-03-18 12:50:19	<--	Guest37229 (~zeus@197.239.35.36) has quit (Quit: WeeChat 2.0.1)
+2018-03-18 12:51:13	-->	vldn (~vldn@2a01:c22:bc05:8700:f85a:57fe:5dc2:ad22) has joined #archlinux
+2018-03-18 12:52:04	teraflops	if you do gnome the choice is easy: easyscreencast
+2018-03-18 12:52:36	-->	_thelion_ (~matthias@85-90-149-146.hdsl.highway.telekom.at) has joined #archlinux
+2018-03-18 12:53:15	Namarrgon	i think gnome has built-in screencapturing
+2018-03-18 12:53:34	teraflops	yeah but thay extension is far superior
+2018-03-18 12:53:44	teraflops	that^
+2018-03-18 12:54:29	Namarrgon	but you have to click more than once to install the extension :P
+2018-03-18 12:55:35	-->	sdothum (~znc@108.63.152.41) has joined #archlinux
+2018-03-18 12:55:46	teraflops	well you have to kill 4kk neurons for remember how to launch built in screencast :P
+2018-03-18 12:57:14	ville	kewl_fft: i'll give that a go too, looks like mongy's suggestion simplescreenrecorder does the job. few clicks and a decent enough capture.
+2018-03-18 12:57:15	Namarrgon	come on, you only need fifteen fingers for the shortcut
+2018-03-18 12:57:24	-->	mprelude (~mprelude@unaffiliated/mprelude) has joined #archlinux
+2018-03-18 12:57:45	teraflops	lol
+2018-03-18 12:58:27	<--	Purec (~Purec@unaffiliated/purec) has quit (Quit: ZNC 1.6.5 - http://znc.in)

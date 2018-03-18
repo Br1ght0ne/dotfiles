@@ -1,0 +1,204 @@
+2018-03-18 10:56:17	--	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-03-18 10:56:17	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-03-18 10:56:17	--	gnutls: receiving 4 certificates
+2018-03-18 10:56:17	--	 - certificate[1] info:
+2018-03-18 10:56:17	--	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-03-18 10:56:17	--	 - certificate[2] info:
+2018-03-18 10:56:17	--	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-03-18 10:56:17	--	 - certificate[3] info:
+2018-03-18 10:56:17	--	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-03-18 10:56:17	--	 - certificate[4] info:
+2018-03-18 10:56:17	--	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-03-18 10:56:17	--	gnutls: peer's certificate is trusted
+2018-03-18 10:56:17	--	irc: connected to irc.snoonet.org/6697 (88.202.186.46)
+2018-03-18 10:56:17	--	pinkfloyd.snoonet.org: *** Looking up your hostname...
+2018-03-18 10:56:17	--	pinkfloyd.snoonet.org: *** Found your hostname (94.244.154.248.nash.net.ua)
+2018-03-18 10:56:17	--	pinkfloyd.snoonet.org: *** If you are having problems connecting due to ping timeouts, please type /quote PONG XcvBAXlU|U or /raw PONG XcvBAXlU|U now.
+2018-03-18 10:56:18	--	pinkfloyd.snoonet.org: Welcome to Snoonet!
+2018-03-18 10:56:18	--	Welcome to the Snoonet IRC Network brightone!brightone@94.244.154.248.nash.net.ua
+2018-03-18 10:56:18	--	Your host is pinkfloyd.snoonet.org, running version InspIRCd-2.0
+2018-03-18 10:56:18	--	This server was created 01:38:19 Jun 21 2017
+2018-03-18 10:56:18	--	pinkfloyd.snoonet.org InspIRCd-2.0 BHILORSTWcdghikorswx ABCDFHIJKLMNOPQRSTUXYZbcdefghijklmnoprstuvwxz FHIJLUXYZbdefghjklovwx
+2018-03-18 10:56:18	--	AWAYLEN=200 CALLERID=g CASEMAPPING=rfc1459 CHANMODES=IXZbegw,k,FHJLUdfjlx,ABCDKMNOPQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcjmprsz FNC INVEX=I :are supported by this server
+2018-03-18 10:56:18	--	KICKLEN=255 MAP MAXBANS=60 MAXCHANNELS=200 MAXPARA=32 MAXTARGETS=20 MODES=50 NAMESX NETWORK=Snoonet NICKLEN=27 OPERLOG PREFIX=(Yohv)!@%+ REMOVE :are supported by this server
+2018-03-18 10:56:18	--	SECURELIST SILENCE=32 SSL=[::]:6697 STATUSMSG=!@%+ TOPICLEN=1000 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=64 :are supported by this server
+2018-03-18 10:56:18	--	1PFAA2QEQ :your unique ID
+2018-03-18 10:56:18	--	pinkfloyd.snoonet.org message of the day
+2018-03-18 10:56:18	--	- #/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	-   _____                              _
+2018-03-18 10:56:18	--	-  / ____|                            | |
+2018-03-18 10:56:18	--	- | (___  _ __   ___   ___  _ __   ___| |_
+2018-03-18 10:56:18	--	-  \___ \| '_ \ / _ \ / _ \| '_ \ / _ \ __|
+2018-03-18 10:56:18	--	-  ____) | | | | (_) | (_) | | | |  __/ |_
+2018-03-18 10:56:18	--	- |_____/|_| |_|\___/ \___/|_| |_|\___|\__|
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Welcome to the Snoonet Chat Network.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- By connecting to Snoonet you indicate that you have read and
+2018-03-18 10:56:18	--	- accept our policies as set out on http://www.snoonet.org/rules
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Snoonet runs an open proxy scanner.  If you continue connecting
+2018-03-18 10:56:18	--	- to Snoonet, you agree to this scanning to protect our network
+2018-03-18 10:56:18	--	- from scammers, spammers and the propagation of viruses.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Please visit our ruleset listed at http://www.snoonet.org/rules
+2018-03-18 10:56:18	--	- Yes, this is so important we list it twice. Snoonet does not have
+2018-03-18 10:56:18	--	- many network wide rules but the ones we do have we enforce
+2018-03-18 10:56:18	--	- to the best of our ability. This may also include the use of
+2018-03-18 10:56:18	--	- automated oper utilities and/or standalone network bots that may
+2018-03-18 10:56:18	--	- join/part your channel, or the mass setting of channel modes across
+2018-03-18 10:56:18	--	- all network channels to protect you and your users during times
+2018-03-18 10:56:18	--	- of network turmoil.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Please join #help if you have questions about any of the above
+2018-03-18 10:56:18	--	- information.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Network Administration may remove any problem user at any time
+2018-03-18 10:56:18	--	- for the betterment of all users. This includes, but is not limited
+2018-03-18 10:56:18	--	- to, trolling, attempting to receive or spread users personal
+2018-03-18 10:56:18	--	- information (also known as Doxxing), vote brigading on any social
+2018-03-18 10:56:18	--	- media websites, or any thing that network administration sees as
+2018-03-18 10:56:18	--	- potentially harmful to the atmosphere of Snoonet.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Our network rules are located here: http://www.snoonet.org/rules
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- Ignorance is not an excuse - most of the network rules are common sense.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- As of the last MOTD Update, Snoonet has never received a National
+2018-03-18 10:56:18	--	- Security Letter, an order under the Foreign Intelligence Surveillance
+2018-03-18 10:56:18	--	- Act, or any other classified request for user information.
+2018-03-18 10:56:18	--	-
+2018-03-18 10:56:18	--	- #/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-
+2018-03-18 10:56:18	--	- MOTD Last Updated:
+2018-03-18 10:56:18	--	- Sun Mar  11 17:51:05 UTC 2018
+2018-03-18 10:56:18	--	End of message of the day.
+2018-03-18 10:56:18	--	There are 131 users and 4636 invisible on 14 servers
+2018-03-18 10:56:18	--	40 :operator(s) online
+2018-03-18 10:56:18	--	5066 :channels formed
+2018-03-18 10:56:18	--	I have 1234 clients and 1 servers
+2018-03-18 10:56:18	--	Current Local Users: 1234  Max: 1553
+2018-03-18 10:56:18	--	Current Global Users: 4767  Max: 5373
+2018-03-18 10:56:18	--	Snoonet-7tk.3os.1j4ls3.IP :is now your displayed host
+2018-03-18 10:56:18	--	User mode [+Iwxi] by brightone
+2018-03-18 10:56:18	--	pinkfloyd.snoonet.org: *** You are connected using SSL cipher "AES256-GCM-SHA384"
+2018-03-18 10:56:18	--	NickServ (NickServ@snoonet/services/NickServ): Your nickname is not registered. To register it, use: /msg NickServ REGISTER password email
+2018-03-18 10:56:18	--	Global (Global@snoonet/services/Global): [Logon News - Sep 30 11:26:50 2016 CEST] Link others to your community chat! https://webchat.snoonet.org/Channel_Name
+2018-03-18 10:56:18	--	Global (Global@snoonet/services/Global): [Logon News - Sep 30 11:27:44 2016 CEST] For speedy live help and assistance, type /join #help or visit www.snoonet.org/help - To see which communities are here, type /list or visit www.snoonet.org/communities
+2018-03-18 10:56:18	--	Global (Global@snoonet/services/Global): [Logon News - Dec 17 14:47:17 2016 CET] Snoonet is partnered with Private Internet Access! Make sure to keep secure by connecting to our secure port irc.snoonet.org:6697 and for best security, use a VPN Service! www.privateinternetaccess.com
+2018-03-18 10:57:29	--	MSG(NickServ): REGISTER *************************************************
+2018-03-18 10:57:30	--	NickServ (NickServ@snoonet/services/NickServ): Nickname brightone registered.
+2018-03-18 10:57:30	--	NickServ (NickServ@snoonet/services/NickServ): Your email address is not confirmed. To confirm it, follow the instructions that were emailed to you.
+2018-03-18 10:57:30	--	NickServ (NickServ@snoonet/services/NickServ): Your account will expire, if not confirmed, in 1 day.
+2018-03-18 10:58:32	--	MSG(NickServ): CONFIRM cK1Kv8Q73
+2018-03-18 10:58:33	--	NickServ (NickServ@snoonet/services/NickServ): Your email address of brightone@protonmail.com has been confirmed.
+2018-03-18 10:58:33	--	User mode [-x] by pinkfloyd.snoonet.org
+2018-03-18 10:58:33	--	user/brightone :is now your displayed host
+2018-03-18 10:58:33	--	HostServ (HostServ@snoonet/services/HostServ): Your vhost of user/brightone is now activated.
+2018-03-18 10:58:33	--	You are now logged in as brightone (brightone!brightone@user/brightone)
+2018-03-18 10:58:33	--	User mode [+r] by NickServ
+2018-03-18 11:11:13	--	irc: disconnected from server
+2018-03-18 11:18:49	--	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-03-18 11:18:49	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-03-18 11:18:49	--	gnutls: receiving 4 certificates
+2018-03-18 11:18:49	--	 - certificate[1] info:
+2018-03-18 11:18:49	--	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-03-18 11:18:49	--	 - certificate[2] info:
+2018-03-18 11:18:49	--	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-03-18 11:18:49	--	 - certificate[3] info:
+2018-03-18 11:18:49	--	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-03-18 11:18:49	--	 - certificate[4] info:
+2018-03-18 11:18:49	--	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-03-18 11:18:50	--	gnutls: peer's certificate is trusted
+2018-03-18 11:18:50	--	irc: connected to irc.snoonet.org/6697 (107.152.98.2)
+2018-03-18 11:18:50	--	alpine.snoonet.org: *** Looking up your hostname...
+2018-03-18 11:18:50	--	alpine.snoonet.org: *** Found your hostname (94.244.154.248.nash.net.ua)
+2018-03-18 11:18:50	--	alpine.snoonet.org: *** If you are having problems connecting due to ping timeouts, please type /quote PONG jhHJJ]I?@y or /raw PONG jhHJJ]I?@y now.
+2018-03-18 11:18:51	--	alpine.snoonet.org: Welcome to Snoonet!
+2018-03-18 11:18:51	--	Welcome to the Snoonet IRC Network brightone!brightone@94.244.154.248.nash.net.ua
+2018-03-18 11:18:51	--	Your host is alpine.snoonet.org, running version InspIRCd-2.0
+2018-03-18 11:18:51	--	This server was created 20:30:52 Aug  2 2017
+2018-03-18 11:18:51	--	alpine.snoonet.org InspIRCd-2.0 BHILORSTWcdghikorswx ABCDFHIJKLMNOPQRSTUXYZbcdefghijklmnoprstuvwxz FHIJLUXYZbdefghjklovwx
+2018-03-18 11:18:51	--	AWAYLEN=200 CALLERID=g CASEMAPPING=rfc1459 CHANMODES=IXZbegw,k,FHJLUdfjlx,ABCDKMNOPQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcjmprsz FNC INVEX=I :are supported by this server
+2018-03-18 11:18:51	--	KICKLEN=255 MAP MAXBANS=60 MAXCHANNELS=200 MAXPARA=32 MAXTARGETS=20 MODES=50 NAMESX NETWORK=Snoonet NICKLEN=27 OPERLOG PREFIX=(Yohv)!@%+ REMOVE :are supported by this server
+2018-03-18 11:18:51	--	SECURELIST SILENCE=32 SSL=[::]:6697 STATUSMSG=!@%+ TOPICLEN=1000 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=64 :are supported by this server
+2018-03-18 11:18:51	--	1APAALBKA :your unique ID
+2018-03-18 11:18:51	--	alpine.snoonet.org message of the day
+2018-03-18 11:18:51	--	- #/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	-   _____                              _
+2018-03-18 11:18:51	--	-  / ____|                            | |
+2018-03-18 11:18:51	--	- | (___  _ __   ___   ___  _ __   ___| |_
+2018-03-18 11:18:51	--	-  \___ \| '_ \ / _ \ / _ \| '_ \ / _ \ __|
+2018-03-18 11:18:51	--	-  ____) | | | | (_) | (_) | | | |  __/ |_
+2018-03-18 11:18:51	--	- |_____/|_| |_|\___/ \___/|_| |_|\___|\__|
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Welcome to the Snoonet Chat Network.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- By connecting to Snoonet you indicate that you have read and
+2018-03-18 11:18:51	--	- accept our policies as set out on http://www.snoonet.org/rules
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Snoonet runs an open proxy scanner.  If you continue connecting
+2018-03-18 11:18:51	--	- to Snoonet, you agree to this scanning to protect our network
+2018-03-18 11:18:51	--	- from scammers, spammers and the propagation of viruses.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Please visit our ruleset listed at http://www.snoonet.org/rules
+2018-03-18 11:18:51	--	- Yes, this is so important we list it twice. Snoonet does not have
+2018-03-18 11:18:51	--	- many network wide rules but the ones we do have we enforce
+2018-03-18 11:18:51	--	- to the best of our ability. This may also include the use of
+2018-03-18 11:18:51	--	- automated oper utilities and/or standalone network bots that may
+2018-03-18 11:18:51	--	- join/part your channel, or the mass setting of channel modes across
+2018-03-18 11:18:51	--	- all network channels to protect you and your users during times
+2018-03-18 11:18:51	--	- of network turmoil.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Please join #help if you have questions about any of the above
+2018-03-18 11:18:51	--	- information.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Network Administration may remove any problem user at any time
+2018-03-18 11:18:51	--	- for the betterment of all users. This includes, but is not limited
+2018-03-18 11:18:51	--	- to, trolling, attempting to receive or spread users personal
+2018-03-18 11:18:51	--	- information (also known as Doxxing), vote brigading on any social
+2018-03-18 11:18:51	--	- media websites, or any thing that network administration sees as
+2018-03-18 11:18:51	--	- potentially harmful to the atmosphere of Snoonet.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Our network rules are located here: http://www.snoonet.org/rules
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- Ignorance is not an excuse - most of the network rules are common sense.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- As of the last MOTD Update, Snoonet has never received a National
+2018-03-18 11:18:51	--	- Security Letter, an order under the Foreign Intelligence Surveillance
+2018-03-18 11:18:51	--	- Act, or any other classified request for user information.
+2018-03-18 11:18:51	--	-
+2018-03-18 11:18:51	--	- #/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-#/-
+2018-03-18 11:18:51	--	- MOTD Last Updated:
+2018-03-18 11:18:51	--	- Sun Mar  11 17:51:05 UTC 2018
+2018-03-18 11:18:51	--	End of message of the day.
+2018-03-18 11:18:51	--	There are 131 users and 4632 invisible on 14 servers
+2018-03-18 11:18:51	--	40 :operator(s) online
+2018-03-18 11:18:51	--	5065 :channels formed
+2018-03-18 11:18:51	--	I have 302 clients and 1 servers
+2018-03-18 11:18:51	--	Current Local Users: 302  Max: 584
+2018-03-18 11:18:51	--	Current Global Users: 4763  Max: 5368
+2018-03-18 11:18:51	--	Snoonet-7tk.3os.1j4ls3.IP :is now your displayed host
+2018-03-18 11:18:51	--	User mode [+Iwxi] by brightone
+2018-03-18 11:18:51	--	alpine.snoonet.org: *** You are connected using SSL cipher "AES256-GCM-SHA384"
+2018-03-18 11:18:51	--	NickServ (NickServ@snoonet/services/NickServ): This nickname is registered and protected.  If it is your
+2018-03-18 11:18:51	--	NickServ (NickServ@snoonet/services/NickServ): nick, type /msg NickServ IDENTIFY password.  Otherwise,
+2018-03-18 11:18:51	--	NickServ (NickServ@snoonet/services/NickServ): please choose a different nick.
+2018-03-18 11:18:51	--	Global (Global@snoonet/services/Global): [Logon News - Sep 30 11:26:50 2016 CEST] Link others to your community chat! https://webchat.snoonet.org/Channel_Name
+2018-03-18 11:18:51	--	Global (Global@snoonet/services/Global): [Logon News - Sep 30 11:27:44 2016 CEST] For speedy live help and assistance, type /join #help or visit www.snoonet.org/help - To see which communities are here, type /list or visit www.snoonet.org/communities
+2018-03-18 11:18:51	--	Global (Global@snoonet/services/Global): [Logon News - Dec 17 14:47:17 2016 CET] Snoonet is partnered with Private Internet Access! Make sure to keep secure by connecting to our secure port irc.snoonet.org:6697 and for best security, use a VPN Service! www.privateinternetaccess.com
+2018-03-18 11:19:11	--	MSG(NickServ): IDENTIFY ************************
+2018-03-18 11:19:11	--	NickServ (NickServ@snoonet/services/NickServ): Password accepted - you are now recognized.
+2018-03-18 11:19:11	--	You are now logged in as brightone (brightone!brightone@Snoonet-7tk.3os.1j4ls3.IP)
+2018-03-18 11:19:11	--	User mode [-x] by alpine.snoonet.org
+2018-03-18 11:19:11	--	user/brightone :is now your displayed host
+2018-03-18 11:19:11	--	HostServ (HostServ@snoonet/services/HostServ): Your vhost of user/brightone is now activated.
+2018-03-18 11:19:11	--	User mode [+r] by NickServ
+2018-03-18 11:25:08	--	irc: disconnected from server

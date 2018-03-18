@@ -1,0 +1,1 @@
+/home/brightone/.weechat/lua/matrix.lua
