@@ -15,3 +15,4 @@ bindkey "^R" history-incremental-search-backward
 #=== COMPLETIONS ===#
 
 autoload -U compinit && compinit
+source <(doctl completion zsh)

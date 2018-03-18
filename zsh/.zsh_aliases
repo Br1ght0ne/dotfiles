@@ -3,14 +3,6 @@ org2pdf() {
     pandoc -s "$1" -o "${out}.pdf" --pdf-engine=xelatex -V mainfont="Open Sans" -V geometry:margin=1in
 }
 
-stream() {
-  q="$1"
-	if [ -z "$q" ]; then
-		q='best'
-	fi
-	streamlink "$1" "$q"
-}
-
 alias e='emacsclient -a vim -t'
 alias ec='emacsclient -c -a vim'
 alias git='hub'
