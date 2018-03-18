@@ -13,6 +13,7 @@ global:
   - https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext
   - https://vk.com/js/api/openapi.js
   content.plugins: true
+  content.proxy: system
   hints.mode: letter
   hints.next_regexes:
   - \bnext\b
