@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 c6f41ae3eddf7774e53f11f34b013b5981a9d4e6 Oleksii Filonenko <brightone@protonmail.com> 1537059386 +0300	branch: Created from refs/remotes/origin/yadm
-c6f41ae3eddf7774e53f11f34b013b5981a9d4e6 89bea7c5435559c56a0f894e65b067eec4077a34 Oleksii Filonenko <brightone@protonmail.com> 1537059718 +0300	commit: Add .gitconfig
-89bea7c5435559c56a0f894e65b067eec4077a34 3e136d0d6dcb9866e8880ff314858fc26ee7dd1c Oleksii Filonenko <brightone@protonmail.com> 1537059950 +0300	commit: Add encrypted files
-3e136d0d6dcb9866e8880ff314858fc26ee7dd1c cc77882335934ac5eadf12320bc28431f053a7cb Oleksii Filonenko <brightone@protonmail.com> 1537060048 +0300	commit: Fixup
-cc77882335934ac5eadf12320bc28431f053a7cb 7f5a2a0816b03e8234c2fd153ed8338b49272774 Oleksii Filonenko <brightone@protonmail.com> 1537060312 +0300	commit: Add yadm bootstrap
-7f5a2a0816b03e8234c2fd153ed8338b49272774 2d00246f5baef8e528a64ac0def28ca03f465511 Oleksii Filonenko <brightone@protonmail.com> 1537060336 +0300	commit (amend): Add yadm bootstrap
-2d00246f5baef8e528a64ac0def28ca03f465511 2d00246f5baef8e528a64ac0def28ca03f465511 Oleksii Filonenko <brightone@protonmail.com> 1537060653 +0300	Branch: renamed refs/heads/yadm to refs/heads/master
-2d00246f5baef8e528a64ac0def28ca03f465511 a6c77da3c877f52b77cd07f6822fce6186bde686 Oleksii Filonenko <brightone@protonmail.com> 1537061762 +0300	commit: Saving lost stuff
-a6c77da3c877f52b77cd07f6822fce6186bde686 74d79feccd7c2f8317db4d4fb1a8190cb3b53c9f Oleksii Filonenko <brightone@protonmail.com> 1537062007 +0300	commit: Add passwords to bootstrap
