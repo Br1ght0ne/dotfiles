@@ -45,4 +45,3 @@ compdef exa=ls
 #=== LOOKS ===#
 
 (\cat ~/.cache/wal/sequences &)
-

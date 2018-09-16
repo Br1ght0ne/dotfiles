@@ -10,20 +10,30 @@ n() {
     echo -e "==> ${C}: ${1}..."
 }
 
+clone() {
+    # Check if $2 exists. If not, clone $1 to $2.
+    [[ -a "$2" ]] && echo "$2 already exists, skipping..." >&2 || git clone "$1" "$2"
+}
+
 ### End helpers
+
+c "yadm"
+
+n "installing envtpl through pip"
+pip3 install --user envtpl
 
 c "emacs"
 
 n "cloning doom-emacs"
-git clone git@gitlab.com:BrightOne/doom-emacs.git ~/.emacs.d.doom
+clone git@gitlab.com:BrightOne/doom-emacs.git ~/.emacs.d.doom
 
 n "cloning spacemacs"
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d.spacemacs
+clone https://github.com/syl20bnr/spacemacs ~/.emacs.d.spacemacs
 
 c "passwords"
 
 n "cloning passwords"
-git clone git@gitlab.com:BrightOne/passwords.git ~/.password-store
+clone git@gitlab.com:BrightOne/passwords.git ~/.password-store
 
 c "zplugin"
 
