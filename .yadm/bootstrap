@@ -1,0 +1,3 @@
+# Zplugin
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+rm -rf $HOME/.zplugin/snippets/https--github.com--sorin-ionescu--prezto--trunk--modules/prompt/functions/prompt_{agnoster,powerlevel9,powerline,pure}_setup
