@@ -1,0 +1,12 @@
+[user]
+	name = Oleksii Filonenko
+	email = brightone@protonmail.com
+	signingkey = F5493B7F93725578FDD3D0B8A1BC8428323ECFE8
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[github]
+	user = filalex77
+[core]
+	editor = vim
