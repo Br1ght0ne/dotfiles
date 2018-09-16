@@ -1,0 +1,63 @@
+2018-09-02 15:53:03	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-09-02 15:53:03	--	Topic for #qutebrowser is "Current version: v1.4.1 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 15:53:03	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Wed, 11 Jul 2018 18:22:26
+2018-09-02 15:53:03	--	Channel #qutebrowser: 182 nicks (0 ops, 0 voices, 182 normals)
+2018-09-02 15:53:03	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-09-02 15:53:09	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-09-02 15:54:21	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-09-02 15:54:21	--	Topic for #qutebrowser is "Current version: v1.4.1 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 15:54:21	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Wed, 11 Jul 2018 18:22:26
+2018-09-02 15:54:21	--	Channel #qutebrowser: 182 nicks (0 ops, 0 voices, 182 normals)
+2018-09-02 15:54:21	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-09-02 15:54:27	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-09-02 15:54:49	ml	nah, I mean the Qt-side rendering
+2018-09-02 15:57:43	Rhylx	ok, can I make it faster ?
+2018-09-02 15:57:47	ml	but thanks for asking. I just realized that I'm probably the one with the problems
+2018-09-02 15:57:58	ml	tbh, I don't know. No idea how rendering works
+2018-09-02 15:59:28	Rhylx	? Why are you the one with problems ?
+2018-09-02 15:59:43	Rhylx	Your qutebrowser starts rather fast no ?
+2018-09-02 16:00:04	ml	yea, but I have 2214 errors at the strace stats, you only 613
+2018-09-02 16:00:25	ml	which are not really errors, but rather stat checks that fail because a file or directory doesn't exit
+2018-09-02 16:00:27	ml	exist*
+2018-09-02 16:01:15	ml	the main reason why it starts fast for me is probably my CPU (i7-6560U) and my M.2 SSD
+2018-09-02 16:02:47	Rhylx	ok. I see ;). If it's that then I can do a lot of things ^^
+2018-09-02 16:06:04	Rhylx	*can't
+2018-09-02 16:08:20	--	irc: disconnected from server
+2018-09-02 16:08:39	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-09-02 16:08:39	--	Topic for #qutebrowser is "Current version: v1.4.1 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 16:08:39	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Wed, 11 Jul 2018 18:22:26
+2018-09-02 16:08:39	--	Channel #qutebrowser: 182 nicks (0 ops, 0 voices, 182 normals)
+2018-09-02 16:08:39	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-09-02 16:08:44	--	irc: disconnected from server
+2018-09-02 16:12:39	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-09-02 16:12:39	--	Topic for #qutebrowser is "Current version: v1.4.1 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 16:12:39	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Wed, 11 Jul 2018 18:22:26
+2018-09-02 16:12:39	--	Channel #qutebrowser: 181 nicks (0 ops, 0 voices, 181 normals)
+2018-09-02 16:12:39	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-09-02 16:12:45	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-09-02 16:14:37	--	Mode #qutebrowser [+o The-Compiler] by ChanServ
+2018-09-02 16:14:42	--	The-Compiler has changed topic for #qutebrowser from "Current version: v1.4.1 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic" to "Current version: v1.4.2 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 16:14:44	--	Mode #qutebrowser [-o The-Compiler] by The-Compiler
+2018-09-02 16:16:57	<--	Rhylx (25ab6914@gateway/web/freenode/ip.37.171.105.20) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:19:44	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-09-02 16:19:44	--	Topic for #qutebrowser is "Current version: v1.4.2 - v1.3.3 and v1.4.1 had SECURITY FIXES, see https://s.cmpl.cc/xss and https://s.cmpl.cc/csrf - https://www.qutebrowser.org/ - new config docs: https://s.cmpl.cc/quteconfig - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-09-02 16:19:44	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Sun, 02 Sep 2018 16:14:42
+2018-09-02 16:19:44	--	Channel #qutebrowser: 180 nicks (0 ops, 0 voices, 180 normals)
+2018-09-02 16:19:44	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-09-02 16:19:51	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-09-02 16:21:40	Foxboron	The-Compiler: *boom*
+2018-09-02 16:24:57	-->	cyfex_ (~cyfex@ppp091138136253.dsl.hol.gr) has joined #qutebrowser
+2018-09-02 16:26:25	<--	cyfex (~cyfex@ppp185145165116.access.hol.gr) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:26:45	The-Compiler	\o/
+2018-09-02 16:28:47	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:28:48	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-09-02 16:29:08	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:29:08	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-09-02 16:29:29	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:29:32	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-09-02 16:29:52	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:29:53	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-09-02 16:30:14	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:30:14	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-09-02 16:30:34	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
+2018-09-02 16:30:34	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)

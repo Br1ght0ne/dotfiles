@@ -1,0 +1,40 @@
+2018-09-02 16:20:07	brightone	HELP LIST
+2018-09-02 16:20:08	--	alis: ***** alis Help *****
+2018-09-02 16:20:08	--	alis: Help for LIST:
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: LIST gives a list of channels matching the
+2018-09-02 16:20:08	--	alis: pattern, modified by the other options.
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: Syntax: LIST <pattern> [options]
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: Options are:
+2018-09-02 16:20:08	--	alis:     -min <n>: show only channels with at least <n> users
+2018-09-02 16:20:08	--	alis:     -max <n>: show only channels with at most <n> users
+2018-09-02 16:20:08	--	alis:     -skip <n>: skip first <n> matches
+2018-09-02 16:20:08	--	alis:     -show [m][t]: show modes/topicsetter
+2018-09-02 16:20:08	--	alis:     -mode <+|-|=><modes>: modes set/unset/equal
+2018-09-02 16:20:08	--	alis:     -topic <pattern>: topic matches pattern
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: The pattern can contain * and ? wildcards. The pattern has to
+2018-09-02 16:20:08	--	alis: match the full channel name or a full topic, depending on where it
+2018-09-02 16:20:08	--	alis: is used; the wildcards are important. The pattern is also
+2018-09-02 16:20:08	--	alis: automatically surrounded by * wildcards if
+2018-09-02 16:20:08	--	alis: - a channel name pattern starts with a wildcard or a #, or
+2018-09-02 16:20:08	--	alis: - a topic pattern contains no * wildcards.
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: For example, for channel names, from most to least specific:
+2018-09-02 16:20:08	--	alis:  ?bar       - any character followed by "bar" with no other characters
+2018-09-02 16:20:08	--	alis:  #bar*      - anything starting with "#bar"
+2018-09-02 16:20:08	--	alis:  ##*bar*    - anything starting with ## and containing "bar"
+2018-09-02 16:20:08	--	alis:  *cows*moo* - anything containing "cows", 0 or more characters, and "moo"
+2018-09-02 16:20:08	--	alis:  *bar*      - anything containing "bar" (equivalent to "bar")
+2018-09-02 16:20:08	--	alis:  
+2018-09-02 16:20:08	--	alis: Examples:
+2018-09-02 16:20:08	--	alis:     /msg alis LIST searchterm
+2018-09-02 16:20:08	--	alis:     /msg alis LIST * -topic multiple*ordered*search*terms
+2018-09-02 16:20:08	--	alis:     /msg alis LIST * -min 50
+2018-09-02 16:20:08	--	alis:     /msg alis LIST #foo*
+2018-09-02 16:20:08	--	alis:     /msg alis LIST #foo* -mode =n
+2018-09-02 16:20:08	--	alis:     /msg alis LIST *freetopic* -mode -t -show mt
+2018-09-02 16:20:08	--	alis:     /msg alis LIST ##nocolors* -mode +c -show t
+2018-09-02 16:20:08	--	alis: ***** End of Help *****

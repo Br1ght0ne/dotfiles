@@ -1,0 +1,368 @@
+2018-09-02 15:46:48		x4??U Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:46:48		x4??U Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:46:48		x4??U Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:46:48		This appears to be the first time highmon has been run. For help and common set up hints see /highmon help
+2018-09-02 15:46:48		perl scripts loaded: highmon, iset
+2018-09-02 15:46:49		URL server listening on ('127.0.0.1', 45327)
+2018-09-02 15:46:49		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:46:49		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:46:49		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:46:59	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2018-09-02 15:46:59	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2018-09-02 15:48:21		??8ÒU Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:48:21		??8ÒU Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:48:21		??8ÒU Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:48:21		perl scripts loaded: highmon, iset
+2018-09-02 15:48:22		URL server listening on ('127.0.0.1', 43487)
+2018-09-02 15:48:22		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:48:22		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:48:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:48:27	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2018-09-02 15:48:27	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2018-09-02 15:49:06		???V Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:49:06		???V Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:49:06		???V Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:49:06		perl scripts loaded: highmon, iset
+2018-09-02 15:49:06		URL server listening on ('127.0.0.1', 37897)
+2018-09-02 15:49:07		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:49:07		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:49:07		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:49:30		irc: server freenode added
+2018-09-02 15:49:38		Option changed: irc.server.freenode.ssl = on  (default if null: off)
+2018-09-02 15:49:51		Option changed: irc.server.freenode.sasl_username = "brightone"  (default if null: "")
+2018-09-02 15:50:04		Option changed: irc.server.freenode.sasl_password = "${sec.data.freenode_password}"  (default if null: "")
+2018-09-02 15:50:07		Options saved to sec.conf
+2018-09-02 15:50:07		Options saved to weechat.conf
+2018-09-02 15:50:07		Options saved to plugins.conf
+2018-09-02 15:50:07		Options saved to charset.conf
+2018-09-02 15:50:07		Options saved to logger.conf
+2018-09-02 15:50:07		Options saved to exec.conf
+2018-09-02 15:50:07		Options saved to trigger.conf
+2018-09-02 15:50:07		Options saved to aspell.conf
+2018-09-02 15:50:07		Options saved to alias.conf
+2018-09-02 15:50:07		Options saved to buflist.conf
+2018-09-02 15:50:07		Options saved to fifo.conf
+2018-09-02 15:50:07		Options saved to xfer.conf
+2018-09-02 15:50:07		Options saved to irc.conf
+2018-09-02 15:50:07		Options saved to relay.conf
+2018-09-02 15:50:07		Options saved to ruby.conf
+2018-09-02 15:50:07		Options saved to lua.conf
+2018-09-02 15:50:07		Options saved to perl.conf
+2018-09-02 15:50:07		Options saved to iset.conf
+2018-09-02 15:50:07		Options saved to python.conf
+2018-09-02 15:50:07		Options saved to urlgrab.conf
+2018-09-02 15:50:07		Options saved to script.conf
+2018-09-02 15:50:07		Options saved to fset.conf
+2018-09-02 15:50:42	=!=	Too few arguments for command "/secure decrypt" (help on command: /help secure)
+2018-09-02 15:50:48		There is no encrypted data
+2018-09-02 15:51:07		Secured data "freenode_password" set
+2018-09-02 15:51:07		Options saved to sec.conf
+2018-09-02 15:51:10	=!=	Error with command "/secure save" (help on command: /help secure)
+2018-09-02 15:51:22		p?c~bU Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:51:22		p?c~bU Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:51:22		p?c~bU Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:51:22		perl scripts loaded: highmon, iset
+2018-09-02 15:51:22		URL server listening on ('127.0.0.1', 42795)
+2018-09-02 15:51:22		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:51:22		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:51:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:52:26		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2018-09-02 15:52:37		Option changed: irc.server.freenode.autojoin = "#gentoo,#lor,##linux,#qutebrowser"  (default if null: "")
+2018-09-02 15:52:41		Options saved to sec.conf
+2018-09-02 15:52:41		Options saved to weechat.conf
+2018-09-02 15:52:41		Options saved to plugins.conf
+2018-09-02 15:52:41		Options saved to charset.conf
+2018-09-02 15:52:41		Options saved to logger.conf
+2018-09-02 15:52:41		Options saved to exec.conf
+2018-09-02 15:52:41		Options saved to trigger.conf
+2018-09-02 15:52:41		Options saved to aspell.conf
+2018-09-02 15:52:41		Options saved to alias.conf
+2018-09-02 15:52:41		Options saved to buflist.conf
+2018-09-02 15:52:41		Options saved to fifo.conf
+2018-09-02 15:52:41		Options saved to xfer.conf
+2018-09-02 15:52:41		Options saved to irc.conf
+2018-09-02 15:52:41		Options saved to relay.conf
+2018-09-02 15:52:41		Options saved to ruby.conf
+2018-09-02 15:52:41		Options saved to lua.conf
+2018-09-02 15:52:41		Options saved to perl.conf
+2018-09-02 15:52:41		Options saved to iset.conf
+2018-09-02 15:52:41		Options saved to python.conf
+2018-09-02 15:52:41		Options saved to urlgrab.conf
+2018-09-02 15:52:41		Options saved to script.conf
+2018-09-02 15:52:41		Options saved to fset.conf
+2018-09-02 15:52:47		pt?7wU Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:52:47		pt?7wU Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:52:47		pt?7wU Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:52:47		perl scripts loaded: highmon, iset
+2018-09-02 15:52:47		URL server listening on ('127.0.0.1', 45847)
+2018-09-02 15:52:47		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:52:47		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:52:47		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:54:03		xt4jUU Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 15:54:03		xt4jUU Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 15:54:03		xt4jUU Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 15:54:03		perl scripts loaded: highmon, iset
+2018-09-02 15:54:03		URL server listening on ('127.0.0.1', 33711)
+2018-09-02 15:54:03		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 15:54:03		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 15:54:03		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 15:55:08		[irc]  /mode  [<channel>] [+|-]o|p|s|i|t|n|m|l|b|e|v|k [<arguments>]
+2018-09-02 15:55:08		              <nick> [+|-]i|s|w|o
+2018-09-02 15:55:08		change channel or user mode
+2018-09-02 15:55:08		channel modes:
+2018-09-02 15:55:08		  channel: channel name to modify (default is current one)
+2018-09-02 15:55:08		  o: give/take channel operator privileges
+2018-09-02 15:55:08		  p: private channel flag
+2018-09-02 15:55:08		  s: secret channel flag
+2018-09-02 15:55:08		  i: invite-only channel flag
+2018-09-02 15:55:08		  t: topic settable by channel operator only flag
+2018-09-02 15:55:08		  n: no messages to channel from clients on the outside
+2018-09-02 15:55:08		  m: moderated channel
+2018-09-02 15:55:08		  l: set the user limit to channel
+2018-09-02 15:55:08		  b: set a ban mask to keep users out
+2018-09-02 15:55:08		  e: set exception mask
+2018-09-02 15:55:08		  v: give/take the ability to speak on a moderated channel
+2018-09-02 15:55:08		  k: set a channel key (password)
+2018-09-02 15:55:08		user modes:
+2018-09-02 15:55:08		  nick: nick to modify
+2018-09-02 15:55:08		  i: mark a user as invisible
+2018-09-02 15:55:08		  s: mark a user for receive server notices
+2018-09-02 15:55:08		  w: user receives wallops
+2018-09-02 15:55:08		  o: operator flag
+2018-09-02 15:55:08		List of modes is not comprehensive, you should read documentation about your server to see all possible modes.
+2018-09-02 15:55:08		Examples:
+2018-09-02 15:55:08		  protect topic on channel #weechat:
+2018-09-02 15:55:08		    /mode #weechat +t
+2018-09-02 15:55:08		  become invisible on server:
+2018-09-02 15:55:08		    /mode nick +i
+2018-09-02 15:55:49		[core]  /set  [<option> [<value>]]
+2018-09-02 15:55:49		              diff [<option> [<option>...]]
+2018-09-02 15:55:49		              env [<variable> [<value>]]
+2018-09-02 15:55:49		set config options and environment variables
+2018-09-02 15:55:49		option: name of an option (wildcard "*" is allowed to list options, if no value is specified)
+2018-09-02 15:55:49		 value: new value for option, according to type:
+2018-09-02 15:55:49		          boolean: on, off or toggle
+2018-09-02 15:55:49		          integer: number, ++number or --number
+2018-09-02 15:55:49		           string: any string ("" for empty string)
+2018-09-02 15:55:49		            color: color name, ++number or --number
+2018-09-02 15:55:49		        Note: for all types, you can use null to remove option value (undefined value). This works only for some special plugin variables.
+2018-09-02 15:55:49		  diff: display only changed options
+2018-09-02 15:55:49		   env: display or set an environment variable (use value "" to unset a variable)
+2018-09-02 15:55:49		Examples:
+2018-09-02 15:55:49		  display options about highlight:
+2018-09-02 15:55:49		    /set *highlight*
+2018-09-02 15:55:49		  add a word to highlight:
+2018-09-02 15:55:49		    /set weechat.look.highlight "word"
+2018-09-02 15:55:49		  display changed options:
+2018-09-02 15:55:49		    /set diff
+2018-09-02 15:55:49		  display changed options in irc plugin:
+2018-09-02 15:55:49		    /set diff irc.*
+2018-09-02 15:55:49		  display value of environment variable LANG:
+2018-09-02 15:55:49		    /set env LANG
+2018-09-02 15:55:49		  set environment variable LANG and use it:
+2018-09-02 15:55:49		    /set env LANG fr_FR.UTF-8
+2018-09-02 15:55:49		    /upgrade
+2018-09-02 15:55:49		  unset environment variable ABC:
+2018-09-02 15:55:49		    /set env ABC ""
+2018-09-02 15:55:56		[core]  /set  [<option> [<value>]]
+2018-09-02 15:55:56		              diff [<option> [<option>...]]
+2018-09-02 15:55:56		              env [<variable> [<value>]]
+2018-09-02 15:55:56		set config options and environment variables
+2018-09-02 15:55:56		option: name of an option (wildcard "*" is allowed to list options, if no value is specified)
+2018-09-02 15:55:56		 value: new value for option, according to type:
+2018-09-02 15:55:56		          boolean: on, off or toggle
+2018-09-02 15:55:56		          integer: number, ++number or --number
+2018-09-02 15:55:56		           string: any string ("" for empty string)
+2018-09-02 15:55:56		            color: color name, ++number or --number
+2018-09-02 15:55:56		        Note: for all types, you can use null to remove option value (undefined value). This works only for some special plugin variables.
+2018-09-02 15:55:56		  diff: display only changed options
+2018-09-02 15:55:56		   env: display or set an environment variable (use value "" to unset a variable)
+2018-09-02 15:55:56		Examples:
+2018-09-02 15:55:56		  display options about highlight:
+2018-09-02 15:55:56		    /set *highlight*
+2018-09-02 15:55:56		  add a word to highlight:
+2018-09-02 15:55:56		    /set weechat.look.highlight "word"
+2018-09-02 15:55:56		  display changed options:
+2018-09-02 15:55:56		    /set diff
+2018-09-02 15:55:56		  display changed options in irc plugin:
+2018-09-02 15:55:56		    /set diff irc.*
+2018-09-02 15:55:56		  display value of environment variable LANG:
+2018-09-02 15:55:56		    /set env LANG
+2018-09-02 15:55:56		  set environment variable LANG and use it:
+2018-09-02 15:55:56		    /set env LANG fr_FR.UTF-8
+2018-09-02 15:55:56		    /upgrade
+2018-09-02 15:55:56		  unset environment variable ABC:
+2018-09-02 15:55:56		    /set env ABC ""
+2018-09-02 15:55:58		[core]  /set  [<option> [<value>]]
+2018-09-02 15:55:58		              diff [<option> [<option>...]]
+2018-09-02 15:55:58		              env [<variable> [<value>]]
+2018-09-02 15:55:58		set config options and environment variables
+2018-09-02 15:55:58		option: name of an option (wildcard "*" is allowed to list options, if no value is specified)
+2018-09-02 15:55:58		 value: new value for option, according to type:
+2018-09-02 15:55:58		          boolean: on, off or toggle
+2018-09-02 15:55:58		          integer: number, ++number or --number
+2018-09-02 15:55:58		           string: any string ("" for empty string)
+2018-09-02 15:55:58		            color: color name, ++number or --number
+2018-09-02 15:55:58		        Note: for all types, you can use null to remove option value (undefined value). This works only for some special plugin variables.
+2018-09-02 15:55:58		  diff: display only changed options
+2018-09-02 15:55:58		   env: display or set an environment variable (use value "" to unset a variable)
+2018-09-02 15:55:58		Examples:
+2018-09-02 15:55:58		  display options about highlight:
+2018-09-02 15:55:58		    /set *highlight*
+2018-09-02 15:55:58		  add a word to highlight:
+2018-09-02 15:55:58		    /set weechat.look.highlight "word"
+2018-09-02 15:55:58		  display changed options:
+2018-09-02 15:55:58		    /set diff
+2018-09-02 15:55:58		  display changed options in irc plugin:
+2018-09-02 15:55:58		    /set diff irc.*
+2018-09-02 15:55:58		  display value of environment variable LANG:
+2018-09-02 15:55:58		    /set env LANG
+2018-09-02 15:55:58		  set environment variable LANG and use it:
+2018-09-02 15:55:58		    /set env LANG fr_FR.UTF-8
+2018-09-02 15:55:58		    /upgrade
+2018-09-02 15:55:58		  unset environment variable ABC:
+2018-09-02 15:55:58		    /set env ABC ""
+2018-09-02 15:58:38		[irc]  /mode  [<channel>] [+|-]o|p|s|i|t|n|m|l|b|e|v|k [<arguments>]
+2018-09-02 15:58:38		              <nick> [+|-]i|s|w|o
+2018-09-02 15:58:38		change channel or user mode
+2018-09-02 15:58:38		channel modes:
+2018-09-02 15:58:38		  channel: channel name to modify (default is current one)
+2018-09-02 15:58:38		  o: give/take channel operator privileges
+2018-09-02 15:58:38		  p: private channel flag
+2018-09-02 15:58:38		  s: secret channel flag
+2018-09-02 15:58:38		  i: invite-only channel flag
+2018-09-02 15:58:38		  t: topic settable by channel operator only flag
+2018-09-02 15:58:38		  n: no messages to channel from clients on the outside
+2018-09-02 15:58:38		  m: moderated channel
+2018-09-02 15:58:38		  l: set the user limit to channel
+2018-09-02 15:58:38		  b: set a ban mask to keep users out
+2018-09-02 15:58:38		  e: set exception mask
+2018-09-02 15:58:38		  v: give/take the ability to speak on a moderated channel
+2018-09-02 15:58:38		  k: set a channel key (password)
+2018-09-02 15:58:38		user modes:
+2018-09-02 15:58:38		  nick: nick to modify
+2018-09-02 15:58:38		  i: mark a user as invisible
+2018-09-02 15:58:38		  s: mark a user for receive server notices
+2018-09-02 15:58:38		  w: user receives wallops
+2018-09-02 15:58:38		  o: operator flag
+2018-09-02 15:58:38		List of modes is not comprehensive, you should read documentation about your server to see all possible modes.
+2018-09-02 15:58:38		Examples:
+2018-09-02 15:58:38		  protect topic on channel #weechat:
+2018-09-02 15:58:38		    /mode #weechat +t
+2018-09-02 15:58:38		  become invisible on server:
+2018-09-02 15:58:38		    /mode nick +i
+2018-09-02 16:02:19	=!=	No help available, "knock" is not a command or an option
+2018-09-02 16:02:36	=!=	Error: unknown command "/knock" (type /help for help)
+2018-09-02 16:07:17		irc: server freenode-tor added
+2018-09-02 16:07:33		Option changed: irc.server.freenode-tor.ssl = on  (default if null: off)
+2018-09-02 16:07:38		Option changed: irc.server.freenode-tor.sasl_username = "brightone"  (default if null: "")
+2018-09-02 16:07:49		Option changed: irc.server.freenode-tor.sasl_password = "${sec.data.freenode_password}"  (default if null: "")
+2018-09-02 16:08:04		Option changed: irc.server.freenode-tor.autoconnect = off  (default if null: off)
+2018-09-02 16:08:17		Option changed: irc.server.freenode-tor.autojoin = "#gentoo,#lor,##linux,#qutebrowser"  (default if null: "")
+2018-09-02 16:08:18		Options saved to sec.conf
+2018-09-02 16:08:18		Options saved to weechat.conf
+2018-09-02 16:08:18		Options saved to plugins.conf
+2018-09-02 16:08:18		Options saved to charset.conf
+2018-09-02 16:08:18		Options saved to logger.conf
+2018-09-02 16:08:18		Options saved to exec.conf
+2018-09-02 16:08:18		Options saved to trigger.conf
+2018-09-02 16:08:18		Options saved to aspell.conf
+2018-09-02 16:08:18		Options saved to alias.conf
+2018-09-02 16:08:18		Options saved to buflist.conf
+2018-09-02 16:08:18		Options saved to fifo.conf
+2018-09-02 16:08:18		Options saved to xfer.conf
+2018-09-02 16:08:18		Options saved to irc.conf
+2018-09-02 16:08:18		Options saved to relay.conf
+2018-09-02 16:08:18		Options saved to ruby.conf
+2018-09-02 16:08:18		Options saved to lua.conf
+2018-09-02 16:08:18		Options saved to perl.conf
+2018-09-02 16:08:18		Options saved to iset.conf
+2018-09-02 16:08:18		Options saved to python.conf
+2018-09-02 16:08:18		Options saved to urlgrab.conf
+2018-09-02 16:08:18		Options saved to script.conf
+2018-09-02 16:08:18		Options saved to fset.conf
+2018-09-02 16:09:05		Option changed: irc.server.freenode.autoconnect = off  (default if null: off)
+2018-09-02 16:09:06		Options saved to sec.conf
+2018-09-02 16:09:06		Options saved to weechat.conf
+2018-09-02 16:09:06		Options saved to plugins.conf
+2018-09-02 16:09:06		Options saved to charset.conf
+2018-09-02 16:09:06		Options saved to logger.conf
+2018-09-02 16:09:06		Options saved to exec.conf
+2018-09-02 16:09:06		Options saved to trigger.conf
+2018-09-02 16:09:06		Options saved to aspell.conf
+2018-09-02 16:09:06		Options saved to alias.conf
+2018-09-02 16:09:06		Options saved to buflist.conf
+2018-09-02 16:09:06		Options saved to fifo.conf
+2018-09-02 16:09:06		Options saved to xfer.conf
+2018-09-02 16:09:06		Options saved to irc.conf
+2018-09-02 16:09:06		Options saved to relay.conf
+2018-09-02 16:09:06		Options saved to ruby.conf
+2018-09-02 16:09:06		Options saved to lua.conf
+2018-09-02 16:09:06		Options saved to perl.conf
+2018-09-02 16:09:06		Options saved to iset.conf
+2018-09-02 16:09:06		Options saved to python.conf
+2018-09-02 16:09:06		Options saved to urlgrab.conf
+2018-09-02 16:09:06		Options saved to script.conf
+2018-09-02 16:09:06		Options saved to fset.conf
+2018-09-02 16:09:29		Option changed: irc.server.freenode.autoconnect = off  (default if null: off)
+2018-09-02 16:11:30		irc: server freenode-tor has been deleted
+2018-09-02 16:11:37	=!=	irc: unable to add temporary server "freenode-tor" because the addition of temporary servers with command /connect is currently disabled
+2018-09-02 16:11:37	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2018-09-02 16:11:49		`?u?]U Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 16:11:49		`?u?]U Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 16:11:49		`?u?]U Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 16:11:49		perl scripts loaded: highmon, iset
+2018-09-02 16:11:49		URL server listening on ('127.0.0.1', 42265)
+2018-09-02 16:11:49		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 16:11:49		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 16:11:49		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 16:12:16		h?\YwU Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 16:12:16		h?\YwU Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 16:12:16		h?\YwU Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 16:12:16		perl scripts loaded: highmon, iset
+2018-09-02 16:12:16		URL server listening on ('127.0.0.1', 41201)
+2018-09-02 16:12:16		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 16:12:16		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 16:12:16		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 16:13:34		[alias]  /UMODE  
+2018-09-02 16:13:34		mode $nick
+2018-09-02 16:15:52	=!=	Error: unknown command "/whous" (type /help for help)
+2018-09-02 16:16:03		[irc]  /who  [<mask> [o]]
+2018-09-02 16:16:03		generate a query which returns a list of information
+2018-09-02 16:16:03		mask: only information which match this mask
+2018-09-02 16:16:03		   o: only operators are returned according to the mask supplied
+2018-09-02 16:19:16		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2018-09-02 16:19:16		list channels and their topic
+2018-09-02 16:19:16		 server: send to this server (internal name)
+2018-09-02 16:19:16		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2018-09-02 16:19:16		channel: channel to list
+2018-09-02 16:19:16		 target: server name
+2018-09-02 16:19:16		Examples:
+2018-09-02 16:19:16		  list all channels on server (can be very slow on large networks):
+2018-09-02 16:19:16		    /list
+2018-09-02 16:19:16		  list channel #weechat:
+2018-09-02 16:19:16		    /list #weechat
+2018-09-02 16:19:16		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2018-09-02 16:19:16		    /list -re #weechat.*
+2018-09-02 16:19:22		`????U Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-09-02 16:19:22		`????U Subroutine PRINT redefined at (eval 4) line 1.
+2018-09-02 16:19:22		`????U Subroutine PRINTF redefined at (eval 4) line 1.
+2018-09-02 16:19:22		perl scripts loaded: highmon, iset
+2018-09-02 16:19:23		URL server listening on ('127.0.0.1', 46633)
+2018-09-02 16:19:23		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-09-02 16:19:23		script: 346 scripts for WeeChat 2.3-dev
+2018-09-02 16:19:23		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-09-02 16:19:33		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2018-09-02 16:19:33		list channels and their topic
+2018-09-02 16:19:33		 server: send to this server (internal name)
+2018-09-02 16:19:33		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2018-09-02 16:19:33		channel: channel to list
+2018-09-02 16:19:33		 target: server name
+2018-09-02 16:19:33		Examples:
+2018-09-02 16:19:33		  list all channels on server (can be very slow on large networks):
+2018-09-02 16:19:33		    /list
+2018-09-02 16:19:33		  list channel #weechat:
+2018-09-02 16:19:33		    /list #weechat
+2018-09-02 16:19:33		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2018-09-02 16:19:33		    /list -re #weechat.*
+2018-09-02 16:19:42	=!=	No help available, "alis" is not a command or an option

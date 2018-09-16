@@ -1,0 +1,2 @@
+rofi.theme: /home/brightone/.local/share/rofi/themes/DarkestDungeon.rasi
+rofi.modi: run,drun,ssh,combi

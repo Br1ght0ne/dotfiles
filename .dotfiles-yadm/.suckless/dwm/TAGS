@@ -1,0 +1,365 @@
+
+README.md,194
+dwm - dynamic window managerdwm - dynamic window manager1,0
+RequirementsRequirements6,127
+InstallationInstallation11,209
+Running dwmRunning dwm25,602
+ConfigurationConfiguration49,1133
+
+config.h,1773
+static const char font[]            = "-*-*-medium-*-*-*-14-*-*-*-*-*-*-*";font4,76
+static const char normbordercolor[] = "#cccccc";normbordercolor5,152
+static const char normbgcolor[]     = "#cccccc";normbgcolor6,201
+static const char normfgcolor[]     = "#000000";normfgcolor7,250
+static const char selbordercolor[]  = "#0066ff";selbordercolor8,299
+static const char selbgcolor[]      = "#0066ff";selbgcolor9,348
+static const char selfgcolor[]      = "#ffffff";selfgcolor10,397
+static const unsigned int borderpx  = 1;        /* border pixel of windows */borderpx11,446
+static const unsigned int snap      = 32;       /* snap pixel */snap12,524
+static const Bool showbar           = False;     /* False means no bar */showbar13,589
+static const Bool topbar            = True;     /* False means bottom bar */topbar14,663
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };tags17,755
+static const Rule rules[] = {rules19,833
+static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */mfact26,1104
+static const Bool resizehints = True; /* True means respect size hints in tiled resizals */resizehints27,1188
+static const Layout layouts[] = {layouts29,1281
+#define MODKEY MODKEY37,1532
+#define TAGKEYS(TAGKEYS38,1556
+#define SHCMD(SHCMD45,1974
+static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcodmenucmd48,2064
+static const char *termcmd[]  = { "st", NULL };termcmd49,2210
+static const char scratchpadname[] = "scratchpad";scratchpadname50,2258
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };scratchpadcmd51,2309
+static Key keys[] = {keys53,2401
+static Button buttons[] = {buttons91,4885
+
+dwm.c,12451
+#define BUTTONMASK BUTTONMASK44,1480
+#define CLEANMASK(CLEANMASK45,1548
+#define INRECT(INRECT46,1613
+#define ISVISIBLE(ISVISIBLE47,1716
+#define LENGTH(LENGTH48,1794
+#define MAX(MAX49,1851
+#define MIN(MIN50,1907
+#define MOUSEMASK MOUSEMASK51,1963
+#define WIDTH(WIDTH52,2026
+#define HEIGHT(HEIGHT53,2081
+#define TAGMASK TAGMASK54,2136
+#define TEXTW(TEXTW55,2194
+enum { CurNormal, CurResize, CurMove, CurLast };        /* cursor */__anon0f53a99e010358,2279
+enum { CurNormal, CurResize, CurMove, CurLast };        /* cursor */CurNormal58,2279
+enum { CurNormal, CurResize, CurMove, CurLast };        /* cursor */CurResize58,2279
+enum { CurNormal, CurResize, CurMove, CurLast };        /* cursor */CurMove58,2279
+enum { CurNormal, CurResize, CurMove, CurLast };        /* cursor */CurLast58,2279
+enum { ColBorder, ColFG, ColBG, ColLast };              /* color */__anon0f53a99e020359,2348
+enum { ColBorder, ColFG, ColBG, ColLast };              /* color */ColBorder59,2348
+enum { ColBorder, ColFG, ColBG, ColLast };              /* color */ColFG59,2348
+enum { ColBorder, ColFG, ColBG, ColLast };              /* color */ColBG59,2348
+enum { ColBorder, ColFG, ColBG, ColLast };              /* color */ColLast59,2348
+enum { NetSupported, NetWMName, NetLast };              /* EWMH atoms */__anon0f53a99e030360,2416
+enum { NetSupported, NetWMName, NetLast };              /* EWMH atoms */NetSupported60,2416
+enum { NetSupported, NetWMName, NetLast };              /* EWMH atoms */NetWMName60,2416
+enum { NetSupported, NetWMName, NetLast };              /* EWMH atoms */NetLast60,2416
+enum { WMProtocols, WMDelete, WMState, WMLast };        /* default atoms */__anon0f53a99e040361,2489
+enum { WMProtocols, WMDelete, WMState, WMLast };        /* default atoms */WMProtocols61,2489
+enum { WMProtocols, WMDelete, WMState, WMLast };        /* default atoms */WMDelete61,2489
+enum { WMProtocols, WMDelete, WMState, WMLast };        /* default atoms */WMState61,2489
+enum { WMProtocols, WMDelete, WMState, WMLast };        /* default atoms */WMLast61,2489
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,__anon0f53a99e050362,2565
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,ClkTagBar62,2565
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,ClkLtSymbol62,2565
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,ClkStatusText62,2565
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,ClkWinTitle62,2565
+       ClkClientWin, ClkRootWin, ClkLast };             /* clicks */ClkClientWin63,2624
+       ClkClientWin, ClkRootWin, ClkLast };             /* clicks */ClkRootWin63,2624
+       ClkClientWin, ClkRootWin, ClkLast };             /* clicks */ClkLast63,2624
+typedef union {__anon0f53a99e060a65,2694
+	int i;i66,2710
+	unsigned int ui;ui67,2718
+	float f;f68,2736
+	const void *v;v69,2746
+} Arg;Arg70,2762
+typedef struct {__anon0f53a99e070872,2770
+	unsigned int click;click73,2787
+	unsigned int mask;mask74,2808
+	unsigned int button;button75,2828
+	void (*func)(const Arg *arg);func76,2850
+	const Arg arg;arg77,2881
+} Button;Button78,2897
+typedef struct Monitor Monitor;Monitor80,2908
+typedef struct Client Client;Client81,2940
+struct Client {Client82,2970
+	char name[256];name83,2986
+	float mina, maxa;mina84,3003
+	float mina, maxa;maxa84,3003
+	int x, y, w, h;x85,3022
+	int x, y, w, h;y85,3022
+	int x, y, w, h;w85,3022
+	int x, y, w, h;h85,3022
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;basew86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;baseh86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;incw86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;inch86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;maxw86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;maxh86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;minw86,3039
+	int basew, baseh, incw, inch, maxw, maxh, minw, minh;minh86,3039
+	int bw, oldbw;bw87,3094
+	int bw, oldbw;oldbw87,3094
+	unsigned int tags;tags88,3110
+	Bool isfixed, isfloating, isurgent;isfixed89,3130
+	Bool isfixed, isfloating, isurgent;isfloating89,3130
+	Bool isfixed, isfloating, isurgent;isurgent89,3130
+	Client *next;next90,3167
+	Client *snext;snext91,3182
+	Monitor *mon;mon92,3198
+	Window win;win93,3213
+typedef struct {__anon0f53a99e080896,3230
+	int x, y, w, h;x97,3247
+	int x, y, w, h;y97,3247
+	int x, y, w, h;w97,3247
+	int x, y, w, h;h97,3247
+	unsigned long norm[ColLast];norm98,3264
+	unsigned long sel[ColLast];sel99,3294
+	Drawable drawable;drawable100,3323
+	GC gc;gc101,3343
+	struct {__anon0f53a99e0908102,3351
+		int ascent;ascent103,3361
+		int descent;descent104,3375
+		int height;height105,3390
+		XFontSet set;set106,3404
+		XFontStruct *xfont;xfont107,3420
+	} font;font108,3442
+} DC; /* draw context */DC109,3451
+typedef struct {__anon0f53a99e0a08111,3477
+	unsigned int mod;mod112,3494
+	KeySym keysym;keysym113,3513
+	void (*func)(const Arg *);func114,3529
+	const Arg arg;arg115,3557
+} Key;Key116,3573
+typedef struct {__anon0f53a99e0b08118,3581
+	const char *symbol;symbol119,3598
+	void (*arrange)(Monitor *);arrange120,3619
+} Layout;Layout121,3648
+struct Monitor {Monitor123,3659
+	char ltsymbol[16];ltsymbol124,3676
+	float mfact;mfact125,3696
+	int num;num126,3710
+	int by;               /* bar geometry */by127,3720
+	int mx, my, mw, mh;   /* screen size */mx128,3762
+	int mx, my, mw, mh;   /* screen size */my128,3762
+	int mx, my, mw, mh;   /* screen size */mw128,3762
+	int mx, my, mw, mh;   /* screen size */mh128,3762
+	int wx, wy, ww, wh;   /* window area  */wx129,3803
+	int wx, wy, ww, wh;   /* window area  */wy129,3803
+	int wx, wy, ww, wh;   /* window area  */ww129,3803
+	int wx, wy, ww, wh;   /* window area  */wh129,3803
+	unsigned int seltags;seltags130,3845
+	unsigned int sellt;sellt131,3868
+	unsigned int tagset[2];tagset132,3889
+	Bool showbar;showbar133,3914
+	Bool topbar;topbar134,3929
+	Client *clients;clients135,3943
+	Client *sel;sel136,3961
+	Client *stack;stack137,3975
+	Monitor *next;next138,3991
+	Window barwin;barwin139,4007
+	const Layout *lt[2];lt140,4023
+typedef struct {__anon0f53a99e0c08143,4049
+	const char *class;class144,4066
+	const char *instance;instance145,4086
+	const char *title;title146,4109
+	unsigned int tags;tags147,4129
+	Bool isfloating;isfloating148,4149
+	int monitor;monitor149,4167
+} Rule;Rule150,4181
+static const char broken[] = "broken";broken244,7758
+static char stext[256];stext245,7797
+static int screen;screen246,7821
+static int sw, sh;           /* X display screen geometry width, height */sw247,7840
+static int sw, sh;           /* X display screen geometry width, height */sh247,7840
+static int bh, blw = 0;      /* bar geometry */bh248,7915
+static int bh, blw = 0;      /* bar geometry */blw248,7915
+static int (*xerrorxlib)(Display *, XErrorEvent *);xerrorxlib249,7963
+static unsigned int numlockmask = 0;numlockmask250,8015
+static void (*handler[LASTEvent]) (XEvent *) = {handler251,8052
+static Atom wmatom[WMLast], netatom[NetLast];wmatom265,9033
+static Atom wmatom[WMLast], netatom[NetLast];netatom265,9033
+static Bool otherwm;otherwm266,9079
+static Bool running = True;running267,9100
+static Cursor cursor[CurLast];cursor268,9128
+static Display *dpy;dpy269,9159
+static DC dc;dc270,9180
+static Monitor *mons = NULL, *selmon = NULL;mons271,9194
+static Monitor *mons = NULL, *selmon = NULL;selmon271,9194
+static Window root;root272,9239
+static unsigned int scratchtag = 1 << LENGTH(tags);scratchtag277,9347
+struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };NumTags280,9473
+struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };limitexceeded280,9473
+applyrules(Client *c) {applyrules284,9578
+applysizehints(Client *c, int *x, int *y, int *w, int *h, Bool interact) {applysizehints318,10486
+arrange(Monitor *m) {arrange386,12042
+arrangemon(Monitor *m) {arrangemon399,12264
+attach(Client *c) {attach407,12439
+attachstack(Client *c) {attachstack413,12517
+buttonpress(XEvent *e) {buttonpress419,12597
+checkotherwm(void) {checkotherwm460,13620
+cleanup(void) {cleanup473,13989
+cleanupmon(Monitor *mon) {cleanupmon500,14624
+clearurgent(Client *c) {clearurgent515,14876
+configure(Client *c) {configure527,15072
+configurenotify(XEvent *e) {configurenotify545,15422
+configurerequest(XEvent *e) {configurerequest565,15872
+createmon(void) {createmon610,17138
+destroynotify(XEvent *e) {destroynotify626,17530
+detach(Client *c) {detach635,17681
+detachstack(Client *c) {detachstack643,17805
+die(const char *errstr, ...) {die656,18045
+dirtomon(int dir) {dirtomon666,18191
+drawbar(Monitor *m) {drawbar683,18437
+drawbars(void) {drawbars733,19618
+drawsquare(Bool filled, Bool empty, Bool invert, unsigned long col[ColLast]) {drawsquare741,19702
+drawtext(const char *text, unsigned long col[ColLast], Bool invert) {drawtext762,20228
+enternotify(XEvent *e) {enternotify790,21088
+expose(XEvent *e) {expose808,21438
+focus(Client *c) {focus817,21577
+focusin(XEvent *e) { /* there are some broken focus acquiring clients */focusin840,22099
+focusmon(const Arg *arg) {focusmon848,22344
+focusstack(const Arg *arg) {focusstack860,22500
+getcolor(const char *colstr) {getcolor886,22963
+getrootptr(int *x, int *y) {getrootptr896,23198
+getstate(Window w) {getstate905,23351
+gettextprop(Window w, Atom atom, char *text, unsigned int size) {gettextprop923,23740
+grabbuttons(Client *c, Bool focused) {grabbuttons948,24295
+grabkeys(void) {grabkeys970,25003
+initfont(const char *fontstr) {initfont988,25463
+isprotodel(Client *c) {isprotodel1024,26504
+isuniquegeom(XineramaScreenInfo *unique, size_t len, XineramaScreenInfo *info) {isuniquegeom1040,26785
+keypress(XEvent *e) {keypress1052,27114
+killclient(const Arg *arg) {killclient1067,27437
+manage(Window w, XWindowAttributes *wa) {manage1093,28045
+mappingnotify(XEvent *e) {mappingnotify1162,30135
+maprequest(XEvent *e) {maprequest1171,30286
+monocle(Monitor *m) {monocle1184,30542
+movemouse(const Arg *arg) {movemouse1198,30897
+nexttiled(Client *c) {nexttiled1253,32461
+ptrtomon(int x, int y) {ptrtomon1259,32568
+propertynotify(XEvent *e) {propertynotify1269,32722
+quit(const Arg *arg) {quit1303,33481
+resize(Client *c, int x, int y, int w, int h, Bool interact) {resize1308,33530
+resizemouse(const Arg *arg) {resizemouse1324,33903
+restack(Monitor *m) {restack1374,35353
+run(void) {run1398,35879
+scan(void) {scan1409,36064
+sendmon(Client *c, Monitor *m) {sendmon1435,36768
+setclientstate(Client *c, long state) {setclientstate1450,37020
+setlayout(const Arg *arg) {setlayout1458,37216
+setmfact(const Arg *arg) {setmfact1472,37591
+setup(void) {setup1485,37827
+showhide(Client *c) {showhide1538,39775
+sigchld(int unused) {sigchld1555,40152
+spawn(const Arg *arg) {spawn1562,40303
+tag(const Arg *arg) {tag1575,40552
+tagmon(const Arg *arg) {tagmon1583,40685
+textnw(const char *text, unsigned int len) {textnw1590,40801
+tile(Monitor *m) {tile1601,41008
+togglebar(const Arg *arg) {togglebar1631,41814
+togglefloating(const Arg *arg) {togglefloating1639,42009
+togglescratch(const Arg *arg) {togglescratch1650,42305
+toggletag(const Arg *arg) {toggletag1672,42774
+toggleview(const Arg *arg) {toggleview1685,42982
+unfocus(Client *c) {unfocus1695,43187
+unmanage(Client *c, Bool destroyed) {unmanage1704,43372
+unmapnotify(XEvent *e) {unmapnotify1728,43924
+updatebars(void) {updatebars1737,44058
+updatebarpos(Monitor *m) {updatebarpos1754,44605
+updategeom(void) {updategeom1767,44816
+updatenumlockmask(void) {updatenumlockmask1850,46851
+updatesizehints(Client *c) {updatesizehints1865,47212
+updatetitle(Client *c) {updatetitle1915,48399
+updatestatus(void) {updatestatus1923,48648
+updatewmhints(Client *c) {updatewmhints1930,48785
+view(const Arg *arg) {view1945,49086
+wintoclient(Window w) {wintoclient1955,49334
+wintomon(Window w) {wintomon1967,49513
+xerror(Display *dpy, XErrorEvent *ee) {xerror1986,49970
+xerrordummy(Display *dpy, XErrorEvent *ee) {xerrordummy2003,50796
+xerrorstart(Display *dpy, XErrorEvent *ee) {xerrorstart2010,50945
+zoom(const Arg *arg) {zoom2016,51027
+main(int argc, char *argv[]) {main2033,51369
+
+Makefile,311
+SRC = dwm.cSRC6,105
+OBJ = ${SRC:.c=.o}OBJ7,117
+all: options dwmall9,137
+options:options11,155
+.c.o:.c.o17,278
+${OBJ}: config.h config.mk${OBJ}21,322
+config.h:config.h23,350
+dwm: ${OBJ}dwm27,419
+clean:clean31,480
+dist: cleandist35,545
+install: allinstall44,794
+uninstall:uninstall54,1201
+
+config.mk,605
+VERSION = 5.8VERSION2,14
+PREFIX = /usr/localPREFIX7,75
+MANPREFIX = ${PREFIX}/share/manMANPREFIX8,95
+X11INC = /usr/X11R6/includeX11INC10,128
+X11LIB = /usr/X11R6/libX11LIB11,156
+XINERAMALIBS = -L${X11LIB} -lXineramaXINERAMALIBS14,192
+XINERAMAFLAGS = -DXINERAMAXINERAMAFLAGS15,230
+INCS = -I. -I/usr/include -I${X11INC}INCS18,278
+LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 ${XINERAMALIBS}LIBS19,316
+CPPFLAGS = -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}CPPFLAGS22,381
+CFLAGS = -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}CFLAGS24,496
+LDFLAGS = -s ${LIBS}LDFLAGS26,576
+CC = ccCC33,699
+
+patches/dwm-scratchpad-20170207-bb3bd6f.diff,460
+--- a/config.def.ha/config.def.h3,71
+@@ -58,11 +58,14 @@ static const Layout layouts[] = {-58,11 +58,145,109
+--- a/dwm.ca/dwm.c22,1221
+@@ -212,6 +212,7 @@ static void tagmon(const Arg *arg);-212,6 +212,724,1245
+@@ -272,6 +273,8 @@ static Window root, wmcheckwin;-272,6 +273,832,1588
+@@ -1051,6 +1054,13 @@ manage(Window w, XWindowAttributes *wa)-1051,6 +1054,1341,1930
+@@ -1724,6 +1734,28 @@ togglefloating(const Arg *arg)-1724,6 +1734,2855,2484
+
+config.def.h,1773
+static const char font[]            = "-*-*-medium-*-*-*-14-*-*-*-*-*-*-*";font4,76
+static const char normbordercolor[] = "#cccccc";normbordercolor5,152
+static const char normbgcolor[]     = "#cccccc";normbgcolor6,201
+static const char normfgcolor[]     = "#000000";normfgcolor7,250
+static const char selbordercolor[]  = "#0066ff";selbordercolor8,299
+static const char selbgcolor[]      = "#0066ff";selbgcolor9,348
+static const char selfgcolor[]      = "#ffffff";selfgcolor10,397
+static const unsigned int borderpx  = 1;        /* border pixel of windows */borderpx11,446
+static const unsigned int snap      = 32;       /* snap pixel */snap12,524
+static const Bool showbar           = False;     /* False means no bar */showbar13,589
+static const Bool topbar            = True;     /* False means bottom bar */topbar14,663
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };tags17,755
+static const Rule rules[] = {rules19,833
+static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */mfact26,1104
+static const Bool resizehints = True; /* True means respect size hints in tiled resizals */resizehints27,1188
+static const Layout layouts[] = {layouts29,1281
+#define MODKEY MODKEY37,1532
+#define TAGKEYS(TAGKEYS38,1556
+#define SHCMD(SHCMD45,1974
+static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcodmenucmd48,2064
+static const char *termcmd[]  = { "st", NULL };termcmd49,2210
+static const char scratchpadname[] = "scratchpad";scratchpadname50,2258
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };scratchpadcmd51,2309
+static Key keys[] = {keys53,2401
+static Button buttons[] = {buttons91,4885
+
+dwm.1,252
+.TH DWM 1 dwm\-VERSIONDWM1,0
+.SH NAMENAME2,23
+.SH SYNOPSISSYNOPSIS4,62
+.SH DESCRIPTIONDESCRIPTION7,94
+.SH OPTIONSOPTIONS32,1551
+.SH USAGEUSAGE36,1633
+.SH CUSTOMIZATIONCUSTOMIZATION143,3851
+.SH SEE ALSOSEE146,3991
+.SH BUGSBUGS148,4018

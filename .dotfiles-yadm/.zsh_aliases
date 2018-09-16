@@ -1,0 +1,82 @@
+org2pdf() {
+    out=`basename $1 .org`
+    pandoc -s "$1" -o "${out}.pdf" --pdf-engine=xelatex -V mainfont="Open Sans" -V geometry:margin=1in
+}
+
+weechat() {
+    env WEECHAT_PASSPHRASE=$(pass show im/local/weechat) weechat
+}
+
+lyrics() {
+    clear
+    beet lyrics -p "$@" | more
+}
+
+screc() {
+    ffmpeg -video_size 1366x768 -f x11grab -i :0.0 ~/screen.gif &!
+}
+
+steamlib32() {
+    LD_LIBRARY_PATH=/home/brightone/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu:/home/brightone/.local/share/Steam/ubuntu12_32/steam-runtime/i386/lib/i386-linux-gnu:. $@
+}
+
+steamlib32clean() {
+    LD_LIBRARY_PATH=/home/brightone/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu:/home/brightone/.local/share/Steam/ubuntu12_32/steam-runtime/i386/lib/i386-linux-gnu $@
+}
+
+steamlib64() {
+    LD_LIBRARY_PATH=/home/brightone/.local/share/Steam/ubuntu12_64/steam-runtime/amd64/lib/x86-64-linux-gnu:/home/brightone/.local/share/Steam/ubuntu12_64/steam-runtime/amd64/usr/lib/x86-64-linux-gnu:. $@
+}
+
+steamlib64clean() {
+    LD_LIBRARY_PATH=/home/brightone/.local/share/Steam/ubuntu12_64/steam-runtime/amd64/lib/x86-64-linux-gnu:/home/brightone/.local/share/Steam/ubuntu12_64/steam-runtime/amd64/usr/lib/x86-64-linux-gnu $@
+}
+
+writeiso() {
+    sudo dd if="$1" of="$2" status=progress bs=4M oflag=sync
+}
+
+decrypt() {
+    $1 <(gpg2 --decrypt $2)
+}
+
+switch-emacs() {
+    local e="$HOME/.emacs.d"
+    [[ -L "$e" ]] || return
+    echo "rm"
+    rm -f "$e"
+    echo "ln"
+    ln -s "$HOME/.emacs.d.${1}" "$e"
+}
+
+# Gentoo stuff
+alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
+alias sync-gfu='sudo eix-sync && gfu'
+alias ask-gfu='sudo emerge -auND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
+alias ask-sync-gfu="sudo eix-sync && ask-gfu"
+alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j6 && sudo make -j6 modules_install && sudo make -j6 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
+
+alias cp='cp --reflink=auto'
+alias e='$EDITOR'
+alias em='emacsclient -a vim -t'
+alias emc='emacsclient -c -a vim'
+alias tddg="BROWSER=links ddgr"
+alias f='ranger'
+alias hiber='sudo zzz || sudo systemctl hibernate -i'
+alias ls='exa'
+alias l='ls -1a'
+alias lyrics='clyrics $(music current) | less'
+alias m='ncmpcpp'
+alias mpm='mpv --no-video'
+alias n='nnn'
+alias news='newsboat'
+alias pg='ps aux | grep'
+alias rss='canto-curses'
+alias rtv='RTV_URLVIEWER="urlscan -d -r \"urlopen {}\"" rtv'
+alias q='qutebrowser'
+alias se='sudo emacsclient -a vim -t'
+alias sec='sudo emacsclient -c -a vim'
+alias t='trans -t'
+alias v='$VISUAL'
+alias z='zathura'
+alias X='startx'

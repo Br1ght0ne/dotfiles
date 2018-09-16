@@ -1,0 +1,5 @@
+#!/bin/bash
+
+selection=$(xclip -o)
+translation=$(trans "$selection" -b -t ru)
+notify-send "$selection" "$translation"

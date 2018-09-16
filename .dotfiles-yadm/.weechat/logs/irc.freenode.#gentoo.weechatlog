@@ -1,0 +1,185 @@
+2018-09-02 15:53:03	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-09-02 15:53:03	--	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or  dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | Channel currently moderated due to spam - please register/identify with services"
+2018-09-02 15:53:03	--	Topic set by username234 (~username2@unaffiliated/username234) on Sat, 01 Sep 2018 15:16:07
+2018-09-02 15:53:03	--	Channel #gentoo: 1078 nicks (8 ops, 53 voices, 1017 normals)
+2018-09-02 15:53:03	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-09-02 15:53:03	--	URL for #gentoo: http://www.gentoo.org
+2018-09-02 15:53:03	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 15:54:21	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-09-02 15:54:21	--	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or  dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | Channel currently moderated due to spam - please register/identify with services"
+2018-09-02 15:54:21	--	Topic set by username234 (~username2@unaffiliated/username234) on Sat, 01 Sep 2018 15:16:07
+2018-09-02 15:54:21	--	Channel #gentoo: 1078 nicks (8 ops, 53 voices, 1017 normals)
+2018-09-02 15:54:21	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-09-02 15:54:21	--	URL for #gentoo: http://www.gentoo.org
+2018-09-02 15:54:21	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 15:55:24	-->	Turingto_ (~textual@200116b860252700280610f5f97ce0cb.dip.versatel-1u1.de) has joined #gentoo
+2018-09-02 15:55:45	-->	P-G (~user@unaffiliated/p-g) has joined #gentoo
+2018-09-02 15:56:34	<--	Turingtoast (~textual@200116b860d1950031ee26acdff274c6.dip.versatel-1u1.de) has quit (Ping timeout: 240 seconds)
+2018-09-02 15:57:48	<--	streuner (~streuner@gateway/tor-sasl/streuner) has quit (Remote host closed the connection)
+2018-09-02 15:58:03	<--	cray_7 (~cray7@gateway/tor-sasl/cray7/x-20361674) has quit (Ping timeout: 250 seconds)
+2018-09-02 15:58:51	--	[#gentoo] [1] $~a quieted by kurly (kurly@kurly.net) on Thu, 30 Aug 2018 19:49:06
+2018-09-02 15:58:51	--	[#gentoo] [2] poopynegromonkey!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [3] zennie!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [4] Spam-Master!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [5] Raybih!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [6] wblackstone!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [7] mernilio!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [8] annoyingman!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [9] $a:liveuser1 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [10] physicist__!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [11] *!*@71-86-150-145.dhcp.stls.mo.charter.com quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [12] Wendy_!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [13] Lenmi!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [14] Xenio!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [15] AutisticRetard!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [16] $a:opal quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [17] Hegna!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [18] Zenina!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [19] Salamander!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [20] *!uid273077@gateway/web/irccloud.com* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [21] Kristjan!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [22] *!uid269541@gateway/web/irccloud.com/* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [23] blopsalot!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [24] AutisticWeedMan!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [25] redblade7!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [26] kiranymous!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [27] obtusetriangle!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [28] *!uid265864@gateway/web/irccloud.com* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [29] daedreth!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [30] AutisticAutist!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [31] *!*@92.40.248.199.threembb.co.uk quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [32] *!*eye@*.hsd1.il.comcast.net quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [33] Martiini!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [34] illlquid!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [35] *souu*!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [36] *souuino*!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [37] tarragon!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [38] EnormousPumpkins!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [39] vendetaxvt!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [40] iflema!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [41] $a:bunder quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [42] $a:ding-dong quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [43] ass_hole!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [44] PregnantGuy!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [45] $a:stqn quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [46] *!*@213.190.118.7 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [47] $a:rigid quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [48] *!*@c-24-128-225-78.hsd1.mi.comcast.net quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [49] *!*@unaffiliated/wolf/x-7838296 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [50] *!*@2a02:2698:7024:d895:76e5:bff:fe14:ee98 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [51] *!*@188.235.130.24 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [52] daku*!*@gateway/web/freenode* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [53] *!*@bzq-79-178-71-70.red.bezeqint.net quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [54] *!*@78.191.117.246 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [55] *!*@91.252.234.6 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [56] *!*@p707186-ipngn200804kobeminato.hyogo.ocn.ne.jp quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [57] *!*@host119-244-dynamic.11-87-r.retail.telecomitalia.it quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [58] *!*@gateway/web/cgi-irc/kiwiirc.com/ip.46.23.66.110 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [59] *!~wryt@*stls.mo.charter.com quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [60] *!*@104.234.242.22 quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] [61] phalloid!*@* quieted by barjavel.freenode.net on Tue, 28 Aug 2018 21:12:22
+2018-09-02 15:58:51	--	[#gentoo] End of Channel Quiet List
+2018-09-02 15:58:57	-->	streuner (~streuner@gateway/tor-sasl/streuner) has joined #gentoo
+2018-09-02 15:59:32	<--	HEX0 (~HEX0@unaffiliated/bl4de) has quit (Quit: WeeChat 2.2)
+2018-09-02 16:00:04	<--	Turingto_ (~textual@200116b860252700280610f5f97ce0cb.dip.versatel-1u1.de) has quit (Ping timeout: 240 seconds)
+2018-09-02 16:00:28	--	Mode #gentoo [+CLPcntzjf 5:10 #gentoo-unregistered]
+2018-09-02 16:00:28	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 16:01:21	<--	revel (~terran@elgoogel.co.vu) has quit (Quit: "")
+2018-09-02 16:01:22	-->	mtkaplanoglu (~Thunderbi@78.173.79.79) has joined #gentoo
+2018-09-02 16:02:05	-->	revel (zeench@elgoogel.co.vu) has joined #gentoo
+2018-09-02 16:02:17	-->	kbaegis_ (3fe0408e@gateway/web/freenode/ip.63.224.64.142) has joined #gentoo
+2018-09-02 16:02:30	mingdao	spacedust: `eix-sync && emerge -aDNtuv @world && dispatch-conf && emerge -a --depclean` would be appropriate
+2018-09-02 16:02:35	-->	lefou (~lefou@p54993C06.dip0.t-ipconnect.de) has joined #gentoo
+2018-09-02 16:04:03	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:04:43	-->	revel (zeench@elgoogel.co.vu) has joined #gentoo
+2018-09-02 16:06:24	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:06:35	-->	revel (zeench@elgoogel.co.vu) has joined #gentoo
+2018-09-02 16:07:28	spacedust	okay thanks, for some reason now i cant rebuild only binaries on one system, i have 28 ebuild not binary installs when doing emerge -ave , changed deps message and that i can use option to ignore the warning , why does this happen ?
+2018-09-02 16:07:47	-->	you_ (~you@2601:2c3:980:b70::2) has joined #gentoo
+2018-09-02 16:08:20	--	irc: disconnected from server
+2018-09-02 16:08:38	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-09-02 16:08:38	--	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or  dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | Channel currently moderated due to spam - please register/identify with services"
+2018-09-02 16:08:38	--	Topic set by username234 (~username2@unaffiliated/username234) on Sat, 01 Sep 2018 15:16:07
+2018-09-02 16:08:38	--	Channel #gentoo: 1080 nicks (8 ops, 53 voices, 1019 normals)
+2018-09-02 16:08:39	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-09-02 16:08:39	--	URL for #gentoo: http://www.gentoo.org
+2018-09-02 16:08:42	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 16:08:44	--	irc: disconnected from server
+2018-09-02 16:12:39	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-09-02 16:12:39	--	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or  dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | Channel currently moderated due to spam - please register/identify with services"
+2018-09-02 16:12:39	--	Topic set by username234 (~username2@unaffiliated/username234) on Sat, 01 Sep 2018 15:16:07
+2018-09-02 16:12:39	--	Channel #gentoo: 1079 nicks (8 ops, 53 voices, 1018 normals)
+2018-09-02 16:12:39	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 16:12:39	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-09-02 16:12:39	--	URL for #gentoo: http://www.gentoo.org
+2018-09-02 16:12:45	-->	Deda_Zych (~zerom@user-78-139-229-226.tomtelnet.ru) has joined #gentoo
+2018-09-02 16:12:45	<--	Deda_Zych (~zerom@user-78-139-229-226.tomtelnet.ru) has quit (Changing host)
+2018-09-02 16:12:45	-->	Deda_Zych (~zerom@unaffiliated/deda-zych/x-1167266) has joined #gentoo
+2018-09-02 16:13:02	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:13:14	-->	revel (zeench@elgoogel.co.vu) has joined #gentoo
+2018-09-02 16:14:03	spacedust	mingdao: i a using FEATURES="buildpkg" on a system, when i did emerge -avek world on that system i get 28 nonbinaries and a message that wont emerge binaries of package x y and z cause of changed dependencies
+2018-09-02 16:15:05	-->	upgrade (5d550b77@gateway/web/cgi-irc/kiwiirc.com/ip.93.85.11.119) has joined #gentoo
+2018-09-02 16:15:54	spacedust	xiaomiao: mingdao yeah i know , i mean i noticed -ave is overkill thanks, i will be using -avuDN world , but not sure about this other changed dependencies message, which is a totally different question :)
+2018-09-02 16:16:18	spacedust	Alvina: hurray :D no more panics
+2018-09-02 16:16:40	-->	endstille (~endstille@b9168f90.cgn.dg-w.de) has joined #gentoo
+2018-09-02 16:16:48	-->	kingkongmok (~kingkongm@61.140.244.4) has joined #gentoo
+2018-09-02 16:16:56	spacedust	okay well i just ave1 those 28 binaries that didnt had an ebuild now -avek world wants to use only binaries
+2018-09-02 16:17:07	upgrade	hi all! trying to install gentu, cpuid2cpuflags says: CPU_FLAGS_X86: aes mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3. but when i use emerge --sync i got error: "/etc/portage/make.conf", line 5: Invalid token 'mmxext' (not '=')
+2018-09-02 16:17:18	-->	xy2_ (~xy2_@94.239.177.175) has joined #gentoo
+2018-09-02 16:17:22	upgrade	But my processor support mmxext..
+2018-09-02 16:17:33	spacedust	paste line 5
+2018-09-02 16:17:48	-->	xlx (~xlx@177.193.202.74) has joined #gentoo
+2018-09-02 16:17:51	<--	xlx (~xlx@177.193.202.74) has quit (Changing host)
+2018-09-02 16:17:51	-->	xlx (~xlx@unaffiliated/xlx) has joined #gentoo
+2018-09-02 16:17:59	upgrade	CPU_FLAGS_X86="aes mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+2018-09-02 16:18:48	yo9fah	grknight: Thanks for help.
+2018-09-02 16:19:44	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-09-02 16:19:44	--	Topic for #gentoo is " Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or  dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | Channel currently moderated due to spam - please register/identify with services"
+2018-09-02 16:19:44	--	Topic set by username234 (~username2@unaffiliated/username234) on Sat, 01 Sep 2018 15:16:07
+2018-09-02 16:19:44	--	Channel #gentoo: 1085 nicks (8 ops, 53 voices, 1024 normals)
+2018-09-02 16:19:44	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-09-02 16:19:44	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-09-02 16:19:44	--	URL for #gentoo: http://www.gentoo.org
+2018-09-02 16:20:54	<--	buzzzz (~buzzzz@r49-3-203-117.cpe.vividwireless.net.au) has quit (Ping timeout: 272 seconds)
+2018-09-02 16:20:57	spacedust	upgrade: post yur make.conf please
+2018-09-02 16:21:00	<--	BCMM (~BCMM@unaffiliated/bcmm) has quit (Remote host closed the connection)
+2018-09-02 16:21:09	spacedust	upgrade: use wgetpaste
+2018-09-02 16:21:38	-->	lwlvl_ (~lwlvl@x55b0b030.dyn.telefonica.de) has joined #gentoo
+2018-09-02 16:22:02	<--	endstille (~endstille@b9168f90.cgn.dg-w.de) has quit (Quit: I'll be back.)
+2018-09-02 16:22:25	upgrade	spacedust https://pastebin.com/raw/dFZNBNrs
+2018-09-02 16:22:35	-->	endstille (~endstille@b9168f90.cgn.dg-w.de) has joined #gentoo
+2018-09-02 16:22:47	<--	yo9fah (~yo9fah@unaffiliated/yo9fah) has quit (Quit: Leaving)
+2018-09-02 16:22:53	-->	mona (~mona@84.39.112.83) has joined #gentoo
+2018-09-02 16:23:18	<--	endstille (~endstille@b9168f90.cgn.dg-w.de) has quit (Client Quit)
+2018-09-02 16:23:58	<--	fling (~user@fsf/member/fling) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:24:10	-->	endstille (~endstille@b9168f90.cgn.dg-w.de) has joined #gentoo
+2018-09-02 16:25:01	<--	lwlvl (~lwlvl@x4dbadb8a.dyn.telefonica.de) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:25:01	-->	BCMM (~BCMM@unaffiliated/bcmm) has joined #gentoo
+2018-09-02 16:25:32	-->	onecamper (~sphinx@x2f7fac4.dyn.telefonica.de) has joined #gentoo
+2018-09-02 16:26:14	<--	revel (zeench@elgoogel.co.vu) has quit (Quit: "")
+2018-09-02 16:26:25	-->	revel (terran@elgoogel.co.vu) has joined #gentoo
+2018-09-02 16:26:51	-->	Alina-malina (~Alina-mal@unaffiliated/alina-malina) has joined #gentoo
+2018-09-02 16:26:52	spacedust	are you sure you dont have some comments in make.conf ? other then that check open closing of all ""
+2018-09-02 16:28:21	<--	YangMame (~mame@unaffiliated/yangmame) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:29:19	-->	sleepymario (~ashwin@078-186-128-083.dynamic.caiway.nl) has joined #gentoo
+2018-09-02 16:29:50	<--	sleepymario1 (~ashwin@078-186-128-083.dynamic.caiway.nl) has quit (Quit: WeeChat 2.0.1)
+2018-09-02 16:29:55	<--	sleepymario (~ashwin@078-186-128-083.dynamic.caiway.nl) has quit (Client Quit)
+2018-09-02 16:30:00	upgrade	spacedust well, i recreate make.conf and retype all text, so, all works fine. sorry for disturbing. maybe some "hidden" symbol, idk.
+2018-09-02 16:30:05	mingdao	upgrade: diff -u <(gcc -march=silvermont -Q --help=target) <(gcc -march=native -Q --help=target)
+2018-09-02 16:30:23	mingdao	upgrade: are you sure silvermont supports mmxext ?
+2018-09-02 16:30:24	<--	maolang (~quassel@modemcable148.99-201-24.mc.videotron.ca) has quit (Ping timeout: 272 seconds)
+2018-09-02 16:30:26	-->	sleepymario (~ashwin@078-186-128-083.dynamic.caiway.nl) has joined #gentoo
+2018-09-02 16:30:36	<--	meriipu (~meriipu@unaffiliated/meriipu) has left #gentoo
+2018-09-02 16:30:45	-->	maolang (~quassel@modemcable148.99-201-24.mc.videotron.ca) has joined #gentoo
+2018-09-02 16:30:49	spacedust	upgrade: some copy paste error probably
+2018-09-02 16:31:02	<--	BCMM (~BCMM@unaffiliated/bcmm) has quit (Quit: Konversation terminated!)
+2018-09-02 16:31:18	upgrade	mingdao well, i found problem. look little bit up. sry for disturbing...
+2018-09-02 16:31:22	upgrade	tx for help all!
+2018-09-02 16:31:29	<--	sleepymario (~ashwin@078-186-128-083.dynamic.caiway.nl) has quit (Remote host closed the connection)
+2018-09-02 16:31:46	-->	sleepymario (~ashwin@078-186-128-083.dynamic.caiway.nl) has joined #gentoo
+2018-09-02 16:32:06	spacedust	1001 packages incomming :) upgrading the world :D
+2018-09-02 16:34:04	<--	shiznix (quassel@gentoo/user/shiznix) has quit (Ping timeout: 240 seconds)
+2018-09-02 16:34:49	<--	lefou (~lefou@p54993C06.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:34:50	<--	m4rcu5 (nobody@546AF885.cm-12-3d.dynamic.ziggo.nl) has quit (Ping timeout: 272 seconds)
+2018-09-02 16:35:20	-->	gibx (~gibx@net-37-182-14-213.cust.vodafonedsl.it) has joined #gentoo
+2018-09-02 16:36:36	<--	xy2_ (~xy2_@94.239.177.175) has quit (Ping timeout: 244 seconds)

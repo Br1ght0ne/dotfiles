@@ -1,0 +1,236 @@
+2018-09-02 15:53:03	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined ##linux
+2018-09-02 15:53:03	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Spammers or trolls or any other op assistance, join ##linux-ops | Set /umode +R if you're getting tons of nonsensical PMs | Feel at home and enjoy your stay!"
+2018-09-02 15:53:03	--	Topic set by DLange on Sun, 27 May 2018 08:47:21
+2018-09-02 15:53:03	--	Channel ##linux: 2219 nicks (0 ops, 0 voices, 2219 normals)
+2018-09-02 15:53:03	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2018-09-02 15:53:03	--	URL for ##linux: http://linux.chat
+2018-09-02 15:53:05	sauvin	What's a "cdb" file, and why are you trying to extract passwords?
+2018-09-02 15:53:07	--	Channel created on Sat, 10 Feb 2001 01:16:24
+2018-09-02 15:53:07	phogg	oh, USB stick... nevermind
+2018-09-02 15:53:09	-->	justsomeguy (~justsomeg@unaffiliated/--/x-3805311) has joined ##linux
+2018-09-02 15:53:11	-->	rrman (~arrman@unaffiliated/rrman) has joined ##linux
+2018-09-02 15:53:17	sauvin	Oh... he left.
+2018-09-02 15:53:28	<--	XGaster (~XGaster@znc.bncheaven.eu) has quit (Quit: ZNC 1.7.1 - https://znc.in)
+2018-09-02 15:53:51	talx	mkdosfs -F 32 -I /dev/sdb
+2018-09-02 15:53:56	talx	should work too init ?
+2018-09-02 15:53:59	-->	sirius (~dnanib@106.51.19.83) has joined ##linux
+2018-09-02 15:54:21	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined ##linux
+2018-09-02 15:54:21	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Spammers or trolls or any other op assistance, join ##linux-ops | Set /umode +R if you're getting tons of nonsensical PMs | Feel at home and enjoy your stay!"
+2018-09-02 15:54:21	--	Topic set by DLange on Sun, 27 May 2018 08:47:21
+2018-09-02 15:54:21	--	Channel ##linux: 2221 nicks (0 ops, 0 voices, 2221 normals)
+2018-09-02 15:54:21	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2018-09-02 15:54:21	--	URL for ##linux: http://linux.chat
+2018-09-02 15:54:24	-->	Freechicks (~Freechick@110.54.202.142) has joined ##linux
+2018-09-02 15:54:25	--	Channel created on Sat, 10 Feb 2001 01:16:24
+2018-09-02 15:54:37	markweston	mkdosfs: WARNING: Not enough clusters for a 32 bit FAT!
+2018-09-02 15:55:08	markweston	mkfs.ext4 doesn't seem to do anything too :(
+2018-09-02 15:55:21	markweston	lsblk reports the same
+2018-09-02 15:55:30	<--	Tee_Pee (uid23783@gateway/web/irccloud.com/x-hgxqtmpvamclbcpp) has quit (Quit: Connection closed for inactivity)
+2018-09-02 15:55:34	phogg	that makes no sense
+2018-09-02 15:55:48	-->	jhollis (~quassel@ca.wlyh.me) has joined ##linux
+2018-09-02 15:56:15	talx	maybe use fdisk
+2018-09-02 15:56:27	-->	wildermind (uid300433@gateway/web/irccloud.com/x-dgqvyogewcfylkby) has joined ##linux
+2018-09-02 15:56:29	-->	nocturnally_ (~nocturnal@unaffiliated/nocturnally) has joined ##linux
+2018-09-02 15:57:48	<--	streuner (~streuner@gateway/tor-sasl/streuner) has quit (Remote host closed the connection)
+2018-09-02 15:57:56	-->	dka (~code-is-a@master-sbg-01.kopaxgroup.com) has joined ##linux
+2018-09-02 15:58:18	-->	akem (~akem@185.156.175.107) has joined ##linux
+2018-09-02 15:58:57	-->	streuner (~streuner@gateway/tor-sasl/streuner) has joined ##linux
+2018-09-02 15:59:00	-->	briner (~briner@217-162-196-50.dynamic.hispeed.ch) has joined ##linux
+2018-09-02 15:59:13	<--	nocturnally (~nocturnal@unaffiliated/nocturnally) has quit (Ping timeout: 245 seconds)
+2018-09-02 15:59:27	<--	ReedK0 (~ReedK3@104.237.86.244) has quit (Ping timeout: 240 seconds)
+2018-09-02 15:59:33	-->	cdignam (~cdignam@pool-71-174-234-178.bstnma.fios.verizon.net) has joined ##linux
+2018-09-02 15:59:35	markweston	fdisk says Disk /dev/sdb: 10 MiB, 10485760 bytes, 20480 sectors
+2018-09-02 15:59:43	markweston	even though it's a 4 gb stick
+2018-09-02 15:59:47	-->	Cyber_Akuma (~Cyber_Aku@c-73-75-130-203.hsd1.il.comcast.net) has joined ##linux
+2018-09-02 16:00:10	-->	jhaenchen (~jhaenchen@unaffiliated/jhaenchen) has joined ##linux
+2018-09-02 16:00:40	<--	h0 (~h0@126.1.10.93.rev.sfr.net) has quit (Quit: leaving)
+2018-09-02 16:01:21	<--	revel (~terran@elgoogel.co.vu) has quit (Quit: "")
+2018-09-02 16:01:52	<--	Freechicks (~Freechick@110.54.202.142) has quit
+2018-09-02 16:02:01	streuner	i've problem ssh: connect to host autisticstory.net port 16960: Network is unreachable
+2018-09-02 16:02:05	-->	revel (zeench@elgoogel.co.vu) has joined ##linux
+2018-09-02 16:02:07	<--	Sublim21 (~Sublim21@pool-108-21-203-141.nycmny.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2018-09-02 16:02:17	markweston	perhaps i should change the number of cylinders/heads/sectors?
+2018-09-02 16:03:25	-->	adroit_machine (~adroit_ma@unaffiliated/adroit-machine/x-2281387) has joined ##linux
+2018-09-02 16:03:36	-->	fendur (~nj@unaffiliated/fendur) has joined ##linux
+2018-09-02 16:03:45	<--	markweston (~markwesto@86.38.112.161) has quit (Remote host closed the connection)
+2018-09-02 16:04:03	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:04:38	<--	jhaenchen (~jhaenchen@unaffiliated/jhaenchen) has quit (Ping timeout: 245 seconds)
+2018-09-02 16:04:42	<--	talonz (~talonz@180-150-92-249.NBN.mel.aussiebb.net) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:04:43	-->	revel (zeench@elgoogel.co.vu) has joined ##linux
+2018-09-02 16:05:09	-->	markweston (~markwesto@86.38.112.161) has joined ##linux
+2018-09-02 16:05:44	-->	Freechicks (~Freechick@110.54.202.142) has joined ##linux
+2018-09-02 16:06:24	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:06:35	-->	revel (zeench@elgoogel.co.vu) has joined ##linux
+2018-09-02 16:07:31	<--	defkult (~defkult@47.38.214.108) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:07:34	talx	phogg: i need for a linux enviorment
+2018-09-02 16:07:47	talx	its still being used to be honest
+2018-09-02 16:08:08	-->	defkult (~defkult@47.38.214.108) has joined ##linux
+2018-09-02 16:08:20	--	irc: disconnected from server
+2018-09-02 16:08:38	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined ##linux
+2018-09-02 16:08:38	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Spammers or trolls or any other op assistance, join ##linux-ops | Set /umode +R if you're getting tons of nonsensical PMs | Feel at home and enjoy your stay!"
+2018-09-02 16:08:38	--	Topic set by DLange on Sun, 27 May 2018 08:47:21
+2018-09-02 16:08:39	--	Channel ##linux: 2226 nicks (0 ops, 0 voices, 2226 normals)
+2018-09-02 16:08:39	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2018-09-02 16:08:39	--	URL for ##linux: http://linux.chat
+2018-09-02 16:08:44	--	irc: disconnected from server
+2018-09-02 16:12:39	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined ##linux
+2018-09-02 16:12:39	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Spammers or trolls or any other op assistance, join ##linux-ops | Set /umode +R if you're getting tons of nonsensical PMs | Feel at home and enjoy your stay!"
+2018-09-02 16:12:39	--	Topic set by DLange on Sun, 27 May 2018 08:47:21
+2018-09-02 16:12:39	--	Channel ##linux: 2226 nicks (0 ops, 0 voices, 2226 normals)
+2018-09-02 16:12:39	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2018-09-02 16:12:39	--	URL for ##linux: http://linux.chat
+2018-09-02 16:12:40	marshwallow	Typing host <my_computer_hostname> on another computer in the intranet throws a SERVFAIL.
+2018-09-02 16:12:43	--	Channel created on Sat, 10 Feb 2001 01:16:24
+2018-09-02 16:12:46	marshwallow	Where should I look first?
+2018-09-02 16:12:49	-->	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has joined ##linux
+2018-09-02 16:12:52	<--	cdignam (~cdignam@pool-71-174-234-178.bstnma.fios.verizon.net) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:12:53	marshwallow	Running Ubuntu.
+2018-09-02 16:13:02	<--	revel (zeench@elgoogel.co.vu) has quit (Client Quit)
+2018-09-02 16:13:04	marshwallow	18.04.
+2018-09-02 16:13:09	<--	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has quit (Client Quit)
+2018-09-02 16:13:11	talx	I will have to work it out myself I guess
+2018-09-02 16:13:13	-->	revel (zeench@elgoogel.co.vu) has joined ##linux
+2018-09-02 16:13:20	talx	had it once but totally forgot;[
+2018-09-02 16:13:21	<--	emx (~bemx@adsl-89-217-90-185.adslplus.ch) has quit (Ping timeout: 244 seconds)
+2018-09-02 16:14:08	<--	kobberholm (~quassel@188.114.166.178) has quit (Remote host closed the connection)
+2018-09-02 16:14:34	<--	RougeR (~RougeR@unaffiliated/rouger) has quit (Ping timeout: 240 seconds)
+2018-09-02 16:14:53	<--	sirius (~dnanib@106.51.19.83) has quit (Remote host closed the connection)
+2018-09-02 16:15:16	-->	sirius (~dnanib@122.171.82.182) has joined ##linux
+2018-09-02 16:15:21	-->	Alina-malina (~Alina-mal@unaffiliated/alina-malina) has joined ##linux
+2018-09-02 16:15:30	-->	kobberholm (~quassel@188.114.166.178) has joined ##linux
+2018-09-02 16:15:34	TheWild	fixed by adding '-o ro' (mount readonly)
+2018-09-02 16:15:49	-->	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has joined ##linux
+2018-09-02 16:16:13	<--	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has quit (Client Quit)
+2018-09-02 16:16:28	<--	teodorg (~teodorg@17751.telnet.bg) has quit (Ping timeout: 272 seconds)
+2018-09-02 16:16:41	-->	cdignam (~cdignam@pool-71-174-234-178.bstnma.fios.verizon.net) has joined ##linux
+2018-09-02 16:16:54	-->	m0d3rn (~x@37.48.80.94) has joined ##linux
+2018-09-02 16:16:54	-->	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has joined ##linux
+2018-09-02 16:16:59	<--	davr0s (~textual@host86-149-134-224.range86-149.btcentralplus.com) has quit (Client Quit)
+2018-09-02 16:17:38	-->	sbdchd (~sbdchd@pool-71-174-234-178.bstnma.fios.verizon.net) has joined ##linux
+2018-09-02 16:19:10	-->	El_Presidente (~martin@p200300EE1BE0BA004778AF1E690E3336.dip0.t-ipconnect.de) has joined ##linux
+2018-09-02 16:19:44	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined ##linux
+2018-09-02 16:19:44	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Spammers or trolls or any other op assistance, join ##linux-ops | Set /umode +R if you're getting tons of nonsensical PMs | Feel at home and enjoy your stay!"
+2018-09-02 16:19:44	--	Topic set by DLange on Sun, 27 May 2018 08:47:21
+2018-09-02 16:19:44	--	Channel ##linux: 2227 nicks (0 ops, 0 voices, 2227 normals)
+2018-09-02 16:19:44	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2018-09-02 16:19:44	--	URL for ##linux: http://linux.chat
+2018-09-02 16:19:49	--	Channel created on Sat, 10 Feb 2001 01:16:24
+2018-09-02 16:20:06	El_Presidente	hi, can I separate the analog and digital output channels of my soundcard with pulseaudio? I would like to use the analog out for my headset and the digital out for my speakers
+2018-09-02 16:20:27	markweston	okay, I think I know what's wrong with the usb stick, but I don't know how to fix it
+2018-09-02 16:20:39	markweston	it has wrong geometry settings: Geometry: 255 heads, 63 sectors/track, 0 cylinders
+2018-09-02 16:21:00	<--	BCMM (~BCMM@unaffiliated/bcmm) has quit (Remote host closed the connection)
+2018-09-02 16:21:02	znh	El_Presidente: pavucontrol allows you the select output device per application
+2018-09-02 16:21:03	talx	[root@clientz /]# su - nisuser
+2018-09-02 16:21:03	talx	Last login: Sun Sep  2 16:13:44 IDT 2018 on pts/0
+2018-09-02 16:21:09	talx	made it for the love of god
+2018-09-02 16:21:15	markweston	i can set the geometry settings using fdisk advanced command mode, but I don't know what values should I enter
+2018-09-02 16:21:24	phogg	talx: so, if you don't mind my asking, what was the solution?
+2018-09-02 16:21:39	El_Presidente	znh, yes I know but I can only select digital out or analog out not both
+2018-09-02 16:21:43	talx	hmm
+2018-09-02 16:21:52	<--	`Guest00000 (~user@37.113.188.10) has quit (Ping timeout: 246 seconds)
+2018-09-02 16:21:53	talx	had to change mount point to *
+2018-09-02 16:22:01	talx	instead of /home
+2018-09-02 16:22:08	<--	sbdchd (~sbdchd@pool-71-174-234-178.bstnma.fios.verizon.net) has quit (Ping timeout: 244 seconds)
+2018-09-02 16:22:27	<--	catts_ (~Mutter@1.121.106.44) has quit (Remote host closed the connection)
+2018-09-02 16:22:29	<--	purist (~purist@gateway/tor-sasl/purist) has quit (Remote host closed the connection)
+2018-09-02 16:22:44	-->	purist (~purist@gateway/tor-sasl/purist) has joined ##linux
+2018-09-02 16:22:52	talx	*       -fstype=nfs,rw,soft,intr        192.168.200.100:/home
+2018-09-02 16:23:09	talx	instead of: home       -fstype=nfs,rw,soft,intr        192.168.200.100:/home
+2018-09-02 16:23:16	-->	`Guest00000 (~user@37.113.188.10) has joined ##linux
+2018-09-02 16:23:57	<--	first-order (~arch-star@24-139-45-27.fidnet.com) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:24:28	Zexaron	Hello
+2018-09-02 16:24:34	Zexaron	what is the console input called
+2018-09-02 16:24:35	<--	nocturnally_ (~nocturnal@unaffiliated/nocturnally) has quit (Read error: Connection reset by peer)
+2018-09-02 16:24:41	-->	nikio_ (~nikio_@unaffiliated/nikio/x-5064535) has joined ##linux
+2018-09-02 16:25:01	-->	BCMM (~BCMM@unaffiliated/bcmm) has joined ##linux
+2018-09-02 16:25:03	Zexaron	when you can type things into, you know when you run a command, the focus is there when that command executes it "returns back" how is that called
+2018-09-02 16:25:07	strive	Zexaron: Terminal?
+2018-09-02 16:25:09	Zexaron	"back to .." what
+2018-09-02 16:25:11	<--	cdignam (~cdignam@pool-71-174-234-178.bstnma.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2018-09-02 16:25:14	-->	trajik2600 (~trajik260@104-14-29-75.lightspeed.austtx.sbcglobal.net) has joined ##linux
+2018-09-02 16:25:15	Zexaron	back to user input ?
+2018-09-02 16:25:29	strive	Standard output?
+2018-09-02 16:25:41	Zexaron	Well I have a command that runs without errors or messages, it quits
+2018-09-02 16:26:02	znh	Zexaron: return exit code ?
+2018-09-02 16:26:14	<--	revel (zeench@elgoogel.co.vu) has quit (Quit: "")
+2018-09-02 16:26:23	Zexaron	but I feel that's not usually how to say it, it "returns without error" or how is the proper way to say this
+2018-09-02 16:26:25	-->	revel (terran@elgoogel.co.vu) has joined ##linux
+2018-09-02 16:26:28	strive	?$
+2018-09-02 16:26:36	talx	$?
+2018-09-02 16:26:37	strive	$?
+2018-09-02 16:27:04	<--	max42343 (~max42343@dslb-002-205-144-008.002.205.pools.vodafone-ip.de) has quit (Quit: Leaving)
+2018-09-02 16:27:04	strive	Returns without error? "Working"?
+2018-09-02 16:27:08	Zexaron	well there's no error so exit code is proably 0, but this isn't debugging so I don't need to be that specific
+2018-09-02 16:27:28	Zexaron	strive: yeah in this case it's not sure if it's working, it suppose to output some messages but it doesn't
+2018-09-02 16:27:38	znh	Zexaron: most simple is &&
+2018-09-02 16:27:48	<--	briner (~briner@217-162-196-50.dynamic.hispeed.ch) has quit (Ping timeout: 252 seconds)
+2018-09-02 16:27:59	Zexaron	strive: it may be the intended operation, it's a bit a specific context because I'm not sure whether it's working or not, so I need another figure of speech
+2018-09-02 16:28:20	strive	Have you tried redirection?
+2018-09-02 16:28:24	Zexaron	This is documenting an issue report, that's why I want this elegant and clear figure of speech, otherwise it wouldn't be that important
+2018-09-02 16:28:34	wigums	 try adding -v. what command is it?
+2018-09-02 16:28:39	talx	/dev/null 2>&1 for no errors ?
+2018-09-02 16:28:49	Zexaron	it's git clean df --dry-run ...
+2018-09-02 16:29:03	wigums	dropping back to prompt with no output usually means it worked or is working
+2018-09-02 16:29:08	wigums	oh thats diff
+2018-09-02 16:29:08	Zexaron	it's not linux, it's git, but it doesn't matter, it runs in bash and exits and you get back to bash
+2018-09-02 16:29:26	-->	basiclaser (uid10861@gateway/web/irccloud.com/x-qoegvowyiqhavkon) has joined ##linux
+2018-09-02 16:29:30	talx	maybe you should try in #bash then
+2018-09-02 16:29:38	wigums	git isnt bash either
+2018-09-02 16:29:41	Zexaron	same thing that youd do in a linux terminal/console/whatever, when you run some utility it gets back... back to ... what's the word
+2018-09-02 16:29:45	strive	What a mystery game to wake up to...
+2018-09-02 16:29:48	strive	:P
+2018-09-02 16:29:52	-->	will_haven (~will_have@185.156.175.51) has joined ##linux
+2018-09-02 16:29:53	Zexaron	"gives back focus to user" or what, but that's a mountful
+2018-09-02 16:29:54	<--	x03ff4a9778 (x03ff4a977@240b:10:b3c0:7a00:8:e71f:9f21:1001) has quit (Quit: Leaving)
+2018-09-02 16:29:59	-->	will_haven-netsp (~will_have@185.156.175.51) has joined ##linux
+2018-09-02 16:30:00	strive	Back to the user prompt?
+2018-09-02 16:30:01	-->	palayoub (~ayoub@196.70.39.15) has joined ##linux
+2018-09-02 16:30:18	marshwallow	I keep getting 2(SERVFAIL) when typing host <hostname> on other computers in intranet, any idea?
+2018-09-02 16:30:19	Zexaron	strive: yeah closer ... seems like it, I actually heard it somewhere but forgot
+2018-09-02 16:30:46	-->	jhaenchen (~jhaenchen@unaffiliated/jhaenchen) has joined ##linux
+2018-09-02 16:30:54	-->	compdoc (~me@unaffiliated/compdoc) has joined ##linux
+2018-09-02 16:30:59	marshwallow	Sorry if that's the wrong way to bump questions, but IRC is kind of broken in that manner.
+2018-09-02 16:31:02	<--	BCMM (~BCMM@unaffiliated/bcmm) has quit (Quit: Konversation terminated!)
+2018-09-02 16:31:11	strive	lol
+2018-09-02 16:31:15	strive	I'am stumped.
+2018-09-02 16:31:19	<--	will_haven-netsp (~will_have@185.156.175.51) has quit (Client Quit)
+2018-09-02 16:31:27	post-factum	marshwallow: it would be better for you to share some configs and actual commands
+2018-09-02 16:31:30	Zexaron	talx: it's common to consoles/terminals (i don't even know the technical difference, but it's common to a black screen with user input to run things)
+2018-09-02 16:31:31	 *	strive thinks his coffee isn't strong enough...
+2018-09-02 16:31:31	wigums	strive what has you confused?
+2018-09-02 16:31:32	-->	Zoppo (~IceChat9@mue-88-130-54-200.dsl.tropolys.de) has joined ##linux
+2018-09-02 16:31:34	talx	marshwallow I'm not sure what are you asking
+2018-09-02 16:31:46	<--	iflema (~ian@unaffiliated/iflema) has quit (Remote host closed the connection)
+2018-09-02 16:31:51	marshwallow	I'm trying to reach my computer in intranet using only hostname.
+2018-09-02 16:31:59	marshwallow	Eventually mDNS service type,
+2018-09-02 16:32:01	marshwallow	*.
+2018-09-02 16:32:08	<--	sonny__ (~sonny@178-85-122-247.dynamic.upc.nl) has quit (Ping timeout: 245 seconds)
+2018-09-02 16:32:16	wigums	marshwallow: have you setup dns or your /etc/hosts file?
+2018-09-02 16:32:19	strive	wigums: heh, is there even another technical term to returning to the command prompt in terminal?
+2018-09-02 16:32:25	talx	just put it in /etc/hosts
+2018-09-02 16:32:29	talx	ip hostname
+2018-09-02 16:32:51	marshwallow	Okay ... but will it work for other devices that don't know about this arrangement?
+2018-09-02 16:32:58	strive	marshwallow: Nope.
+2018-09-02 16:33:08	-->	cdignam (~cdignam@pool-71-174-234-178.bstnma.fios.verizon.net) has joined ##linux
+2018-09-02 16:33:10	marshwallow	So ... I should set DNS up?
+2018-09-02 16:33:17	wigums	strive: not really no. i just say it dropped back to prompt. people that know the shell usually know this to mean returned to prommpt without any info which means it worked or is working... usually
+2018-09-02 16:33:18	<--	blackquasar (~blackquas@net-93-151-225-187.cust.dsl.teletu.it) has quit (Remote host closed the connection)
+2018-09-02 16:33:39	<--	radeek (~radeek@systemofdoom.net) has quit (Quit: Bye!)
+2018-09-02 16:33:52	-->	radeek (~radeek@systemofdoom.net) has joined ##linux
+2018-09-02 16:33:54	strive	wigums: Exactly. Zexaron is either trolling or there really is another term. lol.
+2018-09-02 16:33:57	marshwallow	post-factum, what configs would help you?
+2018-09-02 16:34:19	marshwallow	(same applies for commands)
+2018-09-02 16:34:19	-->	manuelschneid3r (~manuelsch@p200300E243EBF700F7CC8BAC09BC1B65.dip0.t-ipconnect.de) has joined ##linux
+2018-09-02 16:34:27	wigums	strive: i dont know about Zexaron but the derp has been alot in here lately
+2018-09-02 16:34:34	strive	heh
+2018-09-02 16:34:51	<--	Jesin (~Jesin@2601:152:4603:cb81::577f) has quit (Quit: Leaving)
+2018-09-02 16:35:01	-->	altab (~altab@2a01:e35:8adc:92c0:983d:ca08:4c8a:a17b) has joined ##linux
+2018-09-02 16:35:04	Zexaron	strive: I just wanted another term for "returned without error"
+2018-09-02 16:35:19	marshwallow	Iiiiiis there a more suitable channel for this?
+2018-09-02 16:35:39	strive	marshwallow: ##networkign
+2018-09-02 16:35:42	strive	##networking
+2018-09-02 16:35:48	marshwallow	Thank you very much good sir.
+2018-09-02 16:36:08	strive	yw
+2018-09-02 16:36:11	phogg	Zexaron: Why do you want another term?
+2018-09-02 16:36:21	post-factum	marshwallow: i don't need any help atm, you do… a general rule is to state the actual task properly, then share what you did to achieve it, and then we'll see
+2018-09-02 16:36:30	-->	m4g1c_ (~m4g1c@2605:a601:21d2:ab00:3285:a9ff:fe41:b8a3) has joined ##linux
