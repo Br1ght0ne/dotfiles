@@ -1,0 +1,187 @@
+#
+# wm independent hotkeys
+#
+
+# editor
+super + {e,shift + e}
+    {emacs,emacsclient -c}
+
+# browser
+super + b
+    qutebrowser
+
+# terminal emulator
+super + {_,shift + }Return
+	{st -e /bin/zsh --login, tdrop -ma --wm bspwm -w -4 -h 50% -y 30 -s dropdown st}
+
+# brightness
+super + {Home,End}
+    light -{A,U} 5
+
+# program launcher
+super + {d,w}
+	rofi -show {drun -m 0,window}
+super + p
+	rofi-pass
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# lock
+super + Pause
+	lock.sh
+
+# restart polybar
+super + shift + b
+	POLYRESTART_BSPWM=1 polyrestart.sh
+
+# Webcam
+super + o
+	$HOME/.local/bin/camtoggle
+
+# mount.sh
+super + {ctrl + m,alt + m,alt + u,shift + m}
+    $HOME/.local/bin/mount.sh {ask,mount,umount,_}
+
+# Screenkey
+super + shift + s
+    pkill screenkey || screenkey
+
+# Screenshots
+super + {_,shift} + i
+	$HOME/.local/bin/maim.sh {_,-s}
+
+# Powersave
+super + shift + p
+    $HOME/.local/bin/powersave ask
+
+super + shift + o
+    $HOME/.local/bin/rofi-poweroff
+
+# Layout
+super + {z,x,c,v,shift + z}
+	layout {us,ru,ua,dvp,vanilla}
+
+# mpd
+{XF86AudioPlay,XF86AudioStop,XF86AudioPrev,XF86AudioNext}
+	music {toggle,stop,prev,next}
+
+# volume
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+# bspwm hotkeys
+#
+
+# quit bspwm normally
+super + {alt +,shift +,ctrl +} End
+	{sudo poweroff,bspc quit,sudo zzz}
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# monitors
+super + F2
+	bspwm-monitor.sh
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# if the current node is automatic, send it to the last manual, otherwise pull the last leaf
+super + y
+	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+# current node and the biggest node
+super + {g, shift + g}
+	bspc node -{f,s} biggest.local
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {z,x,c}
+	bspc node -g {sticky,locked,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+alt + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + {_,shift + }bracket{left,right}
+	bspc {desktop -f, node -d} {prev,next}.local
+
+# focus the last node/desktop
+super + {Tab,grave}
+	bspc {desktop,monitor} -f last
+
+# swap with last local node
+super + {n,shift + n}
+	bspc node -{f,s} last.local
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

@@ -1,3 +1,27 @@
-# Zplugin
+### Helpers
+
+c() {
+    C=${1}
+}
+
+n() {
+    echo -e "==> ${C}: ${1}..."
+}
+
+### End helpers
+
+c "emacs"
+
+n "cloning doom-emacs"
+git clone git@gitlab.com:BrightOne/doom-emacs.git ~/.emacs.d.doom
+
+n "cloning spacemacs"
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d.spacemacs
+
+c "zplugin"
+
+n "installing zplugin via curl"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+
+n "removing errorful prompts"
 rm -rf $HOME/.zplugin/snippets/https--github.com--sorin-ionescu--prezto--trunk--modules/prompt/functions/prompt_{agnoster,powerlevel9,powerline,pure}_setup
