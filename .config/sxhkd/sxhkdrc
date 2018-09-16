@@ -11,8 +11,10 @@ super + b
     qutebrowser
 
 # terminal emulator
-super + {_,shift + }Return
-	{st -e /bin/zsh --login, tdrop -ma --wm bspwm -w -4 -h 50% -y 30 -s dropdown st}
+# super + {_,shift + }Return
+	# {st -e /bin/zsh --login, tdrop -ma --wm bspwm -w -4 -h 50% -y 30 -s dropdown st}
+super + Return
+    kitty -1
 
 # brightness
 super + {Home,End}
