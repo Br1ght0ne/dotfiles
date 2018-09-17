@@ -77,7 +77,7 @@ x redshift-gtk  # screen filter for nighttime
 
 # Development
 
-# x emacs --daemon  # the god-tier OS
+x emacs --daemon  # the god-tier OS
 
 
 # Messaging
