@@ -9,7 +9,12 @@
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
 # Type: Dict
-c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
+c.aliases = {
+    'w': 'session-save',
+    'q': 'quit',
+    'wq': 'session-save ;; quit',
+    'sq': 'quit --save'
+}
 
 # Require a confirmation before quitting the application.
 # Type: ConfirmQuit
@@ -1366,8 +1371,11 @@ config.bind('q', 'record-macro')
 config.bind('r', 'reload')
 config.bind('sf', 'save')
 config.bind('sk', 'set-cmd-text -s :bind')
-config.bind('sl', 'set-cmd-text -s :set -t')
-config.bind('ss', 'set-cmd-text -s :set')
+config.bind('sd', 'set-cmd-text -s :session-delete')
+config.bind('sl', 'set-cmd-text -s :session-load')
+config.bind('ss', 'set-cmd-text -s :session-save')
+config.bind('svt', 'set-cmd-text -s :set -t')
+config.bind('svg', 'set-cmd-text -s :set')
 config.bind('tT', 'config-cycle -t -p content.proxy system socks://home.brightone.me:9100/')
 config.bind('th', 'back -t')
 config.bind('tl', 'forward -t')
