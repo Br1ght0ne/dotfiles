@@ -2,6 +2,8 @@
 
 load File.expand_path('~/.local/bin/polybar-colors')
 
+VOLUME_DELTA = '10%'
+
 # Methods dedicated to interacting with polybar.
 module Polybar
   def self.polybarify(string, lhs, rhs = nil)
@@ -34,7 +36,6 @@ end
 
 # Generic music player.
 class Player
-  @volume_delta = '10%'
   def initialize(player_name, remote_name)
     @player_name = player_name
     @remote_name = remote_name
@@ -69,6 +70,8 @@ class Player
 
   # rubocop:disable MethodMissingSuper
   def method_missing(name, *args)
+    return super(name, *args) unless __FILE__ == $0
+
     puts "Hell if I know what #{name} is."
     puts "#{args[0, 3].join(', ')}... You crazy or what?" unless args.empty?
     exit 1
@@ -116,8 +119,23 @@ class Cmus < Player
     remote "-v #{value}"
   end
 
+  def format_print(key)
+    remote("-C 'format_print %#{key}'").chomp
+  end
+
+  [%i[artist a], %i[album l], %i[title t], %i[year y]].each do |full, key|
+    define_method(full) { format_print(key) }
+  end
+
   def current
-    remote("-C 'format_print %a\\ -\\ %l\\ -\\ %t'").chomp
+    artist_with_title = "#{artist} - #{title}"
+    album_suffix = " (#{album}, #{year})"
+
+    if (artist_with_title + album_suffix).length < 70
+      artist_with_title + album_suffix
+    else
+      artist_with_title
+    end
   end
 
   def status
@@ -171,11 +189,13 @@ end
 # Toggle players here
 players = [Cmus, MPD]
 
-command, *args = ARGV
-command ||= :current
+if __FILE__ == $0
+  command, *args = ARGV
+  command ||= :current
 
-result = players
-         .map(&:new)
-         .find { |player| `pgrep #{player.player_name}` }
-         .send(command, *args)
-puts result unless result.empty?
+  result = players
+           .map(&:new)
+           .find { |player| `pgrep #{player.player_name}` }
+           .send(command, *args)
+  puts result unless result.empty?
+end
