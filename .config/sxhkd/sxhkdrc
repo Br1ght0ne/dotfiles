@@ -65,9 +65,12 @@ super + shift + o
 super + {z,x,c,v,shift + z}
 	layout {us,ru,ua,dvp,vanilla}
 
-# mpd
+# music
 {XF86AudioPlay,XF86AudioStop,XF86AudioPrev,XF86AudioNext}
 	music {toggle,stop,prev,next}
+
+super + alt + {z,x,c,v,b}
+    music {prev,play,toggle,stop,next}
 
 # volume
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
