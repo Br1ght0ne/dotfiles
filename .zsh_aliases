@@ -49,6 +49,18 @@ switch-emacs() {
     ln -s "$HOME/.emacs.d.${1}" "$e"
 }
 
+ranger-cd() {
+    [[ -z "$RANGER_LEVEL" ]] || exit
+
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
 # Gentoo stuff
 alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
 alias sync-gfu='sudo eix-sync && gfu'
@@ -61,7 +73,7 @@ alias e='$EDITOR'
 alias em='emacsclient -a vim -t'
 alias emc='emacsclient -c -a vim'
 alias tddg="BROWSER=links ddgr"
-alias f='ranger'
+alias f='ranger-cd'
 alias hiber='sudo zzz || sudo systemctl hibernate -i'
 alias ls='exa'
 alias l='ls -1a'
