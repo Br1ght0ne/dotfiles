@@ -67,6 +67,4 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm"  ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.dotnet:$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin:$HOME/go/bin"

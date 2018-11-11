@@ -40,15 +40,6 @@ decrypt() {
     $1 <(gpg2 --decrypt $2)
 }
 
-switch-emacs() {
-    local e="$HOME/.emacs.d"
-    [[ -L "$e" ]] || return
-    echo "rm"
-    rm -f "$e"
-    echo "ln"
-    ln -s "$HOME/.emacs.d.${1}" "$e"
-}
-
 ranger-cd() {
     [[ -z "$RANGER_LEVEL" ]] || exit
 
@@ -77,7 +68,7 @@ alias f='ranger-cd'
 alias hiber='sudo zzz || sudo systemctl hibernate -i'
 alias ls='exa'
 alias l='ls -1a'
-alias lyrics='clyrics $(music current) | less'
+alias lyrics='music lyrics'
 alias m='ncmpcpp'
 alias mpm='mpv --no-video'
 alias n='nnn'
@@ -89,6 +80,7 @@ alias q='qutebrowser'
 alias se='sudo emacsclient -a vim -t'
 alias sec='sudo emacsclient -c -a vim'
 alias t='trans -t'
+alias unmerge='sudo emerge --unmerge'
 alias v='$VISUAL'
 alias z='zathura'
 alias X='startx'
