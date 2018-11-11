@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'colorize'
 require 'git'
 require 'logger'
@@ -17,6 +15,8 @@ class Bootstrap
     end
   end
 
+  private
+
   def log_colors
     {
       'DEBUG' => :light_black,
@@ -26,6 +26,24 @@ class Bootstrap
       'FATAL' => :red
     }
   end
+
+  def install_methods
+    {
+      pip: 'pip install %<options>s %<package>s',
+      emerge: 'sudo emerge %<options>s %<package>s',
+      pacman: 'sudo pacman -S %<options>s %<package>s',
+      yay: 'yay -S %<options>s %<package>s',
+      script: 'sh -c "$(curl -fsSL %<options>s %<package>s)"'
+    }
+  end
+
+  def install_methods_for(package, options = [])
+    install_methods.map do |method, str|
+      [method, format(str, package: package, options: options.join(' '))]
+    end.to_h
+  end
+
+  public
 
   def self.run(options = {}, &block)
     new(options).instance_eval(&block)
@@ -60,22 +78,6 @@ class Bootstrap
     options = {}
     options[:out] = '/dev/null' unless @options[:verbose]
     error "failed to execute `#{command}`" unless system(command, options)
-  end
-
-  def install_methods
-    {
-      pip: 'pip install %<options>s %<package>s',
-      emerge: 'sudo emerge %<options>s %<package>s',
-      pacman: 'sudo pacman -S %<options>s %<package>s',
-      yay: 'yay -S %<options>s %<package>s',
-      script: 'sh -c "$(curl -fsSL %<options>s %<package>s)"'
-    }
-  end
-
-  def install_methods_for(package, options = [])
-    install_methods.map do |method, str|
-      [method, format(str, package: package, options: options.join(' '))]
-    end.to_h
   end
 
   def install(package, method:, options: [])
