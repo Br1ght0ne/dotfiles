@@ -47,6 +47,9 @@ Bootstrap.run(options) do
           install(url, method: :script)
         end
       end
+      action 'initialize zplugin' do
+        execute 'zsh -c exit'
+      end
       action 'remove problematic prompts' do
         dir = 'https--github.com--sorin-ionescu--prezto--trunk--modules'
         path = File.expand_path("~/.zplugin/snippets/#{dir}/prompt/functions")
