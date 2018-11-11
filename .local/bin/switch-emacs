@@ -1,0 +1,12 @@
+#!/bin/bash
+
+root="$HOME/.emacs.d"
+[[ -L "$root" ]] || exit 1
+
+new="$HOME/.emacs.d.${1}"
+[[ -a "$new" ]] || exit 2
+
+echo "removing old symlink (if any)"
+rm -f "$root"
+echo "linking ${root} to ${new}"
+ln -s "$new" "$root"
