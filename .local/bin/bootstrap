@@ -49,8 +49,8 @@ xnc() {
 
 # Audio
 
-x pulseaudio -D
 x pasystray
+x pulseaudio -D
 # x mpd
 # x pa-applet
 
@@ -67,7 +67,7 @@ POLYRESTART_BSPWM=1 ~/.local/bin/polyrestart.sh  # (re)start polybar
 
 # Other tray apps
 
-x parcellite  # clipboard manager
+# x parcellite  # clipboard manager
 x nm-applet  # network management
 x redshift-gtk  # screen filter for nighttime
 # x kdeconnect-indicator  # connect to phone
@@ -77,12 +77,12 @@ x redshift-gtk  # screen filter for nighttime
 
 # Development
 
-x emacs --daemon  # the god-tier OS
+# x emacs --daemon  # the god-tier OS
 
 
 # Messaging
 
-xc 'wire-desktop' $HOME/appimages/wire.AppImage  # at least it's not botnet
+# xc 'wire-desktop' $HOME/appimages/wire.AppImage  # at least it's not botnet
 # x riot-web  # if only somebody used it... :(
 
 

@@ -25,7 +25,7 @@ when 'Emacs'
   puts "desktop=I\nfollow=off"
 when 'qutebrowser'
   puts "desktop=II\nfollow=off"
-when 'Wire', 'Riot'
+when 'Wire', 'Riot', 'TelegramDesktop'
   puts "desktop=V\nfollow=off"
 when 'Transmission-gtk'
   puts "desktop=X\nfollow=off"

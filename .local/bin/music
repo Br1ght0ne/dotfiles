@@ -56,8 +56,19 @@ class Player
     end
   end
 
+  def running?
+    success = system("pgrep -x #{player_name} &>/dev/null")
+    __FILE__ == $0 ? (success ? 'yes' : 'no') : success
+  end
+
+  alias running running?
+
+  def shell
+    system("pry -e 'load \"#{__FILE__}\"; player = Cmus.new'")
+  end
+
   def lyrics
-    `beet lyrics -p #{current.gsub(/\W+\s*/, ' ').downcase} 2>/dev/null`
+    `beet lyrics -p #{[artist, title].map { |e| e.gsub(/\W+\s*/, ' ').downcase }.join(' ')} 2>/dev/null`
   end
 
   def volume_up
@@ -68,7 +79,6 @@ class Player
     volume "-#{@volumeDelta}"
   end
 
-  # rubocop:disable MethodMissingSuper
   def method_missing(name, *args)
     return super(name, *args) unless __FILE__ == $0
 
@@ -76,7 +86,6 @@ class Player
     puts "#{args[0, 3].join(', ')}... You crazy or what?" unless args.empty?
     exit 1
   end
-  # rubocop:enable MethodMissingSuper
 
   def respond_to_missing?(*)
     true
@@ -131,7 +140,7 @@ class Cmus < Player
     artist_with_title = "#{artist} - #{title}"
     album_suffix = " (#{album}, #{year})"
 
-    if (artist_with_title + album_suffix).length < 70
+    if (artist_with_title + album_suffix).length < 60
       artist_with_title + album_suffix
     else
       artist_with_title
