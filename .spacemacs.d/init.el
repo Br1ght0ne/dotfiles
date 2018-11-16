@@ -8,75 +8,65 @@
    ;; dotspacemacs-configuration-layer-path '("~/.emacs.d/layers")
 
    dotspacemacs-configuration-layers
-   '((auto-completion :variables
-                      auto-completion-tab-key-behavior 'complete
-                      auto-completion-enable-snippets-in-popup t
-                      auto-completion-enable-help-tooltip t)
-     ;; better-defaults
-     ;; bibtex
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
-     colors
-     ;; (dash :variables
-     ;;       helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets")
-     ;; elm
+   '(
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
+     auto-completion
+     c-c++
+     command-log
+     csharp
+     csv
+     elfeed
+     elixir
      emacs-lisp
-     ;; (go :variables
-     ;;     go-tab-width 4)
-     finance
-     ;; floobits
-     ;; games
+     evil-snipe
      git
-     ;; github
-     ;; gnus
-     ;; haskell
+     github
      helm
      html
-     ;; (ivy :variables
-     ;;      ivy-initial-inputs-alist nil
-     ;;      magit-completing-read-function 'ivy-completing-read
-     ;;      projectile-completion-system 'ivy)
-     ;; java
-     javascript
-     (latex :variables
-            TeX-view-program-selection '((output-pdf "Zathura"))
-            TeX-source-correlate-mode t
-            TeX-source-correlate-start-server t
-            TeX-source-correlate-method 'synctex
-            TeX-view-program-list
-            '(("Zathura"
-               ("zathura %o"
-                (mode-io-correlate
-                 " --synctex-forward %n:0:%b -x \"emacsclient +%{line} %{input}\"")))))
-     ;; lua
-     ;; (markdown :variables
-     ;;           markdown-live-preview-engine 'vmd)
+     ;; ivy
+     java
+     json
+     latex
+     lsp
+     major-modes
+     markdown
+     multiple-cursors
+     neotree
      (org :variables
-          org-enable-reveal-js-support t)
+          org-enable-reveal-js-support t
+          org-enable-bootstrap-support t
+          org-enable-github-support t
+          org-enable-hugo-support t
+          org-enable-trello-support t)
+     pandoc
+     parinfer
+     pass
      pdf
-     (python :variables
-             python-test-runner 'pytest)
+     python
      ranger
-     ;; react
-     ;; restclient
      ruby
-     (rust :variables
-           rust-rustfmt-bin "/home/brightone/.cargo/bin/rustfmt")
-     shell
-     ;; speed-reading
-     (spell-checking :variables
-                     spell-checking-enable-by-default nil)
+     ruby-on-rails
+     semantic
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     shell-scripts
+     spell-checking
+     sql
      syntax-checking
      themes-megapack
-     ;; tmux
-     (wakatime :variables
-               wakatime-api-key "d3ced585-ce02-419a-a204-36bf85a09926"
-               wakatime-cli-path "/home/brightone/.local/bin/wakatime")
-     xclipboard
-     ;; xkcd
+     treemacs
+     unicode-fonts
+     ;; version-control
      yaml
+     wakatime
+     xkcd
      )
+
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
