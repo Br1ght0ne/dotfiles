@@ -5,4 +5,4 @@ export vblank_mode=0
 
 export WINEPREFIX=$HOME/.wine
 
-wine ~/.wine/drive_c/users/brightone/Local\ Settings/Application\ Data/osu\!/osu\!.exe "$@"
+wine $HOME/.wine/drive_c/users/$USER/Local\ Settings/Application\ Data/osu\!/osu\!.exe "$@"

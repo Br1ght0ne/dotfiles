@@ -7,6 +7,8 @@
       doom-unicode-font (font-spec :family "DejaVu Sans Mono")
       doom-big-font (font-spec :family "DejaVu Sans Mono" :size 19))
 
+(setq-default +pretty-code-enabled-modes '(not elfeed-show-mode elfeed-search-mode))
+
 (map! :n "Q" #'fill-paragraph
       "M-E" #'kill-this-buffer)
 
@@ -73,6 +75,8 @@
 (map! (:after elfeed
         :map (elfeed-search-mode-map elfeed-show-mode-map)
         (:desc "Filter" :prefix "f"
+          (:desc "Channels" :prefix "c"
+            :desc "Wanderbots" :n "w" (λ! (+private/elfeed-set-search-filter "=Wanderbots")))
           :desc "None"   :n "f" (λ! (+private/elfeed-set-search-filter))
           :desc "Games"  :n "g" (λ! (+private/elfeed-set-search-filter "+linux +games"))
           :desc "Linux"  :n "l" (λ! (+private/elfeed-set-search-filter "+linux -reddit"))
@@ -278,7 +282,7 @@
               (at-tag (s-prepend "@" it))
               (header `((org-agenda-overriding-header ,(s-append ":" desc)))))
          `(,key ,desc tags-todo ,at-tag ,header))
-       '("home" "uni" "work"))
+       '("inbox" "home" "uni" "work"))
       org-ellipsis "|>"
       org-blank-before-new-entry '((heading . nil)
                                    (plain-list-item . nil))

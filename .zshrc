@@ -7,8 +7,8 @@ autoload -Uz _zplugin
 #=== PLUGINS ===#
 
 # Prezto
-zplugin ice svn lucid zplugin snippet PZT::modules/git
-zplugin ice svn lucid zplugin snippet PZT::modules/completion
+zplugin ice svn; zplugin snippet PZT::modules/git
+zplugin ice svn; zplugin snippet PZT::modules/completion
 zplugin ice svn; zplugin snippet PZT::modules/history
 zplugin ice svn; zplugin snippet PZT::modules/directory
 zplugin ice svn; zplugin snippet PZT::modules/utility

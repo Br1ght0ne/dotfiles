@@ -366,3 +366,71 @@
 2018-09-02 16:19:33		  list all channels beginning with "#weechat" (can be very slow on large networks):
 2018-09-02 16:19:33		    /list -re #weechat.*
 2018-09-02 16:19:42	=!=	No help available, "alis" is not a command or an option
+2018-10-21 16:25:21		URL server listening on ('127.0.0.1', 34157)
+2018-10-21 16:25:21		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-10-21 16:25:21		???????? Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-10-21 16:25:21		???????? Subroutine PRINT redefined at (eval 4) line 1.
+2018-10-21 16:25:21		???????? Subroutine PRINTF redefined at (eval 4) line 1.
+2018-10-21 16:25:21		perl scripts loaded: highmon, iset
+2018-10-21 16:25:21		script: downloading list of scripts...
+2018-10-21 16:25:21		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-10-21 16:25:21		script: 357 scripts for WeeChat 2.4-dev
+2018-10-21 16:25:27		fifo: pipe closed
+2018-10-30 22:40:44		URL server listening on ('127.0.0.1', 33875)
+2018-10-30 22:40:44		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-10-30 22:40:44		???????? Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-10-30 22:40:44		???????? Subroutine PRINT redefined at (eval 4) line 1.
+2018-10-30 22:40:44		???????? Subroutine PRINTF redefined at (eval 4) line 1.
+2018-10-30 22:40:45		perl scripts loaded: highmon, iset
+2018-10-30 22:40:45		script: downloading list of scripts...
+2018-10-30 22:40:45		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-10-30 22:40:45		script: 357 scripts for WeeChat 2.4-dev
+2018-10-30 22:41:17		irc: server quakenet added
+2018-10-30 23:10:55		fifo: pipe closed
+2018-11-24 23:43:55		URL server listening on ('127.0.0.1', 45869)
+2018-11-24 23:43:55		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-11-24 23:43:55		???????? Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-11-24 23:43:55		???????? Subroutine PRINT redefined at (eval 4) line 1.
+2018-11-24 23:43:55		???????? Subroutine PRINTF redefined at (eval 4) line 1.
+2018-11-24 23:43:56		perl scripts loaded: highmon, iset
+2018-11-24 23:43:56		script: downloading list of scripts...
+2018-11-24 23:43:56		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2018-11-24 23:43:56		script: 358 scripts for WeeChat 2.4-dev
+2018-11-24 23:44:01	=!=	irc: unable to add temporary server "twitch" because the addition of temporary servers with command /connect is currently disabled
+2018-11-24 23:44:01	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2018-11-25 01:12:49	=!=	Too few arguments for command "/query" (help on command: /help query)
+2018-11-25 01:12:55		fifo: pipe closed
+2018-11-27 17:11:34		@??W?U Subroutine TIEHANDLE redefined at (eval 4) line 1.
+2018-11-27 17:11:34		@??W?U Subroutine PRINT redefined at (eval 4) line 1.
+2018-11-27 17:11:34		@??W?U Subroutine PRINTF redefined at (eval 4) line 1.
+2018-11-27 17:11:35		perl scripts loaded: highmon, iset
+2018-11-27 17:11:36		URL server listening on ('127.0.0.1', 40953)
+2018-11-27 17:11:36		python scripts loaded: bitlbee_completion, go, urlgrab, urlserver, vimode
+2018-11-27 17:11:36		script: downloading list of scripts...
+2018-11-27 17:11:36		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2018-11-27 17:11:36		script: 358 scripts for WeeChat 2.4-dev
+2018-11-27 18:08:30		Option changed: irc.server.freenode.autojoin = "#gentoo,#lor,##linux,#qutebrowser,#qutebrowser-offtopic"  (default if null: "")
+2018-11-27 18:08:34		Options saved to sec.conf
+2018-11-27 18:08:34		Options saved to weechat.conf
+2018-11-27 18:08:34		Options saved to plugins.conf
+2018-11-27 18:08:34		Options saved to charset.conf
+2018-11-27 18:08:34		Options saved to logger.conf
+2018-11-27 18:08:34		Options saved to exec.conf
+2018-11-27 18:08:34		Options saved to trigger.conf
+2018-11-27 18:08:34		Options saved to aspell.conf
+2018-11-27 18:08:34		Options saved to alias.conf
+2018-11-27 18:08:34		Options saved to buflist.conf
+2018-11-27 18:08:34		Options saved to fifo.conf
+2018-11-27 18:08:34		Options saved to xfer.conf
+2018-11-27 18:08:34		Options saved to irc.conf
+2018-11-27 18:08:34		Options saved to relay.conf
+2018-11-27 18:08:34		Options saved to perl.conf
+2018-11-27 18:08:34		Options saved to iset.conf
+2018-11-27 18:08:34		Options saved to python.conf
+2018-11-27 18:08:34		Options saved to urlgrab.conf
+2018-11-27 18:08:34		Options saved to lua.conf
+2018-11-27 18:08:34		Options saved to script.conf
+2018-11-27 18:08:34		Options saved to fset.conf
+2018-11-27 18:08:36	=!=	Too few arguments for command "/query" (help on command: /help query)
+2018-11-28 06:13:31	=!=	Too few arguments for command "/query" (help on command: /help query)
+2018-11-28 06:13:36		fifo: pipe closed

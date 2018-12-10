@@ -183,3 +183,1540 @@
 2018-09-02 16:34:50	<--	m4rcu5 (nobody@546AF885.cm-12-3d.dynamic.ziggo.nl) has quit (Ping timeout: 272 seconds)
 2018-09-02 16:35:20	-->	gibx (~gibx@net-37-182-14-213.cust.vodafonedsl.it) has joined #gentoo
 2018-09-02 16:36:36	<--	xy2_ (~xy2_@94.239.177.175) has quit (Ping timeout: 244 seconds)
+2018-11-27 17:12:04	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-11-27 17:12:04	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2018-11-27 17:12:04	--	Topic set by username234 (~username2@unaffiliated/username234) on Mon, 05 Nov 2018 05:08:19
+2018-11-27 17:12:04	--	Channel #gentoo: 1129 nicks (5 ops, 57 voices, 1067 normals)
+2018-11-27 17:12:05	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-11-27 17:12:05	--	URL for #gentoo: http://www.gentoo.org
+2018-11-27 17:12:05	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-11-27 17:12:06	Xelnor	from reading those bug reports and exchanges, it seems to be an issue with power saving modes; and it seems that some users managed to get it working after a suspend/resume cycle
+2018-11-27 17:12:06	<--	Lujeni (~Lujeni@195.66.82.9) has quit (Ping timeout: 268 seconds)
+2018-11-27 17:12:22	<--	murkx (~mur@unaffiliated/murkx) has quit (Quit: WeeChat 2.3)
+2018-11-27 17:12:32	-->	josef64 (~quassel@unaffiliated/josef64) has joined #gentoo
+2018-11-27 17:12:32	-->	Kelsar (~quassel@unaffiliated/kelsar) has joined #gentoo
+2018-11-27 17:12:32	Xelnor	so you could try that (e.g echo 'memory' > /sys/power/state
+2018-11-27 17:12:33	Xelnor	)
+2018-11-27 17:12:46	-->	Giotis (~Giotis@unaffiliated/giotis) has joined #gentoo
+2018-11-27 17:12:50	Xelnor	sorry, echo 'mem' > /sys/power/state
+2018-11-27 17:13:55	<--	azed (~azed@197.21.128.139) has quit (Ping timeout: 246 seconds)
+2018-11-27 17:14:29	-->	suhr (~nemo@5cf3feed.rev.dansknet.dk) has joined #gentoo
+2018-11-27 17:15:29	<--	yangkeao__ (~yangkeao@39.174.133.121) has quit (Quit: yangkeao__)
+2018-11-27 17:16:11	sokan	Generally it's more advised to boot my system adding `kvm.ignore_msrs=1` during GRUB boot meny first than adding it to GRUB_CMDLINE_LINUX_DEFAULT I presume?
+2018-11-27 17:16:28	-->	edit_21 (~edit21@unaffiliated/edit21/x-00000001) has joined #gentoo
+2018-11-27 17:16:38	-->	yangkeao_ (~yangkeao@39.174.133.121) has joined #gentoo
+2018-11-27 17:16:39	edit_21	afternooning you lot
+2018-11-27 17:16:54	-->	kc8wxm (~steve@steve.gaslightmedia.com) has joined #gentoo
+2018-11-27 17:16:58	chymera	Xelnor: nothing :(
+2018-11-27 17:18:45	<--	ismell (~ismell@2603:300b:c0d:ea00:20e:4ff:fe24:4477) has quit (Read error: Connection reset by peer)
+2018-11-27 17:18:52	-->	ismell_ (ismell@50-78-205-250-static.hfc.comcastbusiness.net) has joined #gentoo
+2018-11-27 17:20:39	-->	TheLurps (~Thunderbi@139.11.216.53) has joined #gentoo
+2018-11-27 17:21:40	-->	s_edrik_ (~s_edrik@81-234-44-180-no522.tbcn.telia.com) has joined #gentoo
+2018-11-27 17:21:56	<--	s_edrik (~s_edrik@81-234-44-180-no522.tbcn.telia.com) has quit (Ping timeout: 264 seconds)
+2018-11-27 17:23:51	<--	ItsaVortex (~ItsaVorte@2600:380:6777:6547:9944:c0c2:6f53:cd8e) has quit (Quit: Leaving)
+2018-11-27 17:24:03	-->	KlevinK__ (~KlevinK@77.242.22.154) has joined #gentoo
+2018-11-27 17:24:17	-->	parapente (~nobody@unaffiliated/parapente) has joined #gentoo
+2018-11-27 17:24:28	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-27 17:24:39	-->	m0u (~m0u@unaffiliated/m0u) has joined #gentoo
+2018-11-27 17:25:07	<--	KlevinK_ (~KlevinK@77.242.22.154) has quit (Ping timeout: 246 seconds)
+2018-11-27 17:26:23	-->	stefanc_diff (~stefanc_d@193.105.212.250) has joined #gentoo
+2018-11-27 17:31:19	-->	alfie_ (~alfie@host211-178-dynamic.55-82-r.retail.telecomitalia.it) has joined #gentoo
+2018-11-27 17:31:22	-->	abf_ (~abf@2601:404:c101:234::a36e) has joined #gentoo
+2018-11-27 17:32:17	<--	alfie_ (~alfie@host211-178-dynamic.55-82-r.retail.telecomitalia.it) has quit (Client Quit)
+2018-11-27 17:33:16	-->	n4cht (~fsckoff@pool-71-244-225-4.bltmmd.fios.verizon.net) has joined #gentoo
+2018-11-27 17:36:27	<--	eTeddy (~Thunderbi@2001:1438:4010:4500:583f:bac0:1e92:e564) has quit (Quit: eTeddy)
+2018-11-27 17:37:21	<--	SkunkyFone (~skunky@unaffiliated/skunky) has quit (Remote host closed the connection)
+2018-11-27 17:39:03	<--	aleck (~aleck@p20030078CF140EFC799EA23BCA6A4F3D.dip0.t-ipconnect.de) has quit (Disconnected by services)
+2018-11-27 17:39:03	twnqx	so yeah, this laptop is broken somehow
+2018-11-27 17:39:03	-->	Lujeni (~Lujeni@195.66.82.9) has joined #gentoo
+2018-11-27 17:39:04	-->	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has joined #gentoo
+2018-11-27 17:39:07	-->	aleck1 (~aleck@p20030078CF140EFCB46BCA0BCEF585E9.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 17:39:08	twnqx	it felt "slow" for a long time
+2018-11-27 17:39:15	twnqx	but now it's compiling the kernel for over an hour
+2018-11-27 17:42:59	-->	narispo (~narispo@185.156.173.27) has joined #gentoo
+2018-11-27 17:44:20	-->	hallabro (~hallabro@185.213.154.160) has joined #gentoo
+2018-11-27 17:46:04	sleepymario1	twnqx: RIP
+2018-11-27 17:46:16	sleepymario1	my condoleances
+2018-11-27 17:46:39	-->	Hund_ (~Hund@ubuntu/member/hund) has joined #gentoo
+2018-11-27 17:48:59	twnqx	i guess it shouldn't take ~1.5 hours on a 3ghz syndy bridge, with a manual config for only the relevant parts
+2018-11-27 17:49:04	-->	fusion809 (~fusion809@2001:8003:f12a:6f00:329c:23ff:fee1:37a2) has joined #gentoo
+2018-11-27 17:49:18	sleepymario1	sounds likely indeed
+2018-11-27 17:50:05	-->	SkunkyFone (~skunky@unaffiliated/skunky) has joined #gentoo
+2018-11-27 17:50:14	<--	Hund (~Hund@ubuntu/member/hund) has quit (Ping timeout: 268 seconds)
+2018-11-27 17:50:16	twnqx	also has video playback issues, etc. guess i'll first check the cooling, then start with a fresh stage
+2018-11-27 17:50:52	sleepymario1	yeah maybe that'll just fix it
+2018-11-27 17:51:28	<--	Hund_ (~Hund@ubuntu/member/hund) has quit (Ping timeout: 268 seconds)
+2018-11-27 17:51:36	sleepymario1	is this the installation that was running fine since 2007?
+2018-11-27 17:52:44	<--	Lujeni (~Lujeni@195.66.82.9) has quit (Ping timeout: 250 seconds)
+2018-11-27 17:53:21	--	tangent is now known as lythandrel
+2018-11-27 17:55:51	<--	zChris (~chris@unaffiliated/zchris) has quit (Remote host closed the connection)
+2018-11-27 18:03:03	-->	Terlisimo (~terl@141-136-224-135.dsl.iskon.hr) has joined #gentoo
+2018-11-27 18:03:27	-->	Hund_ (~Hund@ubuntu/member/hund) has joined #gentoo
+2018-11-27 18:03:48	twnqx	yes
+2018-11-27 18:04:25	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Quit: Lost terminal)
+2018-11-27 18:05:42	twnqx	i guess it was cloned from my desktop at some point (also 2007 install, but no problems there)
+2018-11-27 18:06:24	<--	KlevinK__ (~KlevinK@77.242.22.154) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2018-11-27 18:08:27	<--	kokotchY- (~kokotchY@109.134.47.212) has quit (Ping timeout: 240 seconds)
+2018-11-27 18:09:26	<--	johnnyreb (~tth@unaffiliated/johnnyreb) has quit (Quit: WeeChat 2.4-dev)
+2018-11-27 18:09:53	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2018-11-27 18:12:50	<--	hijacker (~nikolay@149.235.255.3) has quit (Quit: Leaving)
+2018-11-27 18:13:02	<--	tabaqui (~tabaqui@31.44.93.25) has quit (Quit: WeeChat 2.3)
+2018-11-27 18:14:31	-->	tabaqui (~tabaqui@31.44.93.25) has joined #gentoo
+2018-11-27 18:14:41	-->	Lujeni (~Lujeni@195.66.82.9) has joined #gentoo
+2018-11-27 18:15:31	sleepymario1	oh well
+2018-11-27 18:17:58	-->	Azimoth (~til@2a02:908:69e:c5a0:368d:5d0f:cfeb:3cef) has joined #gentoo
+2018-11-27 18:18:18	<--	dbermond (~dbermond@archlinux/trusteduser/dbermond) has quit (Quit: No Ping reply in 180 seconds.)
+2018-11-27 18:19:17	-->	wittybookshelf (~anon@209.58.148.225) has joined #gentoo
+2018-11-27 18:19:46	-->	dbermond (~dbermond@archlinux/trusteduser/dbermond) has joined #gentoo
+2018-11-27 18:23:20	<--	router (~peaktop@broadband-37-110-32-164.ip.moscow.rt.ru) has quit (Ping timeout: 246 seconds)
+2018-11-27 18:24:14	wittybookshelf	is there a way to force emerge to use a specific slot version of a dependency for another package?
+2018-11-27 18:24:52	<--	brektyme (~josh@pool-108-28-57-242.washdc.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2018-11-27 18:25:24	<--	twnqx (~twnqx@ip4d149850.dynamic.kabel-deutschland.de) has quit (Quit: Leaving)
+2018-11-27 18:27:03	sleepymario1	wittybookshelf: masking the non-wanted version(s) doesn't help?
+2018-11-27 18:27:32	wittybookshelf	I've never masked a package before but that sounds logical. I'll try it.
+2018-11-27 18:27:58	<--	xmorph (~xt_@unaffiliated/xmorph) has quit
+2018-11-27 18:29:47	<--	ng0 (~ng0@gateway/tor-sasl/ng0) has quit (Quit: Alexa, when is the end of world?)
+2018-11-27 18:31:35	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-27 18:33:57	--	Hund_ is now known as Hund
+2018-11-27 18:34:09	<--	m0u (~m0u@unaffiliated/m0u) has quit (Quit: WeeChat 2.2)
+2018-11-27 18:35:02	-->	Yoda1 (~Yoda@104.143.73.186) has joined #gentoo
+2018-11-27 18:35:03	<--	Yoda1 (~Yoda@104.143.73.186) has quit (Max SendQ exceeded)
+2018-11-27 18:36:14	<--	eduardas_m (~eduardas@213.197.143.19) has quit (Quit: Konversation terminated!)
+2018-11-27 18:39:34	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) has quit (Ping timeout: 268 seconds)
+2018-11-27 18:39:51	Azimoth	ok, now I have the latest version of gnome installed from the gnome-next overlay (3.31.2)... and I must say, I'm not that excited... some extensions crash, e.g. nextcloud-client seems uninstallable due to missing dependency... I know it's not meant to be a fully stable thing, but since gnome 3.30 IS stable... is there another overlay that provides a more robust version?
+2018-11-27 18:40:02	-->	zamlz (~zamlz@128.125.146.10) has joined #gentoo
+2018-11-27 18:40:30	arvut	Azimoth: how can you not like kde;
+2018-11-27 18:40:40	arvut	s/;/?/
+2018-11-27 18:41:20	Azimoth	arvut: The thing about kde is that it would require a considerable amount of work and time to make it look like gnome :P
+2018-11-27 18:41:30	-->	m0u (~m0u@unaffiliated/m0u) has joined #gentoo
+2018-11-27 18:42:03	<--	kutsuya (~bit@gentoo/contributor/kutsuya) has quit (Remote host closed the connection)
+2018-11-27 18:43:34	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2018-11-27 18:49:49	-->	Ishido (~Ishido@31.247.153.77.rev.sfr.net) has joined #gentoo
+2018-11-27 18:50:45	Azimoth	ok, so no suggestions for a more stable gnome 3.30 overlay?
+2018-11-27 18:52:01	zamlz	anyone know anything about the latest stable kernel version 4.14.78 not working with nvidia-drivers? I'm at the module-rebuild step but its failling for some reason. https://paste.pound-python.org/show/diEac1eauUF4GhDcsz4f/
+2018-11-27 18:52:07	<--	clemens3_ (~clemens@mx.eniso-partners.com) has quit (Ping timeout: 250 seconds)
+2018-11-27 18:52:13	+iamben	Azimoth: packaging gnome is a lot of work, especially doing it properly
+2018-11-27 18:52:32	<--	venom00 (~venom00@unaffiliated/venom00) has quit (Ping timeout: 250 seconds)
+2018-11-27 18:52:35	sleepymario1	is stable portage still on 3.24?
+2018-11-27 18:52:52	domhnall	Azimoth: does it work with non-desktop profile?
+2018-11-27 18:52:53	+iamben	Azimoth: has 4.14.83 kernel been fully built & installed, including modules_install?
+2018-11-27 18:52:53	Azimoth	zamlz: The latest stable kernel version is 4.14.83...?
+2018-11-27 18:53:01	+iamben	oops
+2018-11-27 18:53:06	+iamben	zamlz: ^
+2018-11-27 18:53:33	zamlz	yeah it is the latest stable kernel cause its LTS on kernel.org i think lol.
+2018-11-27 18:53:43	-->	InvisibleRasta (~Invisible@146-241-98-217.dyn.eolo.it) has joined #gentoo
+2018-11-27 18:53:49	zamlz	well should the modules-rebuild step be performed before the kernel is compiled ?
+2018-11-27 18:54:10	zamlz	oh wait
+2018-11-27 18:54:12	+iamben	zamlz: it should be done after
+2018-11-27 18:54:18	zamlz	sorry I meant I was trying to setup up 4.14.83
+2018-11-27 18:54:30	+iamben	you need to build & install 4.14.83 before @modules-rebuild
+2018-11-27 18:54:59	<--	`VL (~vl@82.204.252.162) has quit (Quit: Leaving)
+2018-11-27 18:54:59	wuseman	Portage on 3.24? I must be far behind then.
+2018-11-27 18:55:02	zamlz	i copied the config from 4.14.78 and ran make silentoldconfig and make modules_prepare
+2018-11-27 18:55:21	+iamben	zamlz: please do a full build & install first
+2018-11-27 18:55:29	zamlz	kk I'll do that
+2018-11-27 18:55:35	<--	NeoZed (~ursu@82.158.17.10.dyn.user.ono.com) has quit (Ping timeout: 250 seconds)
+2018-11-27 18:55:43	Azimoth	iamben: The desktop itself runs fine (so far), but apparently it's "too new" for at least some extensions that I got used to and nextcloud-client (which is quite essential for me) complains about tracker-1.13.0 not being available...
+2018-11-27 18:55:47	zamlz	its odd for me because I managed to get away with not doing that for all the previous kernel builds lol
+2018-11-27 18:56:14	+iamben	zamlz: i dont know why you'd even attempt to rebuild modules before the kernel itself is built though.  modules_prepare is *sometimes* enough for a 3rd party module build, but often not.
+2018-11-27 18:56:18	Azimoth	iamben: so I guess it's not a problem with the flags/profile, but rather the fact that it's simply not a stable thing, yet
+2018-11-27 18:56:39	-->	kekstee28 (~kekstee@223.red-83-55-43.dynamicip.rima-tde.net) has joined #gentoo
+2018-11-27 18:56:42	kekstee28	/！\ АTTN˸ Ꭲhіs сһanneⅼ һas mоⅴеd to іrc.freеnodе․net #οsiriѕⅼab /!＼
+2018-11-27 18:56:42	<--	kekstee28 (~kekstee@223.red-83-55-43.dynamicip.rima-tde.net) has quit (Killed (Sigyn (Spam is off topic on freenode.)))
+2018-11-27 18:57:50	Azimoth	I'm thinking about downgrading to 3.24 and just have everything back "as usual"...
+2018-11-27 18:58:13	zamlz	i was under the impression that since nvidia is a 3rd party module, I need to do modules_prepare
+2018-11-27 18:58:21	<--	Azimoth (~til@2a02:908:69e:c5a0:368d:5d0f:cfeb:3cef) has quit (Remote host closed the connection)
+2018-11-27 18:58:47	zamlz	my lack of understanding of what actually modules-rebuild does is my downfall here
+2018-11-27 18:58:53	zamlz	i know it pulls in nvidia-drivers again
+2018-11-27 18:58:57	+iamben	zamlz: modules_prepare does a small subset of what a normal make does, *in case* you are unable to do a full build
+2018-11-27 18:59:06	+iamben	but full build does what modules_prepare does and a lot more
+2018-11-27 18:59:09	JohnnyMnemonic	how do i find out which package contains a certain file?
+2018-11-27 18:59:19	+iamben	but on gentoo, there is no reason to NOT do a full build
+2018-11-27 18:59:20	-->	Azimoth (~til@5.146.198.78) has joined #gentoo
+2018-11-27 18:59:25	+iamben	JohnnyMnemonic: do you have this file already?
+2018-11-27 18:59:33	zamlz	oh I see
+2018-11-27 18:59:56	-->	Kelzier (~duka@87.116.180.145) has joined #gentoo
+2018-11-27 19:00:42	zamlz	that makes sense, so as long as I'm using make -j10 I should be fine. It looks like module-rebuild is working now as intended.
+2018-11-27 19:00:44	<--	Tristam (~Tristam@bodhilinux/team/Tristam) has left #gentoo ("Leaving")
+2018-11-27 19:00:56	JohnnyMnemonic	iamben, evidently not, im trying to compile boost and it complains about a missing file
+2018-11-27 19:01:06	JohnnyMnemonic	crti.o specificaly
+2018-11-27 19:01:46	<--	kajo (~kajo@dyn-1712724aebd286e155001000.eduroam.ipv6.ruhr-uni-bochum.de) has quit (Ping timeout: 268 seconds)
+2018-11-27 19:01:47	+iamben	JohnnyMnemonic: .o files would normally be a part of this same build, maybe there was an earlier undetected failure
+2018-11-27 19:02:05	+iamben	.o files don't get installed to the main system, they are built object files that later get linked together to form a real binary or library
+2018-11-27 19:02:51	JohnnyMnemonic	iamben, i was doing a world update and ncmpcpp failed to build, complaining about: /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../x86_64-pc-linux-gnu/bin/ld: cannot find -lboost_date_time-mt
+2018-11-27 19:03:01	JohnnyMnemonic	so i tried to emerge boost thinking thats what was missing
+2018-11-27 19:03:57	wuseman	/usr/portage/sys-libs/netbsd-csu/netbsd-csu-7.1.ebuild: # we only need those files; crt1 and friends are provided by libc
+2018-11-27 19:04:21	wuseman	found this maybe it can help
+2018-11-27 19:05:18	<--	zamlz (~zamlz@128.125.146.10) has quit (Quit: WeeChat 2.2)
+2018-11-27 19:05:21	wuseman	aha, i searched for crt1 and not crti i see now, nvm then
+2018-11-27 19:05:27	JohnnyMnemonic	iamben, would you like to see the build log?
+2018-11-27 19:05:31	+iamben	JohnnyMnemonic: yes please
+2018-11-27 19:05:33	-->	bskdndn (~AndChat29@181.115.131.75) has joined #gentoo
+2018-11-27 19:07:05	JohnnyMnemonic	iamben, thisis for ncmpcpp: https://paste.pound-python.org/show/kd1EiVbjqiaIv1etlrvy/
+2018-11-27 19:07:22	+iamben	please try with ccache off, on both these builds
+2018-11-27 19:08:23	-->	kokotchY (~kokotchY@91.178.101.143) has joined #gentoo
+2018-11-27 19:09:20	<--	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has quit (Remote host closed the connection)
+2018-11-27 19:10:39	-->	hurikhan77 (~quassel@2a02:8109:c40:3f2b:4cfe:14ff:fe36:c983) has joined #gentoo
+2018-11-27 19:12:03	<--	pekkari (~pekkari@unaffiliated/pekkari) has quit (Quit: Konversation terminated!)
+2018-11-27 19:12:09	JohnnyMnemonic	iamben, here is the build log for ncmpcpp
+2018-11-27 19:12:11	JohnnyMnemonic	/var/tmp/portage/media-sound/ncmpcpp-0.8.2/temp/build.log
+2018-11-27 19:13:30	+iamben	i dont have access to your filesystem so that doesnt do me much good =)
+2018-11-27 19:13:36	<--	cosimone (~cosimone@93-51-213-243.ip268.fastwebnet.it) has quit (Quit: WeeChat 2.2)
+2018-11-27 19:13:39	<--	Azimoth (~til@5.146.198.78) has quit (Remote host closed the connection)
+2018-11-27 19:13:52	JohnnyMnemonic	oh lord
+2018-11-27 19:14:49	JohnnyMnemonic	https://paste.pound-python.org/show/ZP3sLtwnjbGvYUkX3hzH/ xd
+2018-11-27 19:15:19	-->	Azimoth (~til@2a02:908:69e:c5a0:368d:5d0f:cfeb:3cef) has joined #gentoo
+2018-11-27 19:15:28	+iamben	!!! Please attach the following file when seeking support:  !!! /var/tmp/portage/media-sound/ncmpcpp-0.8.2/work/ncmpcpp-0.8.2/config.log
+2018-11-27 19:15:51	JohnnyMnemonic	iamben, im sorry i have to run
+2018-11-27 19:15:56	<--	schallusion (~till@dynip-129-217-100-246.wifi.tu-dortmund.de) has quit (Ping timeout: 264 seconds)
+2018-11-27 19:15:57	JohnnyMnemonic	thank you though
+2018-11-27 19:16:32	-->	synchris (~synchris@unaffiliated/synchris) has joined #gentoo
+2018-11-27 19:16:51	+iamben	jeez
+2018-11-27 19:18:10	<--	InvisibleRasta (~Invisible@146-241-98-217.dyn.eolo.it) has quit (Quit: WeeChat 2.3)
+2018-11-27 19:18:52	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) has quit (Quit: tuxtor)
+2018-11-27 19:19:28	-->	elev3n (~elev3n@185.159.157.22) has joined #gentoo
+2018-11-27 19:20:59	<--	psachin (~psachin@103.51.234.218) has quit (Ping timeout: 268 seconds)
+2018-11-27 19:22:15	-->	dnndndbx (~AndChat29@181.115.131.75) has joined #gentoo
+2018-11-27 19:22:16	<--	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has quit (Quit: WeeChat 2.3)
+2018-11-27 19:22:18	<--	bskdndn (~AndChat29@181.115.131.75) has quit (Read error: Connection reset by peer)
+2018-11-27 19:22:59	-->	quba42 (~qubap42@p5B05B68E.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 19:24:07	-->	_0bitcount (~Big_Byte@90.162.105.206) has joined #gentoo
+2018-11-27 19:24:09	<--	Renich (~Renich@177.240.230.53) has quit (Quit: Renich)
+2018-11-27 19:24:41	<--	optmzr (~optmzr@pub154-52.pub.ltu.se) has quit (Ping timeout: 268 seconds)
+2018-11-27 19:25:26	<--	abf_ (~abf@2601:404:c101:234::a36e) has quit (Quit: Leaving)
+2018-11-27 19:25:39	-->	Renich (~Renich@177.240.230.53) has joined #gentoo
+2018-11-27 19:26:47	<--	m0u (~m0u@unaffiliated/m0u) has quit (Ping timeout: 250 seconds)
+2018-11-27 19:27:16	--	groepaz__ is now known as groepaz
+2018-11-27 19:29:28	-->	Cheyenne (~Cheyenne@71-211-168-94.hlrn.qwest.net) has joined #gentoo
+2018-11-27 19:30:18	-->	hotaronohanako (~user@unaffiliated/hotaronohanako) has joined #gentoo
+2018-11-27 19:31:02	<--	hurikhan77 (~quassel@2a02:8109:c40:3f2b:4cfe:14ff:fe36:c983) has quit (Remote host closed the connection)
+2018-11-27 19:31:10	grepwood	Are there any NFS experts here? I need to talk in private with one. I'm not sure if what I just stumbled upon is a serious security bug or a feature resulting from my misconfiguration.
+2018-11-27 19:32:10	-->	hurikhan77 (~quassel@2a02:8109:c40:3f2b:4cfe:14ff:fe36:c983) has joined #gentoo
+2018-11-27 19:33:34	<--	megaTherion (~therion@2001:470:1f0b:518::3) has quit (Ping timeout: 252 seconds)
+2018-11-27 19:34:34	koollman	grepwood: why privately ?
+2018-11-27 19:35:09	-->	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has joined #gentoo
+2018-11-27 19:35:19	<--	stefanc_diff (~stefanc_d@193.105.212.250) has quit (Ping timeout: 246 seconds)
+2018-11-27 19:35:54	Xelnor	grepwood: I would suggest taking a look at the official upstream maintainers of the software you use, and take a look at the contacts listed there?
+2018-11-27 19:35:54	grepwood	koollman, the implications of this discovery are quite insidious
+2018-11-27 19:36:00	-->	venom00 (~venom00@unaffiliated/venom00) has joined #gentoo
+2018-11-27 19:36:07	Azimoth	koollman: probably because if he actually found a bug, he'd be discussing a zero day exploit in public...
+2018-11-27 19:36:22	<--	hardbot (~hardbot@lputeaux-656-1-75-52.w92-154.abo.wanadoo.fr) has quit (Ping timeout: 246 seconds)
+2018-11-27 19:36:22	grepwood	^
+2018-11-27 19:36:28	koollman	well, the probability is pretty low
+2018-11-27 19:36:54	grepwood	I really hope it's just me being dumb with the config
+2018-11-27 19:36:57	Azimoth	koollman: so is winning the lottery... yet every few weeks somebody actually does ;)
+2018-11-27 19:39:34	<--	sozuba (~sozuba@unaffiliated/sozuba) has quit (Quit: bye bye)
+2018-11-27 19:40:01	-->	bskdndn (~AndChat29@181.115.131.18) has joined #gentoo
+2018-11-27 19:40:07	<--	bskdndn (~AndChat29@181.115.131.18) has quit (Read error: Connection reset by peer)
+2018-11-27 19:40:21	-->	bskdndn (~AndChat29@181.115.131.18) has joined #gentoo
+2018-11-27 19:40:25	-->	megaTherion (~therion@unix.io) has joined #gentoo
+2018-11-27 19:41:30	<--	dnndndbx (~AndChat29@181.115.131.75) has quit (Ping timeout: 250 seconds)
+2018-11-27 19:41:33	Azimoth	Am I right to assume that, when one package I definitely need requires qt5, I might as well remove the -qt5 flag from make.conf, because it doesn't make a difference if one or more packages use it?
+2018-11-27 19:41:48	+iamben	Azimoth: that's not right at all
+2018-11-27 19:42:13	--	Vasco is now known as Vasco_O
+2018-11-27 19:42:16	+iamben	just because one package hard-requires it, doesnt mean that all other packages *optionally* using it, will automatically pick up & enable it
+2018-11-27 19:44:08	Azimoth	iamben: no, not as long as -qt5 is in place. But it doesn't make a difference regarding the qt5 packages that are about to be installed, does it?
+2018-11-27 19:44:28	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-27 19:44:47	+iamben	Azimoth: -qt5 will only disable qt5 where it is optional.  it won't have any effect on things that hard-require qt5.
+2018-11-27 19:45:25	Azimoth	iamben: backintime doesn't require it, but I don't know how to use it without a GUI :D
+2018-11-27 19:46:33	Voidablazer	Yesterday I updated gentoo sources, depcleaned the old sources, and eselect kernel set the new sources but I didn't build the kernel or installed it. I shutdown my pc. Today should I first build and install my kernel (I have to emerge @modules_rebuild for VirtualBox also) and then emerge sync and update world? Or is it better to sync and update world first?
+2018-11-27 19:46:51	-->	medard (~medard@147.175.213.164) has joined #gentoo
+2018-11-27 19:46:59	Voidablazer	Maybe sh
+2018-11-27 19:47:17	domhnall	Voidablazer: so what kernel are you running?
+2018-11-27 19:47:20	Voidablazer	Something looks into the sources to build itself while I use another kernel
+2018-11-27 19:47:20	+iamben	Voidablazer: if the upgrade includes 3rd party modules like virtualbox or nvidia-drivers, you should build the kernel first.
+2018-11-27 19:47:42	-->	alem0lars (~alem0lars@78-134-84-206.v4.ngi.it) has joined #gentoo
+2018-11-27 19:47:59	Voidablazer	domhnall: the latest amd64~
+2018-11-27 19:48:09	Voidablazer	The point release
+2018-11-27 19:48:26	+iamben	if you wanna be safe, build the new kernel asap
+2018-11-27 19:48:34	Voidablazer	Alright
+2018-11-27 19:48:48	Voidablazer	And will rebuild modules
+2018-11-27 19:49:33	<--	Ishido (~Ishido@31.247.153.77.rev.sfr.net) has quit (Read error: Connection reset by peer)
+2018-11-27 19:49:38	-->	InvisibleRasta (~Invisible@146-241-98-217.dyn.eolo.it) has joined #gentoo
+2018-11-27 19:50:32	-->	ch0wn_ (~tmp@c-73-255-220-160.hsd1.fl.comcast.net) has joined #gentoo
+2018-11-27 19:51:36	<--	wittybookshelf (~anon@209.58.148.225) has left #gentoo
+2018-11-27 19:52:56	grepwood	Azimoth, your package may have optional GUI frontends. This is why qt5 USEFLAG exists.
+2018-11-27 19:53:20	-->	rememberYou (~user@unaffiliated/rememberyou) has joined #gentoo
+2018-11-27 19:53:42	-->	kajo (~kajo@2a02:908:2f34:d740:e9ce:9b26:a656:5b95) has joined #gentoo
+2018-11-27 19:53:47	<--	hurikhan77 (~quassel@2a02:8109:c40:3f2b:4cfe:14ff:fe36:c983) has quit (Ping timeout: 252 seconds)
+2018-11-27 19:53:49	grepwood	like vlc, it has several frontends, ncurses, qt4, qt5, you can choose which ones to build
+2018-11-27 19:54:00	-->	aplainzetakind (~dk@2E8BD6FE.catv.pool.telekom.hu) has joined #gentoo
+2018-11-27 19:54:18	-->	catpig (~catpig@2a02:810a:980:2ea0:793c:708:acae:da1f) has joined #gentoo
+2018-11-27 19:54:44	+iamben	fyi on gentoo, packages do NOT just pick up whatever libs are available and enable/disable features automatically.  it's all explicitly controlled by USE.
+2018-11-27 19:54:52	Azimoth	grepwood: that's where I came from and why I started thinking about removing -qt5 from make.conf ;)
+2018-11-27 19:54:54	+iamben	so just HAVING qt5 doesn't automatically enable it on pkgs where it's optional
+2018-11-27 19:55:20	+iamben	also, "having qt5" is really vague, it's a big collection and you almost certainly just have some subset of it
+2018-11-27 19:55:30	--	Vasco_O is now known as Vasco
+2018-11-27 19:55:33	-->	kd926 (~kd926@71-218-33-29.hlrn.qwest.net) has joined #gentoo
+2018-11-27 19:55:46	grepwood	yeah, some packages have a hard-require like skype
+2018-11-27 19:56:03	grepwood	skype is qt-only and will not work without it
+2018-11-27 19:56:17	grepwood	therefore it makes no sense to offer a qt* useflag to skype
+2018-11-27 19:56:34	+iamben	but just having a few qt5 bits for skype, doesn't mean you must or shoudl enable qt5 support everywhere else.  which i think is what his original question was about.
+2018-11-27 19:56:59	+iamben	using skype w/ hard qt5 requirement doesnt in any way imply that you should remove -qt5 from make.conf, it's completely unrelated
+2018-11-27 19:57:38	grepwood	yeah, it's a matter of personal preference
+2018-11-27 19:57:44	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-27 19:57:55	-->	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has joined #gentoo
+2018-11-27 19:59:07	<--	ch0wn_ (~tmp@c-73-255-220-160.hsd1.fl.comcast.net) has quit (Ping timeout: 246 seconds)
+2018-11-27 19:59:32	grepwood	removing qt5/qt4/gtk/gtk3 is useful if you're me from 7 years ago - you are disappointed with gnome3 and want to stick it to the man by adding -gtk3 into your make.conf and masking >=gtk-3.0
+2018-11-27 20:00:21	<--	iterati (~vangelis@2a02:85f:1227:be00:6ce4:a230:d809:18a3) has quit (Read error: Connection reset by peer)
+2018-11-27 20:03:53	grepwood	ok so I sent an email to citi.umich.edu
+2018-11-27 20:04:05	grepwood	I really hope I'm just dumb with the config
+2018-11-27 20:04:40	-->	dnndndbx (~AndChat29@181.115.130.118) has joined #gentoo
+2018-11-27 20:04:55	<--	aplainzetakind (~dk@2E8BD6FE.catv.pool.telekom.hu) has quit (Ping timeout: 250 seconds)
+2018-11-27 20:06:05	-->	fling (~user@fsf/member/fling) has joined #gentoo
+2018-11-27 20:06:25	+iamben	grepwood: you're using nfsv4 with kerberos, something like that?
+2018-11-27 20:06:39	grepwood	just nfsv4
+2018-11-27 20:06:49	grepwood	iamben, wanna talk it over in private?
+2018-11-27 20:06:52	+iamben	no
+2018-11-27 20:07:05	grepwood	okiedokie
+2018-11-27 20:07:05	+iamben	i dont like nfs, especially when security matters =)
+2018-11-27 20:07:08	<--	bskdndn (~AndChat29@181.115.131.18) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:07:27	-->	bluezz (~Unknown@185.242.4.205) has joined #gentoo
+2018-11-27 20:08:11	+iamben	but i suspect you're just noticing the complete lack of security that nfs has always had
+2018-11-27 20:08:59	grepwood	what'd you suggest in its stead? my usecase requires rootfs over network
+2018-11-27 20:09:19	bluezz	so guys
+2018-11-27 20:09:23	+iamben	all of rootfs? for a netboot scenario?
+2018-11-27 20:09:28	grepwood	yes
+2018-11-27 20:09:31	bluezz	i can't seem to get bluetooth loaded on this rig
+2018-11-27 20:09:46	grepwood	the rationale is a little dumb really
+2018-11-27 20:10:13	bluezz	I'm not using loadable kernel modules (MODULES=N), and dmesg shows "bluetooth hci0: Direct firmware load for intel/ibt-12-16.sfi failed with error -2"
+2018-11-27 20:10:32	+iamben	bluezz: did you build that firmware in, via CONFIG_EXTRA_FIRMWARE?
+2018-11-27 20:10:46	+iamben	or add it into an initramfs
+2018-11-27 20:10:47	grepwood	it's a PS3, model CECH-2003 (early slim) with gitbrew.org's OtherOS++ 3.55 firmware with emergency init set to divide the main HDD into 2 regions, 1 for GameOS, 1 for OtherOS
+2018-11-27 20:11:31	grepwood	the kernel patches to support this scenario are working really weird, when used with 4.19 instead of 4.1 for which they were originally written, they get the HDD regions idea completely wrong
+2018-11-27 20:11:51	bluezz	iamben: I did, but i probably did it wrong, set CONFIG_EXTRA_FIRMWARE to "ibt-12-16.sfi", and CONFIG_EXTRA_FIRMWARE_DIR to "/lib/firmware"
+2018-11-27 20:12:11	+iamben	bluezz: but it needs intel/ibt-12-16.sfi, not ibt-12-16.sfi
+2018-11-27 20:12:29	-->	azed (~azed@154.110.157.118) has joined #gentoo
+2018-11-27 20:12:32	bluezz	ah!
+2018-11-27 20:12:47	<--	siodor (~siodor@80-219-147-44.dclient.hispeed.ch) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:12:49	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2018-11-27 20:12:53	grepwood	instead of showing each HDD region as a separate drive node (ps3da(partition table containing ps3db and ps3dc as partitions), ps3db(gameos), ps3dc(2gb of nothing), ps3dd(empty space for us)),
+2018-11-27 20:12:54	<--	graphene (~graphene@46.101.134.251) has quit (Remote host closed the connection)
+2018-11-27 20:13:12	bluezz	that probably solves it!
+2018-11-27 20:13:48	grepwood	they show ps3da1(unknown), ps3da2(gameos), ps3da3(2gb of nothing), ps3da4(where ps3dd is meant to be)
+2018-11-27 20:31:21	-->	graphene (~graphene@46.101.134.251) has joined #gentoo
+2018-11-27 20:31:22	Psyb3rN4ut	the gentoo wiki says for btrfs raid1 to # mkfs.btrfs -m raid1 /dev/sdb /dev/sdc -d raid1 /dev/sdb /dev/sdc....but throws an error "skipping duplicate device" and the btrfs wiki says # mkfs.btrfs -m raid1 -d raid1 /dev/sdb /dev/sdc
+2018-11-27 20:31:22	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 20:31:22	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-27 20:31:22	Psyb3rN4ut	which one is correct/better?
+2018-11-27 20:31:22	bluezz	i did 'grep -r ibt /lib' and it pointed to a WHENCE file, so i was confused for a sec. Seems like there's an intel sub dir under /lib/firmware
+2018-11-27 20:31:22	grepwood	if I boot 4.19 on the PS3, usb_storage.ko experiences a kernel panic and so, I'm left without any options, HDD support is inconsistent with documented behavior, USB storage is out of the way
+2018-11-27 20:31:22	grepwood	so I'm left with rootfs over network
+2018-11-27 20:31:22	grepwood	the only way I can boot the kernel is that petitboot's usb_storage.ko doesn't panic
+2018-11-27 20:31:22	<--	ccokee (~pi@196.red-83-53-150.dynamicip.rima-tde.net) has quit (Ping timeout: 240 seconds)
+2018-11-27 20:31:22	sleepymario1	u got gentoo installed on a ps3? that's cool.
+2018-11-27 20:31:23	grepwood	sleepymario1, I had for years, I needed to make a backup of my rootfs on CECHC (old 60GB FAT) and move to a slim, because the CECHC was getting serious hardware issues
+2018-11-27 20:31:23	Necktwi	Can't locate Twitter/API.pm in @INC
+2018-11-27 20:31:23	-->	InvisibleRasta2 (~Invisible@146-241-68-63.dyn.eolo.it) has joined #gentoo
+2018-11-27 20:31:23	bluezz	one more thing
+2018-11-27 20:31:23	Necktwi	I've already merge Net-twitter
+2018-11-27 20:31:23	Psyb3rN4ut	sleepymario1: grepwood nice cracking/mining box! mips right?
+2018-11-27 20:31:23	grepwood	sleepymario1, powerpc64 big endian
+2018-11-27 20:31:23	bluezz	when attempting to launch a creater VM through virt-manager, it complains about qemu not supporting qxl vid device
+2018-11-27 20:31:23	grepwood	it's not for cracking or mining though
+2018-11-27 20:31:23	<--	brightone (~brightone@94.244.154.248.nash.net.ua) has quit (Ping timeout: 246 seconds)
+2018-11-27 20:31:23	--	irc: disconnected from server
+2018-11-27 20:31:49	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #gentoo
+2018-11-27 20:31:49	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2018-11-27 20:31:49	--	Topic set by username234 (~username2@unaffiliated/username234) on Mon, 05 Nov 2018 05:08:19
+2018-11-27 20:31:50	--	Channel #gentoo: 1132 nicks (4 ops, 56 voices, 1072 normals)
+2018-11-27 20:31:50	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2018-11-27 20:31:50	--	URL for #gentoo: http://www.gentoo.org
+2018-11-27 20:31:55	--	Channel created on Sat, 15 Sep 2001 06:15:36
+2018-11-27 20:32:20	<--	Renich (~Renich@177.240.230.53) has left #gentoo
+2018-11-27 20:35:10	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-27 20:35:30	<--	venom00 (~venom00@unaffiliated/venom00) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:35:44	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 20:36:13	-->	vulpix1337 (~vulpix@ec2-54-164-171-208.compute-1.amazonaws.com) has joined #gentoo
+2018-11-27 20:37:23	-->	stn616 (~kings@24.157.18.182) has joined #gentoo
+2018-11-27 20:38:16	<--	stn616 (~kings@24.157.18.182) has quit (Client Quit)
+2018-11-27 20:39:01	-->	candrews (~candrews@gentoo/developer/candrews) has joined #gentoo
+2018-11-27 20:39:01	--	Mode #gentoo [+v candrews] by ChanServ
+2018-11-27 20:41:43	<--	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has quit (Remote host closed the connection)
+2018-11-27 20:42:00	-->	Keij0 (~Keij0@176.223.143.16) has joined #gentoo
+2018-11-27 20:42:07	Keij0	Hi, teamviewer stopped working for me
+2018-11-27 20:42:22	<--	zack_moe (~realname@unaffiliated/zack-moe/x-5811739) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:42:33	Keij0	Doesn't show any id of my computer nor it wants to connect, checked with both the repo one and tarball one
+2018-11-27 20:42:56	-->	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has joined #gentoo
+2018-11-27 20:42:56	<--	yesi (~yesi@gateway/tor-sasl/yesi) has quit (Quit: leaving)
+2018-11-27 20:43:57	<--	beeman (uid332244@gateway/web/irccloud.com/x-tsyfdubxosnopusb) has quit (Quit: Connection closed for inactivity)
+2018-11-27 20:44:17	-->	orbiter (~orbiter@dslb-092-075-073-176.092.075.pools.vodafone-ip.de) has joined #gentoo
+2018-11-27 20:44:28	-->	quadbootman (~lifesux@host86-135-102-62.range86-135.btcentralplus.com) has joined #gentoo
+2018-11-27 20:44:49	Keij0	any ideas what could go wrong? when I do teamviewer -info on the repo one and give the id displayed there to my friend it says that I'm not connected to a router, could that be a network issue?
+2018-11-27 20:44:51	Necktwi	that worked
+2018-11-27 20:45:01	quadbootman	hi if i get a fetch failed for something like spotify, should i emerge --sync? i dont want to...whyyyyy
+2018-11-27 20:45:01	Necktwi	but couldn't login
+2018-11-27 20:45:57	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-27 20:48:55	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 20:50:59	<--	madmartin (~quassel@2a02:8109:9f40:428e:5e9a:d8ff:fee5:1193) has quit (Ping timeout: 252 seconds)
+2018-11-27 20:51:07	-->	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has joined #gentoo
+2018-11-27 20:51:48	-->	buscher (~buscher@konversation/developer/buscher) has joined #gentoo
+2018-11-27 20:53:26	+iamben	quadbootman: or find the file yourself, somewhere else
+2018-11-27 20:53:33	<--	m3g[m] (m3gmatrixo@gateway/shell/matrix.org/x-ankutkznetzcrojt) has quit (Remote host closed the connection)
+2018-11-27 20:53:40	<--	tleydxdy_m (tleydxdymt@gateway/shell/matrix.org/x-czllmfnwwwpokhre) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:40	<--	c1pher (c1phertunn@gateway/shell/matrix.org/x-asyllrtgqfzlzfgz) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:41	<--	MiningMarsh (miningmars@lugatgt/officer/MiningMarsh) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:42	<--	rtr63gdh[m] (rtr63gdhma@gateway/shell/matrix.org/x-fsjrfnaxtxazkrzc) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:42	<--	Processus42 (processus4@gateway/shell/matrix.org/x-oisnmonsotepxhyo) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:43	<--	nigel[m] (nigelmatri@gateway/shell/matrix.org/x-jqifsafemztexskw) has quit (Remote host closed the connection)
+2018-11-27 20:53:46	<--	tansly[m] (tanslymatr@gateway/shell/matrix.org/x-bykrpylslupbdvan) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:46	<--	swarmert[m] (swarmertma@gateway/shell/matrix.org/x-bdbjajpmrjaqbwyz) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:47	<--	BlackBob[m] (blackbobma@gateway/shell/matrix.org/x-wqcnniifgttycwyq) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:48	<--	M00jeel[m] (m00jeelmat@gateway/shell/matrix.org/x-cpblsidqfjqllgld) has quit (Remote host closed the connection)
+2018-11-27 20:53:48	<--	mikemol (mikemolmat@gateway/shell/matrix.org/x-reurwmclrrjkdhjo) has quit (Remote host closed the connection)
+2018-11-27 20:53:49	<--	Ananace (acekittenf@gateway/shell/matrix.org/x-zizyxjkgwlikcrdq) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:49	<--	solInvictus (solinvictu@gateway/shell/matrix.org/x-whqmprvannjmiyju) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:51	<--	lordievader (olivieroli@gateway/shell/matrix.org/x-qtwdkfvcdbcfxyhu) has quit (Remote host closed the connection)
+2018-11-27 20:53:52	<--	paulez[m] (paulezmatr@gateway/shell/matrix.org/x-hywhsvpialdypdwf) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:53	<--	rcman[m] (rcmanmatri@gateway/shell/matrix.org/x-ojsletahzaioktax) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:54	<--	Samsonite[m] (gwilliamsm@gateway/shell/matrix.org/x-ytfsaiiyuobvxyzl) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:54	<--	steils[m] (steilsmatr@gateway/shell/matrix.org/x-dvjoxksyqnzbjvfa) has quit (Remote host closed the connection)
+2018-11-27 20:53:54	<--	WeissJT[m] (weissjtmat@gateway/shell/matrix.org/x-isnbcmqjhplafuvz) has quit (Remote host closed the connection)
+2018-11-27 20:53:54	<--	tyler274[m] (tyler274ma@gateway/shell/matrix.org/x-tstbphmhhbjuuahm) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:54	<--	rajudev[m] (libregeeki@gateway/shell/matrix.org/x-qybqkygdxzhjknvd) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:55	<--	ElonSayori[m] (elonsatosh@gateway/shell/matrix.org/x-pzvtpifgcyrcdobq) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:55	<--	TaoHansen[m] (taohansenm@gateway/shell/matrix.org/x-eklnfqqhvzqcfoyt) has quit (Remote host closed the connection)
+2018-11-27 20:53:55	<--	jonjitsu (jonjitsmat@gateway/shell/matrix.org/x-mpymevvvphzyxjue) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:55	<--	Valodim[m] (valodimstr@gateway/shell/matrix.org/x-gawqjloyzdvcwgzt) has quit (Remote host closed the connection)
+2018-11-27 20:53:55	<--	Chaosgrille[m] (khaosgrill@gateway/shell/matrix.org/x-ngjcokqvwywxelim) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:55	<--	dontstalkmepls[m (dontstalkm@gateway/shell/matrix.org/x-fturxelquoiuyqaq) has quit (Remote host closed the connection)
+2018-11-27 20:53:55	<--	tlater[m] (tlatermatr@gateway/shell/matrix.org/x-qalflzsqkkavvaxw) has quit (Remote host closed the connection)
+2018-11-27 20:53:57	<--	irdr (~irdr@bzq-79-183-103-191.red.bezeqint.net) has quit (Max SendQ exceeded)
+2018-11-27 20:53:57	<--	lbeckman314[m] (lbeckman31@gateway/shell/matrix.org/x-tdgfhnyyfktyqviq) has quit (Remote host closed the connection)
+2018-11-27 20:53:57	<--	Renich[m] (renichmatr@gateway/shell/matrix.org/x-muwpuwtffeyuuwsp) has quit (Remote host closed the connection)
+2018-11-27 20:53:57	<--	icetux (stonewares@gateway/shell/matrix.org/x-qrdmyylofhzpbcrf) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:58	<--	AnastasiosIrania (goozbanter@gateway/shell/matrix.org/x-hqqvkwrxeufpvous) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:58	<--	gerion[m] (gerionmatr@gateway/shell/matrix.org/x-gcesniwcgjuxemkn) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:59	<--	e5ten[m] (e5tenstatu@gateway/shell/matrix.org/x-myxqsfgjbunutkso) has quit (Remote host closed the connection)
+2018-11-27 20:53:59	<--	ash[m] (nevernewma@gateway/shell/matrix.org/x-djquatterankxdic) has quit (Remote host closed the connection)
+2018-11-27 20:53:59	<--	JCaesar (juliusmtxl@gateway/shell/matrix.org/x-ijgtdvaunnomdhry) has quit (Read error: Connection reset by peer)
+2018-11-27 20:54:21	sleepymario1	quadbootman: what's so scary about emerge --sync ?
+2018-11-27 20:54:37	quadbootman	it will want to update everythang else
+2018-11-27 20:54:41	quadbootman	:p
+2018-11-27 20:54:44	quadbootman	i just wanna listen to muzak
+2018-11-27 20:55:10	sleepymario1	quadbootman: hm. sounds like a nightmare indeed.
+2018-11-27 20:55:16	-->	waebbl (~waebbl@aftr-185-17-207-114.dynamic.mnet-online.de) has joined #gentoo
+2018-11-27 20:55:31	quadbootman	but anyway, i'd only do that if it guaranteed to work
+2018-11-27 20:55:47	quadbootman	yay --sync, system up to date! no spotify?!
+2018-11-27 20:55:49	<--	narispo (~narispo@185.156.173.27) has quit (Ping timeout: 246 seconds)
+2018-11-27 20:55:50	+iamben	you should be sync'ing and updating monthly at least
+2018-11-27 20:55:52	quadbootman	that would be super lame
+2018-11-27 20:56:20	quadbootman	oh well, i'll update then : (
+2018-11-27 20:56:39	-->	irdr (~irdr@bzq-79-183-103-191.red.bezeqint.net) has joined #gentoo
+2018-11-27 20:57:36	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-27 20:59:16	-->	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-27 20:59:50	xcm	quadbootman: but i can see spotify. how are you searching?
+2018-11-27 21:00:01	xcm	oh, oh. never mind me.
+2018-11-27 21:03:01	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2018-11-27 21:04:34	<--	cdown (~cdown@199.201.66.0) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:04:44	-->	Guest97492 (~a@79.pool84-76-247.static.orange.es) has joined #gentoo
+2018-11-27 21:05:07	-->	GurliGebis (~GurliGebi@unaffiliated/gurligebis) has joined #gentoo
+2018-11-27 21:06:13	-->	crack3r (~crack3r@unaffiliated/crack3r) has joined #gentoo
+2018-11-27 21:07:07	<--	crack3r (~crack3r@unaffiliated/crack3r) has quit (Client Quit)
+2018-11-27 21:07:34	<--	nj0rd (~nj0rd@200116b845a7eb00b65a4f5f71382b06.dip.versatel-1u1.de) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:07:44	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:07:51	<--	Guest97492 (~a@79.pool84-76-247.static.orange.es) has quit (Quit: leaving)
+2018-11-27 21:08:47	<--	InvisibleRasta2 (~Invisible@146-241-68-63.dyn.eolo.it) has quit (Quit: WeeChat 2.3)
+2018-11-27 21:08:50	-->	Kelzier (~duka@87.116.180.145) has joined #gentoo
+2018-11-27 21:09:36	-->	C0c0dril0 (~cocodrilo@unaffiliated/rasdark) has joined #gentoo
+2018-11-27 21:09:43	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-27 21:09:51	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-27 21:09:51	-->	Renich_ (~Renich@2-172-230-103.dcwest.net.au) has joined #gentoo
+2018-11-27 21:10:02	<--	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:10:10	Voidablazer	When is this command really used?  #make modules_prepare
+2018-11-27 21:10:21	Voidablazer	https://wiki.gentoo.org/wiki/Kernel/Upgrade#Reinstalling_external_kernel_modules
+2018-11-27 21:10:51	Voidablazer	The modules_prepare step is not required if building an entire kernel as this function is done as part of the standard process.
+2018-11-27 21:10:55	<--	Skunky (skunky@unaffiliated/skunky) has quit (Ping timeout: 272 seconds)
+2018-11-27 21:11:04	Voidablazer	Then why it says to use it
+2018-11-27 21:11:18	Voidablazer	Also here I have been advised not to use it
+2018-11-27 21:11:24	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-27 21:11:30	Voidablazer	And just emerge modules rebuild
+2018-11-27 21:11:33	--	Renich_ is now known as Renich
+2018-11-27 21:11:59	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 21:13:50	-->	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has joined #gentoo
+2018-11-27 21:14:02	Voidablazer	https://wiki.gentoo.org/wiki/Talk:Kernel/Upgrade
+2018-11-27 21:14:14	Voidablazer	Seems more people are confused with that wiki article
+2018-11-27 21:14:21	<--	TheLurps (~Thunderbi@139.11.216.53) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:14:53	-->	Renich[m] (renichmatr@gateway/shell/matrix.org/x-cbonsedsiszhsdcx) has joined #gentoo
+2018-11-27 21:15:08	Voidablazer	This I think explains it
+2018-11-27 21:15:10	Voidablazer	make modules_prepare is unnecessary if you are building the kernel anyway. It is strictly for when you are wanting to build modules without building the rest of the kernel. --Grknight (talk) 14:30, 8 November 2018 (UTC)
+2018-11-27 21:15:21	+iamben	our wiki article should not mention modules_prepare at all, imho
+2018-11-27 21:15:34	Keij0	so no clue about that teamviewer stuff?
+2018-11-27 21:15:41	+iamben	it's ONLY used in scenarios where you cannot or will not do a full kernel build
+2018-11-27 21:15:51	<--	iAmDecim_ (~iAmDecim@2600:1702:ad0:3b90:ec78:6159:3b6:5b27) has quit (Ping timeout: 260 seconds)
+2018-11-27 21:15:51	+iamben	but that is really not relevant to gentoo
+2018-11-27 21:16:29	Voidablazer	iamben: I am fine with that. But the first time I read the wiki I didn't understand its meant for the case you say. I thought it is always fun with new kernel builds
+2018-11-27 21:16:30	<--	Necktwi (~necktwi@175.101.146.135) has quit (Client Quit)
+2018-11-27 21:16:32	-->	thadthemad (~tarkus@50.105.181.233) has joined #gentoo
+2018-11-27 21:16:55	+iamben	it is for doing the minimal subset of the full build, just enough for 3rd party module builds
+2018-11-27 21:16:56	+grknight	Voidablazer: the one and only time you will need it is if you routinely clear out the built kernel for storage space issues but still want to build modules from emerge
+2018-11-27 21:17:02	-->	SpudDogg (~SpudDogg@99.10.183.200) has joined #gentoo
+2018-11-27 21:17:02	Voidablazer	If it was mentioned as a side note for a special case it would be good
+2018-11-27 21:17:17	+iamben	but it's pointless is if you are going to do a full build anyway-- and that article's whole point IS a full build
+2018-11-27 21:17:44	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-27 21:17:45	-->	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has joined #gentoo
+2018-11-27 21:18:38	Voidablazer	grknight: you mean do make clean, make distclean inside /usr/src/Linux
+2018-11-27 21:18:58	Voidablazer	Makes sense some modules look in there upon installing
+2018-11-27 21:19:04	<--	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:19:08	+grknight	not distclean (as that kills your configruation), but yes
+2018-11-27 21:19:29	Voidablazer	Oh I understand now
+2018-11-27 21:20:13	+grknight	if you can sacrifice the space, just leave the files and you don't have headaches
+2018-11-27 21:20:31	Voidablazer	Yeah of course
+2018-11-27 21:20:41	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Read error: Connection reset by peer)
+2018-11-27 21:20:54	-->	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-27 21:20:59	Voidablazer	So I just do emerge @modules_rebuild after I have copied my kernel using make install
+2018-11-27 21:21:17	+grknight	sounds solid
+2018-11-27 21:21:34	+grknight	but it should be @module-rebuild
+2018-11-27 21:21:43	Voidablazer	Also does it make a difference if the grub configuration is done after make install but before module rebuild?
+2018-11-27 21:21:54	+iamben	it does not make a a difference
+2018-11-27 21:22:00	Voidablazer	Does that command grub mkconfig care about those modules in any way?
+2018-11-27 21:22:06	+iamben	grub config doesnt care about modules, only about /boot contents
+2018-11-27 21:22:14	Voidablazer	Oh alright
+2018-11-27 21:22:14	-->	nj0rd (~nj0rd@200116b845c8aa00e2620be45ef67020.dip.versatel-1u1.de) has joined #gentoo
+2018-11-27 21:22:15	+iamben	and "make install" is what copies new stuff to /boot
+2018-11-27 21:24:38	<--	gyroninja (~gyroninja@97-120-203-103.ptld.qwest.net) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:25:04	vulpix1337	\q
+2018-11-27 21:25:12	<--	vulpix1337 (~vulpix@ec2-54-164-171-208.compute-1.amazonaws.com) has quit (Quit: WeeChat 2.2)
+2018-11-27 21:26:13	<--	sys4 (~sys4@gateway/tor-sasl/sys4) has quit (Remote host closed the connection)
+2018-11-27 21:26:49	-->	sys4 (~sys4@gateway/tor-sasl/sys4) has joined #gentoo
+2018-11-27 21:27:01	-->	daggs1 (~dagg@176.231.24.16) has joined #gentoo
+2018-11-27 21:27:03	-->	Renich_ (~Renich@177.240.230.53) has joined #gentoo
+2018-11-27 21:27:04	<--	azed (~azed@154.110.157.118) has quit (Quit: WeeChat 2.3)
+2018-11-27 21:27:12	<--	fekepp (~Thunderbi@p200300E2AF1B218312B8B6BD9B83590A.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-11-27 21:28:33	<--	Renich (~Renich@2-172-230-103.dcwest.net.au) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:28:33	--	Renich_ is now known as Renich
+2018-11-27 21:28:39	-->	Skunky (skunky@unaffiliated/skunky) has joined #gentoo
+2018-11-27 21:30:35	-->	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has joined #gentoo
+2018-11-27 21:31:20	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 21:31:45	quadbootman	35 updates, not TOOO bad
+2018-11-27 21:33:46	akko	trying to install qutebrowser and got that ' webengine? ( widgets? ( webchannel ) ) '
+2018-11-27 21:34:09	akko	i've read the part about required_use on the handbook but couldn't get it figured out
+2018-11-27 21:34:09	-->	beeman (uid332244@gateway/web/irccloud.com/x-pbdunqpubguoxieh) has joined #gentoo
+2018-11-27 21:34:52	-->	Bloodclaw (~bloodclaw@vpn.h38.org) has joined #gentoo
+2018-11-27 21:36:27	-->	kujira (~no1@mobile-166-171-250-162.mycingular.net) has joined #gentoo
+2018-11-27 21:37:54	-->	mawiegand (~mwiegand@p200300DD2F29410069BF97339FF0F0F8.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 21:38:45	-->	venom00 (~venom00@unaffiliated/venom00) has joined #gentoo
+2018-11-27 21:39:51	-->	kli (~kalle@c83-248-246-218.bredband.comhem.se) has joined #gentoo
+2018-11-27 21:39:52	<--	kli (~kalle@c83-248-246-218.bredband.comhem.se) has quit (Client Quit)
+2018-11-27 21:41:35	<--	kajo (~kajo@2a02:908:2f34:d740:e9ce:9b26:a656:5b95) has quit (Ping timeout: 252 seconds)
+2018-11-27 21:41:46	+grknight	akko: what don't you understand about the expression?
+2018-11-27 21:42:12	-->	ralpheeee (~ralpheeee@xdsl-89-0-115-54.nc.de) has joined #gentoo
+2018-11-27 21:42:20	-->	narispo (~narispo@185.156.173.27) has joined #gentoo
+2018-11-27 21:42:58	<--	dansan (~daniel@2602:306:c5b5:e308:6936:705c:598d:2521) has quit (Remote host closed the connection)
+2018-11-27 21:43:11	akko	grknight: I don't get what it's saying
+2018-11-27 21:43:40	+grknight	if you've read them as USE flags, what do you think it means?
+2018-11-27 21:43:40	<--	candrews (~candrews@gentoo/developer/candrews) has quit (Remote host closed the connection)
+2018-11-27 21:44:31	-->	candrews (~candrews@gentoo/developer/candrews) has joined #gentoo
+2018-11-27 21:44:32	--	Mode #gentoo [+v candrews] by ChanServ
+2018-11-27 21:44:32	<--	thadthemad (~tarkus@50.105.181.233) has quit (Remote host closed the connection)
+2018-11-27 21:44:43	akko	if it meant that if webengine is set, widgets and webchannel have to be set as well
+2018-11-27 21:44:50	akko	it had to have a '||'
+2018-11-27 21:44:54	akko	no?
+2018-11-27 21:45:00	akko	REQUIRED_USE="foo? ( || ( bar baz ) )"
+2018-11-27 21:45:11	+grknight	almost.  if webengine *and* widgets are set, webchannel must be set
+2018-11-27 21:45:11	<--	Xionaba (~fartofago@h79-138-86-255.cust.a3fiber.se) has quit
+2018-11-27 21:45:55	+grknight	|| is *or*
+2018-11-27 21:46:15	+grknight	absence of || is *and*
+2018-11-27 21:46:22	-->	dontstalkmepls[m (dontstalkm@gateway/shell/matrix.org/x-ntxbhhzppzcnokcg) has joined #gentoo
+2018-11-27 21:46:22	-->	Chaosgrille[m] (khaosgrill@gateway/shell/matrix.org/x-nowdyivnydzyiqdk) has joined #gentoo
+2018-11-27 21:46:22	-->	Valodim[m] (valodimstr@gateway/shell/matrix.org/x-qatwkzcmzacfxogb) has joined #gentoo
+2018-11-27 21:46:22	-->	M00jeel[m] (m00jeelmat@gateway/shell/matrix.org/x-agvwdjgqjihgclnc) has joined #gentoo
+2018-11-27 21:46:22	-->	MiningMarsh (miningmars@lugatgt/officer/MiningMarsh) has joined #gentoo
+2018-11-27 21:46:22	-->	e5ten[m] (e5tenstatu@gateway/shell/matrix.org/x-naufpqhbzylgxbnx) has joined #gentoo
+2018-11-27 21:46:22	-->	BlackBob[m] (blackbobma@gateway/shell/matrix.org/x-zipwywjpnoxcqbie) has joined #gentoo
+2018-11-27 21:46:32	akko	grknight: ooh now i get it
+2018-11-27 21:46:35	akko	thanks
+2018-11-27 21:46:37	-->	c1pher (c1phertunn@gateway/shell/matrix.org/x-klxlsuwfhckbewcw) has joined #gentoo
+2018-11-27 21:46:37	-->	ElonSayori[m] (elonsatosh@gateway/shell/matrix.org/x-hywjeplgnrxfjuic) has joined #gentoo
+2018-11-27 21:46:37	-->	Ananace (acekittenf@gateway/shell/matrix.org/x-rbpjlptegftzotho) has joined #gentoo
+2018-11-27 21:46:37	-->	rtr63gdh[m] (rtr63gdhma@gateway/shell/matrix.org/x-efghegvkagpgzyzf) has joined #gentoo
+2018-11-27 21:46:38	-->	jonjitsu (jonjitsmat@gateway/shell/matrix.org/x-qpgpdnbsowjzkoez) has joined #gentoo
+2018-11-27 21:46:38	-->	nigel[m] (nigelmatri@gateway/shell/matrix.org/x-ewpsxnwcxrkgduvm) has joined #gentoo
+2018-11-27 21:46:38	-->	Processus42 (processus4@gateway/shell/matrix.org/x-ffcaenekmdndhsfk) has joined #gentoo
+2018-11-27 21:46:38	-->	Samsonite[m] (gwilliamsm@gateway/shell/matrix.org/x-riafcvjoijovrpgb) has joined #gentoo
+2018-11-27 21:46:46	akko	boi
+2018-11-27 21:46:53	-->	paulez[m] (paulezmatr@gateway/shell/matrix.org/x-fhkjtubgqiervtud) has joined #gentoo
+2018-11-27 21:46:53	-->	rcman[m] (rcmanmatri@gateway/shell/matrix.org/x-cybrkxhhbtwwhmxj) has joined #gentoo
+2018-11-27 21:46:53	-->	swarmert[m] (swarmertma@gateway/shell/matrix.org/x-wqfwmmaryhshzbpx) has joined #gentoo
+2018-11-27 21:46:53	-->	mikemol (mikemolmat@gateway/shell/matrix.org/x-twxkpbystvbvzoib) has joined #gentoo
+2018-11-27 21:46:53	-->	rajudev[m] (libregeeki@gateway/shell/matrix.org/x-myxbfewzxldrruvi) has joined #gentoo
+2018-11-27 21:46:53	-->	TaoHansen[m] (taohansenm@gateway/shell/matrix.org/x-evnjxcykaucfvagt) has joined #gentoo
+2018-11-27 21:46:54	-->	AnastasiosIrania (goozbanter@gateway/shell/matrix.org/x-oxcikhvxbysahmwa) has joined #gentoo
+2018-11-27 21:47:09	-->	tyler274[m] (tyler274ma@gateway/shell/matrix.org/x-gjoecvsntazlmtch) has joined #gentoo
+2018-11-27 21:47:09	-->	lordievader (olivieroli@gateway/shell/matrix.org/x-kmpbexjryucdrbjl) has joined #gentoo
+2018-11-27 21:47:09	-->	steils[m] (steilsmatr@gateway/shell/matrix.org/x-xubizdxeccwsgcyr) has joined #gentoo
+2018-11-27 21:47:09	-->	icetux (stonewares@gateway/shell/matrix.org/x-dongcrajytwolskh) has joined #gentoo
+2018-11-27 21:47:09	-->	gerion[m] (gerionmatr@gateway/shell/matrix.org/x-lgelzckkfetshafh) has joined #gentoo
+2018-11-27 21:47:09	-->	tansly[m] (tanslymatr@gateway/shell/matrix.org/x-lwdmqujvupmchcby) has joined #gentoo
+2018-11-27 21:47:23	+grknight	once it clicks, it makes a lot of sense
+2018-11-27 21:47:24	-->	tlater[m] (tlatermatr@gateway/shell/matrix.org/x-bcbdompuanlrwdin) has joined #gentoo
+2018-11-27 21:47:24	-->	ash[m] (nevernewma@gateway/shell/matrix.org/x-daeutwqcebdhkinw) has joined #gentoo
+2018-11-27 21:47:24	-->	m3g[m] (m3gmatrixo@gateway/shell/matrix.org/x-viyzjthpuwurczcm) has joined #gentoo
+2018-11-27 21:47:24	-->	JCaesar (juliusmtxl@gateway/shell/matrix.org/x-cypafltqwkqcripb) has joined #gentoo
+2018-11-27 21:47:25	-->	tleydxdy_m (tleydxdymt@gateway/shell/matrix.org/x-ngovsmnwdtcajlve) has joined #gentoo
+2018-11-27 21:47:25	-->	karaface[m] (karafacema@gateway/shell/matrix.org/x-mdzcigjsezxefqnp) has joined #gentoo
+2018-11-27 21:47:43	akko	why are there so many people joining at the same time?
+2018-11-27 21:48:16	+grknight	looks like some gateway just reconnected
+2018-11-27 21:48:21	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-27 21:49:21	-->	dansan (~daniel@2602:306:c5b5:e308:6936:705c:598d:2521) has joined #gentoo
+2018-11-27 21:49:42	-->	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-27 21:50:54	-->	elxa (~elxa@2a01:5c0:e085:2291:b493:f2a8:d018:18d1) has joined #gentoo
+2018-11-27 21:51:11	-->	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has joined #gentoo
+2018-11-27 21:51:21	<--	pro_z (~pro_z@mm-74-32-214-37.mogilev.dynamic.pppoe.byfly.by) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:52:04	akko	welp
+2018-11-27 21:52:48	<--	w77 (~wonko7@anx4.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:54:28	-->	TheLurps (~Thunderbi@139.11.216.53) has joined #gentoo
+2018-11-27 21:54:29	-->	spare (~user@unaffiliated/spareproject) has joined #gentoo
+2018-11-27 21:54:46	<--	Renich (~Renich@177.240.230.53) has quit (Read error: Connection reset by peer)
+2018-11-27 21:55:18	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-27 21:55:39	-->	Renich (~Renich@177.240.230.53) has joined #gentoo
+2018-11-27 21:55:51	<--	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has quit (Ping timeout: 250 seconds)
+2018-11-27 21:56:13	<--	karaface[m] (karafacema@gateway/shell/matrix.org/x-mdzcigjsezxefqnp) has quit (Remote host closed the connection)
+2018-11-27 21:56:14	<--	Ananace (acekittenf@gateway/shell/matrix.org/x-rbpjlptegftzotho) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:14	<--	tyler274[m] (tyler274ma@gateway/shell/matrix.org/x-gjoecvsntazlmtch) has quit (Remote host closed the connection)
+2018-11-27 21:56:15	<--	icetux (stonewares@gateway/shell/matrix.org/x-dongcrajytwolskh) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:18	<--	paulez[m] (paulezmatr@gateway/shell/matrix.org/x-fhkjtubgqiervtud) has quit (Remote host closed the connection)
+2018-11-27 21:56:19	<--	Renich[m] (renichmatr@gateway/shell/matrix.org/x-cbonsedsiszhsdcx) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:19	<--	dontstalkmepls[m (dontstalkm@gateway/shell/matrix.org/x-ntxbhhzppzcnokcg) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:20	<--	tleydxdy_m (tleydxdymt@gateway/shell/matrix.org/x-ngovsmnwdtcajlve) has quit (Remote host closed the connection)
+2018-11-27 21:56:21	<--	Valodim[m] (valodimstr@gateway/shell/matrix.org/x-qatwkzcmzacfxogb) has quit (Remote host closed the connection)
+2018-11-27 21:56:22	<--	ash[m] (nevernewma@gateway/shell/matrix.org/x-daeutwqcebdhkinw) has quit (Remote host closed the connection)
+2018-11-27 21:56:22	<--	tansly[m] (tanslymatr@gateway/shell/matrix.org/x-lwdmqujvupmchcby) has quit (Remote host closed the connection)
+2018-11-27 21:56:22	<--	rcman[m] (rcmanmatri@gateway/shell/matrix.org/x-cybrkxhhbtwwhmxj) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:23	<--	BlackBob[m] (blackbobma@gateway/shell/matrix.org/x-zipwywjpnoxcqbie) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:26	<--	JCaesar (juliusmtxl@gateway/shell/matrix.org/x-cypafltqwkqcripb) has quit (Write error: Connection reset by peer)
+2018-11-27 21:56:26	<--	steils[m] (steilsmatr@gateway/shell/matrix.org/x-xubizdxeccwsgcyr) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:26	<--	rajudev[m] (libregeeki@gateway/shell/matrix.org/x-myxbfewzxldrruvi) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:27	<--	Chaosgrille[m] (khaosgrill@gateway/shell/matrix.org/x-nowdyivnydzyiqdk) has quit (Remote host closed the connection)
+2018-11-27 21:56:28	<--	m3g[m] (m3gmatrixo@gateway/shell/matrix.org/x-viyzjthpuwurczcm) has quit (Remote host closed the connection)
+2018-11-27 21:56:28	<--	ElonSayori[m] (elonsatosh@gateway/shell/matrix.org/x-hywjeplgnrxfjuic) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:28	<--	mikemol (mikemolmat@gateway/shell/matrix.org/x-twxkpbystvbvzoib) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:29	<--	Processus42 (processus4@gateway/shell/matrix.org/x-ffcaenekmdndhsfk) has quit (Remote host closed the connection)
+2018-11-27 21:56:30	<--	MiningMarsh (miningmars@lugatgt/officer/MiningMarsh) has quit (Remote host closed the connection)
+2018-11-27 21:56:31	<--	swarmert[m] (swarmertma@gateway/shell/matrix.org/x-wqfwmmaryhshzbpx) has quit (Remote host closed the connection)
+2018-11-27 21:56:32	<--	jonjitsu (jonjitsmat@gateway/shell/matrix.org/x-qpgpdnbsowjzkoez) has quit (Remote host closed the connection)
+2018-11-27 21:56:32	<--	nigel[m] (nigelmatri@gateway/shell/matrix.org/x-ewpsxnwcxrkgduvm) has quit (Remote host closed the connection)
+2018-11-27 21:56:32	<--	TaoHansen[m] (taohansenm@gateway/shell/matrix.org/x-evnjxcykaucfvagt) has quit (Remote host closed the connection)
+2018-11-27 21:56:33	<--	lordievader (olivieroli@gateway/shell/matrix.org/x-kmpbexjryucdrbjl) has quit (Remote host closed the connection)
+2018-11-27 21:56:33	<--	rtr63gdh[m] (rtr63gdhma@gateway/shell/matrix.org/x-efghegvkagpgzyzf) has quit (Remote host closed the connection)
+2018-11-27 21:56:33	<--	M00jeel[m] (m00jeelmat@gateway/shell/matrix.org/x-agvwdjgqjihgclnc) has quit (Remote host closed the connection)
+2018-11-27 21:56:34	<--	gerion[m] (gerionmatr@gateway/shell/matrix.org/x-lgelzckkfetshafh) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:34	<--	Samsonite[m] (gwilliamsm@gateway/shell/matrix.org/x-riafcvjoijovrpgb) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:35	<--	AnastasiosIrania (goozbanter@gateway/shell/matrix.org/x-oxcikhvxbysahmwa) has quit (Remote host closed the connection)
+2018-11-27 21:56:35	<--	e5ten[m] (e5tenstatu@gateway/shell/matrix.org/x-naufpqhbzylgxbnx) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:35	<--	tlater[m] (tlatermatr@gateway/shell/matrix.org/x-bcbdompuanlrwdin) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:36	<--	c1pher (c1phertunn@gateway/shell/matrix.org/x-klxlsuwfhckbewcw) has quit (Remote host closed the connection)
+2018-11-27 21:56:36	<--	irdr (~irdr@bzq-79-183-103-191.red.bezeqint.net) has quit (Max SendQ exceeded)
+2018-11-27 21:56:54	<--	slek (~seiflek@105.110.121.50) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:58:14	<--	section1 (~section1@178.33.109.106) has quit (Quit: Leaving)
+2018-11-27 21:58:48	-->	irdr (~irdr@bzq-79-183-103-191.red.bezeqint.net) has joined #gentoo
+2018-11-27 21:59:42	<--	Bloodclaw (~bloodclaw@vpn.h38.org) has quit (Quit: Leaving)
+2018-11-27 22:01:27	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 22:02:46	<--	Necktwi (~necktwi@175.101.146.135) has quit (Client Quit)
+2018-11-27 22:03:01	-->	kajo (~kajo@2001:4c50:371e:dc00:ca2a:14ff:fe0f:7dd1) has joined #gentoo
+2018-11-27 22:03:41	<--	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has quit (Ping timeout: 260 seconds)
+2018-11-27 22:04:23	<--	TheLurps (~Thunderbi@139.11.216.53) has quit (Ping timeout: 268 seconds)
+2018-11-27 22:06:03	-->	notthebee (~notthebee@5.2.70.136) has joined #gentoo
+2018-11-27 22:06:13	-->	Renich[m] (renichmatr@gateway/shell/matrix.org/x-mhwutvzqkzaoonrq) has joined #gentoo
+2018-11-27 22:07:14	-->	toralf (~toralf@gentoo/developer/toralf) has joined #gentoo
+2018-11-27 22:07:14	--	Mode #gentoo [+v toralf] by ChanServ
+2018-11-27 22:08:20	quadbootman	anyone setup the media keys suck that >>| skips current merge? ;)
+2018-11-27 22:08:24	quadbootman	such^
+2018-11-27 22:08:59	-->	hgrsd (~daniel@cpc110797-lewi20-2-0-cust197.2-4.cable.virginm.net) has joined #gentoo
+2018-11-27 22:12:08	m0shbear	quadbootman: sounds like that's a feature you need to program your WM to do
+2018-11-27 22:14:02	<--	hgrsd (~daniel@cpc110797-lewi20-2-0-cust197.2-4.cable.virginm.net) has quit (Ping timeout: 250 seconds)
+2018-11-27 22:16:09	<--	Jake4532 (4fb4305b@gateway/web/cgi-irc/kiwiirc.com/ip.79.180.48.91) has quit (Remote host closed the connection)
+2018-11-27 22:17:10	<--	Azimoth (~til@2a02:908:69e:c5a0:368d:5d0f:cfeb:3cef) has quit (Remote host closed the connection)
+2018-11-27 22:20:21	-->	aplainzetakind (~dk@2E8BD6FE.catv.pool.telekom.hu) has joined #gentoo
+2018-11-27 22:24:16	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-27 22:24:24	-->	madmartin (~quassel@2a02:8109:9f40:428e:a0bb:195f:9856:7d8d) has joined #gentoo
+2018-11-27 22:25:56	<--	dbermond (~dbermond@archlinux/trusteduser/dbermond) has quit (Remote host closed the connection)
+2018-11-27 22:26:35	Voidablazer	iamben: grknight i forgot to ask, emerge --ask @module_rebuild, does this require me to reboot first so the new kernel is loaded? Or does it read data from /boot or my compiled /usr/src/Linux objects?
+2018-11-27 22:26:41	<--	Renich (~Renich@177.240.230.53) has quit (Read error: Connection reset by peer)
+2018-11-27 22:26:58	+iamben	Voidablazer: it does not depend in any way on the running kernel
+2018-11-27 22:27:02	-->	Renich (~Renich@177.240.230.53) has joined #gentoo
+2018-11-27 22:27:09	+iamben	only stuff in /usr/src/linux and /lib/modules
+2018-11-27 22:27:10	-->	Jake4532 (4fb4305b@gateway/web/cgi-irc/kiwiirc.com/ip.79.180.48.91) has joined #gentoo
+2018-11-27 22:27:14	Voidablazer	ok
+2018-11-27 22:28:02	<--	tryte_ (~tryte@gateway/tor-sasl/tryte) has quit (Ping timeout: 256 seconds)
+2018-11-27 22:28:39	-->	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has joined #gentoo
+2018-11-27 22:29:54	<--	Cheyenne (~Cheyenne@71-211-168-94.hlrn.qwest.net) has quit (Quit: Leaving)
+2018-11-27 22:31:11	-->	Cheyenne (~Cheyenne@71-211-168-94.hlrn.qwest.net) has joined #gentoo
+2018-11-27 22:33:20	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-11-27 22:34:34	<--	Cheyenne (~Cheyenne@71-211-168-94.hlrn.qwest.net) has quit (Client Quit)
+2018-11-27 22:35:46	Melphis	Wish I could figure out how often to update the "@system" set to avoid taking hours to work out the dependency issues.
+2018-11-27 22:37:12	-->	M00jeel[m] (m00jeelmat@gateway/shell/matrix.org/x-qjsbawrpusokbbzo) has joined #gentoo
+2018-11-27 22:37:12	-->	BlackBob[m] (blackbobma@gateway/shell/matrix.org/x-atadwkzcsqmsrfyx) has joined #gentoo
+2018-11-27 22:37:12	-->	dontstalkmepls[m (dontstalkm@gateway/shell/matrix.org/x-xhjuoksleamyqtfu) has joined #gentoo
+2018-11-27 22:37:12	-->	Valodim[m] (valodimstr@gateway/shell/matrix.org/x-epxxshcspxlpmsxr) has joined #gentoo
+2018-11-27 22:37:12	-->	Chaosgrille[m] (khaosgrill@gateway/shell/matrix.org/x-ylxcowxqwwvmaftm) has joined #gentoo
+2018-11-27 22:37:12	-->	ElonSayori[m] (elonsatosh@gateway/shell/matrix.org/x-gxokpatxbzpfcuiw) has joined #gentoo
+2018-11-27 22:37:19	<--	FriendlyMan (~IceChat9@174-21-156-53.tukw.qwest.net) has quit (Ping timeout: 246 seconds)
+2018-11-27 22:37:27	-->	Processus42 (processus4@gateway/shell/matrix.org/x-ydhsbtbjpalxuvgf) has joined #gentoo
+2018-11-27 22:37:27	-->	MiningMarsh (miningmars@lugatgt/officer/MiningMarsh) has joined #gentoo
+2018-11-27 22:37:27	-->	c1pher (c1phertunn@gateway/shell/matrix.org/x-cxqwbhyfgtcpsoxg) has joined #gentoo
+2018-11-27 22:37:27	-->	Ananace (acekittenf@gateway/shell/matrix.org/x-lemolgwgoaydokxt) has joined #gentoo
+2018-11-27 22:37:27	-->	e5ten[m] (e5tenstatu@gateway/shell/matrix.org/x-yapvukthvaqzeyuo) has joined #gentoo
+2018-11-27 22:37:36	+grknight	Melphis: that actually increases dependency issues;  you should do everything together as 'emerge -avuDN @world'
+2018-11-27 22:37:43	-->	rtr63gdh[m] (rtr63gdhma@gateway/shell/matrix.org/x-wxzslbeaypmjhyft) has joined #gentoo
+2018-11-27 22:37:43	-->	paulez[m] (paulezmatr@gateway/shell/matrix.org/x-vbrlxoajvkepsiym) has joined #gentoo
+2018-11-27 22:37:43	-->	Samsonite[m] (gwilliamsm@gateway/shell/matrix.org/x-gqmagfbudqyumxsi) has joined #gentoo
+2018-11-27 22:37:43	-->	jonjitsu (jonjitsmat@gateway/shell/matrix.org/x-zagosmtaaguadqyr) has joined #gentoo
+2018-11-27 22:37:43	-->	nigel[m] (nigelmatri@gateway/shell/matrix.org/x-svtrvqsbyctuwkgk) has joined #gentoo
+2018-11-27 22:37:58	-->	TaoHansen[m] (taohansenm@gateway/shell/matrix.org/x-ucjcmrfndrbyvntm) has joined #gentoo
+2018-11-27 22:37:58	-->	AnastasiosIrania (goozbanter@gateway/shell/matrix.org/x-htoxfdghdfcvldsp) has joined #gentoo
+2018-11-27 22:37:58	-->	rajudev[m] (libregeeki@gateway/shell/matrix.org/x-zbupfnyqcncnjkdf) has joined #gentoo
+2018-11-27 22:37:58	-->	swarmert[m] (swarmertma@gateway/shell/matrix.org/x-smviksguytpatdgu) has joined #gentoo
+2018-11-27 22:37:58	-->	rcman[m] (rcmanmatri@gateway/shell/matrix.org/x-xhcndkmfirdzqdna) has joined #gentoo
+2018-11-27 22:38:14	-->	mikemol (mikemolmat@gateway/shell/matrix.org/x-mhjhdrusqexehlnt) has joined #gentoo
+2018-11-27 22:38:14	-->	tansly[m] (tanslymatr@gateway/shell/matrix.org/x-ucrbkofpeuoddlcd) has joined #gentoo
+2018-11-27 22:38:14	-->	ash[m] (nevernewma@gateway/shell/matrix.org/x-xbhquduakbqmmeja) has joined #gentoo
+2018-11-27 22:38:14	-->	tyler274[m] (tyler274ma@gateway/shell/matrix.org/x-mrgqrhjweyklilir) has joined #gentoo
+2018-11-27 22:38:14	-->	gerion[m] (gerionmatr@gateway/shell/matrix.org/x-utoybszvontggjev) has joined #gentoo
+2018-11-27 22:38:14	-->	steils[m] (steilsmatr@gateway/shell/matrix.org/x-aypzyrlfopzafxei) has joined #gentoo
+2018-11-27 22:38:14	-->	icetux (stonewares@gateway/shell/matrix.org/x-nrgqzaczgqealzdy) has joined #gentoo
+2018-11-27 22:38:14	-->	lordievader (olivieroli@gateway/shell/matrix.org/x-zvkjmmkmmkirduia) has joined #gentoo
+2018-11-27 22:38:14	-->	tlater[m] (tlatermatr@gateway/shell/matrix.org/x-xknuxnpgrhakboyv) has joined #gentoo
+2018-11-27 22:38:48	<--	cd (~none@gateway/tor-sasl/cd) has quit (Ping timeout: 256 seconds)
+2018-11-27 22:39:26	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #gentoo
+2018-11-27 22:39:29	-->	Love_Dali (~Love_Dali@93.99.225.2) has joined #gentoo
+2018-11-27 22:39:32	-->	FriendlyMan (~IceChat9@174-21-156-53.tukw.qwest.net) has joined #gentoo
+2018-11-27 22:39:41	Love_Dali	Hey guys, would you please know what have I missed? https://pastebin.com/TPcxC86g
+2018-11-27 22:39:45	Melphis	Hmmm... well let me see if that works better then.
+2018-11-27 22:39:52	-->	perique (~peri@2601:646:8a80:3ca9:c8da:e2cc:bd38:283e) has joined #gentoo
+2018-11-27 22:40:10	-->	cd (~none@gateway/tor-sasl/cd) has joined #gentoo
+2018-11-27 22:41:09	Love_Dali	just been updating via emerge -uDU --keep-going --with-bdeps=y @world
+2018-11-27 22:42:20	-->	brektyme (~josh@pool-108-28-57-242.washdc.fios.verizon.net) has joined #gentoo
+2018-11-27 22:42:32	<--	alem0lars (~alem0lars@78-134-84-206.v4.ngi.it) has quit (Ping timeout: 268 seconds)
+2018-11-27 22:43:40	-->	InvisibleRasta (~Invisible@146-241-68-63.dyn.eolo.it) has joined #gentoo
+2018-11-27 22:44:05	Melphis	It's an older system that I've been trying to update occasionally, but hardly ever manage to get emerge to finish rebuilding everything. Wish I was better at this.
+2018-11-27 22:44:20	+grknight	Love_Dali: "Read only filesystem"
+2018-11-27 22:44:34	Love_Dali	I know, does not make much sense
+2018-11-27 22:44:39	+grknight	sure it does
+2018-11-27 22:44:50	-->	zChris (~chris@81-233-239-187-no19.tbcn.telia.com) has joined #gentoo
+2018-11-27 22:44:51	Love_Dali	this is via chroot and I ahve checker the FS couple of times already
+2018-11-27 22:45:37	+grknight	are you sure you're not trying to emerge outside the mounted devices?  is there a bug or hardware issue triggering a swap to ro (check dmesg)?
+2018-11-27 22:46:48	Love_Dali	I don't use swaú
+2018-11-27 22:47:00	Love_Dali	I'll reboot and check
+2018-11-27 22:47:26	<--	Love_Dali (~Love_Dali@93.99.225.2) has quit (Remote host closed the connection)
+2018-11-27 22:47:47	<--	immibis (~immibis@222-153-249-64-fibre.sparkbb.co.nz) has quit (Ping timeout: 240 seconds)
+2018-11-27 22:47:57	-->	juli (~julian@p5B02D2D2.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 22:48:10	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) has quit (Quit: tuxtor)
+2018-11-27 22:48:17	<--	notthebee (~notthebee@5.2.70.136) has quit (Ping timeout: 250 seconds)
+2018-11-27 22:49:30	-->	notthebee (~notthebee@5.2.70.136) has joined #gentoo
+2018-11-27 22:51:44	juli	hi i have some trouble with my Microphone, i can't capture anything (testing with Audacity)
+2018-11-27 22:51:54	-->	kerrhau (~kerrhau@unaffiliated/aceahmedmoh) has joined #gentoo
+2018-11-27 22:52:06	juli	i have raised the volume of the Mic to 100% on alsamixer ...
+2018-11-27 22:52:30	<--	arvut (~nobody@unaffiliated/arvut) has quit (Read error: Connection reset by peer)
+2018-11-27 22:52:51	Melphis	Finally, "Would you like to merge these packages? [Yes/No]"... fingers crossed, "y" <enter>
+2018-11-27 22:53:16	quadbootman	i finished --sync, uDNav @world (with octave excluded @_@)   then i asked for spotify but it seemed to want the old one and said i hadn't synced for 60+ days which was odd
+2018-11-27 22:53:57	quadbootman	anyway i synced again, then -1 portage then it installed spotify. after that i tried uDNav @world again and saw something about nodejs inspector having unmet requirements ...whats that all about ?_?
+2018-11-27 22:54:18	-->	Renich_ (~Renich@91.92.71.51) has joined #gentoo
+2018-11-27 22:55:22	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-27 22:55:33	<--	toralf (~toralf@gentoo/developer/toralf) has quit (Quit: Konversation terminated!)
+2018-11-27 22:55:38	<--	Renich (~Renich@177.240.230.53) has quit (Ping timeout: 250 seconds)
+2018-11-27 22:55:39	--	Renich_ is now known as Renich
+2018-11-27 22:55:40	coot__	Hello, I need some help installing Gentoo on a ThinkPad P1.  I went through the installation handbook, and I successfully installed the stage3 tarball.  The problem arise when I try to boot.  It's an uefi installation with a grub2 installed on the uefi partition. After grub tries to load a linux kernel with `linux /vmlinuz-4.18.18-gentoo-r1 root=/dev/mapper/fedora-00`  there is no single message.  Any ideas how to debug this?
+2018-11-27 22:57:09	-->	arvut (~nobody@unaffiliated/arvut) has joined #gentoo
+2018-11-27 22:57:10	-->	pandather (~pandather@sadbox.org) has joined #gentoo
+2018-11-27 22:57:53	-->	toralf (~toralf@gentoo/developer/toralf) has joined #gentoo
+2018-11-27 22:57:53	--	Mode #gentoo [+v toralf] by ChanServ
+2018-11-27 22:58:12	juli	coot__: is the kernel installed in /boot/vmlinuz-4.18... ?
+2018-11-27 22:59:23	-->	Love_Dali (~Love_Dali@93.99.225.2) has joined #gentoo
+2018-11-27 22:59:40	Love_Dali	so, fs was not clean
+2018-11-27 22:59:48	Love_Dali	re-checked and all fine
+2018-11-27 22:59:54	Love_Dali	cheers
+2018-11-27 23:01:44	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-27 23:01:45	+grknight	coot__: did you enable a video driver so you can see what happens at boot time? UEFI does not have a text console to display until a real video driver loads (like FB_EFI)
+2018-11-27 23:01:59	-->	TwistedFate (~twistedfa@unaffiliated/twistedfate) has joined #gentoo
+2018-11-27 23:02:53	<--	Love_Dali (~Love_Dali@93.99.225.2) has quit (Remote host closed the connection)
+2018-11-27 23:05:04	<--	Kruppt (~Kruppt@50.111.43.204) has quit (Quit: Leaving)
+2018-11-27 23:06:19	-->	bemeurer (~bemeurer@2600:8802:5300:7540:e16c:7b43:285:321a) has joined #gentoo
+2018-11-27 23:06:20	<--	AsumFace (~asumface@31.16.14.227) has quit (Quit: install gentoo)
+2018-11-27 23:06:49	<--	Starhowl (~Starhowl@p57876F59.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2018-11-27 23:07:02	<--	Yog (~yog@gts.jsbc.cc) has quit (Remote host closed the connection)
+2018-11-27 23:07:12	-->	the_weanus (~yourname@c-73-210-116-39.hsd1.il.comcast.net) has joined #gentoo
+2018-11-27 23:07:15	<--	synchris (~synchris@unaffiliated/synchris) has quit (Quit: yeeha!)
+2018-11-27 23:07:20	<--	toralf (~toralf@gentoo/developer/toralf) has quit (Ping timeout: 250 seconds)
+2018-11-27 23:09:55	coot__	@juli yes it is :)
+2018-11-27 23:10:32	<--	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has quit (Ping timeout: 256 seconds)
+2018-11-27 23:10:41	Melphis	Emerging (1 of 495) ... "ERROR: kde-frameworks/kservice-5.50.0::gentoo failed (compile phase): * emake failed"
+2018-11-27 23:10:55	<--	chymera (~chymera@129.132.121.235) has quit (Ping timeout: 246 seconds)
+2018-11-27 23:11:05	juli	coot__: i guess for the video module there should be written "load video" in the boot entry in the grub.cfg
+2018-11-27 23:11:24	-->	antarus (~antarus@gentoo/developer/antarus) has joined #gentoo
+2018-11-27 23:11:24	--	Mode #gentoo [+v antarus] by ChanServ
+2018-11-27 23:11:39	+antarus	Hey Gentoo folks, any reports of problems rsyncing seen in the past 24h?
+2018-11-27 23:11:39	Melphis	What further info should I put on dpaste/pastebin to help work out what the problem is?
+2018-11-27 23:11:49	-->	Mut (~jinx@2601:484:c104:3dd::7a9d) has joined #gentoo
+2018-11-27 23:11:51	coot__	@juli @grknight yes there is `load video` in the grub entry
+2018-11-27 23:12:09	<--	troulouliou_div2 (~troulouli@unaffiliated/troulouliou-div2/x-0271439) has quit (Read error: Connection reset by peer)
+2018-11-27 23:12:13	<--	sharp15 (~stop_look@dsl-50-5-116-224.fuse.net) has quit (Quit: leaving)
+2018-11-27 23:12:56	+grknight	coot__: once grub loads the kernel, any grub directive is null/void
+2018-11-27 23:12:58	Mut	I installed pulseaudio for some programs that need it. It seems to work OK for the most part, but if I have anything that may need sound (Like a youtube video.) I get no sound with my notifications.
+2018-11-27 23:13:12	-->	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has joined #gentoo
+2018-11-27 23:13:23	+grknight	juli: that's incorrect
+2018-11-27 23:13:26	<--	vhost- (~vhost@infoforcefeed/vhost-) has quit (Ping timeout: 252 seconds)
+2018-11-27 23:13:30	ccokee	Hi Im trying to emerge johntheripper since long ago, it had a paxctl bug but, besides its now fixed, it now crashes just after starting installation phase: https://paste.pound-python.org/show/xNePqhjamLY5ggiphuB2/
+2018-11-27 23:13:43	coot__	@grknight the `linux /vmlinux-....` is the last grub directive
+2018-11-27 23:13:43	<--	candrews (~candrews@gentoo/developer/candrews) has quit (Read error: Connection reset by peer)
+2018-11-27 23:14:04	+grknight	coot__: i'm saying you need a kernel video driver configured to get any display
+2018-11-27 23:14:11	-->	duus (~duus@2a01:7e8:25:111::1) has joined #gentoo
+2018-11-27 23:14:18	juli	sorry
+2018-11-27 23:14:41	<--	kokotchY (~kokotchY@91.178.101.143) has quit (Ping timeout: 268 seconds)
+2018-11-27 23:14:45	ccokee	does anyone know about this issue?
+2018-11-27 23:15:01	coot__	@grknight you mean  a framebuffer
+2018-11-27 23:15:38	_2E0LNX	#672102
+2018-11-27 23:15:38	+grknight	coot__: this could be FB_EFI for basic support; but if you want to use an xorg open-source driver, one of the DRM video drivers should be enabled to pair with the hardware
+2018-11-27 23:16:15	_2E0LNX	I've reported bug 672102 . If anyone has any ideas, please PM me
+2018-11-27 23:16:17	willikins	_2E0LNX: https://bugs.gentoo.org/672102 "sys-cluster/ceph fails to compile/update"; Gentoo Linux, Current packages; UNCO; neil:bug-wranglers
+2018-11-27 23:16:29	coot__	FB_EFI [=y] is included (compiled into the kernel)
+2018-11-27 23:16:49	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Ping timeout: 252 seconds)
+2018-11-27 23:17:02	coot__	btw I stole the kernel from fedora
+2018-11-27 23:17:11	+kurly	antarus: sync'd fine last night, about 2AM UTC
+2018-11-27 23:17:54	<--	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has quit (Ping timeout: 256 seconds)
+2018-11-27 23:18:17	-->	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has joined #gentoo
+2018-11-27 23:18:39	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-27 23:18:57	+kurly	_2E0LNX: my idea is you should attach the required build.log ;)
+2018-11-27 23:19:00	+grknight	coot__: if you stole the kernel, you'll need to steal its initramfs as well
+2018-11-27 23:19:08	-->	cCkw (~ejakuk@gateway/tor-sasl/cckw) has joined #gentoo
+2018-11-27 23:19:14	_2E0LNX	kurly: I did
+2018-11-27 23:19:15	+kurly	-j20 is pretty aggressive even with 32GB RAM, and it may be that gcc6 doesn't like your newer processor
+2018-11-27 23:19:25	+kurly	_2E0LNX: you did not
+2018-11-27 23:19:31	_2E0LNX	ffs... I told it to
+2018-11-27 23:20:08	TwistedFate	hooooooooowdyyyy hooooooo
+2018-11-27 23:20:12	Melphis	Build log from my problem emerge http://dpaste.com/24798VY
+2018-11-27 23:20:20	<--	elxa (~elxa@2a01:5c0:e085:2291:b493:f2a8:d018:18d1) has quit (Ping timeout: 250 seconds)
+2018-11-27 23:20:22	coot__	I actually stole just the config and recompiled it against `gentoo-sources`, do I still need the initramfs?
+2018-11-27 23:20:42	+iamben	coot__: almost certainly
+2018-11-27 23:20:51	<--	lefou (~lefou@p4FD936AD.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2018-11-27 23:21:05	+iamben	Melphis: try    emerge -1av /usr/lib64/libQt5Gui.so.5
+2018-11-27 23:21:10	coot__	let me try
+2018-11-27 23:21:25	_2E0LNX	kurly: ok, I re-re-attached it...
+2018-11-27 23:22:07	juli	has anybody an idea where i should start to look what the problem with my microphone is?
+2018-11-27 23:22:29	_2E0LNX	juli: check it's not muted...
+2018-11-27 23:22:52	juli	yes i did that already :)
+2018-11-27 23:23:19	<--	Jake4532 (4fb4305b@gateway/web/cgi-irc/kiwiirc.com/ip.79.180.48.91) has quit (Remote host closed the connection)
+2018-11-27 23:23:20	<--	xlx (~xlx@unaffiliated/xlx) has quit (Read error: Connection reset by peer)
+2018-11-27 23:23:21	juli	its set to 100% with alsamixer
+2018-11-27 23:23:32	_2E0LNX	100% != unmuted
+2018-11-27 23:23:51	-->	vhost- (~vhost@infoforcefeed/vhost-) has joined #gentoo
+2018-11-27 23:24:00	juli	well there is no mute setting for capture devices in the alsamixer
+2018-11-27 23:24:17	-->	mazes_80 (~mazes_80@mur31-4-78-210-220-201.fbx.proxad.net) has joined #gentoo
+2018-11-27 23:24:40	_2E0LNX	juli: there is in mine... but okay if there isn't in yours might be a diff driver
+2018-11-27 23:24:54	-->	lefou (~lefou@p200300C47F018889DD9FFB95FCE867C9.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 23:26:28	coot__	@grknight no luck, now I see `Loading Linux ...` followed by `Loading initial ramdisk` grub echo output, and nothing more.
+2018-11-27 23:26:38	juli	_2E0LNX: well ... you can "enable recording" hitting space ... why isn't that just "m" like  for speakers
+2018-11-27 23:26:46	juli	_2E0LNX: now it works XD
+2018-11-27 23:26:47	-->	candrews (~candrews@gentoo/developer/candrews) has joined #gentoo
+2018-11-27 23:26:47	--	Mode #gentoo [+v candrews] by ChanServ
+2018-11-27 23:26:59	<--	niee (~user@MINE.THE.GAP.NIEE.LOAN) has quit (Remote host closed the connection)
+2018-11-27 23:27:02	_2E0LNX	lol, glad you found it
+2018-11-27 23:27:18	-->	epicmetal (~epicmetal@unaffiliated/epicmetal) has joined #gentoo
+2018-11-27 23:27:23	+kurly	_2E0LNX: no idea, sorry
+2018-11-27 23:28:09	Melphis	iamben: Did not build anything, gave me this output: http://dpaste.com/1HVFHRD
+2018-11-27 23:28:14	juli	_2E0LNX: thx for the help .
+2018-11-27 23:28:28	_2E0LNX	juli: no worries, glad you got it sorted :-)
+2018-11-27 23:28:34	+iamben	Melphis: you have a pending upgrade... you should get fully up to date before installing new packages
+2018-11-27 23:28:58	+iamben	oh this failure might BE from the world upgrade
+2018-11-27 23:30:58	Melphis	How do I get fully up to date without installing new packages?
+2018-11-27 23:31:09	_2E0LNX	kurly: I've fired it off again with -j1... just in case...
+2018-11-27 23:31:18	<--	antarus (~antarus@gentoo/developer/antarus) has left #gentoo
+2018-11-27 23:31:20	+iamben	Melphis: was your kservice build failure during a normal full world upgrade?
+2018-11-27 23:31:32	_2E0LNX	biab...
+2018-11-27 23:32:03	Melphis	Was during an "emerge -auvND @world" attempt
+2018-11-27 23:32:44	<--	Tentacles (~Tentacles@91.196.121.15) has quit (Remote host closed the connection)
+2018-11-27 23:32:59	<--	Mut (~jinx@2601:484:c104:3dd::7a9d) has quit (Quit: Leaving.)
+2018-11-27 23:33:17	+iamben	Melphis: might need to force upgrade qt first, like   emerge -1av $(qlist -ICS dev-qt/)
+2018-11-27 23:33:44	-->	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has joined #gentoo
+2018-11-27 23:33:51	Melphis	Let's see if that works... thanks for your help so far.
+2018-11-27 23:33:52	<--	natemon (~natemonst@pool-173-73-243-133.washdc.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2018-11-27 23:33:55	<--	lefou (~lefou@p200300C47F018889DD9FFB95FCE867C9.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-11-27 23:34:11	-->	natemon (~natemonst@pool-173-73-243-133.washdc.fios.verizon.net) has joined #gentoo
+2018-11-27 23:34:21	-->	lefou (~lefou@p200300C47F018889DD9FFB95FCE867C9.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-27 23:34:58	-->	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has joined #gentoo
+2018-11-27 23:35:06	Melphis	At least the output after "calculating dependencies" was shorter... "emerge: there are no ebuilds to satisfy "dev-qt/designer:4"."
+2018-11-27 23:35:26	+iamben	hah you have a nicely outdated system
+2018-11-27 23:35:50	+iamben	emerge -1av $(qlist -ICS dev-qt/ | grep -e 5$)
+2018-11-27 23:36:08	Melphis	Yes, I am aware.  emerge/portage always gives me such a massive headache.
+2018-11-27 23:36:16	+iamben	you don't depclean often, do you?
+2018-11-27 23:36:46	<--	io_default (~io_defaul@p4FD6F516.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-11-27 23:36:48	<--	GurliGebis (~GurliGebi@unaffiliated/gurligebis) has quit (Ping timeout: 250 seconds)
+2018-11-27 23:36:57	Melphis	I can't get emerge --depclean to work properly, as it keeps telling me to upgrade world first.
+2018-11-27 23:37:04	+iamben	yeah i just mean in general
+2018-11-27 23:37:07	<--	shabius_ (~shabius@2a07:241:1:1022::1002) has quit (Quit: Leaving)
+2018-11-27 23:37:20	<--	ralpheeee (~ralpheeee@xdsl-89-0-115-54.nc.de) has left #gentoo ("WeeChat 2.3")
+2018-11-27 23:37:20	+iamben	clearly you have updated at least a few times this year, but it doesnt seem like you depcleaned afterward
+2018-11-27 23:37:29	<--	gerhard7 (~gerhard7@ip5657ee30.direct-adsl.nl) has quit (Quit: Leaving)
+2018-11-27 23:37:36	-->	shabius (~shabius@2a07:241:1:1022::1002) has joined #gentoo
+2018-11-27 23:39:01	Melphis	I'm never sure what I can depclean, as I hardly ever get this thing to upgrade completely anyway.
+2018-11-27 23:39:12	-->	Yog (~yog@gts.jsbc.cc) has joined #gentoo
+2018-11-27 23:39:28	+iamben	well for the future, depcleaning often helps make later upgrades easier
+2018-11-27 23:39:40	+iamben	so once we get this back on track, add depclean to your regular upgrade procedure
+2018-11-27 23:40:01	<--	fusion809 (~fusion809@2001:8003:f12a:6f00:329c:23ff:fee1:37a2) has quit (Remote host closed the connection)
+2018-11-27 23:40:35	-->	kokotchY (~kokotchY@91.177.91.50) has joined #gentoo
+2018-11-27 23:40:44	<--	juli (~julian@p5B02D2D2.dip0.t-ipconnect.de) has quit (Quit: Lost terminal)
+2018-11-27 23:40:47	<--	pavlix (~pavlix@185.8.165.163) has quit (Ping timeout: 240 seconds)
+2018-11-27 23:41:36	-->	pavlix (~pavlix@185.8.165.163) has joined #gentoo
+2018-11-27 23:42:52	<--	kujira (~no1@mobile-166-171-250-162.mycingular.net) has quit (Ping timeout: 252 seconds)
+2018-11-27 23:43:01	Melphis	Right, I'd love to... if only I could get this upgrade to work... :P  OK, the "emerge -1av $(qlist -ICS dev-qt/ | grep -e 5$)" finally got to a "yes/no" question :-)  http://dpaste.com/28EQTE7
+2018-11-27 23:43:54	-->	kujira (~no1@mobile-166-171-250-162.mycingular.net) has joined #gentoo
+2018-11-27 23:44:24	Melphis	I should answer "yes" to add the changes to config, etc., correct?
+2018-11-27 23:45:43	-->	tradar (~tradar@gateway/tor-sasl/tradar) has joined #gentoo
+2018-11-27 23:46:04	+grknight	Melphis: i'd answer no and figure out why some dev-qt packages are keyworded unstable and some are keyworded stable;  you cannot mix and match
+2018-11-27 23:46:45	<--	BiggBang (~BiggBang@unaffiliated/biggbang) has quit (Ping timeout: 268 seconds)
+2018-11-27 23:46:46	<--	notthebee (~notthebee@5.2.70.136) has quit (Ping timeout: 250 seconds)
+2018-11-27 23:46:55	Asara	win 8
+2018-11-27 23:46:58	<--	kokotchY (~kokotchY@91.177.91.50) has quit (Ping timeout: 246 seconds)
+2018-11-27 23:46:58	Asara	:/
+2018-11-27 23:47:10	-->	Mut (~jinx@2601:484:c104:3dd::7a9d) has joined #gentoo
+2018-11-27 23:47:22	<--	zChris (~chris@81-233-239-187-no19.tbcn.telia.com) has quit (Remote host closed the connection)
+2018-11-27 23:47:50	-->	kitsunenokenja (~kitsunech@68.91.220.96) has joined #gentoo
+2018-11-27 23:48:06	-->	kokotchY (~kokotchY@20.93-245-81.adsl-dyn.isp.belgacom.be) has joined #gentoo
+2018-11-27 23:48:13	<--	Yog (~yog@gts.jsbc.cc) has quit (Quit: X-Chat: Reserve your copy of X-Chat for the Commodore 64 today!)
+2018-11-27 23:48:19	Mut	When I installed pulceaudio it insisted on updating some configuration files and now I can't have sound from more than one aplication at a time. (Sadly I forget what files, just that they are in /etc somewhere.)
+2018-11-27 23:48:19	Melphis	That'd be my fault. I've been trying to get this upgrade to work for days now.
+2018-11-27 23:48:56	Melphis	How would I set them all to "stable", for example?
+2018-11-27 23:49:22	+grknight	Melphis: remove any and all entries of the dev-qt category from package.accept_keywords
+2018-11-27 23:51:15	-->	sibok (~sibok@static-6-137-224-77.ipcom.comunitel.net) has joined #gentoo
+2018-11-27 23:51:52	<--	Skunky (skunky@unaffiliated/skunky) has quit (Remote host closed the connection)
+2018-11-27 23:52:13	-->	ralpheeee (~ralpheeee@xdsl-89-0-115-54.nc.de) has joined #gentoo
+2018-11-27 23:52:32	<--	cCkw (~ejakuk@gateway/tor-sasl/cckw) has quit (Remote host closed the connection)
+2018-11-27 23:52:50	<--	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2018-11-27 23:53:15	Melphis	OK, done that,  Trying emerge -1av $(qlist -ICS dev-qt/ | grep -e 4$) again.
+2018-11-27 23:53:17	-->	clemens3_ (~clemens@80-218-38-71.dclient.hispeed.ch) has joined #gentoo
+2018-11-27 23:53:27	<--	lefou (~lefou@p200300C47F018889DD9FFB95FCE867C9.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2018-11-27 23:53:36	<--	sibok (~sibok@static-6-137-224-77.ipcom.comunitel.net) has quit (Client Quit)
+2018-11-27 23:53:40	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Ping timeout: 272 seconds)
+2018-11-27 23:53:44	Melphis	5... I meant 5.
+2018-11-27 23:53:47	-->	cCkw (~ejakuk@gateway/tor-sasl/cckw) has joined #gentoo
+2018-11-27 23:54:00	-->	sibok (~sibok@static-6-137-224-77.ipcom.comunitel.net) has joined #gentoo
+2018-11-27 23:54:22	-->	Skunky (skunky@unaffiliated/skunky) has joined #gentoo
+2018-11-27 23:54:59	JohnnyMnemonic	hi again, im having trouble doing a world update, ncmpcpp build fails, here is the output of emerge --info ncmpcpp: https://paste.pound-python.org/show/AanS6TU2ZXRsCszaVzlj/, and here is the output of emerge -pvq ncmpcpp: emerge -pqv '=media-sound/ncmpcpp-0.8.2::gentoo i can paste the build log if needed
+2018-11-27 23:55:07	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-27 23:55:28	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Client Quit)
+2018-11-27 23:55:36	JohnnyMnemonic	sorry, here is the output of emerge -pvq ncmpcpp: https://paste.pound-python.org/show/gcp6CtVNzdSQcYU37kdp/
+2018-11-27 23:56:07	-->	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has joined #gentoo
+2018-11-27 23:56:32	<--	Giotis (~Giotis@unaffiliated/giotis) has quit (Quit: Cheers)
+2018-11-27 23:56:57	<--	clemens3_ (~clemens@80-218-38-71.dclient.hispeed.ch) has quit (Remote host closed the connection)
+2018-11-27 23:57:02	Melphis	"Would you like to merge these packages?"... mostly kde 5.13 and 5.50 packages.
+2018-11-27 23:57:03	-->	Yog (~yog@gts.jsbc.cc) has joined #gentoo
+2018-11-27 23:57:20	quadbootman	can you exclude specific packages from being unmerged during --depclean? : i have "selected: 4.9.72 4.9.76-r1 4.9.95 4.14.52 4.14.61"   but i want to keep 4.9.72
+2018-11-27 23:57:25	--	Vasco is now known as Vasco_O
+2018-11-27 23:57:29	sibok	Any idea why i cannot set my system clock from my hardward clock? https://pastebin.com/sSm6CfnM
+2018-11-27 23:57:42	quadbootman	usually i do --exclude=sys-kernel/*    which keeps all of dem
+2018-11-27 23:58:29	-->	clemens3 (~clemens@80-218-38-71.dclient.hispeed.ch) has joined #gentoo
+2018-11-27 23:58:30	-->	turbosnail (~turbosnai@185.21.217.49) has joined #gentoo
+2018-11-27 23:59:20	<--	sasukeskapa (~sasukeska@94-21-26-185.pool.digikabel.hu) has quit (Ping timeout: 244 seconds)
+2018-11-27 23:59:55	<--	venom00 (~venom00@unaffiliated/venom00) has quit (Ping timeout: 246 seconds)
+2018-11-28 00:00:39	+iamben	quadbootman: add slotted entries to world
+2018-11-28 00:01:18	Melphis	Looks OK to merge these, right? http://dpaste.com/240T58K
+2018-11-28 00:01:21	<--	kc8wxm (~steve@steve.gaslightmedia.com) has quit (Quit: Konversation terminated!)
+2018-11-28 00:01:58	<--	im4nuXX99VD (~im4nuXX99@46.23.92.191) has quit (Quit: ZNC 1.7.1 - https://znc.in)
+2018-11-28 00:02:05	<--	jtriley (~jtriley@140.247.242.54) has quit (Ping timeout: 268 seconds)
+2018-11-28 00:02:14	-->	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has joined #gentoo
+2018-11-28 00:02:40	+iamben	Melphis: looks ok to me
+2018-11-28 00:03:14	-->	CrazyEddy (crazyed@wrongplanet/CrazyEddy) has joined #gentoo
+2018-11-28 00:03:14	<--	kokotchY (~kokotchY@20.93-245-81.adsl-dyn.isp.belgacom.be) has quit (Ping timeout: 250 seconds)
+2018-11-28 00:04:14	quadbootman	iamben so the "atom" to my /var/lib/portage/world file?
+2018-11-28 00:04:47	+iamben	quadbootman: you can use emerge to do it, like "emerge --noreplace gentoo-sources:4.9.72"
+2018-11-28 00:05:27	<--	daggs1 (~dagg@176.231.24.16) has quit (Quit: Konversation terminated!)
+2018-11-28 00:05:29	<--	rememberYou (~user@unaffiliated/rememberyou) has quit (Remote host closed the connection)
+2018-11-28 00:08:43	<--	snatcher (~user@gateway/tor-sasl/snatcher) has quit (Remote host closed the connection)
+2018-11-28 00:08:43	quadbootman	thx that works as expected, omits 4.9.72 and the latest sources
+2018-11-28 00:08:44	-->	dingir_ (~ty@modemcable097.80-19-135.mc.videotron.ca) has joined #gentoo
+2018-11-28 00:08:44	-->	gyroninja (~gyroninja@97-120-203-103.ptld.qwest.net) has joined #gentoo
+2018-11-28 00:08:44	-->	snatcher (~user@gateway/tor-sasl/snatcher) has joined #gentoo
+2018-11-28 00:08:44	-->	im4nuXX99VD (~im4nuXX99@46.23.92.191) has joined #gentoo
+2018-11-28 00:08:53	<--	waebbl (~waebbl@aftr-185-17-207-114.dynamic.mnet-online.de) has quit (Quit: Leaving.)
+2018-11-28 00:09:38	<--	quadbootman (~lifesux@host86-135-102-62.range86-135.btcentralplus.com) has quit (Quit: Leaving)
+2018-11-28 00:10:05	<--	parapente (~nobody@unaffiliated/parapente) has quit (Quit: Konversation terminated!)
+2018-11-28 00:10:06	<--	optmzr (~optmzr@158.174.28.161) has quit (Ping timeout: 268 seconds)
+2018-11-28 00:10:54	-->	m0u (~m0u@unaffiliated/m0u) has joined #gentoo
+2018-11-28 00:12:00	<--	m0u (~m0u@unaffiliated/m0u) has quit (Client Quit)
+2018-11-28 00:12:13	<--	kujira (~no1@mobile-166-171-250-162.mycingular.net) has quit
+2018-11-28 00:12:44	-->	sasukeskapa (~sasukeska@92-249-215-54.pool.digikabel.hu) has joined #gentoo
+2018-11-28 00:12:58	Melphis	Fingers crossed, but so far the qt5 upgrade merges seem to be working... "9 of 80" If these work, what next? "emerge --depclean"? or continue with the world update?
+2018-11-28 00:14:00	+iamben	you can TRY a depclean, but it will most likely complain of some unsatisfied deps.  if so, just continue on with world update
+2018-11-28 00:14:43	<--	zatteliet (~kv@178-118-155-229.access.telenet.be) has quit (Quit: Leaving)
+2018-11-28 00:16:31	<--	im4nuXX99VD (~im4nuXX99@46.23.92.191) has quit (Quit: ZNC 1.7.1 - https://znc.in)
+2018-11-28 00:17:30	<--	mawiegand (~mwiegand@p200300DD2F29410069BF97339FF0F0F8.dip0.t-ipconnect.de) has quit (Quit: Konversation terminated!)
+2018-11-28 00:17:41	<--	InvisibleRasta (~Invisible@146-241-68-63.dyn.eolo.it) has quit (Quit: WeeChat 2.3)
+2018-11-28 00:18:14	tyil	I have a set containing most software I use to keep it in a neat list, but when I add something and do emerge @tyil, it tries to reinstall all the packages that were already installed
+2018-11-28 00:18:24	tyil	is there a flag for emerge to skip packages that are already installed?
+2018-11-28 00:18:44	<--	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2018-11-28 00:19:01	+iamben	tyil: see if --noreplace helps
+2018-11-28 00:19:20	-->	im4nuXX99VD (~im4nuXX99@46.23.92.191) has joined #gentoo
+2018-11-28 00:19:35	tyil	like a charm, thanks iamben
+2018-11-28 00:20:17	Melphis	Many thanks to those who have helped me with this upgrade so far.
+2018-11-28 00:21:59	JohnnyMnemonic	having trouble doing a @world update, teh whole thing sfails on configuring ncmpcpp because of a missing file, crti.o any ideas?
+2018-11-28 00:22:36	+iamben	JohnnyMnemonic: can you pastebin that config.log i asked for?
+2018-11-28 00:22:43	JohnnyMnemonic	iamben, yes, ofc
+2018-11-28 00:22:46	JohnnyMnemonic	hold please
+2018-11-28 00:23:39	JohnnyMnemonic	iamben, https://paste.pound-python.org/show/1hjey62MNY5EFOxs0wJ2/
+2018-11-28 00:25:01	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-28 00:25:13	+iamben	JohnnyMnemonic: does "qcheck glibc" show any damaged/missing files?
+2018-11-28 00:26:23	JohnnyMnemonic	iamben, https://paste.pound-python.org/show/K8A4nAJUXcQ3Fo3S6gFm/
+2018-11-28 00:27:14	+iamben	JohnnyMnemonic: seems like some random files got deleted, that's not good.
+2018-11-28 00:27:37	+iamben	you'll probably need a rescue binpkg of glibc
+2018-11-28 00:28:14	<--	kageru (~kageru@2a04:4540:6f16:d700:7546:ceb7:fab6:a143) has quit (Ping timeout: 252 seconds)
+2018-11-28 00:28:18	-->	chymera (~chymera@213.55.184.168) has joined #gentoo
+2018-11-28 00:28:24	<--	sibok (~sibok@static-6-137-224-77.ipcom.comunitel.net) has quit (Quit: Konversation terminated!)
+2018-11-28 00:28:37	-->	kokotchY (~kokotchY@228.77-244-81.adsl-dyn.isp.belgacom.be) has joined #gentoo
+2018-11-28 00:29:32	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-11-28 00:29:36	-->	xcm_ (~xcm@ipa210.225.tellas.gr) has joined #gentoo
+2018-11-28 00:29:36	--	xcm_ is now known as xcm
+2018-11-28 00:30:28	<--	Ycarus (~Ycarus@j.aime.ma.xn--vieprive-h1a.com) has quit (Quit: Ycarus)
+2018-11-28 00:30:35	JohnnyMnemonic	iamben, ok. where would i find that?
+2018-11-28 00:30:55	+iamben	JohnnyMnemonic: do you have another gentoo machien of the same arch?
+2018-11-28 00:31:03	<--	steils (~stefan@pripet.hukot.net) has quit (Quit: Leaving.)
+2018-11-28 00:31:32	<--	polman (~ananevtem@128-71-244-125.broadband.corbina.ru) has quit (Ping timeout: 246 seconds)
+2018-11-28 00:31:46	<--	Tommy[D] (~TommyD]@gentoo/developer/tommy) has quit (Ping timeout: 268 seconds)
+2018-11-28 00:31:55	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-28 00:32:10	JohnnyMnemonic	iamben, no, the only other computer i have is a laptop with arch on it
+2018-11-28 00:32:17	-->	Tommy[D] (~TommyD]@gentoo/developer/tommy) has joined #gentoo
+2018-11-28 00:32:17	--	Mode #gentoo [+v Tommy[D]] by ChanServ
+2018-11-28 00:33:02	+iamben	JohnnyMnemonic: then i'd probably do:    PORTAGE_BINHOST="http://packages.gentooexperimental.org/packages/amd64-stable/" emerge -1av --getbinpkgonly glibc"
+2018-11-28 00:33:36	-->	viaCrucis (~scott@91.33.233.220.static.exetel.com.au) has joined #gentoo
+2018-11-28 00:34:40	JohnnyMnemonic	all-right
+2018-11-28 00:36:42	-->	steils (~stefan@pripet.hukot.net) has joined #gentoo
+2018-11-28 00:36:51	<--	steils (~stefan@pripet.hukot.net) has quit (Client Quit)
+2018-11-28 00:37:45	-->	polman (~ananevtem@128-71-244-125.broadband.corbina.ru) has joined #gentoo
+2018-11-28 00:38:05	<--	djdunn (~djdunn@fl-184-2-23-179.dhcp.embarqhsd.net) has quit (Quit: Lost terminal)
+2018-11-28 00:39:43	-->	cdown (~cdown@188.211.162.133) has joined #gentoo
+2018-11-28 00:40:24	JohnnyMnemonic	iamben, the build failed, here is the build log: https://paste.pound-python.org/show/rl388STyKkR88r3F0b6J/
+2018-11-28 00:41:05	+iamben	glibc?
+2018-11-28 00:41:21	+iamben	not glib
+2018-11-28 00:41:23	<--	Mut (~jinx@2601:484:c104:3dd::7a9d) has quit (Quit: Leaving.)
+2018-11-28 00:41:27	JohnnyMnemonic	oh ok :P
+2018-11-28 00:43:38	-->	malina (~malina@unaffiliated/malina) has joined #gentoo
+2018-11-28 00:44:09	<--	_0bitcount (~Big_Byte@90.162.105.206) has quit (Quit: Leaving)
+2018-11-28 00:44:47	<--	sys4 (~sys4@gateway/tor-sasl/sys4) has quit (Quit: sys4)
+2018-11-28 00:45:25	-->	madjestic (~madjestic@ip565848f4.direct-adsl.nl) has joined #gentoo
+2018-11-28 00:45:48	JohnnyMnemonic	iamben, it installed successfully buti got this message before it finished: /sbin/ldconfig: Cannot lstat /usr/lib64/libfftw3l_threads.so.3.5.6: Input/output error
+2018-11-28 00:45:49	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-28 00:46:59	JohnnyMnemonic	otherwise fine
+2018-11-28 00:50:31	-->	smithjd (~enderw@node-1w7jra24sjglstsim5d2cc0yd.ipv6.telus.net) has joined #gentoo
+2018-11-28 00:51:46	-->	dbermond (~dbermond@archlinux/trusteduser/dbermond) has joined #gentoo
+2018-11-28 00:52:00	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-28 00:53:16	-->	tryte (~tryte@gateway/tor-sasl/tryte) has joined #gentoo
+2018-11-28 00:53:16	<--	sarnex (~sarnex@gentoo/developer/sarnex) has quit (Quit: Quit)
+2018-11-28 00:53:56	<--	kitsunenokenja (~kitsunech@68.91.220.96) has quit (Ping timeout: 250 seconds)
+2018-11-28 00:55:33	Melphis	I didn't realize until earlier when I was trying to paste info from a file, but "dolphin" had stopped working at some point during my upgrade attempt. Now that it's recompiled the things I screwed up, "dolphin" works again. Thank goodness I stopped and said, "wait, where can I figure out what I'm doing wrong" before I screwed up something realllly
+2018-11-28 00:55:33	Melphis	important.
+2018-11-28 00:55:41	-->	[drizzt] (~Saint@84.121.76.195.dyn.user.ono.com) has joined #gentoo
+2018-11-28 00:56:03	ccokee	Hi Im trying to emerge johntheripper since long ago, it had a paxctl bug but, besides its now fixed, it now crashes just after starting installation phase: https://paste.pound-python.org/show/xNePqhjamLY5ggiphuB2/
+2018-11-28 00:56:05	ccokee	does anyone know about this issue?
+2018-11-28 00:56:16	<--	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has quit (Remote host closed the connection)
+2018-11-28 00:56:33	-->	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has joined #gentoo
+2018-11-28 00:58:57	-->	AzP (5881fd3d@gateway/web/freenode/ip.88.129.253.61) has joined #gentoo
+2018-11-28 00:59:22	<--	perique (~peri@2601:646:8a80:3ca9:c8da:e2cc:bd38:283e) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-11-28 01:00:10	<--	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has left #gentoo
+2018-11-28 01:00:22	<--	Zuccace (~zucca@85-76-3-35-nat.elisa-mobile.fi) has quit (Quit: WeeChat 2.2)
+2018-11-28 01:00:29	AzP	Hi, I have an overlay on Gitolite, but after re-installing Gentoo and wiping everything, I need to replace my old PublicKey with a newly generated one. Should I log a bug on bugzilla for that?
+2018-11-28 01:01:00	-->	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has joined #gentoo
+2018-11-28 01:01:14	-->	Zucca (~zucca@85-76-3-35-nat.elisa-mobile.fi) has joined #gentoo
+2018-11-28 01:02:36	-->	ItsaVortex (~ItsaVorte@2600:380:6841:6ddb:4125:25a8:6a39:6f34) has joined #gentoo
+2018-11-28 01:02:37	<--	ItsaVortex (~ItsaVorte@2600:380:6841:6ddb:4125:25a8:6a39:6f34) has quit (Max SendQ exceeded)
+2018-11-28 01:03:20	-->	int10h (~int10h@69.5.127.34) has joined #gentoo
+2018-11-28 01:03:28	<--	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has quit (Remote host closed the connection)
+2018-11-28 01:03:37	bemeurer	Can someone explain to me why eclean-kernel will nuke the initramfs for my latest & in use kernel?
+2018-11-28 01:03:57	bemeurer	It's kind of annoying, I always have to regenerate the initramfs after running eclean-kernel
+2018-11-28 01:04:46	-->	kyhwana_ (~kyhwana_@ntsitm476160.sitm.nt.ngn.ppp.infoweb.ne.jp) has joined #gentoo
+2018-11-28 01:04:54	-->	hijackeel (~weechat@gateway/tor-sasl/hijackeel) has joined #gentoo
+2018-11-28 01:05:10	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:05:11	<--	kyhwana_ (~kyhwana_@ntsitm476160.sitm.nt.ngn.ppp.infoweb.ne.jp) has quit (Remote host closed the connection)
+2018-11-28 01:06:02	turbosnail	bemeurer: I had the same problem
+2018-11-28 01:06:19	JohnnyMnemonic	iamben, still cant do world update, fails while buildilng ncmpcpp
+2018-11-28 01:06:21	bemeurer	turbosnail: Did you ever figure it out?
+2018-11-28 01:06:28	turbosnail	no
+2018-11-28 01:06:36	turbosnail	I delete manually
+2018-11-28 01:06:42	 *	bemeurer sighs
+2018-11-28 01:06:48	turbosnail	hehe
+2018-11-28 01:07:30	-->	poeppman (~poeppman@xdsl-84-44-249-77.nc.de) has joined #gentoo
+2018-11-28 01:08:24	<--	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has quit (Ping timeout: 272 seconds)
+2018-11-28 01:08:37	-->	Renich_ (~Renich@177.240.230.53) has joined #gentoo
+2018-11-28 01:09:04	<--	violetina (~quassel@unaffiliated/violetina) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:09:47	<--	Renich (~Renich@91.92.71.51) has quit (Ping timeout: 240 seconds)
+2018-11-28 01:09:47	--	Renich_ is now known as Renich
+2018-11-28 01:09:48	-->	fstd_ (~fstd@unaffiliated/fisted) has joined #gentoo
+2018-11-28 01:10:32	<--	poeppman_ (~poeppman@xdsl-78-34-160-152.nc.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 01:10:35	-->	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has joined #gentoo
+2018-11-28 01:11:38	Caelum	bemeurer: it doesn't do this for me, is your initramfs made with genkernel or dracut?
+2018-11-28 01:11:43	AzP	Nevermind, found other users that had logged bug reports on it, so I added one myself. Thanks.
+2018-11-28 01:11:45	domhnall	ccokee: sharing dmesg?
+2018-11-28 01:11:50	bemeurer	Caelum: genkernel
+2018-11-28 01:11:52	<--	AzP (5881fd3d@gateway/web/freenode/ip.88.129.253.61) has quit (Quit: Good night and good luck.)
+2018-11-28 01:11:58	Caelum	bemeurer: I use genkernel too, weird
+2018-11-28 01:12:05	bemeurer	I just manually call it after compiling a new kernel
+2018-11-28 01:12:06	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-28 01:12:07	Caelum	bemeurer: well genkernel-next
+2018-11-28 01:12:26	Caelum	bemeurer: oh, I always boot to the new kernel before running eclean-kernel
+2018-11-28 01:12:46	bemeurer	Me too
+2018-11-28 01:12:50	bemeurer	`genkernel initramfs --install --btrfs --microcode --busybox`
+2018-11-28 01:12:55	bemeurer	Is what I run, to be exact
+2018-11-28 01:13:05	<--	fstd (~fstd@unaffiliated/fisted) has quit (Ping timeout: 268 seconds)
+2018-11-28 01:13:07	--	fstd_ is now known as fstd
+2018-11-28 01:13:52	domhnall	ccokee: and emerge -pv johntheripper output too if possible.
+2018-11-28 01:14:06	bemeurer	My pipeline is eselect new kernel -> compile new kernel -> install new kernel -> emerge @modules-rebuild -> genkernel -> grub mkconfig -> reboot -> eclean-kernel
+2018-11-28 01:14:36	bemeurer	* emerge --depclean -> eclean-kernel
+2018-11-28 01:14:48	<--	DrPete (~DrPete@fsf/member/DrPete) has left #gentoo
+2018-11-28 01:14:55	-->	noobly (~user@2001:5b0:49c1:6338:eff3:7cd7:ffd0:74a7) has joined #gentoo
+2018-11-28 01:15:17	bemeurer	but then eclean-kernel nukes my initramfs and reconfigures grub, so I need to genkernel and grub-mkconfig again
+2018-11-28 01:19:26	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-28 01:19:53	-->	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-28 01:20:36	bemeurer	Caelum: Thoughts?
+2018-11-28 01:21:03	<--	tholin (~tholin@c-61a5d954.501502050104-0-757473696b74.bbcust.telenor.se) has quit
+2018-11-28 01:21:35	--	Mode #gentoo [-o tdr] by tdr
+2018-11-28 01:23:20	<--	drazan (~drazan@23.252.59.120) has quit (Remote host closed the connection)
+2018-11-28 01:24:35	-->	drazan (~drazan@23.252.59.120) has joined #gentoo
+2018-11-28 01:24:42	<--	madjestic (~madjestic@ip565848f4.direct-adsl.nl) has quit (Ping timeout: 250 seconds)
+2018-11-28 01:25:21	turbosnail	Gentoo is learned in kidergartens now
+2018-11-28 01:25:25	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:25:37	<--	spare (~user@unaffiliated/spareproject) has quit (Ping timeout: 244 seconds)
+2018-11-28 01:26:08	-->	sarnex (~sarnex@pool-173-48-207-197.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-28 01:26:08	<--	sarnex (~sarnex@pool-173-48-207-197.bstnma.fios.verizon.net) has quit (Changing host)
+2018-11-28 01:26:08	-->	sarnex (~sarnex@gentoo/developer/sarnex) has joined #gentoo
+2018-11-28 01:26:08	--	Mode #gentoo [+v sarnex] by ChanServ
+2018-11-28 01:26:32	<--	tradar (~tradar@gateway/tor-sasl/tradar) has quit (Remote host closed the connection)
+2018-11-28 01:26:37	<--	chaky (~chaky@gateway/tor-sasl/chaky) has quit (Remote host closed the connection)
+2018-11-28 01:27:17	-->	tradar (~tradar@gateway/tor-sasl/tradar) has joined #gentoo
+2018-11-28 01:27:17	-->	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has joined #gentoo
+2018-11-28 01:27:25	-->	chaky (~chaky@gateway/tor-sasl/chaky) has joined #gentoo
+2018-11-28 01:27:53	-->	ARMEWT (~ARMer@ip-173-133-99-159.atlnga.spcsdns.net) has joined #gentoo
+2018-11-28 01:28:49	-->	steils (~stefan@pripet.hukot.net) has joined #gentoo
+2018-11-28 01:32:12	<--	medard (~medard@147.175.213.164) has quit (Quit: Leaving)
+2018-11-28 01:32:13	<--	Voidablazer (~Voidablaz@2a02:214a:8006:d300:6d9a:7c56:b8ea:3fc5) has quit (Read error: Connection reset by peer)
+2018-11-28 01:32:15	Caelum	bemeurer: this may be helpful: https://bugs.gentoo.org/464576
+2018-11-28 01:32:56	<--	noobly (~user@2001:5b0:49c1:6338:eff3:7cd7:ffd0:74a7) has quit (Remote host closed the connection)
+2018-11-28 01:33:16	<--	cHawk (chawk@160-3-236-93.cpe.cableone.net) has quit (Quit: Leaving)
+2018-11-28 01:35:21	bemeurer	Caelum: Hmm
+2018-11-28 01:35:25	Caelum	bemeurer: one thing I do differently, I use genkernel to build the kernel and the initramfs together, e.g.: sudo genkernel --oldconfig --virtio --linuxrc=/etc/linuxrc all
+2018-11-28 01:35:38	Caelum	bemeurer: I just copy .config to the new kernel tree
+2018-11-28 01:35:48	<--	kokotchY (~kokotchY@228.77-244-81.adsl-dyn.isp.belgacom.be) has quit (Ping timeout: 246 seconds)
+2018-11-28 01:36:40	-->	kokotchY (~kokotchY@109.128.88.5) has joined #gentoo
+2018-11-28 01:36:54	bemeurer	I see
+2018-11-28 01:37:09	bemeurer	I could try that
+2018-11-28 01:37:14	bemeurer	Why the --virtio?
+2018-11-28 01:37:44	Caelum	that's for some hack I made for vfio :D
+2018-11-28 01:37:48	bemeurer	:P
+2018-11-28 01:38:08	bemeurer	Let me try that :)
+2018-11-28 01:39:30	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-28 01:39:38	-->	cHawk (chawk@160-3-236-93.cpe.cableone.net) has joined #gentoo
+2018-11-28 01:40:46	-->	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has joined #gentoo
+2018-11-28 01:40:46	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined #gentoo
+2018-11-28 01:40:57	-->	kc8wxm (~steve@047-026-252-043.res.spectrum.com) has joined #gentoo
+2018-11-28 01:41:17	-->	justan0theruser (~justanoth@unaffiliated/justanotheruser) has joined #gentoo
+2018-11-28 01:41:46	bemeurer	Caelum: How can I make genkernel call make with -j8?
+2018-11-28 01:42:28	<--	prehensileNipple (~nooblet@101.98.105.28) has quit (Ping timeout: 250 seconds)
+2018-11-28 01:42:36	Caelum	bemeurer: set MAKEOPTS="-j8" in /etc/genkernel.conf
+2018-11-28 01:43:58	bemeurer	Oh, guess I missed that while scrolling!
+2018-11-28 01:45:07	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 240 seconds)
+2018-11-28 01:45:52	<--	madmartin (~quassel@2a02:8109:9f40:428e:a0bb:195f:9856:7d8d) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:46:23	-->	cynapse (~chris@185.217.69.133) has joined #gentoo
+2018-11-28 01:48:43	-->	bemeurer_ (~bemeurer@2600:8802:5300:7540:70dc:a23d:201a:b403) has joined #gentoo
+2018-11-28 01:50:21	+kurly	bemeurer_: Caelum: the default for some time now has been to look up MAKEOPTS, I think?
+2018-11-28 01:50:40	Caelum	I think so
+2018-11-28 01:50:51	Caelum	it gets it from portage if you don't set it yourself
+2018-11-28 01:51:22	<--	bemeurer (~bemeurer@2600:8802:5300:7540:e16c:7b43:285:321a) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:51:31	-->	ch0wn_ (~tmp@c-73-255-220-160.hsd1.fl.comcast.net) has joined #gentoo
+2018-11-28 01:53:29	<--	lwlvl (~lwlvl@x4d0804f3.dyn.telefonica.de) has quit (Quit: Leaving)
+2018-11-28 01:53:38	-->	alexandros_c (~quassel@unaffiliated/alexandros-c/x-1684531) has joined #gentoo
+2018-11-28 01:54:17	alexandros_c	good day how to remove mdadm from initramfs
+2018-11-28 01:54:43	<--	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has quit (Quit: WeeChat 2.3)
+2018-11-28 01:54:55	-->	virys (~virys@unaffiliated/virys) has joined #gentoo
+2018-11-28 01:55:27	<--	ch0wn_ (~tmp@c-73-255-220-160.hsd1.fl.comcast.net) has quit (Client Quit)
+2018-11-28 01:55:43	-->	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has joined #gentoo
+2018-11-28 01:55:46	-->	djdunn (~djdunn@fl-184-2-23-179.dhcp.embarqhsd.net) has joined #gentoo
+2018-11-28 01:55:49	<--	Essadon (~Essadon@81-225-32-185-no249.tbcn.telia.com) has quit (Quit: Qutting)
+2018-11-28 01:55:58	<--	bemeurer_ (~bemeurer@2600:8802:5300:7540:70dc:a23d:201a:b403) has quit (Ping timeout: 252 seconds)
+2018-11-28 01:58:18	-->	King_DuckZ (~DuckZ@97e48412.skybroadband.com) has joined #gentoo
+2018-11-28 01:58:32	-->	tlhonmey (~lperkins@160-20-210-11.ptr.pco-inc.com) has joined #gentoo
+2018-11-28 02:00:15	tlhonmey	Years ago I stumbled across a program in the Debian repos that would encode binary files using only the characters ABCDE.  I have a use for it now, but can't remember its name.  Anybody here know what it is?
+2018-11-28 02:01:14	lillypad	tlhonmey: base64?
+2018-11-28 02:01:43	tlhonmey	lillypad: no, it used only those five characters.
+2018-11-28 02:02:04	tlhonmey	Anything that encodes to only UPPERCASE ASCII will do, but that's the one I remember seeing.
+2018-11-28 02:02:52	-->	Krennic (~Krennic@unaffiliated/krennic) has joined #gentoo
+2018-11-28 02:03:48	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-11-28 02:04:09	<--	kokotchY (~kokotchY@109.128.88.5) has quit (Ping timeout: 246 seconds)
+2018-11-28 02:04:15	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #gentoo
+2018-11-28 02:04:17	<--	trumee (~trumee@c-98-194-48-184.hsd1.tx.comcast.net) has quit (Ping timeout: 246 seconds)
+2018-11-28 02:04:31	-->	trumee (~trumee@c-98-194-48-184.hsd1.tx.comcast.net) has joined #gentoo
+2018-11-28 02:05:07	<--	tm852010_ (~tm852010@546B439D.cm-12-4b.dynamic.ziggo.nl) has quit (Ping timeout: 240 seconds)
+2018-11-28 02:05:42	<--	tradar (~tradar@gateway/tor-sasl/tradar) has quit (Quit: tradar)
+2018-11-28 02:06:32	tlhonmey	I thought it was in bsd-games, but apparently not.
+2018-11-28 02:06:38	lillypad	tlhonmey: honestly i have no idea
+2018-11-28 02:07:11	lillypad	tlhonmey: maybe it had to do with Polybius Square Ciphers?
+2018-11-28 02:07:12	-->	kokotchY (~kokotchY@109.134.41.215) has joined #gentoo
+2018-11-28 02:07:59	<--	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has quit (Quit: coot_)
+2018-11-28 02:09:43	+maffblaster	tlhonmey: Yo.
+2018-11-28 02:09:58	<--	salyavin (~salyavin@184-96-63-195.hlrn.qwest.net) has quit (Quit: WeeChat 2.3)
+2018-11-28 02:10:08	-->	salyavin (~salyavin@184-96-63-195.hlrn.qwest.net) has joined #gentoo
+2018-11-28 02:10:29	+maffblaster	tlhonmey: Should we ask what you need this program for?
+2018-11-28 02:10:30	tlhonmey	lillypad: I don't think so.  It would take arbitrary binary input and spit out a string of A-E or a string of A-E and spit out the binary.
+2018-11-28 02:10:38	tlhonmey	Like base64, but with a much smaller character set.
+2018-11-28 02:12:08	<--	akko (~gentoo@gateway/tor-sasl/akko) has quit (Quit: WeeChat 2.2)
+2018-11-28 02:13:26	<--	lm- (~lm-@178.43.183.147.ipv4.supernova.orange.pl) has quit (Ping timeout: 268 seconds)
+2018-11-28 02:14:05	-->	scramblez (~michael@5.148.98.2) has joined #gentoo
+2018-11-28 02:14:31	<--	paneidos (~paneidos@unaffiliated/paneidos) has quit (Ping timeout: 260 seconds)
+2018-11-28 02:14:42	<--	clemens3 (~clemens@80-218-38-71.dclient.hispeed.ch) has quit (Ping timeout: 244 seconds)
+2018-11-28 02:14:54	<--	bak (~bak@239.129.196.77.rev.sfr.net) has quit (Quit: Konversation terminated!)
+2018-11-28 02:15:59	lillypad	tlhonmey: any of these ring a bell? https://en.wikipedia.org/wiki/Binary-to-text_encoding
+2018-11-28 02:17:27	-->	bemeurer_ (~bemeurer@2600:8802:5300:7540:70dc:a23d:201a:b403) has joined #gentoo
+2018-11-28 02:17:41	bemeurer_	Sorry, had to leave b/c my new laptop got here
+2018-11-28 02:17:45	bemeurer_	now stuck flashing the darn bios
+2018-11-28 02:17:49	--	bemeurer_ is now known as bemeurer
+2018-11-28 02:17:59	scramblez	Hi All, [OT] question: if I create a file using sudo find, then mv it as a plain user to overwrite previous output, I get a request for confirmation from mv.  It asks 'overriding mode 0644 (rw-r--r--)?'.  What I find strange is that both source and destination are owned by root and already have mode 0644 - so why is mv asking?
+2018-11-28 02:18:29	tlhonmey	lillypad: no, those all appear to be larger character sets.  Quoted-Printable would work for what I'm doing except it uses an =...
+2018-11-28 02:18:44	+kurly	scramblez: #gentoo-chat is our off-topic channel, or maybe ##linux
+2018-11-28 02:19:06	scramblez	Thanks kurly, will go there.
+2018-11-28 02:19:29	<--	scramblez (~michael@5.148.98.2) has left #gentoo
+2018-11-28 02:19:54	<--	int10h (~int10h@69.5.127.34) has quit (Ping timeout: 246 seconds)
+2018-11-28 02:19:58	<--	RobbieAB (~robert@05452277.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-11-28 02:20:08	lillypad	tlhonmey: i wrote my own base64 encoder before with support for custom character sets perhaps you can write your own? i wish i knew where to find this for you
+2018-11-28 02:20:09	tlhonmey	lillypad: Ah well, it was something of a silly idea anyway.  I can probably find a better way to build it.
+2018-11-28 02:20:28	tlhonmey	lillypad: No worries.  I'll probably stumble across it again in a couple of years.
+2018-11-28 02:20:30	<--	Krennic (~Krennic@unaffiliated/krennic) has quit (Remote host closed the connection)
+2018-11-28 02:20:34	lillypad	tlhonmey: what's the usecase?
+2018-11-28 02:20:49	tlhonmey	lillypad: sending files via morse code.
+2018-11-28 02:20:55	+wraeth	This can probably go to #-chat as well.
+2018-11-28 02:21:16	lillypad	tlhonmey: that is pretty cool
+2018-11-28 02:21:17	tlhonmey	wraeth: yeah, I mistyped my /join by mistake.
+2018-11-28 02:24:45	-->	kitsunenokenja (~kitsunech@68.91.220.96) has joined #gentoo
+2018-11-28 02:25:09	<--	djdunn (~djdunn@fl-184-2-23-179.dhcp.embarqhsd.net) has quit (Quit: Lost terminal)
+2018-11-28 02:27:27	<--	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has quit (Remote host closed the connection)
+2018-11-28 02:28:30	-->	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has joined #gentoo
+2018-11-28 02:28:34	<--	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has quit (Remote host closed the connection)
+2018-11-28 02:28:44	-->	lm- (~lm-@178.43.177.72.ipv4.supernova.orange.pl) has joined #gentoo
+2018-11-28 02:29:01	-->	djdunn (~djdunn@fl-184-2-23-179.dhcp.embarqhsd.net) has joined #gentoo
+2018-11-28 02:29:13	djdunn	woho i fixed it
+2018-11-28 02:31:47	-->	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has joined #gentoo
+2018-11-28 02:34:19	<--	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has quit (Quit: WeeChat 2.3)
+2018-11-28 02:34:49	lillypad	tlhonmey: what are you using for sending morse code out from text at this time cwwav?
+2018-11-28 02:35:23	<--	lillypad (~c3rb3ru5@24-89-235-175.eastlink.ca) has quit (Quit: WeeChat 2.4-dev)
+2018-11-28 02:35:23	<--	sektour (~SEKTOUR@94.19.27.219) has quit (Remote host closed the connection)
+2018-11-28 02:36:40	King_DuckZ	I'm making progress with my install, now it's booting almost perrfectly, the screen freezes at the line "fb: switching to amdgpudrmfb from EFI VGA"
+2018-11-28 02:37:04	-->	dlan (~dennis@116.192.33.248) has joined #gentoo
+2018-11-28 02:37:04	<--	dlan (~dennis@116.192.33.248) has quit (Changing host)
+2018-11-28 02:37:04	-->	dlan (~dennis@gentoo/developer/dlan) has joined #gentoo
+2018-11-28 02:37:04	--	Mode #gentoo [+v dlan] by ChanServ
+2018-11-28 02:37:12	djdunn	King_DuckZ: 4.19?
+2018-11-28 02:37:16	djdunn	King_DuckZ: amdgpu?
+2018-11-28 02:37:56	<--	Kelzier (~duka@87.116.180.145) has quit (Ping timeout: 250 seconds)
+2018-11-28 02:37:57	<--	kingkongmok (~kingkongm@61.140.244.123) has quit (Ping timeout: 244 seconds)
+2018-11-28 02:38:13	-->	kyan (~kyan@cpe-24-198-108-20.maine.res.rr.com) has joined #gentoo
+2018-11-28 02:38:22	<--	coot_ (~coot@188.146.109.130.nat.umts.dynamic.t-mobile.pl) has quit (Ping timeout: 250 seconds)
+2018-11-28 02:38:38	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2018-11-28 02:38:41	djdunn	King_DuckZ: i just tracked down a bug with kernel 4.19 and amdgpu
+2018-11-28 02:39:50	King_DuckZ	djdunn: yes, nomodeset fixes it tho, I just tried
+2018-11-28 02:39:52	kyan	Hi! Is there a way to build a package (but not merge) without checking deps, for quickly testing another version without satisfying deps for it?
+2018-11-28 02:40:03	-->	kingkongmok (~kingkongm@61.140.244.123) has joined #gentoo
+2018-11-28 02:40:13	djdunn	King_DuckZ: https://paste.pound-python.org/show/T4zUkxORGJV6EV1n1w3s/ i hit that bug
+2018-11-28 02:40:24	+kurly	kyan: man 1 ebuild
+2018-11-28 02:40:25	-->	iAmDecim_ (~iAmDecim@2600:1702:ad0:3b90:1418:a6d0:a989:acf1) has joined #gentoo
+2018-11-28 02:40:33	djdunn	King_DuckZ: https://patchwork.freedesktop.org/patch/259364/ fixed with that patch
+2018-11-28 02:41:20	kyan	guess my "less" searching skills were insufficient. thanks :)
+2018-11-28 02:41:25	-->	Yhorm (~gary@cpc80917-thor6-2-0-cust976.14-2.cable.virginm.net) has joined #gentoo
+2018-11-28 02:41:39	+kurly	:)
+2018-11-28 02:41:49	<--	snatcher (~user@gateway/tor-sasl/snatcher) has quit (Remote host closed the connection)
+2018-11-28 02:42:31	<--	iAmDecim (~iAmDecim@2600:1702:ad0:3b90:4d3a:d102:6829:1695) has quit (Ping timeout: 252 seconds)
+2018-11-28 02:42:39	<--	insecta (~olli@91-155-82-82.elisa-laajakaista.fi) has quit (Ping timeout: 246 seconds)
+2018-11-28 02:42:47	King_DuckZ	djdunn: I didn't have that specific crash, luckily :) but it's still not giving me a usable shell
+2018-11-28 02:43:09	King_DuckZ	Failed to start Login Service
+2018-11-28 02:43:10	-->	snatcher (~user@gateway/tor-sasl/snatcher) has joined #gentoo
+2018-11-28 02:43:12	King_DuckZ	wut?
+2018-11-28 02:43:48	djdunn	King_DuckZ: can you remote it and get a dmesg?
+2018-11-28 02:44:14	-->	insecta (~olli@91-155-82-82.elisa-laajakaista.fi) has joined #gentoo
+2018-11-28 02:44:34	King_DuckZ	djdunn: nope, I don't think the network got initialized
+2018-11-28 02:45:05	King_DuckZ	ohh hold on: failed to start activation of lvm2 logical volumes
+2018-11-28 02:45:06	djdunn	King_DuckZ: my problem was something to do with pcie 2.0 not getting detected correctly
+2018-11-28 02:45:17	King_DuckZ	no it seems to be lvm
+2018-11-28 02:45:34	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) has quit (Quit: tuxtor)
+2018-11-28 02:46:10	<--	kyan (~kyan@cpe-24-198-108-20.maine.res.rr.com) has quit (Ping timeout: 250 seconds)
+2018-11-28 02:46:15	-->	tuxtor (~tuxtor@unaffiliated/tuxtor) has joined #gentoo
+2018-11-28 02:46:27	-->	Psyb3rN4ut (~psybernau@bzq-109-66-248-75.red.bezeqint.net) has joined #gentoo
+2018-11-28 02:48:01	-->	dingir___ (~asdf@unaffiliated/dingir) has joined #gentoo
+2018-11-28 02:49:02	-->	delightfulApple (~root@71-83-160-43.dhcp.whtr.ca.charter.com) has joined #gentoo
+2018-11-28 02:49:16	delightfulApple	e
+2018-11-28 02:49:21	<--	Yhorm (~gary@cpc80917-thor6-2-0-cust976.14-2.cable.virginm.net) has quit (Remote host closed the connection)
+2018-11-28 02:49:54	sheep	 
+2018-11-28 02:49:57	sheep	oops
+2018-11-28 02:51:24	<--	dingir (~asdf@unaffiliated/dingir) has quit (Ping timeout: 246 seconds)
+2018-11-28 02:51:46	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #gentoo
+2018-11-28 02:53:28	Psyb3rN4ut	when i put compress=zstd:1 in fstab i booted into emergency mode...can this be set in fstab? the gentoo btrfs wiki in the Compression section...it is not clear how to set compression and have it carry accross boots....only the mount -o compress=zstd:1 or chattr +c for files...
+2018-11-28 02:53:30	Caelum	what does it mean when eix shows a version in red with an [M] next to it, and portage won't let me install it
+2018-11-28 02:53:47	sheep	Caelum: masked
+2018-11-28 02:53:56	Caelum	ah, thank you
+2018-11-28 02:54:30	-->	Azimoth (~til@2a02:908:69e:c5a0:368d:5d0f:cfeb:3cef) has joined #gentoo
+2018-11-28 02:54:47	<--	domhnall (~domhnall@unaffiliated/ccmcdee-sfc) has quit (Ping timeout: 240 seconds)
+2018-11-28 02:55:19	Psyb3rN4ut	is this permanent?  there is also btrfs filesystem defragment -r -v -czstd /path but i am not sure how to have it permanent? or at least not revert on reboot?
+2018-11-28 02:55:45	+grknight	Psyb3rN4ut: depends on how you have the full fstab line;  may be a syntax error
+2018-11-28 02:57:04	Psyb3rN4ut	grknight: LABEL="data_raid1_1"                            /mnt/data/raid1_1               btrfs           noatime,compress=zstd:3                                             0 0
+2018-11-28 02:57:28	tlhonmey	Psyb3rN4ut: you can put compress=<alg> in the options section of your fstab.  I wasn't aware that it took any arguments beyond what algorithm though.
+2018-11-28 02:57:58	Psyb3rN4ut	tlhonmey: you mean the :3?
+2018-11-28 02:58:22	Psyb3rN4ut	tlhonmey: in the gentoo btrfs wiki this is the command for zlib:
+2018-11-28 02:58:36	Psyb3rN4ut	mount -o compress=zlib:9 /dev/sdXY /path/to/btrfs/mountpoint
+2018-11-28 02:58:47	Psyb3rN4ut	tlhonmey: it is the compression level
+2018-11-28 02:59:03	Psyb3rN4ut	tlhonmey: and zstd supports also compression levels
+2018-11-28 03:01:14	-->	dingir (~asdf@unaffiliated/dingir) has joined #gentoo
+2018-11-28 03:01:38	+grknight	tlhonmey: it seems like compression level is supported in fstab
+2018-11-28 03:01:48	+grknight	Psyb3rN4ut: ^^
+2018-11-28 03:01:53	+grknight	the type is, but not level
+2018-11-28 03:02:01	tlhonmey	Psyb3rN4ut: Ok.  That's new since the last time I looked at it.  Never tried it.
+2018-11-28 03:03:03	Psyb3rN4ut	grknight: so...if i set compress=zstd it will be the default level? because i cant set the level in fstab?
+2018-11-28 03:03:22	<--	nerdboy (~sarnold@gentoo/developer/nerdboy) has quit (Excess Flood)
+2018-11-28 03:04:22	<--	dingir___ (~asdf@unaffiliated/dingir) has quit (Ping timeout: 250 seconds)
+2018-11-28 03:04:24	<--	tlhonmey (~lperkins@160-20-210-11.ptr.pco-inc.com) has quit (Quit: Leaving)
+2018-11-28 03:05:28	Psyb3rN4ut	grknight: ok...also with mount command....it wont accept the level...how do i set the level?
+2018-11-28 03:05:57	Psyb3rN4ut	grknight: and what level do i get if i set only zstd?
+2018-11-28 03:07:15	stevie	where can I find the font used in the default tty without X?
+2018-11-28 03:07:56	-->	RobbieAB (~robert@94.10.187.117) has joined #gentoo
+2018-11-28 03:08:03	-->	nerdboy (~sarnold@gatekeeper.gentoogeek.org) has joined #gentoo
+2018-11-28 03:08:14	<--	nerdboy (~sarnold@gatekeeper.gentoogeek.org) has quit (Changing host)
+2018-11-28 03:08:14	-->	nerdboy (~sarnold@gentoo/developer/nerdboy) has joined #gentoo
+2018-11-28 03:08:14	--	Mode #gentoo [+v nerdboy] by ChanServ
+2018-11-28 03:09:01	<--	arma7laerv (~androirc@2600:1:f508:c44d:7425:ee89:f20f:3867) has quit (Quit: AndroIRC - Android IRC Client ( http://www.androirc.com ))
+2018-11-28 03:10:20	-->	jtriley (~jtriley@209.6.38.104) has joined #gentoo
+2018-11-28 03:10:57	<--	tuxtor (~tuxtor@unaffiliated/tuxtor) has quit (Quit: tuxtor)
+2018-11-28 03:10:59	<--	[drizzt] (~Saint@84.121.76.195.dyn.user.ono.com) has quit (Quit: Saliendo)
+2018-11-28 03:11:11	-->	prehensileNipple (~nooblet@101.98.105.28) has joined #gentoo
+2018-11-28 03:11:16	Caelum	gentoo is the best dist bar none for running software from git, I can have a whole stack installed from git in a matter of minutes <3
+2018-11-28 03:11:31	-->	pacman2_1 (~pacman@217.150.81.183) has joined #gentoo
+2018-11-28 03:11:34	<--	opc0de (~opc0de@unaffiliated/opc0de) has quit (Ping timeout: 252 seconds)
+2018-11-28 03:14:03	<--	candrews (~candrews@gentoo/developer/candrews) has quit (Remote host closed the connection)
+2018-11-28 03:14:17	pacman2_1	hello does any one know netdiscover?
+2018-11-28 03:14:41	Psyb3rN4ut	pacman2_1: sure
+2018-11-28 03:15:14	<--	ARMEWT (~ARMer@ip-173-133-99-159.atlnga.spcsdns.net) has quit (Remote host closed the connection)
+2018-11-28 03:15:57	pacman2_1	i entered the command netdiscover -i wlo1
+2018-11-28 03:16:28	pacman2_1	does this only scan for devices that are on my router?
+2018-11-28 03:16:59	-->	tm852010_ (~tm852010@546B439D.cm-12-4b.dynamic.ziggo.nl) has joined #gentoo
+2018-11-28 03:17:51	Psyb3rN4ut	ok....looks like btrfs doesnt yet support compression levels with zstd...i must have misread....thanx
+2018-11-28 03:19:56	+wraeth	pacman2_1: Maybe try asking in ##networking - doesn't sound like a Gentoo question.
+2018-11-28 03:21:14	-->	faulskemper (~marcuse@i59F54970.versanet.de) has joined #gentoo
+2018-11-28 03:22:50	-->	cjbayliss (~user@unaffiliated/cjbayliss) has joined #gentoo
+2018-11-28 03:23:02	maolang	Psyb3rN4ut: not sure about it, i have used / tested it just to see, i did not see when i did try it a long while ago it was either compress or not
+2018-11-28 03:23:20	wuseman	pacman2_1 it does only scan on your local network. Use iw for scan signals outside network
+2018-11-28 03:23:25	-->	tilda_ (~tilda@unaffiliated/tildaturn) has joined #gentoo
+2018-11-28 03:23:42	-->	emmett1 (~emmett1@2001:e68:7400:0:34d:f788:eb46:6586) has joined #gentoo
+2018-11-28 03:24:42	-->	you_ (~you@2601:2c3:980:b70::3) has joined #gentoo
+2018-11-28 03:25:20	-->	Renich_ (~Renich@91.92.71.51) has joined #gentoo
+2018-11-28 03:28:07	pacman2_1	so i see only machines connected yo my wifi ?
+2018-11-28 03:28:27	wuseman	Yes
+2018-11-28 03:28:35	-->	cjbaylis` (~user@pa49-184-208-159.pa.vic.optusnet.com.au) has joined #gentoo
+2018-11-28 03:28:36	wuseman	Otherwise that would be the nr1 pen tool :)
+2018-11-28 03:28:38	<--	Renich (~Renich@177.240.230.53) has quit (Ping timeout: 250 seconds)
+2018-11-28 03:28:38	--	Renich_ is now known as Renich
+2018-11-28 03:28:41	pacman2_1	thank you
+2018-11-28 03:29:12	-->	ub|k12 (~ub|k@pool-108-34-242-196.prvdri.fios.verizon.net) has joined #gentoo
+2018-11-28 03:29:16	<--	ub|k12 (~ub|k@pool-108-34-242-196.prvdri.fios.verizon.net) has quit (Remote host closed the connection)
+2018-11-28 03:29:39	<--	pacman2_1 (~pacman@217.150.81.183) has quit (Quit: Leaving)
+2018-11-28 03:30:26	<--	cjbayliss (~user@unaffiliated/cjbayliss) has quit (Ping timeout: 244 seconds)
+2018-11-28 03:31:13	<--	jnt (~jnt@dyndsl-031-150-136-160.ewe-ip-backbone.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 03:31:14	<--	alexandros_c (~quassel@unaffiliated/alexandros-c/x-1684531) has quit (Ping timeout: 250 seconds)
+2018-11-28 03:31:18	<--	cjbaylis` (~user@pa49-184-208-159.pa.vic.optusnet.com.au) has quit (Remote host closed the connection)
+2018-11-28 03:31:24	-->	jnt (~jnt@dyndsl-091-096-059-050.ewe-ip-backbone.de) has joined #gentoo
+2018-11-28 03:31:31	-->	tdoirc (~tdoirc@toroon0717w-lp130-04-184-145-70-21.dsl.bell.ca) has joined #gentoo
+2018-11-28 03:32:01	-->	cjbayliss (~user@unaffiliated/cjbayliss) has joined #gentoo
+2018-11-28 03:32:02	tdoirc	netifrc doesn't have any built in support for netns and veth does it?
+2018-11-28 03:32:27	tdoirc	I'm using postup and predown for it atm, but I'd prefer something more flexible
+2018-11-28 03:32:35	--	NextHendrix is now known as nh
+2018-11-28 03:33:24	--	nh is now known as NH
+2018-11-28 03:35:34	<--	King_DuckZ (~DuckZ@97e48412.skybroadband.com) has quit (Quit: Konversation terminated!)
+2018-11-28 03:41:19	-->	zyxelthrone (~zyxelthro@2601:18a:c500:f43f:8c02:a90e:e5de:98d5) has joined #gentoo
+2018-11-28 03:41:58	<--	zyxelthrone (~zyxelthro@2601:18a:c500:f43f:8c02:a90e:e5de:98d5) has quit (Client Quit)
+2018-11-28 03:42:13	<--	viaCrucis (~scott@91.33.233.220.static.exetel.com.au) has quit (Remote host closed the connection)
+2018-11-28 03:42:48	-->	viaCrucis (~scott@91.33.233.220.static.exetel.com.au) has joined #gentoo
+2018-11-28 03:43:56	<--	beeman (uid332244@gateway/web/irccloud.com/x-pbdunqpubguoxieh) has quit (Quit: Connection closed for inactivity)
+2018-11-28 03:46:13	<--	viaCrucis (~scott@91.33.233.220.static.exetel.com.au) has quit (Remote host closed the connection)
+2018-11-28 03:47:29	<--	nerdboy (~sarnold@gentoo/developer/nerdboy) has left #gentoo ("Leaving")
+2018-11-28 03:47:44	<--	CMoH (~cipi@unaffiliated/c-moh) has quit (Quit: Konversation terminated!)
+2018-11-28 03:49:28	<--	tzero (~tzero@unaffiliated/tzero) has quit (Quit: WeeChat 2.2)
+2018-11-28 03:49:51	<--	drazan (~drazan@23.252.59.120) has quit (Ping timeout: 246 seconds)
+2018-11-28 03:50:04	-->	drazan (~drazan@23.252.59.120) has joined #gentoo
+2018-11-28 03:50:46	<--	Terlisimo (~terl@141-136-224-135.dsl.iskon.hr) has quit (Remote host closed the connection)
+2018-11-28 03:50:57	-->	Dave123 (~Dave123@2604:6000:1000:8580::1330) has joined #gentoo
+2018-11-28 03:52:56	-->	JeffATL (~FYRD@99-157-54-155.lightspeed.tukrga.sbcglobal.net) has joined #gentoo
+2018-11-28 03:53:20	-->	King_DuckZ (~DuckZ@97e48412.skybroadband.com) has joined #gentoo
+2018-11-28 03:53:59	-->	tzero (~tzero@unaffiliated/tzero) has joined #gentoo
+2018-11-28 03:54:21	-->	LogicalCyber (~LogicalCy@unaffiliated/logicalcyber) has joined #gentoo
+2018-11-28 03:54:43	King_DuckZ	hello again, here https://wiki.gentoo.org/wiki/AMDGPU#X11_driver it says that the video driver is pulled in as a dependency of xorg-drivers, does that mean I have to install xorg-driver myself or should that be a dependency of the plasma profile already?
+2018-11-28 03:54:51	kerframil	tdoirc: I don't think so. see also: https://gitweb.gentoo.org/proj/netifrc.git/tree/net
+2018-11-28 03:54:55	-->	zugz_ (~zugz@dslb-188-100-252-096.188.100.pools.vodafone-ip.de) has joined #gentoo
+2018-11-28 03:54:57	King_DuckZ	because I don't think it's getting selected automatically in my case
+2018-11-28 03:55:55	tdoirc	kerframil: yeah, doesn't look promising :P I figured it was getting a bit too complicated for netifrc, but just in case
+2018-11-28 03:57:40	tdoirc	now I just need to get forwarding working to the netns :/
+2018-11-28 03:58:03	tdoirc	without nat
+2018-11-28 03:58:21	<--	zugz (~zugz@dslb-178-001-019-195.178.001.pools.vodafone-ip.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 03:58:31	<--	GNU\Jack (~1000@127.245.196.77.rev.sfr.net) has quit (Ping timeout: 264 seconds)
+2018-11-28 03:58:33	davidk_	should `/etc/init.d/someservice status` always indicate the status of the someservice alone, or is it acceptable to have different output there?
+2018-11-28 03:59:30	<--	Renich (~Renich@91.92.71.51) has quit (Ping timeout: 268 seconds)
+2018-11-28 03:59:30	davidk_	(I got confused when my scripting broke, because some service was giving me random status information instead of information of whether the init script already ran or not)
+2018-11-28 03:59:42	+grknight	tdoirc: remind me what netns and veth are
+2018-11-28 04:00:15	-->	zyxelthrone (~zyxelthro@2601:18a:c500:f43f:8c02:a90e:e5de:98d5) has joined #gentoo
+2018-11-28 04:00:51	<--	delightfulApple (~root@71-83-160-43.dhcp.whtr.ca.charter.com) has quit (Quit: Lost terminal)
+2018-11-28 04:03:45	+grknight	actually, i don't think it's supported even in /lib/netifrc/net/*
+2018-11-28 04:04:30	+grknight	davidk_: the status output is not configurable
+2018-11-28 04:04:49	JeffATL	i've gone through the process to set up a Brother MFC-6490C allin1 printer as laid out in https://wiki.gentoo.org/wiki/Brother_networked_printer (had to use the RPM method) but jobs fail. i feel like the problem is that the current connection for that printer shown in CUPS is lpd://BRN001...0A4/BINARY_P1 but that's not something that's going to resolve. given that i know what the printer's IP address is, what should i change t
+2018-11-28 04:04:49	JeffATL	his connection to?
+2018-11-28 04:05:14	-->	Melphis (18ce7307@gateway/web/cgi-irc/kiwiirc.com/ip.24.206.115.7) has joined #gentoo
+2018-11-28 04:05:36	+grknight	King_DuckZ: when you install xorg-server, it will pull in xorg-drivers
+2018-11-28 04:06:13	JeffATL	think i found it! socket://<ip_address>:9100
+2018-11-28 04:06:37	+grknight	JeffATL: i thnk you want ipp://
+2018-11-28 04:07:00	<--	King_DuckZ (~DuckZ@97e48412.skybroadband.com) has quit (Ping timeout: 246 seconds)
+2018-11-28 04:08:13	+grknight	or at least my Brother HL-2280DW uses ipp://192.168.2.25:631/ipp
+2018-11-28 04:08:17	<--	malina (~malina@unaffiliated/malina) has quit (Remote host closed the connection)
+2018-11-28 04:08:35	--	iAmDecim_ is now known as iAmDecim
+2018-11-28 04:08:41	davidk_	grknight: the problem is sys-fs/zfs provides a script with weird output. Is that a bug, or is that something I should code around?
+2018-11-28 04:09:46	+grknight	davidk_: dunno.  a true OpenRC script cannot produce status output (will have /sbin/openrc-run at the top)
+2018-11-28 04:10:33	-->	GNU\Jack (~1000@127.245.196.77.rev.sfr.net) has joined #gentoo
+2018-11-28 04:10:47	tdoirc	grknight: netns is network namespaces, it creates an isolated namespace you can move devices to such that programs executed in the namespace can't access other devices
+2018-11-28 04:10:53	davidk_	grknight: it has that at the top, has a case-statement checking for second parameter "status", and overrides status(), both calling a custom function do_status, which produces output.
+2018-11-28 04:11:12	tdoirc	grknight: and veth is a virtual ethernet pair, it creates 2 devices, input to one is output to the other, and vice versa
+2018-11-28 04:11:36	<--	LogicalCyber (~LogicalCy@unaffiliated/logicalcyber) has left #gentoo ("Leaving")
+2018-11-28 04:11:39	tdoirc	oh, and routes, iptables, etc. are all local to netns's as well
+2018-11-28 04:13:20	tdoirc	(in my case, my isp/phone provider actually does SIP over a vlan, but I need dhcp and the routes for it, as well as no other traffic going over it, so I isolated it to it's own netns, which also contains my voice vlan, then I modified the asterisk init.d script and dhcpd scripts to be able execute in a netns)
+2018-11-28 04:13:52	tdoirc	it's overly complicated and not a normal use case ;)
+2018-11-28 04:17:27	+grknight	tdoirc: if it was more common, you could always write a module for it ;)
+2018-11-28 04:18:41	tdoirc	it would clean up my config possibly :P
+2018-11-28 04:18:44	tdoirc	which looks like https://pastebin.com/wKvyWzrR
+2018-11-28 04:18:44	tdoirc	lol
+2018-11-28 04:18:52	+grknight	davidk_: that's likely a poor convert
+2018-11-28 04:20:02	tdoirc	I still need to add in the veth device after I finish getting forwarding working properly too -.-
+2018-11-28 04:20:23	chymera	is there any way to update the groups I am part of without restarting?
+2018-11-28 04:21:05	JeffATL	grknight: you sure about the :631?
+2018-11-28 04:21:15	+wraeth	chymera: Try newgrp
+2018-11-28 04:21:15	kerframil	tdoirc: if nothing else, I would recommend moving some of that into a separate script. openrc uses /bin/sh and that's only working because gentoo has /bin/sh linking to bash by default.
+2018-11-28 04:21:21	<--	mackal (~mike@pool-98-110-248-198.bstnma.fios.verizon.net) has quit (Quit: BE VIGILANT.)
+2018-11-28 04:21:26	+grknight	JeffATL: like I said, that's how my 2280DW works;  not sure if yours does IPP
+2018-11-28 04:21:43	<--	DigitalReaper (~DigitalRe@2a00:23c4:4806:1c00:ddec:8498:6588:6950) has quit (Read error: Connection reset by peer)
+2018-11-28 04:21:45	davidk_	grknight: that means I should file a bug for this issue?
+2018-11-28 04:21:54	+wraeth	chymera: Also, you generally shouldn't need to restart, just log out and back in.
+2018-11-28 04:22:51	tdoirc	kerframil: I feel like most modern distros do that though, but yeah I see your point
+2018-11-28 04:23:02	+grknight	davidk_: maybe.  i don't know the script or the subject very well
+2018-11-28 04:23:16	kerframil	tdoirc: this is one of the few things that I appreciate debian for. they put their foot down years ago and were right to do so.
+2018-11-28 04:23:36	kerframil	tdoirc: anyway, just something to keep in mind
+2018-11-28 04:24:12	tdoirc	kerframil: I tried switching to systemd at one point when I built a new server, but my netifrc scripts (this was before the postup and postdown even) just didn't work, and I didn't see a good way to do it with systemd (I also don't know systemd)
+2018-11-28 04:24:24	<--	chymera (~chymera@213.55.184.168) has quit (Read error: Connection reset by peer)
+2018-11-28 04:25:15	+grknight	JeffATL: ignore me.  checked the specs of mfc6490cw and it does *not* have IPP
+2018-11-28 04:26:06	-->	hellrazo1 (~hellrazor@x4d0b5cd4.dyn.telefonica.de) has joined #gentoo
+2018-11-28 04:26:50	JeffATL	grknight: ok. setting it back to socket
+2018-11-28 04:27:21	tdoirc	while on the topic, and also because i'm not getting a reply in netfilter, trying to get forwarding across my server to the netns, I have routes set up for the networks such that I can ping from inside the netns to out, and vice versa (server local that is), but I can't get forwarding from one network to the other working. I'm trying to do it without NAT, I have -A FORWARD -i bond0.1 -o veth0_0 -j ACCEPT and vice versa, but
+2018-11-28 04:27:21	tdoirc	I can't reach it from my network (server is default route and has ip_forward on)
+2018-11-28 04:28:34	<--	catpig (~catpig@2a02:810a:980:2ea0:793c:708:acae:da1f) has quit (Ping timeout: 252 seconds)
+2018-11-28 04:28:39	<--	daktak (~quassel@220-245-14-175.static.tpgi.com.au) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2018-11-28 04:29:03	<--	hellrazor (~hellrazor@x4db41497.dyn.telefonica.de) has quit (Ping timeout: 246 seconds)
+2018-11-28 04:29:07	tdoirc	oh...i probably need forward rules inside the netns
+2018-11-28 04:29:08	tdoirc	doh
+2018-11-28 04:30:07	tdoirc	nope
+2018-11-28 04:30:33	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2018-11-28 04:31:22	tdoirc	and sysctl ip_forward inside the net_ns as well...still not enough though
+2018-11-28 04:32:22	<--	cCkw (~ejakuk@gateway/tor-sasl/cckw) has quit (Quit: Leaving)
+2018-11-28 04:33:39	-->	troulouliou_div2 (~troulouli@unaffiliated/troulouliou-div2/x-0271439) has joined #gentoo
+2018-11-28 04:34:55	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #gentoo
+2018-11-28 04:35:36	kerframil	tdoirc: I think that systemd-networkd - the systemd.netdev part - can handle veth. but yeah, it's hard sell if you're not really looking to use systemd in general.
+2018-11-28 04:36:35	tdoirc	kerframil: I was actually looking to use systemd in general, mainly for it's restarting services if they crash, but I just couldn't get the network stack working right, pppoe and vlans and bond and bridges
+2018-11-28 04:36:40	<--	kolla (~kolla@cloudsmurf.kolla.no) has quit (Quit: %fog relay%)
+2018-11-28 04:36:54	tdoirc	the veth it what I'm working on now, and I just added the netns a few weeks ago too
+2018-11-28 04:36:58	tdoirc	is*
+2018-11-28 04:37:38	-->	kolla (~kolla@cloudsmurf.kolla.no) has joined #gentoo
+2018-11-28 04:38:15	tdoirc	veth is *working* for me right now, just not the forwarding traffic across it in the most ridiculous way
+2018-11-28 04:38:41	tdoirc	I'm trying to do 192.168.10.0/24 -> bond0.1 -> veth0_0->veth0_1 -> bond0.555 -> 192.168.36.0/24
+2018-11-28 04:38:53	tdoirc	without nat
+2018-11-28 04:38:55	tdoirc	lol
+2018-11-28 04:40:00	tdoirc	bond0.1 and veth0_0 are in the default netns, veth0_1 and bond0.555 are in the sip netns
+2018-11-28 04:40:30	tdoirc	everything works fine except the traffic forwarding
+2018-11-28 04:40:37	-->	psachin (~psachin@103.51.235.30) has joined #gentoo
+2018-11-28 04:40:59	-->	zack_moe (~realname@unaffiliated/zack-moe/x-5811739) has joined #gentoo
+2018-11-28 04:42:56	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-28 04:44:31	<--	Mony (~sobieski@ganymede.usys.eu) has quit (Ping timeout: 252 seconds)
+2018-11-28 04:44:52	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-28 04:47:57	-->	Tommy[D]_ (~TommyD]@gentoo/developer/tommy) has joined #gentoo
+2018-11-28 04:47:57	--	Mode #gentoo [+v Tommy[D]_] by ChanServ
+2018-11-28 04:49:36	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-11-28 04:50:00	<--	JeffATL (~FYRD@99-157-54-155.lightspeed.tukrga.sbcglobal.net) has quit (Quit: This computer has gone to sleep)
+2018-11-28 04:50:04	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #gentoo
+2018-11-28 04:50:46	<--	Necktwi (~necktwi@175.101.146.135) has quit (Quit: leaving)
+2018-11-28 04:50:58	<--	kitsunenokenja (~kitsunech@68.91.220.96) has quit (Ping timeout: 250 seconds)
+2018-11-28 04:51:27	<--	Tommy[D] (~TommyD]@gentoo/developer/tommy) has quit (Ping timeout: 246 seconds)
+2018-11-28 04:51:36	-->	Necktwi (~necktwi@175.101.146.135) has joined #gentoo
+2018-11-28 04:51:39	davidk_	grknight: I took liberty to file the bug and hope for the higher powers to sort out whether I am barking up the wrong tree :)
+2018-11-28 04:52:17	<--	cjbayliss (~user@unaffiliated/cjbayliss) has quit (Quit: brb, changing phones OS)
+2018-11-28 04:52:35	-->	unomystEz (~unomystEz@unaffiliated/unomystez) has joined #gentoo
+2018-11-28 04:53:33	<--	aplainzetakind (~dk@2E8BD6FE.catv.pool.telekom.hu) has quit (Ping timeout: 246 seconds)
+2018-11-28 04:55:39	-->	Mony (~sobieski@ganymede.usys.eu) has joined #gentoo
+2018-11-28 04:56:39	-->	qubap42 (~qubap42@p5B05B88B.dip0.t-ipconnect.de) has joined #gentoo
+2018-11-28 04:57:15	-->	kingkong1ok (~kingkongm@61.140.246.217) has joined #gentoo
+2018-11-28 04:59:47	<--	kingkongmok (~kingkongm@61.140.244.123) has quit (Ping timeout: 240 seconds)
+2018-11-28 05:00:01	-->	lahe (~lahe@93-167-191-90.dyn.estpak.ee) has joined #gentoo
+2018-11-28 05:00:30	<--	lahe (~lahe@93-167-191-90.dyn.estpak.ee) has quit (Client Quit)
+2018-11-28 05:00:38	<--	quba42 (~qubap42@p5B05B68E.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 05:00:41	-->	lahe (~lahe@93-167-191-90.dyn.estpak.ee) has joined #gentoo
+2018-11-28 05:01:46	<--	Supersonic (~Supersoni@gaf/supersonic112) has quit (Ping timeout: 268 seconds)
+2018-11-28 05:01:53	<--	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has quit (Remote host closed the connection)
+2018-11-28 05:03:09	-->	hurikhan77 (~quassel@2a02:8109:c40:3f2b::12b) has joined #gentoo
+2018-11-28 05:05:42	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:06:05	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #gentoo
+2018-11-28 05:06:29	-->	Supersonic (~Supersoni@gaf/supersonic112) has joined #gentoo
+2018-11-28 05:06:45	-->	catpig (~catpig@2a02:810a:980:2ea0:793c:708:acae:da1f) has joined #gentoo
+2018-11-28 05:07:32	<--	steils (~stefan@pripet.hukot.net) has quit (Remote host closed the connection)
+2018-11-28 05:14:15	unomystEz	any recommendations on microtik router to get for 3 devices and apu2d4 + APU-AC-Pro?
+2018-11-28 05:15:18	+kurly	nah this is #gentoo, we do gentoo linux support.  maybe #gentoo-chat or ##networking?
+2018-11-28 05:18:45	unomystEz	kurly: yes, mispaste - sorry!
+2018-11-28 05:20:05	+kurly	no problem, good luck!
+2018-11-28 05:24:44	<--	CrazyEddy (crazyed@wrongplanet/CrazyEddy) has quit (Remote host closed the connection)
+2018-11-28 05:25:13	-->	BjH_ (~bjh@host-091-097-032-014.ewe-ip-backbone.de) has joined #gentoo
+2018-11-28 05:25:23	-->	user___ (~user@fsf/member/fling) has joined #gentoo
+2018-11-28 05:25:58	-->	berti (~quassel@89.244.97.143) has joined #gentoo
+2018-11-28 05:26:05	--	user___ is now known as fling
+2018-11-28 05:29:37	<--	BjH (~bjh@host-091-097-015-054.ewe-ip-backbone.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 05:29:37	--	BjH_ is now known as BjH
+2018-11-28 05:29:58	<--	berti_ (~quassel@89.244.104.253) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:31:45	-->	CrazyEddy (~oligohydr@wrongplanet/CrazyEddy) has joined #gentoo
+2018-11-28 05:32:00	-->	wokko (~wokko@gateway/tor-sasl/wokko) has joined #gentoo
+2018-11-28 05:32:10	-->	Renich (~Renich@91.92.71.51) has joined #gentoo
+2018-11-28 05:34:18	<--	GNU\Jack (~1000@127.245.196.77.rev.sfr.net) has quit (Ping timeout: 245 seconds)
+2018-11-28 05:36:01	Psyb3rN4ut	hey...whats the @ for with btrfs subvolumes?
+2018-11-28 05:36:43	Psyb3rN4ut	does it actually do something? or just a best practice to visually identify it as a subvolume and not an ordinary dir
+2018-11-28 05:39:44	CompanionCube	anyone know a good gentoo background image for SDDM?
+2018-11-28 05:40:08	CompanionCube	I like the one used by LightDM but it'd be better to have one that doens't say that on it.
+2018-11-28 05:40:39	Psyb3rN4ut	CompanionCube: you can make it whatever you want....mine was the DeathStar back when i used sddm
+2018-11-28 05:40:46	<--	Renich (~Renich@91.92.71.51) has quit (Ping timeout: 240 seconds)
+2018-11-28 05:41:04	CompanionCube	Psyb3rN4ut: see above.
+2018-11-28 05:42:02	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Quit: http://quassel-irc.org - Discuter simplement. Partout.)
+2018-11-28 05:43:12	<--	BCMM (~BCMM@unaffiliated/bcmm) has quit (Quit: Konversation terminated!)
+2018-11-28 05:43:27	Psyb3rN4ut	CompanionCube: you want to use the one from lightdm without the words? will take 2min in GIMP to paint over that prbly
+2018-11-28 05:45:21	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #gentoo
+2018-11-28 05:46:25	+wraeth	CompanionCube: I don't know if you'll find an unbranded version of that image, but perhaps check out https://www.gentoo.org/inside-gentoo/artwork/ and/or "gentoo 1920x1080" in images.google.com (adjusting resolution as needed).
+2018-11-28 05:46:33	-->	tryte_ (~tryte@gateway/tor-sasl/tryte) has joined #gentoo
+2018-11-28 05:46:44	-->	GNU\Jack (~1000@127.245.196.77.rev.sfr.net) has joined #gentoo
+2018-11-28 05:46:55	wokko	CompanionCube: https://www.opendesktop.org/p/1145554/ background imabge to use
+2018-11-28 05:47:05	wokko	image*
+2018-11-28 05:47:11	<--	tryte (~tryte@gateway/tor-sasl/tryte) has quit (Ping timeout: 256 seconds)
+2018-11-28 05:52:48	-->	Renich (~Renich@91.92.71.51) has joined #gentoo
+2018-11-28 05:53:53	-->	ghostav (~ghostav@gateway/tor-sasl/ghostav) has joined #gentoo
+2018-11-28 05:54:19	-->	alexandros_c (~quassel@unaffiliated/alexandros-c/x-1684531) has joined #gentoo
+2018-11-28 05:56:49	<--	ghostav_ (~ghostav@gateway/tor-sasl/ghostav) has quit (Ping timeout: 256 seconds)
+2018-11-28 05:56:58	-->	cjbayliss (~user@unaffiliated/cjbayliss) has joined #gentoo
+2018-11-28 05:59:44	<--	muffindrake (~muffindra@unaffiliated/muffindrake) has quit (Ping timeout: 268 seconds)
+2018-11-28 06:01:05	<--	faulskemper (~marcuse@i59F54970.versanet.de) has quit (Remote host closed the connection)
+2018-11-28 06:01:31	-->	muffindrake (~muffindra@unaffiliated/muffindrake) has joined #gentoo
+2018-11-28 06:02:30	<--	fling (~user@fsf/member/fling) has quit (Remote host closed the connection)
+2018-11-28 06:04:01	 *	CompanionCube has done a bad hackjob of it in GIMP
+2018-11-28 06:05:06	Psyb3rN4ut	CompanionCube: try the heal function
+2018-11-28 06:05:21	CompanionCube	Psyb3rN4ut: heal and clone were indeed useful
+2018-11-28 06:06:28	-->	kingkongmok (~kingkongm@61.140.246.217) has joined #gentoo
+2018-11-28 06:07:20	<--	Renich (~Renich@91.92.71.51) has quit (Ping timeout: 272 seconds)
+2018-11-28 06:08:54	<--	dbermond (~dbermond@archlinux/trusteduser/dbermond) has quit (Remote host closed the connection)
+2018-11-28 06:09:42	<--	kingkong1ok (~kingkongm@61.140.246.217) has quit (Ping timeout: 268 seconds)
+2018-11-28 06:11:07	Psyb3rN4ut	does it actually do something? or just a best practice to visually identify it as a subvolume and not an ordinary dir
+2018-11-28 06:11:12	Psyb3rN4ut	hey...whats the @ for with btrfs subvolumes?
+2018-11-28 06:11:26	JohnnyMnemonic	what is the best course of action upon discovering corrupted package innstalls?
+2018-11-28 06:12:00	Psyb3rN4ut	JohnnyMnemonic: rebuild package?
+2018-11-28 06:12:25	Psyb3rN4ut	JohnnyMnemonic: but....why is it corrupt?  thats the more important question
+2018-11-28 06:12:40	+kurly	JohnnyMnemonic: questions out of context are hard to answer
+2018-11-28 06:12:49	JohnnyMnemonic	sorry
+2018-11-28 06:12:56	+kurly	Psyb3rN4ut: you pasted your repeat question in the wrong order ;P
+2018-11-28 06:12:57	Psyb3rN4ut	JohnnyMnemonic: could be a failing disk
+2018-11-28 06:13:00	JohnnyMnemonic	it seems i have a few corrupted packages on my system
+2018-11-28 06:13:04	Psyb3rN4ut	kurly: yeah...haha
+2018-11-28 06:13:06	JohnnyMnemonic	and the are causing build failures
+2018-11-28 06:13:22	+kurly	JohnnyMnemonic: yes, I vaguely remember your problem from earlier; you'll have to refresh the channel's memory

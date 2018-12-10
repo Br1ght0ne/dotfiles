@@ -36,8 +36,20 @@ writeiso() {
     sudo dd if="$1" of="$2" status=progress bs=4M oflag=sync
 }
 
+mountiso() {
+    sudo mount -o loop "$1" /mnt/iso
+}
+
 decrypt() {
     $1 <(gpg2 --decrypt $2)
+}
+
+dotnet-boot() {
+    mkdir $1
+    cd $1
+    dotnet new sln
+    dotnet new $2
+    dotnet sln add $1.csproj
 }
 
 ranger-cd() {
@@ -50,6 +62,19 @@ ranger-cd() {
         cd -- "$(cat "$tempfile")"
     fi
     rm -f -- "$tempfile"
+}
+
+rename-screen() {
+    fname="$1"
+    mv ~/screen.png ~/pics/screenshots/"${fname}".png
+}
+
+fcopy() {
+    cat $1 | xclip -selection clipboard
+}
+
+wine64() {
+    WINEARCH=win64 WINEPREFIX=~/.wine64 wine $@
 }
 
 # Gentoo stuff

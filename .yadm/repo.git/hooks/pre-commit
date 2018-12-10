@@ -1,8 +1,0 @@
-#!/usr/bin/ruby
-
-diff = `git diff --cached`
-
-if diff.include?('.spacemacs.d/init.el') && diff.include?('package-selected-packages')
-    puts 'Please remove Spacemacs packages from the index.'
-    exit 1
-end

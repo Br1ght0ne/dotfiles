@@ -54,7 +54,7 @@ wm-restack = bspwm
 [bar/simple]
 enable-ipc = true
 locale = en_US.UTF-8
-monitor = LVDS1
+monitor = LVDS-1
 
 # width = 90%
 height = 28
@@ -71,7 +71,7 @@ line-color = #f00
 
 modules-left = bspwm keyboard cmus
 modules-center = date
-modules-right = battery brightness 
+modules-right = battery brightness
 ; border-size = 5
 ; border-color = #00000000
 
@@ -363,7 +363,7 @@ ws-icon-9 = X
 
 [module/brightness]
 type = internal/xbacklight
-output = LVDS1
+card = intel_backlight
 enable-scroll = true
 ; Available tags:
 ;   <label> (default)

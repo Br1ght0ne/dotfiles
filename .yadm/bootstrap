@@ -12,6 +12,8 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+# rubocop:disable Metrics/BlockLength
+
 Bootstrap.run(options) do
   category 'yadm' do
     action 'install envtpl via pip' do
@@ -23,9 +25,11 @@ Bootstrap.run(options) do
     action 'clone doom-emacs' do
       clone 'git@gitlab.com:/BrightOne/doom-emacs.git', '~/.emacs.d.doom'
     end
+
     action 'clone spacemacs' do
       clone 'https://github.com/syl20bnr/spacemacs', '~/.emacs.d.spacemacs'
     end
+
     action 'set doom-emacs as default' do
       execute 'switch-emacs doom'
     end
@@ -47,12 +51,15 @@ Bootstrap.run(options) do
           install(url, method: :script)
         end
       end
+
       action 'initialize zplugin' do
         execute 'zsh -c exit'
       end
+
       category 'prompts' do
         dir = 'https--github.com--sorin-ionescu--prezto--trunk--modules'
         path = File.expand_path("~/.zplugin/snippets/#{dir}/prompt/functions")
+
         action 'remove problematic prompts' do
           problematic = %w[agnoster powerlevel9k powerline pure]
           Pathname(path)
@@ -60,6 +67,7 @@ Bootstrap.run(options) do
             .select { |f| /prompt_(#{problematic.join('|')})_setup/ =~ f.to_s }
             .each(&:delete)
         end
+
         action 'fix steeef theme' do
           execute "sed -i \"93 s/} '$/}❯ '/\" #{path}/prompt_steeef_setup"
         end
@@ -67,3 +75,5 @@ Bootstrap.run(options) do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

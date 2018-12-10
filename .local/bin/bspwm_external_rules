@@ -22,8 +22,8 @@ end
 # Desktops
 case classname
 when 'Emacs'
-  puts "desktop=I\nfollow=off"
-when 'qutebrowser'
+  puts "desktop=I\nfollow=on"
+when 'qutebrowser', 'Firefox'
   puts "desktop=II\nfollow=off"
 when 'Wire', 'Riot', 'TelegramDesktop'
   puts "desktop=V\nfollow=off"

@@ -18,7 +18,7 @@ super + Return
 
 # brightness
 super + {Home,End}
-    light -{A,U} 5
+    light -{A,U} 10
 
 # program launcher
 super + {d,w}
@@ -48,7 +48,7 @@ super + {ctrl + m,alt + m,alt + u,shift + m}
 
 # Screenkey
 super + shift + s
-    pkill screenkey || screenkey
+    $HOME/.local/bin/toggle-screencast
 
 # Screenshots
 super + {_,shift} + i
@@ -72,11 +72,14 @@ super + {z,x,c,v,shift + z}
 super + alt + {z,x,c,v,b}
     music {prev,play,toggle,stop,next}
 
+super + {Left,Down,Up,Right}
+    music {prev,toggle,stop,next}
+
 # volume
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%
+	(pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%) && $HOME/.local/bin/notify-volume
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute 0 toggle && $HOME/.local/bin/notify-volume
 
 # bspwm hotkeys
 #
@@ -129,17 +132,21 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
-alt + {_,shift + }Tab
-	bspc node -f {next,prev}.local
-
 # focus the next/previous desktop in the current monitor
 super + {_,shift + }bracket{left,right}
-	bspc {desktop -f, node -d} {prev,next}.local
+	bspc {desktop -f, node -d} {prev,next}.occupied.local
 
 # focus the last node/desktop
-super + {Tab,grave}
-	bspc {desktop,monitor} -f last
+super + Tab
+	bspc desktop -f last
+super + shift + Tab
+    	bspc node -f last.local
+super + {_,shift +}grave
+    	bspc {node -f} {prev,next}.local
+
+# rotate windows
+super + {semicolon,apostrophe}
+    bspc node @/ -C {back,for}ward && bspc node -f last.local
 
 # swap with last local node
 super + {n,shift + n}

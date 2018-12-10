@@ -67,4 +67,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-export PATH="$HOME/.dotnet:$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin:$HOME/go/bin"
+export PATH="$HOME/.local/share/junest/bin:$HOME/.dotnet:$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin:$HOME/go/bin:/usr/lib/llvm/7/bin:/usr/lib/llvm/5/bin"
+
+# ccache
+export PATH="/usr/lib/ccache/bin:$PATH"

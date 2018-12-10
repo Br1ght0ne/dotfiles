@@ -61,3 +61,345 @@
 2018-09-02 16:30:14	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
 2018-09-02 16:30:34	-->	txgl3mos (~matheus@189.6.19.144) has joined #qutebrowser
 2018-09-02 16:30:34	<--	txgl3mos (~matheus@189.6.19.144) has quit (Excess Flood)
+2018-11-27 17:12:05	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-11-27 17:12:05	--	Topic for #qutebrowser is "Current version: v1.5.2 - https://www.qutebrowser.org/ - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - Pastebin: https://p.cmpl.cc/ - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-11-27 17:12:05	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Fri, 26 Oct 2018 11:25:34
+2018-11-27 17:12:05	--	Channel #qutebrowser: 201 nicks (0 ops, 0 voices, 201 normals)
+2018-11-27 17:12:05	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-11-27 17:12:10	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-11-27 17:12:22	<--	murkx (~mur@unaffiliated/murkx) has quit (Quit: WeeChat 2.3)
+2018-11-27 17:17:13	<--	chronus (~chronus@unaffiliated/chronus) has quit (Quit: bye)
+2018-11-27 17:21:02	-->	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has joined #qutebrowser
+2018-11-27 17:21:56	<--	glatzor (~glatzor@200116b860a357002199aae1a778c817.dip.versatel-1u1.de) has quit (Ping timeout: 264 seconds)
+2018-11-27 17:23:51	-->	cyfex (~cyfex@ppp091138144195.dsl.hol.gr) has joined #qutebrowser
+2018-11-27 17:27:11	<--	cyfex_ (~cyfex@ppp091138157149.dsl.hol.gr) has quit (Ping timeout: 250 seconds)
+2018-11-27 17:27:57	-->	Elodin (~weechat@unaffiliated/padawan) has joined #qutebrowser
+2018-11-27 17:32:00	-->	za1b1tsu (~bogdan@79.112.54.139) has joined #qutebrowser
+2018-11-27 17:39:33	-->	cyfex_ (~cyfex@ppp086104068212.access.hol.gr) has joined #qutebrowser
+2018-11-27 17:41:16	metastance	blawiz: search for part of that text with /, and then select it in visual mode
+2018-11-27 17:41:32	blawiz	:>
+2018-11-27 17:41:42	<--	ArturShaik (~ArturShai@212.112.100.88) has quit (Ping timeout: 268 seconds)
+2018-11-27 17:41:51	blawiz	not caret mode? is it documented somewhere?
+2018-11-27 17:42:07	<--	ninewise (~weechat@qutebrowser/dev/Noctua) has quit (Ping timeout: 240 seconds)
+2018-11-27 17:42:14	metastance	blawiz: oops, i meant caret mode
+2018-11-27 17:42:53	<--	cyfex (~cyfex@ppp091138144195.dsl.hol.gr) has quit (Ping timeout: 268 seconds)
+2018-11-27 17:43:24	blawiz	i think i asked about it before, and here is no documentation?
+2018-11-27 17:43:46	Alish	The-Compiler: everyone is saying terminator sucks alot. Is that true? I have used all lightweight terminals but I can't set them up just like this one.
+2018-11-27 17:43:57	The-Compiler	Alish: who's everyone?
+2018-11-27 17:44:04	The-Compiler	First time I hear it, and I'm quite happy with it
+2018-11-27 17:44:14	blawiz	kitty
+2018-11-27 17:44:49	Alish	The-Compiler: everyone means everywhere I share my scrot
+2018-11-27 17:44:55	brightone	blawiz: yeah, kitty is not bad. i used to use st, but kitty got me with better font support
+2018-11-27 17:45:20	blawiz	i aim to switch, still on urxvt
+2018-11-27 17:45:22	The-Compiler	I do want to try kitty, but the only gripe I have with termite is its keybindings being a bit non-intuitive
+2018-11-27 17:45:22	Alish	blawiz: I have been using kitty and it sucks more than terminator.
+2018-11-27 17:45:32	blawiz	Alish: oh ye? :[
+2018-11-27 17:45:43	The-Compiler	also, #qutebrowser-offtopic :)
+2018-11-27 17:46:17	blawiz	The-Compiler: is caret mode documented?
+2018-11-27 17:46:34	The-Compiler	blawiz: only the commands bound in that mode
+2018-11-27 17:47:04	blawiz	hm
+2018-11-27 17:47:13	Alish	I'm there. lets talk there in qb offtopic.
+2018-11-27 17:47:49	<--	za1b1tsu (~bogdan@79.112.54.139) has quit (Quit: WeeChat 2.2)
+2018-11-27 17:48:46	<--	Sajadi (~SaJaDi@089144203122.atnat0012.highway.a1.net) has quit (Remote host closed the connection)
+2018-11-27 17:48:58	<--	tyxie (~tyx@uppa-nat-193-55-218-3.univ-pau.fr) has quit (Quit: WeeChat 2.2)
+2018-11-27 17:49:54	-->	Sajadi (~SaJaDi@089144203122.atnat0012.highway.a1.net) has joined #qutebrowser
+2018-11-27 17:49:58	blawiz	feels too forced to go to offtopic chan :P
+2018-11-27 17:50:02	blawiz	nvm, bygones
+2018-11-27 17:50:13	<--	sQVe (~sQVe@unaffiliated/sqve) has quit (Quit: Bye!)
+2018-11-27 17:50:49	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #qutebrowser
+2018-11-27 17:54:33	amosbird	The-Compiler: really? It happens so frequently here that it's barely usable
+2018-11-27 17:55:42	The-Compiler	amosbird: never happened for any other reason here
+2018-11-27 18:03:41	The-Compiler	jgkamat: mypy now runs on Travis
+2018-11-27 18:06:30	jgkamat	Yayay :D
+2018-11-27 18:18:47	-->	kmarius (~kmarius@ip-178-203-147-91.hsi10.unitymediagroup.de) has joined #qutebrowser
+2018-11-27 18:25:31	-->	tyxie (~tyx@lfbn-bay-1-82-35.w83-193.abo.wanadoo.fr) has joined #qutebrowser
+2018-11-27 18:33:21	<--	chrissl (~chris@80-110-34-172.static.upcbusiness.at) has quit (Remote host closed the connection)
+2018-11-27 18:38:24	-->	chrissl (~chris@80-110-34-172.static.upcbusiness.at) has joined #qutebrowser
+2018-11-27 18:47:38	<--	Haudegen (~quassel@212-186-77-29.static.upcbusiness.at) has quit (Remote host closed the connection)
+2018-11-27 19:07:16	<--	sud0x3 (~sud0x3@79-67-18-122.dynamic.dsl.as9105.com) has quit (Ping timeout: 250 seconds)
+2018-11-27 19:08:20	-->	reet (~reet@mail.codelabs.ch) has joined #qutebrowser
+2018-11-27 19:08:35	reet	hi everyone
+2018-11-27 19:08:46	jgkamat	hellllo
+2018-11-27 19:08:56	reet	I just installed qutebrowser in a Ubuntu 18.04 virtualbox vm
+2018-11-27 19:09:19	reet	the browser window always stays on top and is completely black
+2018-11-27 19:09:38	reet	if i resize the window I see duck duck go in 80s disco style
+2018-11-27 19:09:45	reet	is this a known problem?
+2018-11-27 19:09:53	jgkamat	idk about the always on top thing but I've seen the black window if HW acceleration is disabled in the VM
+2018-11-27 19:10:07	reet	let me check, it should be enabled
+2018-11-27 19:10:17	jgkamat	also make sure guest additions are working
+2018-11-27 19:10:19	reet	def enabled
+2018-11-27 19:10:44	Alish	I was using web.whatsapp.com from my qb but now its saying use some other browsers
+2018-11-27 19:10:53	reet	ok let me check the additions, they are def installed, but might be outdated
+2018-11-27 19:11:33	reet	jgkamat: updating from 5.2.20 to 5.2.22
+2018-11-27 19:13:35	reet	browser is still black
+2018-11-27 19:13:37	reet	3d is working
+2018-11-27 19:14:06	jgkamat	hm, no clue then. Although if you updated it you might have to update kernel modules too if it's virtualbox
+2018-11-27 19:14:09	reet	ohh I was too fast, seems to be a vbox 3d prob
+2018-11-27 19:14:13	reet	glxgears is also black
+2018-11-27 19:14:31	jgkamat	yah, virtualized 3d is weiird
+2018-11-27 19:14:34	reet	the guest drivers are kernel modules
+2018-11-27 19:14:46	reet	and vbox update updates these
+2018-11-27 19:15:07	The-Compiler	reet: you might want to play with the qt.force_software_rendering setting
+2018-11-27 19:15:39	reet	The-Compiler: as fallback if I can't make hw rendering work?
+2018-11-27 19:15:43	The-Compiler	yeah
+2018-11-27 19:15:45	reet	ok
+2018-11-27 19:16:38	reet	thx will try
+2018-11-27 19:23:22	<--	hdqn (~rld@46-165-19-193.static.isp.enf.pl) has quit (Quit: Aaaaaaaa job on fire!)
+2018-11-27 19:28:00	-->	cyfex (~cyfex@ppp091138134187.dsl.hol.gr) has joined #qutebrowser
+2018-11-27 19:30:45	<--	cyfex_ (~cyfex@ppp086104068212.access.hol.gr) has quit (Ping timeout: 268 seconds)
+2018-11-27 19:32:32	-->	sud0x3 (~sud0x3@79-67-18-122.dynamic.dsl.as9105.com) has joined #qutebrowser
+2018-11-27 19:48:57	Alish	The-Compiler: today I can't access to web.whatsapp.com using qb
+2018-11-27 19:49:33	Alish	In my whatsapp today qb session is undefined.
+2018-11-27 19:49:58	-->	aydio (~adem@unaffiliated/aydio) has joined #qutebrowser
+2018-11-27 19:50:00	Alish	I was using it since months and never got a problem before
+2018-11-27 19:50:42	The-Compiler	Alish: what error do you get exactly?
+2018-11-27 19:51:52	Alish	web.whatsapp says you should use other browsers
+2018-11-27 19:52:17	The-Compiler	Alish: does it work with --temp-basedir?
+2018-11-27 19:53:10	The-Compiler	I'm guessing it's whatever non-default user agent you use
+2018-11-27 19:53:25	Alish	lemme check it
+2018-11-27 19:53:31	-->	rememberYou (~user@unaffiliated/rememberyou) has joined #qutebrowser
+2018-11-27 19:53:35	aydio	as of recently, my tabs have gotten higher, does anyone know why that is? https://ptpb.pw/ekzX
+2018-11-27 19:54:37	The-Compiler	aydio: huh, odd - do they look the same with --temp-basedir?
+2018-11-27 19:54:45	Alish	yeah its okay with --temp-basedir. which user agent I should use?
+2018-11-27 19:55:07	The-Compiler	Alish: the default
+2018-11-27 19:55:46	Alish	default is empty now
+2018-11-27 19:56:12	The-Compiler	yeah, which uses whatever QtWebEngine has built-in
+2018-11-27 19:56:42	aydio	The-Compiler: yeah, it's the same. Interestingly this seems to have happened when I changed the default font to Iosevka. However, when switching back to the default value, it turns back to normal. Also, when switching back to Iosevka, it stays normal as well.
+2018-11-27 19:56:54	The-Compiler	aydio: huh, weird
+2018-11-27 19:58:22	aydio	ok I think I found out why - this only happens when hooked up to my second monitor. Even though I disabled scaling in sway, it seems to do some HiDPI stuff on my laptop monitor (where the tab height fits perfectly)
+2018-11-27 19:58:26	aydio	really weird
+2018-11-27 19:59:07	-->	Tyresc (~Tyresc@linux-dusseldorf.cryptostorm.net) has joined #qutebrowser
+2018-11-27 19:59:48	<--	aydio (~adem@unaffiliated/aydio) has quit (Quit: WeeChat 2.3)
+2018-11-27 20:00:49	<--	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has quit (Quit: Leaving)
+2018-11-27 20:01:32	-->	aydio (~adem@unaffiliated/aydio) has joined #qutebrowser
+2018-11-27 20:02:07	aydio	after explicitly setting the scaling of my laptop display to 2, the tab height is displayed normally
+2018-11-27 20:03:32	jgkamat	nothing changed with tab sizing recently fwiw :/
+2018-11-27 20:03:56	jgkamat	I think we calculate the size of fonts through QT
+2018-11-27 20:07:47	-->	tzcrawford (~tzcrawfor@173.239.195.17) has joined #qutebrowser
+2018-11-27 20:08:55	Alish	can we use notify-send to get notifications of whatsapp like in chrome firefox if I open whatsapp web, I can recieve notification via dunst.
+2018-11-27 20:09:41	jgkamat	https://codereview.qt-project.org/#/c/205716/
+2018-11-27 20:12:46	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (Ping timeout: 246 seconds)
+2018-11-27 20:31:22	-->	Haudegen (~quassel@178.115.237.87.static.drei.at) has joined #qutebrowser
+2018-11-27 20:31:22	-->	hdqn (~rld@46-165-19-193.static.isp.enf.pl) has joined #qutebrowser
+2018-11-27 20:31:23	<--	brightone (~brightone@94.244.154.248.nash.net.ua) has quit (Ping timeout: 246 seconds)
+2018-11-27 20:31:23	--	irc: disconnected from server
+2018-11-27 20:31:50	-->	brightone (~brightone@94.244.154.248.nash.net.ua) has joined #qutebrowser
+2018-11-27 20:31:50	--	Topic for #qutebrowser is "Current version: v1.5.2 - https://www.qutebrowser.org/ - https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - Pastebin: https://p.cmpl.cc/ - #qutebrowser-dev for github/travis bots; #qutebrowser-offtopic for offtopic"
+2018-11-27 20:31:50	--	Topic set by The-Compiler (~compiler@qutebrowser/dev/The-Compiler) on Fri, 26 Oct 2018 11:25:34
+2018-11-27 20:31:50	--	Channel #qutebrowser: 202 nicks (0 ops, 0 voices, 202 normals)
+2018-11-27 20:31:50	--	URL for #qutebrowser: https://www.qutebrowser.org/
+2018-11-27 20:31:54	rememberYou	about the if statement, do you have an idea what I should check? I though to use xrandr and check if DP1 (my external monitor) is connected for that
+2018-11-27 20:32:01	--	Channel created on Mon, 20 Jan 2014 00:03:37
+2018-11-27 20:32:17	rememberYou	by *but QT* I mean, of QT_SCALE sorry
+2018-11-27 20:32:41	jgkamat	you can if you want, I would just check the hostname though personally
+2018-11-27 20:33:24	-->	cyfex_ (~cyfex@ppp037153148253.access.hol.gr) has joined #qutebrowser
+2018-11-27 20:34:10	rememberYou	alright, I will do that, thank you
+2018-11-27 20:34:13	-->	buttros_ (~buttros_@62.74.77.40) has joined #qutebrowser
+2018-11-27 20:36:12	--	ak is now known as Alish
+2018-11-27 20:36:44	<--	cyfex (~cyfex@ppp091138134187.dsl.hol.gr) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:38:35	<--	tzcrawford (~tzcrawfor@173.239.195.17) has quit (Ping timeout: 268 seconds)
+2018-11-27 20:39:27	<--	metastance (~vector@117.201.11.82) has quit (Quit: WeeChat 2.3)
+2018-11-27 20:39:45	-->	metastance (~vector@117.201.11.82) has joined #qutebrowser
+2018-11-27 20:41:43	<--	metastance (~vector@117.201.11.82) has quit (Client Quit)
+2018-11-27 20:42:04	-->	metastance (~vector@117.201.11.82) has joined #qutebrowser
+2018-11-27 20:47:43	The-Compiler	aydio: if www.googleadservices.com is blocked, you need to whitelist www.googleadservices.com and not googleadservices.com
+2018-11-27 20:48:46	<--	Alish (~z@gateway/tor-sasl/alishbakabeer) has quit (Quit: Alish)
+2018-11-27 20:51:14	-->	tzcrawford (~tzcrawfor@wlan-nat-outside-222-131.uoregon.edu) has joined #qutebrowser
+2018-11-27 20:51:49	<--	ff0x (~ff0x@gateway/tor-sasl/ff0x) has quit (Remote host closed the connection)
+2018-11-27 20:52:04	-->	ff0x (~ff0x@gateway/tor-sasl/ff0x) has joined #qutebrowser
+2018-11-27 20:53:42	<--	Purple-mx (purplematr@gateway/shell/matrix.org/x-xezbdgmflfvbpmhn) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:47	<--	copy` (copymatrix@gateway/shell/matrix.org/x-nboiepfrgucmsatx) has quit (Read error: Connection reset by peer)
+2018-11-27 20:53:55	<--	ada[m] (adamthebec@gateway/shell/matrix.org/x-xrbqbxxhvjgznpeo) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:57	<--	Evidlo (evidlomatr@purduelug/evidlo) has quit (Write error: Connection reset by peer)
+2018-11-27 20:53:58	<--	jkamat (jgkamatmat@qutebrowser/dev/jgkamat) has quit (Read error: Connection reset by peer)
+2018-11-27 20:55:00	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2018-11-27 20:55:17	-->	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has joined #qutebrowser
+2018-11-27 20:56:43	<--	hdqn (~rld@46-165-19-193.static.isp.enf.pl) has quit (Quit: Lost terminal)
+2018-11-27 21:05:48	<--	z3r0th (~z3r0th@gateway/tor-sasl/z3r0th) has quit (Remote host closed the connection)
+2018-11-27 21:06:31	-->	z3r0th (~z3r0th@gateway/tor-sasl/z3r0th) has joined #qutebrowser
+2018-11-27 21:06:46	-->	hdqn (~rld@46-165-19-193.static.isp.enf.pl) has joined #qutebrowser
+2018-11-27 21:14:46	<--	buttros_ (~buttros_@62.74.77.40) has quit (Quit: Leaving)
+2018-11-27 21:14:56	-->	ada[m] (adamthebec@gateway/shell/matrix.org/x-apuxghspyaxvkzed) has joined #qutebrowser
+2018-11-27 21:28:07	aydio	The-Compiler: thanks, after temp-disabling blocking, it worked out. good to know
+2018-11-27 21:28:22	<--	tzcrawford (~tzcrawfor@wlan-nat-outside-222-131.uoregon.edu) has quit (Ping timeout: 246 seconds)
+2018-11-27 21:31:26	-->	kmerfeld (~user@129.74.115.70) has joined #qutebrowser
+2018-11-27 21:42:38	-->	AK (~ak@gateway/tor-sasl/ak) has joined #qutebrowser
+2018-11-27 21:42:54	hdqn	hey guys
+2018-11-27 21:42:56	AK	Hi The-Compiler I'm not your new fan lol
+2018-11-27 21:42:59	-->	glatzor (~glatzor@200116b860a357002199aae1a778c817.dip.versatel-1u1.de) has joined #qutebrowser
+2018-11-27 21:43:11	jgkamat	:o
+2018-11-27 21:43:34	hdqn	I'm getting a core dump, apparently because I dumped on my qutebrowser profile with rsync
+2018-11-27 21:43:51	jgkamat	O.o
+2018-11-27 21:43:55	jgkamat	can you pastebin the dump
+2018-11-27 21:44:02	AK	lol jgkamat you were in my mind but I couldn't remember your name :-D
+2018-11-27 21:44:20	The-Compiler	so you're jgkamat's new fan then?
+2018-11-27 21:44:20	metastance	in chrome there's the "search google for this image" when you right click on image, is there an easy way to get that in qutebrowser?
+2018-11-27 21:44:40	AK	hdqn: please don't ask people which country they belong to :-)
+2018-11-27 21:45:01	The-Compiler	metastance: no, but you probably could do it via hints
+2018-11-27 21:45:10	<--	tyxie (~tyx@lfbn-bay-1-82-35.w83-193.abo.wanadoo.fr) has quit (Ping timeout: 246 seconds)
+2018-11-27 21:45:14	hdqn	'Error initializing SQL: Failed to prepare query "PRAGMA journal_mode=WAL":"database disk image is malformed Unable to execute statement' - halp pls? :)
+2018-11-27 21:45:18	hdqn	AK: why?
+2018-11-27 21:45:39	jgkamat	lolol AK :)
+2018-11-27 21:45:43	-->	Evidlo (evidlomatr@purduelug/evidlo) has joined #qutebrowser
+2018-11-27 21:45:44	-->	Purple-mx (purplematr@gateway/shell/matrix.org/x-rqlxfkcthsddhjus) has joined #qutebrowser
+2018-11-27 21:45:44	-->	copy` (copymatrix@gateway/shell/matrix.org/x-vhwqkhpcilwptsne) has joined #qutebrowser
+2018-11-27 21:45:44	-->	jkamat (jgkamatmat@qutebrowser/dev/jgkamat) has joined #qutebrowser
+2018-11-27 21:45:51	jgkamat	hdqn: do you have a copy of the file from before?
+2018-11-27 21:45:56	The-Compiler	hdqn: looks like your history.sqlite is corrupted
+2018-11-27 21:45:57	AK	The-Compiler: nah, I'm your fan. but he also helps me. I didn't mention his name with yours as I forgot his nickname
+2018-11-27 21:45:58	hdqn	jgkamat: of the what now?
+2018-11-27 21:46:07	hdqn	I rsynced all my stuff lolol
+2018-11-27 21:46:10	metastance	The-Compiler: i'm fine with that. but how?
+2018-11-27 21:46:11	jgkamat	ooooh :C
+2018-11-27 21:46:14	hdqn	oh yeah got backups
+2018-11-27 21:46:17	hdqn	used -b
+2018-11-27 21:46:19	jgkamat	:D
+2018-11-27 21:46:22	-->	cyfex (~cyfex@ppp037153150151.access.hol.gr) has joined #qutebrowser
+2018-11-27 21:46:35	hdqn	just not sure which file you mean ^-^"
+2018-11-27 21:46:40	hdqn	The-Compiler: oo ok
+2018-11-27 21:47:01	jgkamat	make sure you have all qb shutdown, and the file is history.sqlite in the data dir
+2018-11-27 21:47:33	metastance	The-Compiler: Aahh, got it...
+2018-11-27 21:47:46	jgkamat	yay :D
+2018-11-27 21:47:48	AK	I meant I'm not new one. I have been there before, just got my new account ready. I love shortnames
+2018-11-27 21:49:11	<--	aydio (~adem@unaffiliated/aydio) has quit (Quit: WeeChat 2.3)
+2018-11-27 21:49:30	<--	cyfex_ (~cyfex@ppp037153148253.access.hol.gr) has quit (Ping timeout: 268 seconds)
+2018-11-27 21:56:18	<--	Purple-mx (purplematr@gateway/shell/matrix.org/x-rqlxfkcthsddhjus) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:19	<--	Evidlo (evidlomatr@purduelug/evidlo) has quit (Read error: Connection reset by peer)
+2018-11-27 21:56:24	<--	jkamat (jgkamatmat@qutebrowser/dev/jgkamat) has quit (Remote host closed the connection)
+2018-11-27 21:56:25	<--	ada[m] (adamthebec@gateway/shell/matrix.org/x-apuxghspyaxvkzed) has quit (Remote host closed the connection)
+2018-11-27 21:56:34	<--	copy` (copymatrix@gateway/shell/matrix.org/x-vhwqkhpcilwptsne) has quit (Read error: Connection reset by peer)
+2018-11-27 21:58:16	hdqn	worked, thanks
+2018-11-27 21:58:26	hdqn	I hope it only stores history
+2018-11-27 21:58:54	jgkamat	I think it stores time visited and other things, it should be pretty easy to dump a row and see what it looks like
+2018-11-27 21:59:10	jgkamat	that frecency PR ads a couple of things to it too
+2018-11-27 21:59:26	<--	kmerfeld (~user@129.74.115.70) has quit (Quit: ERC (IRC client for Emacs 26.1))
+2018-11-27 21:59:45	AK	we had only few users with matrix
+2018-11-27 22:02:38	The-Compiler	really not sure what to do about that frecency PR
+2018-11-27 22:03:03	jgkamat	yahhhh :C
+2018-11-27 22:03:12	<--	gxt (~gxt@b2b-78-94-156-186.unitymedia.biz) has quit (Ping timeout: 250 seconds)
+2018-11-27 22:03:13	The-Compiler	the moment where they added multithreaded SQL stuff and claim it works just fine was the moment where I just want to shut it down to be honest...
+2018-11-27 22:03:24	The-Compiler	really not sure if it's worth the complexity
+2018-11-27 22:04:01	jgkamat	I really don't like the way that they're handling the locking either, I suspect it won't work properly in some cases (which is basically what I commented already)
+2018-11-27 22:04:08	jgkamat	I wonder if it's possible to make that kind of thing a plugin
+2018-11-27 22:04:22	The-Compiler	probably not
+2018-11-27 22:06:22	-->	ada[m] (adamthebec@gateway/shell/matrix.org/x-knfrpxseyvdorbqc) has joined #qutebrowser
+2018-11-27 22:09:56	-->	tzcrawford (~tzcrawfor@173.239.195.200) has joined #qutebrowser
+2018-11-27 22:36:22	-->	gxt (~gxt@2a02:908:e851:4020:ecdd:1d23:bafe:298b) has joined #qutebrowser
+2018-11-27 22:37:45	-->	copy` (copymatrix@gateway/shell/matrix.org/x-wshuhvjtcynztlwk) has joined #qutebrowser
+2018-11-27 22:37:45	-->	Evidlo (evidlomatr@purduelug/evidlo) has joined #qutebrowser
+2018-11-27 22:37:45	-->	jkamat (jgkamatmat@qutebrowser/dev/jgkamat) has joined #qutebrowser
+2018-11-27 22:37:45	-->	Purple-mx (purplematr@gateway/shell/matrix.org/x-cfxipieafebndlml) has joined #qutebrowser
+2018-11-27 22:43:53	<--	tzcrawford (~tzcrawfor@173.239.195.200) has quit (Ping timeout: 245 seconds)
+2018-11-27 22:44:53	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2018-11-27 22:45:22	-->	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has joined #qutebrowser
+2018-11-27 22:59:22	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2018-11-27 23:28:54	<--	koltrast_ (7ecff488@h77-53-57-114.cust.a3fiber.se) has quit (Quit: ZNC - http://znc.in)
+2018-11-27 23:29:56	-->	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has joined #qutebrowser
+2018-11-27 23:35:25	-->	koltrast (9ac24fb8@h77-53-57-114.cust.a3fiber.se) has joined #qutebrowser
+2018-11-27 23:53:45	<--	Haudegen (~quassel@178.115.237.87.static.drei.at) has quit (Remote host closed the connection)
+2018-11-27 23:54:48	<--	metastance (~vector@117.201.11.82) has quit (Quit: WeeChat 2.3)
+2018-11-27 23:59:44	<--	glatzor (~glatzor@200116b860a357002199aae1a778c817.dip.versatel-1u1.de) has quit (Ping timeout: 264 seconds)
+2018-11-28 00:03:41	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2018-11-28 00:05:29	<--	rememberYou (~user@unaffiliated/rememberyou) has quit (Remote host closed the connection)
+2018-11-28 00:18:11	<--	hdqn (~rld@46-165-19-193.static.isp.enf.pl) has quit (Quit: Buuuuuurnn, baby!)
+2018-11-28 00:28:27	-->	cyfex_ (~cyfex@ppp089047044024.access.hol.gr) has joined #qutebrowser
+2018-11-28 00:31:25	<--	cyfex (~cyfex@ppp037153150151.access.hol.gr) has quit (Ping timeout: 246 seconds)
+2018-11-28 00:36:27	<--	blawiz (~DD_comman@unaffiliated/blawiz) has quit (Quit: leaving)
+2018-11-28 00:41:23	-->	Haudegen (~quassel@178.115.237.87.static.drei.at) has joined #qutebrowser
+2018-11-28 01:01:48	<--	Jellyg00se (~Jellyg00s@host81-149-124-93.in-addr.btopenworld.com) has quit (Remote host closed the connection)
+2018-11-28 01:02:43	-->	Jellyg00se (~Jellyg00s@host81-149-124-93.in-addr.btopenworld.com) has joined #qutebrowser
+2018-11-28 01:08:00	AK	The-Compiler: This key belongs to you? 4CE1C13E
+2018-11-28 01:10:16	<--	Haudegen (~quassel@178.115.237.87.static.drei.at) has quit (Ping timeout: 246 seconds)
+2018-11-28 01:11:42	<--	sud0x3 (~sud0x3@79-67-18-122.dynamic.dsl.as9105.com) has quit (Ping timeout: 250 seconds)
+2018-11-28 01:11:51	jgkamat	https://www.the-compiler.org/pubkey.asc
+2018-11-28 01:13:10	AK	I'm gonna curl | gpg --import
+2018-11-28 01:15:48	AK	He is another one. I did whois and was curious if he was the one I had in my keypair as he was also in #archlinux :-P
+2018-11-28 01:17:17	<--	walnut_burl (~oak@96.44.144.98) has quit (Quit: leaving)
+2018-11-28 01:29:02	<--	kmarius (~kmarius@ip-178-203-147-91.hsi10.unitymediagroup.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 01:35:35	<--	AK (~ak@gateway/tor-sasl/ak) has quit (Ping timeout: 256 seconds)
+2018-11-28 01:36:51	-->	AK (~ak@gateway/tor-sasl/ak) has joined #qutebrowser
+2018-11-28 02:00:19	-->	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has joined #qutebrowser
+2018-11-28 02:23:09	<--	AK (~ak@gateway/tor-sasl/ak) has quit (Remote host closed the connection)
+2018-11-28 02:23:28	-->	AK (~ak@gateway/tor-sasl/ak) has joined #qutebrowser
+2018-11-28 02:26:43	blu3r4d0n	So does qutebrowser allow popups?
+2018-11-28 02:30:12	blu3r4d0n	Ah I figured it out nvm
+2018-11-28 02:34:02	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2018-11-28 02:37:42	<--	AK (~ak@gateway/tor-sasl/ak) has quit (Remote host closed the connection)
+2018-11-28 02:37:59	-->	AK_ (~ak@gateway/tor-sasl/ak) has joined #qutebrowser
+2018-11-28 02:43:58	<--	AK_ (~ak@gateway/tor-sasl/ak) has quit (Remote host closed the connection)
+2018-11-28 02:44:13	-->	AK_ (~ak@gateway/tor-sasl/ak) has joined #qutebrowser
+2018-11-28 02:49:31	<--	AK_ (~ak@gateway/tor-sasl/ak) has quit (Remote host closed the connection)
+2018-11-28 02:52:37	-->	chrisg3 (~chrisg3@50.28.149.178) has joined #qutebrowser
+2018-11-28 02:57:34	-->	ArturShaik (~ArturShai@212.112.100.88) has joined #qutebrowser
+2018-11-28 03:00:28	<--	frolv (~frolv@CPE00fc8d4905d3-CM00fc8d4905d0.cpe.net.cable.rogers.com) has quit (Ping timeout: 250 seconds)
+2018-11-28 03:20:13	<--	d4nky (~keith@S0106802aa88eb867.wp.shawcable.net) has quit (Quit: WeeChat 2.3)
+2018-11-28 03:22:22	-->	revarre (~revarre@h85-238-212-187.cust.a3fiber.se) has joined #qutebrowser
+2018-11-28 03:22:30	revarre	hiya
+2018-11-28 03:23:48	-->	frolv (~frolv@CPE00fc8d4905d3-CM00fc8d4905d0.cpe.net.cable.rogers.com) has joined #qutebrowser
+2018-11-28 03:25:35	jgkamat	Hye
+2018-11-28 03:26:26	-->	d4nky (~keith@S0106802aa88eb867.wp.shawcable.net) has joined #qutebrowser
+2018-11-28 03:29:49	<--	tweg (dings@freeshell.de) has quit (Ping timeout: 252 seconds)
+2018-11-28 03:29:59	-->	tweg (dings@freeshell.de) has joined #qutebrowser
+2018-11-28 03:37:56	revarre	heya!
+2018-11-28 03:38:30	revarre	sooo first question! I get an error when i try to access settings page from start tutorial:
+2018-11-28 03:38:32	revarre	Also.. Do anyone know why my AC and
+2018-11-28 03:38:35	revarre	woops
+2018-11-28 03:38:36	revarre	lol
+2018-11-28 03:39:14	<--	chrisg3 (~chrisg3@50.28.149.178) has quit (Ping timeout: 268 seconds)
+2018-11-28 03:39:27	jgkamat	Uh
+2018-11-28 03:39:35	revarre	The webpage at qute://settings might be temporarily down or it may have moved permanently to a new web address.
+2018-11-28 03:39:35	revarre	ERR_ACCESS_DENIED
+2018-11-28 03:39:39	revarre	there we go xD
+2018-11-28 03:40:02	revarre	also the marker in carot mode is white? on a whbite page? :P
+2018-11-28 03:40:09	jgkamat	Do you have multiple set pages open? Does it happen in qutebrowser --temp-basedir
+2018-11-28 03:40:20	jgkamat	I dont think it should be white
+2018-11-28 03:40:30	-->	chrisg3 (~chrisg3@50.28.149.178) has joined #qutebrowser
+2018-11-28 03:40:50	revarre	I'll check sec
+2018-11-28 03:43:09	<--	Tyresc (~Tyresc@linux-dusseldorf.cryptostorm.net) has quit (Quit: WeeChat 2.3-dev)
+2018-11-28 03:46:01	revarre	nope :) but weird thing is that it works in both the old runtime and the new XD
+2018-11-28 03:46:57	revarre	but the marker is still .. light grey, in a white background in caret mode.. well i guess its editable in settings :)
+2018-11-28 03:47:29	jgkamat	How did you install qb, and can you pastebin your :version revarre
+2018-11-28 03:48:08	<--	gxt (~gxt@2a02:908:e851:4020:ecdd:1d23:bafe:298b) has quit (Ping timeout: 250 seconds)
+2018-11-28 03:48:48	jgkamat	I'm not sure if the caret is configurable without a custom stylesheet
+2018-11-28 03:49:35	-->	gxt (~gxt@2a02:908:e851:4020:1446:d14e:de2f:ea7e) has joined #qutebrowser
+2018-11-28 03:49:47	revarre	through pacman, I am running manjaro https://paste.the-compiler.org/view/96c227d4
+2018-11-28 03:50:55	revarre	arch-manjaro :=
+2018-11-28 03:52:54	jgkamat	No clue then, I'd stick around to see if other people know anything though
+2018-11-28 03:53:44	revarre	Aiit, thanks man :)
+2018-11-28 03:54:01	revarre	its not a big of a problem if it doesnt reocccur :)
+2018-11-28 03:59:56	jgkamat	oh it only happens sometimes?
+2018-11-28 04:04:25	revarre	First start :)
+2018-11-28 04:04:32	revarre	marker is still white though
+2018-11-28 04:04:43	revarre	Is there a dark mode btw?
+2018-11-28 04:04:57	<--	revarre (~revarre@h85-238-212-187.cust.a3fiber.se) has quit (Remote host closed the connection)
+2018-11-28 04:05:34	-->	revarre (~revarre@85.238.212.187) has joined #qutebrowser
+2018-11-28 04:05:49	revarre	oops i accidently quit xD
+2018-11-28 04:06:05	jgkamat	revarre: a lot of people use the solarzied-everything stylesheet
+2018-11-28 04:06:10	jgkamat	there's also greasemonkey themes which work
+2018-11-28 04:06:26	revarre	cool :)
+2018-11-28 04:07:17	revarre	btw can u simulate mouse movement (for e.g. enabling on:hover thumbnails) on videos?
+2018-11-28 04:07:27	jgkamat	;h I think
+2018-11-28 04:07:46	revarre	hehe ok :)
+2018-11-28 04:23:39	-->	cadex (~cadex@c-66-30-117-13.hsd1.ma.comcast.net) has joined #qutebrowser
+2018-11-28 04:23:45	cadex	\names
+2018-11-28 04:30:33	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2018-11-28 04:30:40	-->	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has joined #qutebrowser
+2018-11-28 04:34:55	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #qutebrowser
+2018-11-28 04:55:00	<--	chrisg3 (~chrisg3@50.28.149.178) has quit (Remote host closed the connection)
+2018-11-28 05:05:16	<--	derk0pf (~derk0pf@p57ADCAB3.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:05:42	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:06:05	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #qutebrowser
+2018-11-28 05:07:49	<--	Sajadi (~SaJaDi@089144203122.atnat0012.highway.a1.net) has quit (Remote host closed the connection)
+2018-11-28 05:17:15	-->	batman_nair (~batman_na@111.92.78.172) has joined #qutebrowser
+2018-11-28 05:19:08	<--	ranzpirat (~anon@unaffiliated/ranzpirat) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:20:00	-->	ranzpirat (~anon@unaffiliated/ranzpirat) has joined #qutebrowser
+2018-11-28 05:29:38	-->	tzcrawford (~tzcrawfor@173.239.195.214) has joined #qutebrowser
+2018-11-28 05:31:39	-->	Joschasa_ (~andre@i577B2F7B.versanet.de) has joined #qutebrowser
+2018-11-28 05:35:41	<--	Joschasa (~andre@i59F6757C.versanet.de) has quit (Ping timeout: 268 seconds)
+2018-11-28 05:35:44	--	Joschasa_ is now known as Joschasa
+2018-11-28 05:39:01	<--	batman_nair (~batman_na@111.92.78.172) has quit (Remote host closed the connection)
+2018-11-28 05:39:04	<--	tzcrawford (~tzcrawfor@173.239.195.214) has quit (Ping timeout: 250 seconds)
+2018-11-28 05:42:02	<--	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has quit (Quit: http://quassel-irc.org - Discuter simplement. Partout.)
+2018-11-28 05:44:16	<--	bjgbob (~bjgbob@lugatgt/member/bjgbob) has quit (Quit: ZNC 1.6.2 - http://znc.in)
+2018-11-28 05:45:21	-->	maolang (~quassel@modemcable042.189-201-24.mc.videotron.ca) has joined #qutebrowser
+2018-11-28 05:46:57	-->	bjgbob (~bjgbob@lugatgt/member/bjgbob) has joined #qutebrowser

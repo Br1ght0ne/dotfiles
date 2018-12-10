@@ -351,7 +351,7 @@ c.completion.timestamp_format = '%Y-%m-%d'
 # Number of URLs to show in the web history. 0: no history / -1:
 # unlimited
 # Type: Int
-c.completion.web_history_max_items = -1
+c.completion.web_history.max_items = -1
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
@@ -400,7 +400,7 @@ c.downloads.remove_finished = 500
 # `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
 # Same as `{column}`, but starting from index 0.
 # Type: ShellCommand
-c.editor.command = ['st', '-c', 'st-floating', '-e', 'vim', '{}']
+c.editor.command = ['emacsclient', '-c', '-a', 'vim', '-nw', '{file}', "+{line}:{column}"]
 
 # Encoding to use for the editor.
 # Type: Encoding
@@ -535,8 +535,8 @@ c.prompt.filebrowser = True
 c.prompt.radius = 8
 
 # Show a scrollbar.
-# Type: Bool
-c.scrolling.bar = False
+# Type: String
+c.scrolling.bar = 'when-searching'
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.

@@ -96,7 +96,7 @@ end
 #
 
 def autodmenu
-  ['rofi -dmenu', 'dmenu'].find { |launcher| `which #{launcher.split.first} -v`; $?.success? }
+  ['rofi -dmenu', 'dmenu'].find { |launcher| `which #{launcher.split.first}`; $?.success? }
 end
 
 #==============#
