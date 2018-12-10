@@ -1,0 +1,38 @@
+[Default Applications]
+x-scheme-handler/http=qutebrowser-client.desktop
+x-scheme-handler/https=qutebrowser-client.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+image/png=feh.desktop
+image/jpeg=feh.desktop
+image/jpg=feh.desktop
+video/x-flv=mpv.desktop
+video/x-matroska=mpv.desktop
+text/plain=emacsclient.desktop
+text/x-shellscript=emacsclient.desktop
+text/html=qutebrowser-client.desktop
+x-scheme-handler/about=qutebrowser-client.desktop
+x-scheme-handler/unknown=qutebrowser-client.desktop
+x-scheme-handler/ocs=ocs-url.desktop
+x-scheme-handler/mailto=claws-mail.desktop
+message/rfc822=claws-mail.desktop
+x-scheme-handler/discord-378483863044882443=discord-378483863044882443.desktop
+x-scheme-handler/itchio=io.itch.itch.desktop
+application/vnd.powdertoy.save=powdertoy-tpt-open.desktop
+x-scheme-handler/ptsave=powdertoy-tpt-ptsave.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+application/pdf=zathura.desktop
+
+[Added Associations]
+image/png=sxiv.desktop;userapp-sxiv-P16IFZ.desktop;feh.desktop;userapp-vimiv-TSYKFZ.desktop;ristretto.desktop;wine-extension-png.desktop;
+video/x-flv=mpv.desktop;
+video/x-matroska=org.xfce.Parole.desktop;mpv.desktop;
+image/jpeg=userapp-vimiv-OAJOFZ.desktop;
+text/plain=mousepad.desktop;wine-extension-txt.desktop;
+text/x-mpsub=mousepad.desktop;
+application/x-ms-dos-executable=wine.desktop;
+text/x-log=mousepad.desktop;
+application/x-shellscript=emacs.desktop;
+x-scheme-handler/mailto=claws-mail.desktop;claws-mail.desktop;
+message/rfc822=claws-mail.desktop;claws-mail.desktop;
+
+[Removed Associations]
