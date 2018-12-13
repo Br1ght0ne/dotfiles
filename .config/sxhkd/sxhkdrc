@@ -1,83 +1,89 @@
-#
-# wm independent hotkeys
-#
+# sxhkd
 
-# editor
-super + {e,shift + e}
-    {emacs,emacsclient -c}
-
-# browser
-super + b
-    qutebrowser
-
-# terminal emulator
-# super + {_,shift + }Return
-	# {st -e /bin/zsh --login, tdrop -ma --wm bspwm -w -4 -h 50% -y 30 -s dropdown st}
-super + Return
-    kitty -1
-
-# brightness
-super + {Home,End}
-    light -{A,U} 10
-
-# program launcher
-super + {d,w}
-	rofi -show {drun -m 0,window}
-super + p
-	rofi-pass
-
-# make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# lock
-super + Pause
-	lock.sh
+# apps
 
-# restart polybar
-super + shift + b
-	POLYRESTART_BSPWM=1 polyrestart.sh
+super + Return
+    kitty -1
 
-# Webcam
-super + o
-	$HOME/.local/bin/camtoggle
+super + {r,s}
+    kitty {ranger,dbus-launch cmus}
 
-# mount.sh
-super + {ctrl + m,alt + m,alt + u,shift + m}
-    $HOME/.local/bin/mount.sh {ask,mount,umount,_}
+super + {e,shift + e}
+    {emacs,emacsclient -c}
 
-# Screenkey
-super + shift + s
-    $HOME/.local/bin/toggle-screencast
+super + b
+    qutebrowser
 
-# Screenshots
-super + {_,shift} + i
-	$HOME/.local/bin/maim.sh {_,-s}
+# environment
 
-# Powersave
-super + shift + p
-    $HOME/.local/bin/powersave ask
+## layout
 
-super + shift + o
-    $HOME/.local/bin/rofi-poweroff
-
-# Layout
 super + {z,x,c,v,shift + z}
 	layout {us,ru,ua,dvp,vanilla}
 
-# music
-{XF86AudioPlay,XF86AudioStop,XF86AudioPrev,XF86AudioNext}
-	music {toggle,stop,prev,next}
+## screen
 
+super + Pause
+	lock.sh
+
+### brightness
+
+super + {Home,End}
+    light -{A,U} 10
+
+super + shift + {Home,End}
+    light -{A,U} 25
+
+super + ctrl + Home
+    $HOME/.local/bin/rofi-brightness
+
+### screenshots
+
+super + {_,shift} + Print
+	$HOME/.local/bin/maim.sh {_,-s}
+
+super + shift + {o,s}
+    $HOME/.local/bin/toggle-{camera,screencast}
+
+## rofi
+
+super + {d,w}
+	rofi -show {drun -m 0,window}
+
+super + p
+	rofi-pass
+
+super + {ctrl + m,alt + m,alt + u,shift + m}
+    $HOME/.local/bin/mount.sh {ask,mount,umount,_}
+
+super + shift + p
+    $HOME/.local/bin/powersave ask
+
+## polybar
+
+super + shift + b
+	POLYRESTART_BSPWM=1 polyrestart.sh
+
+## music
+
+{XF86AudioPrev,XF86AudioPlay,XF86AudioStop,XF86AudioNext}
+	music {prev,toggle,stop,next}
+
+### cmus-like
 super + alt + {z,x,c,v,b}
     music {prev,play,toggle,stop,next}
 
 super + {Left,Down,Up,Right}
     music {prev,toggle,stop,next}
 
-# volume
+## volume
+
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
 	(pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%) && $HOME/.local/bin/notify-volume
+
 XF86AudioMute
 	pactl set-sink-mute 0 toggle && $HOME/.local/bin/notify-volume
 
@@ -113,7 +119,7 @@ super + {g, shift + g}
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,shift + t,shift + f,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
