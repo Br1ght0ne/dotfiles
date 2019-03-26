@@ -71,3 +71,12 @@ export PATH="$HOME/.local/share/junest/bin:$HOME/.dotnet:$HOME/.rbenv/shims:$HOM
 
 # ccache
 export PATH="/usr/lib/ccache/bin:$PATH"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
+export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
+
+# Homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)

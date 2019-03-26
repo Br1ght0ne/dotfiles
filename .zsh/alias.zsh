@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 org2pdf() {
     out=`basename $1 .org`
     pandoc -s "$1" -o "${out}.pdf" --pdf-engine=xelatex -V mainfont="Open Sans" -V geometry:margin=1in
@@ -77,6 +79,14 @@ wine64() {
     WINEARCH=win64 WINEPREFIX=~/.wine64 wine $@
 }
 
+pg() {
+    ps aux | grep "[${1:0:1}]${1:1}"
+}
+
+serveo() {
+    ssh -R 80:localhost:${1:-3000} serveo.net
+}
+
 # Gentoo stuff
 alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
 alias sync-gfu='sudo eix-sync && gfu'
@@ -85,6 +95,7 @@ alias ask-sync-gfu="sudo eix-sync && ask-gfu"
 alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j6 && sudo make -j6 modules_install && sudo make -j6 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
 
 alias cp='cp --reflink=auto'
+alias doom='~/.emacs.d.doom/bin/doom'
 alias e='$EDITOR'
 alias em='emacsclient -a vim -t'
 alias emc='emacsclient -c -a vim'
@@ -98,14 +109,20 @@ alias m='ncmpcpp'
 alias mpm='mpv --no-video'
 alias n='nnn'
 alias news='newsboat'
-alias pg='ps aux | grep'
+alias rf='rifle'
 alias rss='canto-curses'
-alias rtv='RTV_URLVIEWER="urlscan -d -r \"urlopen {}\"" rtv'
+alias rtv='RTV_URLVIEWER="urlscan -d -r \"urlopen {}\"" rtv --enable-media'
 alias q='qutebrowser'
 alias se='sudo emacsclient -a vim -t'
 alias sec='sudo emacsclient -c -a vim'
-alias t='trans -t'
+alias ts='trans -t'
 alias unmerge='sudo emerge --unmerge'
 alias v='$VISUAL'
 alias z='zathura'
 alias X='startx'
+
+# Ruby
+alias rac='bundle exec rails console'
+alias bu='bundle'
+alias bue='bundle exec'
+alias bus='bundle exec rspec'
