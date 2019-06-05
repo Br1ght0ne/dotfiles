@@ -87,6 +87,10 @@ serveo() {
     ssh -R 80:localhost:${1:-3000} serveo.net
 }
 
+git-branch-current() {
+    git branch | grep '^\*' | cut -d' ' -f2
+}
+
 # Gentoo stuff
 alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
 alias sync-gfu='sudo eix-sync && gfu'
@@ -101,6 +105,7 @@ alias em='emacsclient -a vim -t'
 alias emc='emacsclient -c -a vim'
 alias tddg="BROWSER=links ddgr"
 alias f='ranger-cd'
+alias ffsend='docker run --rm -it -v $(pwd):/data timvisee/ffsend'
 alias hiber='sudo zzz || sudo systemctl hibernate -i'
 alias ls='exa'
 alias l='ls -1a'
@@ -126,3 +131,18 @@ alias rac='bundle exec rails console'
 alias bu='bundle'
 alias bue='bundle exec'
 alias bus='bundle exec rspec'
+
+# Antibody
+alias abu='antibody bundle < ~/.zsh/plugins.txt >| ~/.zsh/plugins.zsh'
+
+# Docker
+docker-sh() {
+    docker run -w /src -v $(pwd):/src --rm "$1" ${@:2}
+}
+
+# Exercism
+ex-test() {
+    language=$(cd .. && basename $(pwd))
+    image=${$(sed -n "/${language}:/{n;p;}" ../../.gitlab-ci.yml | awk '{print $2}')}
+    docker-sh "$image" $@
+}

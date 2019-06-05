@@ -55,5 +55,5 @@ export SPACESHIP_ELIXIR_SYMBOL=" "
 
 export TERM=xterm-256color
 
-( cd && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower )
+[[ -f ~/.purepower ]] || ( cd && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower )
 source ~/.purepower
