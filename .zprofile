@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR='emacsclient -a vim -nw -c'
+export EDITOR='emacsclient -a vim -c'
 export VISUAL='emacsclient -a vim -c'
 export PAGER='less'
 
@@ -72,11 +72,14 @@ export PATH="$HOME/.local/share/junest/bin:$HOME/.dotnet:$HOME/.rbenv/shims:$HOM
 # ccache
 export PATH="/usr/lib/ccache/bin:$PATH"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
 export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 
 # Homebrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+
+export PATH="$HOME/.cargo/bin:$PATH"
