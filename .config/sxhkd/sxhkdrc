@@ -6,13 +6,16 @@ super + Escape
 # apps
 
 super + Return
-    kitty -1
+    alacritty
 
 super + {r,s}
-    kitty {ranger,dbus-launch cmus}
+    alacritty -e {ranger,dbus-launch cmus}
 
 super + {e,shift + e}
     {emacs,emacsclient -c}
+
+super + shift + v
+    $HOME/.local/bin/vimedit
 
 super + b
     qutebrowser
@@ -48,10 +51,13 @@ super + {_,shift} + Print
 super + shift + {o,s}
     $HOME/.local/bin/toggle-{camera,screencast}
 
+super + Prior
+    $HOME/.local/bin/cliptoqr
+
 ## rofi
 
-super + {d,w}
-	rofi -show {drun -m 0,window}
+super + {d,w,ctrl + s,shift + r}
+	rofi -show {drun -m 0,window,ssh,run}
 
 super + p
 	rofi-pass
@@ -61,6 +67,9 @@ super + {ctrl + m,alt + m,alt + u,shift + m}
 
 super + shift + p
     $HOME/.local/bin/powersave ask
+
+super + shift + t
+    $HOME/.local/bin/shmile
 
 ## polybar
 
@@ -82,17 +91,17 @@ super + {Left,Down,Up,Right}
 ## volume
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	(pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%) && $HOME/.local/bin/notify-volume
+	(pactl set-sink-volume 0 {+,-}5% || pactl set-sink-volume 0 -- {+,-}5%)
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle && $HOME/.local/bin/notify-volume
+	pactl set-sink-mute 0 toggle
 
 # bspwm hotkeys
 #
 
 # quit bspwm normally
 super + {alt +,shift +,ctrl +} End
-	{sudo poweroff,bspc quit,sudo zzz}
+	{sudo poweroff,bspc quit,lock.sh suspend}
 
 # close and kill
 super + {_,shift + }q
@@ -100,7 +109,7 @@ super + {_,shift + }q
 
 # monitors
 super + F2
-	bspwm-monitor.sh
+	$HOME/.local/bin/bspwm-monitor.sh
 
 # alternate between the tiled and monocle layout
 super + m
@@ -119,8 +128,8 @@ super + {g, shift + g}
 #
 
 # set the window state
-super + {t,shift + t,shift + f,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + f,f}
+	bspc node -t {tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {z,x,c}
@@ -142,6 +151,10 @@ super + {p,b,comma,period}
 super + {_,shift + }bracket{left,right}
 	bspc {desktop -f, node -d} {prev,next}.occupied.local
 
+# same, but all desktops
+super + ctrl + {_,shift + }bracket{left,right}
+	bspc {desktop -f, node -d} {prev,next}.local
+
 # focus the last node/desktop
 super + Tab
 	bspc desktop -f last
@@ -151,8 +164,9 @@ super + {_,shift +}grave
     	bspc {node -f} {prev,next}.local
 
 # rotate windows
-super + {semicolon,apostrophe}
-    bspc node @/ -C {back,for}ward && bspc node -f last.local
+
+super + shift + {semicolon,apostrophe}
+    bspc node @/ -R {-90,90}
 
 # swap with last local node
 super + {n,shift + n}
