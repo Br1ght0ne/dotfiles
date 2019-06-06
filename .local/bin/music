@@ -140,6 +140,8 @@ class Cmus < Player
     artist_with_title = "#{artist} - #{title}"
     album_suffix = " (#{album}, #{year})"
 
+    return 'cmus is stopped' if [artist, title, album].all?(&:empty?)
+
     if (artist_with_title + album_suffix).length < 60
       artist_with_title + album_suffix
     else
