@@ -1,8 +1,8 @@
 .config/cmus/playlists
+.config/cmusfm/cmusfm.conf
 .config/mpv/watch_later/
 .config/mpv/scripts/
-.config/ranger/bookmarks
+/.config/ranger/bookmarks
 
 .zsh/.completions
 .weechat/**/*.log
-.config/cmus/cmusfm.conf
