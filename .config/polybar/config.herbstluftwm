@@ -1,10 +1,10 @@
 [colors]
-background = #5a000000
+background = #00000000
 foreground = #ddffffff
 blight = #b2c312
 bleed = #87040a
 bleed-bright = #cf060f
-ash = #333133
+ash = #333133 
 torch-radiant = #f64a09
 torch-dim = #c13a07
 torch-shadowy = #932c05
@@ -35,7 +35,7 @@ line-color = #f00
 
 modules-left = bspwm date menu
 modules-center = title
-modules-right = keyboard mpd battery brightness
+modules-right = keyboard mpd battery brightness 
 ; border-size = 5
 ; border-color = #00000000
 
@@ -54,12 +54,12 @@ wm-restack = bspwm
 [bar/simple]
 enable-ipc = true
 locale = en_US.UTF-8
-monitor = LVDS1
+monitor = LVDS-1
 
 # width = 90%
 height = 28
 # offset-x = 5%
-# offset-y = 0
+offset-y = 0
 bottom = false
 fixed-center = true
 
@@ -69,9 +69,9 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-modules-left = bspwm keyboard cmus pulseaudio
+modules-left = keyboard cmus hlwm
 modules-center = date
-modules-right = brightness wireless battery brightness
+modules-right = wireless battery brightness
 ; border-size = 5
 ; border-color = #00000000
 
@@ -84,17 +84,14 @@ font-0 = Iosevka Light:pixelsize=10;1
 font-1 = "Font Awesome 5 Free:style=Regular:size=11;2"
 font-2 = "Font Awesome 5 Free:style=Solid:size=11;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:size=11;2"
-# font-4 = Noto Sans CJK JP:style=Regular:size=11;2
-font-4 = Source Han Sans JP:style=Regular:size=11;2
+font-4 = Noto Sans CJK JP:style=Regular:size=11;2
 font-5 = MaterialIcons:size=12;2
 tray-position = right
 tray-detached = false
 tray-padding = 6
 tray-maxsize = 16
+tray-transparent = true
 
-wm-restack = bspwm
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
 
 [module/wired]
 type = internal/network
@@ -117,10 +114,10 @@ type = internal/network
 interface = wlp3s0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.ash}
 label-connected =  %essid%
 format-connected-underline = ${colors.torch-radiant}
 label-disconnected =  offline
+format-disconnected-underline = ${colors.ash}
 
 [module/battery]
 type = internal/battery
@@ -150,7 +147,7 @@ format-charging-underline = ${colors.heal}
 format-full-underline = ${colors.heal}
 
 bar-capacity-width = 5
-bar-capacity-empty =
+bar-capacity-empty = 
 bar-capacity-fill = =
 bar-capacity-indicator = >
 
@@ -176,6 +173,7 @@ poll-interval = 20
 [module/date]
 type = internal/date
 interval = 1
+
 
 date = %u/%d/%m
 time = %H:%M
@@ -275,6 +273,7 @@ label = "%output:0:30%"
 exec = ~/bin/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -285,22 +284,6 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/pulseaudio]
-type = internal/pulseaudio
-# sink = alsa_output.pci-0000_12_00.3.analog-stereo
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
-use-ui-max = true
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 5
-format-volume = <ramp-volume> <label-volume>
-label-muted =  muted
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-format-volume-underline = ${colors.torch-radiant}
-format-muted-underline = ${colors.ash}
 
 [module/pavolume]
 type = custom/script
@@ -312,53 +295,40 @@ click-left = ~/bin/pavolume.sh --togmute
 scroll-up = ~/bin/pavolume.sh --up
 scroll-down = ~/bin/pavolume.sh --down
 
-[module/bspwm]
-type = internal/bspwm
+[module/hlwm]
+type = internal/xworkspaces
 pin-workspaces = true
-inline-mode = false
 enable-click = true
 enable-scroll = true
-reverse-scroll = true
-fuzzy-match = true
-format = <label-state> <label-mode>
 
-ws-icon-0 = 一;ichi
-ws-icon-1 = 二;ni
-ws-icon-2 = 三;san
-ws-icon-3 = 四;yon
-ws-icon-4 = 五;go
-ws-icon-5 = 六;roku
-ws-icon-6 = 七;nana
-ws-icon-7 = 八;hachi
-ws-icon-8 = 九;kyū
-ws-icon-9 = 十;jū
+icon-0 = 1;I
+icon-1 = 2;II
+icon-2 = 3;III
+icon-3 = 4;IV
+icon-4 = 5;V
+icon-5 = 6;VI
+icon-6 = 7;VII
+icon-7 = 8;VIII
+icon-8 = 9;IX
+icon-default = W
 
-label-focused = %name% %icon%
+label-active = %name%
+# label-active = %icon% %name%
 label-occupied = %name%
+# label-occupied = %icon%
 label-urgent = %name%
+# label-urgent = %icon%
 label-empty =
+# label-empty = %icon%
 
-label-focused-padding = 1
+label-active-padding = 1
 label-occupied-padding = 1
 label-urgent-padding = 1
 label-empty-padding = 1
 
-label-focused-underline = ${colors.torch-radiant}
+label-active-underline = ${colors.torch-radiant}
 label-occupied-underline = ${colors.ash}
 label-urgent-underline = ${colors.bleed}
-
-label-monocle = m
-label-tiled = t
-label-fullscreen = F
-label-floating = f
-label-pseudotiled = T
-label-locked = l
-label-sticky = s
-label-private = p
-
-label-locked-foreground = ${colors.bleed-bright}
-label-sticky-foreground = ${colors.blight}
-label-private-foreground = ${colors.torch-dim}
 
 [module/brightness]
 type = internal/xbacklight
@@ -396,6 +366,25 @@ bar-width = 10
 bar-indicator = |
 bar-fill = ─
 bar-empty = ─
+
+[module/menu]
+type = custom/menu
+
+expand-right = true
+
+menu-0-0 = Leave Hamlet
+menu-0-0-underline = ${colors.heal}
+menu-0-0-exec = bspc quit
+menu-0-1 = Abandon quest
+menu-0-1-underline = ${colors.bleed}
+menu-0-1-exec = sudo poweroff
+
+label-open = Menu
+label-open-underline = ${colors.ash}
+label-close = Nevermind
+label-close-underline = ${colors.ash}
+label-separator = |
+label-separator-padding = 1
 
 [module/cmus]
 type = custom/script
