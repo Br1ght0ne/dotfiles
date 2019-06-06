@@ -1,10 +1,13 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 
 _id, classname, instance = ARGV
 
 # State
 case instance
 when 'mpv-cam'
+  puts "state=floating\nsticky=on"
+when 'Emacs-floating'
   puts "state=floating\nsticky=on"
 else
   case classname
@@ -21,14 +24,14 @@ end
 
 # Desktops
 case classname
-when 'Emacs'
-  puts "desktop=I\nfollow=on"
+# when 'Emacs'
+#   puts "desktop=一\nfollow=off"
 when 'qutebrowser', 'Firefox'
-  puts "desktop=II\nfollow=off"
+  puts "desktop=二\nfollow=off"
 when 'Wire', 'Riot', 'TelegramDesktop'
-  puts "desktop=V\nfollow=off"
+  puts "desktop=五\nfollow=off"
 when 'Transmission-gtk'
-  puts "desktop=X\nfollow=off"
+  puts "desktop=十\nfollow=off"
 end
 
 # Manage
