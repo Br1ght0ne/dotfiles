@@ -71,7 +71,7 @@ line-color = #f00
 
 modules-left = bspwm keyboard cmus pulseaudio
 modules-center = date
-modules-right = brightness wireless battery brightness
+modules-right = wireless battery brightness
 ; border-size = 5
 ; border-color = #00000000
 
