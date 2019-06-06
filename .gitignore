@@ -5,3 +5,4 @@
 
 .zsh/.completions
 .weechat/**/*.log
+.config/cmus/cmusfm.conf
