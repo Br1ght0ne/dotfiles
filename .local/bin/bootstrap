@@ -58,8 +58,8 @@ x pulseaudio -D
 # Display and appearance
 
 $HOME/.screenlayout/bspwm.sh  # xrandr configuration
-xnc bspwm feh --bg-scale $HOME/pics/wallpapers/darkestdungeon.png  # set wallpaper
-# x compton -b  # transparency
+xnc bspwm feh --bg-scale $HOME/pics/wallpapers/city1.png  # set wallpaper
+x compton -b  # transparency
 x dunst -config $HOME/.config/dunst/dunstrc.bspwm  # notifications
 x unclutter -idle 3  # hide cursor when inactive
 POLYRESTART_BSPWM=1 ~/.local/bin/polyrestart.sh  # (re)start polybar
@@ -71,7 +71,7 @@ POLYRESTART_BSPWM=1 ~/.local/bin/polyrestart.sh  # (re)start polybar
 x nm-applet  # network management
 x redshift-gtk  # screen filter for nighttime
 # x kdeconnect-indicator  # connect to phone
-# x syncthing-gtk  # sync your files
+x syncthing-gtk  # sync your files
 # x nextcloud  # or store them in your cloud
 
 
