@@ -18,3 +18,4 @@ denilsonsa/prettyping kind:path
 
 petervanderdoes/git-flow-completion
 
+dylanaraps/fff kind:path

@@ -146,3 +146,12 @@ ex-test() {
     image=${$(sed -n "/${language}:/{n;p;}" ../../.gitlab-ci.yml | awk '{print $2}')}
     docker-sh "$image" $@
 }
+
+# Projects
+cdr() {
+    local root
+
+    if root=$(git rev-parse --show-toplevel); then
+        cd "$root"
+    fi
+}
