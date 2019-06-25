@@ -1,0 +1,4 @@
+AllCops:
+  TargetRubyVersion: 2.6
+Style/Encoding:
+  Enabled: false
