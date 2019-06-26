@@ -9,6 +9,10 @@ else
 	compinit -C
 fi
 
-. "$HOME/.asdf/completions/asdf.bash"
+source "$HOME/.asdf/completions/asdf.bash"
+
+for completion in "$HOME"/.zsh/completions/*.zsh; do
+	source "$completion"
+done
 
 compdef exa=ls
