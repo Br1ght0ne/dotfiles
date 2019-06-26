@@ -75,7 +75,8 @@
        ;; idris
        (java              ; the poster child for carpal tunnel syndrome
         +meghanada)       ; the only java server that sucks (a little) less
-       javascript         ; all(hope(abandon(ye(who(enter(here))))))
+       (javascript        ; all(hope(abandon(ye(who(enter(here))))))
+        +lsp)
        ;; julia           ; a better, faster MATLAB
        kotlin             ; better Java, and even more!
        latex              ; writing papers in Emacs has never been so fun
@@ -128,7 +129,7 @@
        (flycheck          ; tasing you for every semicolon you forget
         +childframe)      ; because popups are hungry for attention
        flyspell           ; tasing you for misspelling mispelling
-       ;; gist            ; interacting with github gists
+       gist            ; interacting with github gists
        (lookup            ; helps you navigate your code and documentation
         +devdocs)         ; ...on devdocs.io online
        lsp                ; a sane way to talk to your editor in charge
