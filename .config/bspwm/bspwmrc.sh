@@ -2,12 +2,13 @@
 
 scripts="$HOME/.local/bin"
 
-"$scripts/bspwm-monitor.sh"
+bspc monitor -d 一 二 三 四 五 六 七 八 九 十
 wmname LG3D
 xsetroot -cursor_name left_ptr
 
 # pip3 install --user flashfocus
 # bspc config border_width            0
+
 bspc config border_width            2
 bspc config window_gap              5
 bspc config split_ratio             0.5
