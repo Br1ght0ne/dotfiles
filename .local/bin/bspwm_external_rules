@@ -7,8 +7,10 @@ _id, classname, instance = ARGV
 case instance
 when 'mpv-cam'
   puts "state=floating\nsticky=on"
-when 'Emacs-floating'
-  puts "state=floating\nsticky=on"
+when 'libreoffice'
+  puts "state=tiled"
+#when 'Emacs-floating'
+#  puts "state=floating\nsticky=on"
 else
   case classname
   when 'mpv'
@@ -24,8 +26,8 @@ end
 
 # Desktops
 case classname
-# when 'Emacs'
-#   puts "desktop=一\nfollow=off"
+when 'Emacs'
+  puts "desktop=一\nfollow=off"
 when 'qutebrowser', 'Firefox'
   puts "desktop=二\nfollow=off"
 when 'Wire', 'Riot', 'TelegramDesktop'
