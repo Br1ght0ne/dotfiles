@@ -87,11 +87,8 @@
        ;; nix             ; I hereby declare "nix geht mehr!"
        ;; ocaml           ; an objective camel
        (org               ; organize your plain life in plain text
-        +alert            ; don't be rude, don't miss birthdays
-        +attach           ; custom attachment system
-        +babel            ; running code in org
-        +capture          ; org-capture in and outside of Emacs
-        +export           ; exporting org to whatever you want
+        +gnuplot          ; because a picture is worth... something?
+        +pandoc           ; for those *other* pleb formats
         +present)         ; emacs for presentations
        ;; perl            ; write code no one else can comprehend
        ;; php             ; perl's insecure younger brother
