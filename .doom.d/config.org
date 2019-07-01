@@ -474,8 +474,9 @@
 #+END_SRC
 ** Org-mode
 #+BEGIN_SRC emacs-lisp
-;; (require 'org)
+(after! org
 #+END_SRC
+
 *** Variables
 #+BEGIN_SRC emacs-lisp
 (setq org-directory "~/org/"
@@ -575,6 +576,10 @@
         (:name "Habits"
                :tag "@tickler")
         ))
+#+END_SRC
+*** Close after
+#+BEGIN_SRC emacs-lisp
+)
 #+END_SRC
 ** Eshell
 #+BEGIN_SRC emacs-lisp
