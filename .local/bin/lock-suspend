@@ -1,0 +1,5 @@
+#!/bin/bash
+
+betterlockscreen -l dimblur &
+layous us
+sudo pm-suspend

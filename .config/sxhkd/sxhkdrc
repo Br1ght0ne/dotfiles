@@ -30,7 +30,7 @@ super + {z,x,c,v,shift + z}
 ## screen
 
 super + Pause
-	lock.sh
+	betterlockscreen -l dimblur
 
 ### brightness
 
@@ -101,7 +101,7 @@ XF86AudioMute
 
 # quit bspwm normally
 super + {alt +,shift +,ctrl +} End
-	{sudo poweroff,bspc quit,lock.sh suspend}
+	{sudo poweroff,bspc quit,lock-suspend}
 
 # close and kill
 super + {_,shift + }q
