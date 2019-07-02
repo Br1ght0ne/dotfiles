@@ -1,0 +1,24 @@
+IMAPAccount protonmail
+Host 127.0.0.1
+Port 1143
+User brightone@protonmail.com
+PassCmd "pass show mail/protonmail.com/bridge | head -n 1"
+SSLType STARTTLS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+CertificateFile ~/.cert/mail.protonmail.pem
+
+IMAPStore protonmail-remote
+Account protonmail
+
+MaildirStore protonmail-local
+SubFolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/protonmail/
+Inbox ~/.mail/protonmail/Inbox
+
+Channel protonmail
+Master :protonmail-remote:
+Slave :protonmail-local:
+Patterns * !INBOX !Folders.* !Labels.*
+Create Slave
+SyncState *

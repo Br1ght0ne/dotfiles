@@ -1,0 +1,19 @@
+[general]
+accounts = protonmail
+
+[Account protonmail]
+localrepository = protonmail-local
+remoterepository = protonmail-remote
+
+[Repository protonmail-local]
+type = Maildir
+localfolders = ~/.mail/protonmail
+nametrans = lambda foldername: foldername.replace('Inbox', 'INBOX')
+
+[Repository protonmail-remote]
+type = IMAP
+remotehost = 127.0.0.1
+remoteport = 1143
+remoteuser = brightone@protonmail.com
+ssl = no
+nametrans = lambda foldername: foldername.replace('INBOX', 'Inbox')
