@@ -100,7 +100,6 @@ alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j6 
 
 alias cp='cp --reflink=auto'
 alias doom='~/.emacs.d.doom/bin/doom'
-alias e='$EDITOR'
 alias em='emacsclient -a vim -t'
 alias emc='emacsclient -c -a vim'
 alias tddg="BROWSER=links ddgr"
@@ -122,7 +121,6 @@ alias se='sudo emacsclient -a vim -t'
 alias sec='sudo emacsclient -c -a vim'
 alias ts='trans -t'
 alias unmerge='sudo emerge --unmerge'
-alias v='$VISUAL'
 alias z='zathura'
 alias X='startx'
 
