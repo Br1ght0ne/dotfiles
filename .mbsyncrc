@@ -20,7 +20,7 @@ Inbox ~/.mail/protonmail/Inbox
 Channel protonmail
 Master :protonmail-remote:
 Slave :protonmail-local:
-Patterns * !INBOX !Folders.* !Labels.* !drafts
+Patterns * !Folders.* !Labels.* !drafts
 Create Slave
 SyncState *
 
