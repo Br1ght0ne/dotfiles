@@ -1,6 +1,7 @@
 IMAPAccount protonmail
 Host 127.0.0.1
 Port 1143
+Timeout 0
 User brightone@protonmail.com
 PassCmd "pass show mail/protonmail.com/bridge | head -n 1"
 SSLType STARTTLS
@@ -19,6 +20,7 @@ Inbox ~/.mail/protonmail/Inbox
 Channel protonmail
 Master :protonmail-remote:
 Slave :protonmail-local:
-Patterns * !INBOX !Folders.* !Labels.*
+Patterns * !INBOX !Folders.* !Labels.* !drafts
 Create Slave
 SyncState *
+
