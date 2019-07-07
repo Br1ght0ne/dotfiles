@@ -733,37 +733,31 @@
 ~'offlineimap~ or ~'mbsync~.
 
 #+BEGIN_SRC elisp
-(setq +email-backend 'msync)
+(setq +mu4e-backend 'mbsync)
+#+END_SRC
+*** Accounts
+**** Protonmail
+#+BEGIN_SRC emacs-lisp
+(set-email-account! "brightone@protonmail.com"
+                    '((smtpmail-smtp-user . "brightone@protonmail.com")
+                      (user-mail-address . "brightone@protonmail.com")
+                      (mu4e-maildir . "~/.mail/protonmail")
+                      (mu4e-trash-folder . "/Trash")
+                      (mu4e-sent-folder . "/Sent")
+                      (mu4e-refile-folder . "/Archive")))
 #+END_SRC
 *** Bookmarks
-#+BEGIN_SRC elisp
-(-each '(("RR Inbox" "maildir:/railsreactor/Inbox" ?i)
-         ("RR All Mail" "maildir:/railsreactor/\"All Mail\"" ?a))
-  (lambda (account)
-    (let ((name (nth 0 account))
-          (query (nth 1 account))
-          (key (nth 2 account)))
-      (message "%s %s %s" name query key)
-      (add-to-list 'mu4e-bookmarks
-                   (make-mu4e-bookmark :name name :query query :key key)))))
-#+END_SRC
-
-#+RESULTS:
-*** Accounts
-**** RailsReactor
-#+BEGIN_SRC elisp
-(set-email-account! "Oleksii Filonenko @ RailsReactor"
-                    '((mu4e-sent-folder   . "/railsreactor/Sent Mail")
-                      (mu4e-drafts-folder . "/railsreactor/Drafts")
-                      (mu4e-trash-folder  . "/railsreactor/Trash")
-                      (mu4e-refile-folder . "/railsreactor/All Mail")
-                      (smtpmail-smtp-user . "oleksii.filonenko@railsreactor.com")
-                      (user-mail-address  . "oleksii.filonenko@railsreactor.com")
-                      (mu4e-compose-signature . "Oleksii Filonenko\nFull-stack Ruby on Rails Engineer @ Rails Reactor\nhttps://railsreactor.com\nemail: oleksii.filonenko@railsreactor.com\nphone: +380731406297")))
+#+BEGIN_SRC emacs-lisp
+(let ((bookmarks '(("maildir:/Inbox" "Inbox" ?i)
+                   ("maildir:/Archive" "Archive" ?a))))
+  (dolist (bookmark bookmarks mu4e-bookmarks)
+    (add-to-list 'mu4e-bookmarks bookmark)))
 #+END_SRC
 *** HTML to text
-#+BEGIN_SRC elisp
-(setq mu4e-html2text-command "html2text")
+~'mu4e-shr2text~ or ~"html2text"~.
+
+#+BEGIN_SRC emacs-lisp
+(setq mu4e-html2text-command 'mu4e-shr2text)
 #+END_SRC
 ** Modeline
 *** Major mode icon
