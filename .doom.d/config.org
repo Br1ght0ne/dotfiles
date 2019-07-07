@@ -423,6 +423,13 @@
         :n "G" (λ! (org-clock-goto 'select))
         :n "x" #'org-clock-cancel))
 #+END_SRC
+*** Move subtree up/down
+#+BEGIN_SRC emacs-lisp
+(after! org
+  (map! :map org-mode-map
+        :n "M-j" #'org-metadown
+        :n "M-k" #'org-metaup))
+#+END_SRC
 ** \LaTeX
 #+BEGIN_SRC emacs-lisp
 (map! (:after tex
