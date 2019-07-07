@@ -468,6 +468,12 @@
 (map! :after treemacs
       "<f5>" #'+private/treemacs-back-and-forth)
 #+END_SRC
+** mu4e
+#+BEGIN_SRC emacs-lisp
+(after! mu4e
+  (map! :map mu4e-main-mode-map
+        :n "U" #'mu4e-update-index))
+#+END_SRC
 * Configuration
 ** About me
 #+BEGIN_SRC emacs-lisp
