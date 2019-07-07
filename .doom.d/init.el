@@ -121,7 +121,7 @@
        ;; direnv
        docker             ; ever played buzzword bingo?
        editorconfig       ; let someone else argue about tabs vs spaces
-       ein                ; tame Jupyter notebooks with emacs
+       ;; ein             ; tame Jupyter notebooks with emacs
        eval               ; run code, run (also, repls)
        (flycheck          ; tasing you for every semicolon you forget
         +childframe)      ; because popups are hungry for attention
@@ -176,3 +176,9 @@
         +snippets         ; you won't use them anyway
         +evil-commands)   ; what are those for?
        )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(wakatime-api-key "d3ced585-ce02-419a-a204-36bf85a09926"))
