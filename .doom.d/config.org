@@ -735,7 +735,7 @@
 *** Backend
 ~'offlineimap~ or ~'mbsync~.
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (setq +mu4e-backend 'mbsync)
 #+END_SRC
 *** Accounts
@@ -775,7 +775,7 @@
 #+END_SRC
 ** Modeline
 *** Major mode icon
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (setq doom-modeline-major-mode-icon t
       doom-modeline-major-mode-color-icon t)
 #+END_SRC
