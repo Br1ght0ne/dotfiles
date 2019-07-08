@@ -24,3 +24,63 @@ Patterns * !Folders.* !Labels.* !drafts
 Create Slave
 SyncState *
 
+# Syndicode
+
+IMAPAccount syndicode
+Host imap.gmail.com
+User oleksii.filonenko@syndicode.com
+PassCmd "pass show work/syndicode/imap-mbsync | head -n 1"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore syndicode-remote
+Account syndicode
+
+MaildirStore syndicode-local
+Subfolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/syndicode/
+Inbox ~/.mail/syndicode/Inbox
+
+Channel syndicode-all
+Master :syndicode-remote:"[Gmail]/All Mail"
+Slave :syndicode-local:"All Mail"
+Create Slave
+Expunge Both
+SyncState *
+
+Channel syndicode-inbox
+Master :syndicode-remote:"INBOX"
+Slave :syndicode-local:"Inbox"
+Create Slave
+Expunge Both
+SyncState *
+
+Channel syndicode-drafts
+Master :syndicode-remote:"[Gmail]/Drafts"
+Slave :syndicode-local:"Drafts"
+Create Slave
+Expunge Both
+SyncState *
+
+Channel syndicode-sent
+Master :syndicode-remote:"[Gmail]/Sent Mail"
+Slave :syndicode-local:"Sent Mail"
+Create Slave
+Expunge Both
+SyncState *
+
+Channel syndicode-trash
+Master :syndicode-remote:"[Gmail]/Trash"
+Slave :syndicode-local:"Trash"
+Create Slave
+Expunge Both
+SyncState *
+
+## Groups
+Group syndicode
+Channel syndicode-all
+Channel syndicode-inbox
+Channel syndicode-drafts
+Channel syndicode-sent
+Channel syndicode-trash
