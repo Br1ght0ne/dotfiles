@@ -511,7 +511,7 @@
       org-blank-before-new-entry '((heading . nil)
                                    (plain-list-item . nil))
       org-capture-templates
-      (append '(("t" "Todo" entry (file+headline "gtd/inbox.org" "Inbox") "* TODO %?\n%c")
+      (append '(("t" "Todo" entry (file "gtd/inbox.org") "* TODO %?\n%c")
                 ("T" "Tickler" entry (file+headline "gtd/tickler.org" "Tickler") "* %?\n%U")
                 ("n" "Note" entry (file+headline "Notes.org" "Notes") "* %?\n%c"))
               (--map `(,(s-left 2 it) ,it entry (file+headline "gtd/gtd.org" ,it) "* TODO %?\n%c")
