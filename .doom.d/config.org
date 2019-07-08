@@ -517,8 +517,7 @@
               (--map `(,(s-left 2 it) ,it entry (file+headline "gtd/gtd.org" ,it) "* TODO %?\n%c")
                      '("home" "uni" "work" "reading" "watching" "listening" "doing")))
       org-refile-targets '((nil :maxlevel . 2)
-                           (org-agenda-files :maxlevel . 2)
-                           ((concat org-gtd-directory "someday.org") :maxlevel . 2))
+                           (org-agenda-files :maxlevel . 2))
       org-link-abbrev-alist '(("r" . "https://reddit.com/r/")
                               ("gh" . "https://github.com/")
                               ("yt" . "https://youtube.com/watch?v=")
@@ -587,6 +586,10 @@
         (:name "Habits"
                :tag "@tickler")
         ))
+#+END_SRC
+*** Insert state in note buffers (~org-add-note~)
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-log-buffer-setup-hook 'evil-insert-state)
 #+END_SRC
 *** Close after
 #+BEGIN_SRC emacs-lisp
@@ -745,6 +748,17 @@
                       (mu4e-trash-folder . "/Trash")
                       (mu4e-sent-folder . "/Sent")
                       (mu4e-refile-folder . "/Archive")))
+#+END_SRC
+**** Syndicode
+#+BEGIN_SRC emacs-lisp
+(set-email-account! "oleksii.filonenko@syndicode.com"
+                    '((smtpmail-smtp-user . "oleksii.filonenko@syndicode.com")
+                      (user-mail-address . "oleksii.filonenko@syndicode.com")
+                      (mu4e-maildir . "~/.mail/syndicode")
+                      (mu4e-sent-folder . "/Sent Mail")
+                      (mu4e-drafts-folder . "/Drafts")
+                      (mu4e-trash-folder . "/Trash")
+                      (mu4e-refile-folder . "/All Mail")))
 #+END_SRC
 *** Bookmarks
 #+BEGIN_SRC emacs-lisp
