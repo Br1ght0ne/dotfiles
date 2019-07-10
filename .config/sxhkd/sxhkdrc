@@ -18,7 +18,7 @@ super + shift + v
     $HOME/.local/bin/vimedit
 
 super + b
-    qutebrowser
+    $BROWSER
 
 # environment
 
