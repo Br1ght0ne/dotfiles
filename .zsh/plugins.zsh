@@ -23,3 +23,4 @@ export PATH="/home/brightone/.cache/antibody/https-COLON--SLASH--SLASH-github.co
 source /home/brightone/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-petervanderdoes-SLASH-git-flow-completion/git-flow-completion.plugin.zsh
 fpath+=( /home/brightone/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-petervanderdoes-SLASH-git-flow-completion )
 export PATH="/home/brightone/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-dylanaraps-SLASH-fff:$PATH"
+export PATH="/home/brightone/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-carnager-SLASH-rofi-pass:$PATH"
