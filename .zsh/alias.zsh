@@ -106,7 +106,11 @@ alias tddg="BROWSER=links ddgr"
 alias f='ranger-cd'
 alias ffsend='docker run --rm -it -v $(pwd):/data timvisee/ffsend'
 alias hiber='sudo zzz || sudo systemctl hibernate -i'
-alias ls='exa'
+
+if command -v exa &>/dev/null; then
+	alias ls='exa'
+fi
+
 alias l='ls -1a'
 alias lyrics='music lyrics'
 alias m='ncmpcpp'

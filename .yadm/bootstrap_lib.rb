@@ -1,6 +1,11 @@
-require 'colorize'
-require 'git'
-require 'logger'
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'colorize'
+  gem 'git'
+  gem 'logger'
+end
 
 # rubocop:disable Metrics/ClassLength
 
@@ -36,7 +41,7 @@ class Bootstrap
   INSTALL_METHODS = {
     emerge: 'sudo emerge %<options>s %<package>s',
     pacman: 'sudo pacman -S %<options>s %<package>s',
-    pip: 'pip install %<options>s %<package>s',
+    pip: 'pip3 install %<options>s %<package>s',
     script: 'sh -c "$(curl -fsSL %<options>s %<package>s)"',
     yay: 'yay -S %<options>s %<package>s'
   }.freeze
