@@ -6,3 +6,4 @@
 
 .zsh/.completions
 .weechat/**/*.log
+.yadm/boostrap.retry

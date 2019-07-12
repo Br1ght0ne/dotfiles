@@ -1,0 +1,148 @@
+---
+- name: Bootstrap
+  hosts: 127.0.0.1
+  connection: local
+  vars:
+    packages:
+      homebrew:
+        - exa
+        - ripgrep
+      flatpak:
+        - com.slack.Slack
+        - org.telegram.desktop
+      system:
+        - curl
+        - emacs
+        - gawk
+  tasks:
+    - name: Ensure some basic system packages
+      package:
+        name: "{{ packages.system }}"
+        state: present
+    - name: Install Homebrew
+      tags: homebrew
+      block:
+        - name: Download Homebrew installer
+          get_url:
+            url: https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh
+            dest: /tmp/brew-install.sh
+        - name: Run Homebrew installer
+          become: true
+          shell: /tmp/brew-install.sh
+          args:
+            creates: /home/linuxbrew/.linuxbrew
+        - name: Install Homebrew packages
+          tags: long
+          homebrew:
+            name: "{{ packages.flatpak }}"
+            state: present
+    - name: Install Rust
+      tags: rust
+      block:
+        - name: Install rustup
+          block:
+            - name: Download rustup installer
+              get_url:
+                url: https://sh.rustup.rs
+                dest: /tmp/rustup.sh
+            - name: Run rustup installer
+              shell: /tmp/rustup.sh -y
+              args:
+                creates: ~/.rustup
+        - name: Install Rust toolchains
+          tags: long
+          shell: rustup install {{ item }}
+          register: rustup_install
+          changed_when: "'unchanged' not in rustup_install.stdout"
+          loop:
+            - stable
+            - nightly
+    - name: Set up Emacs
+      tags: emacs
+      block:
+        - name: Clone doom-emacs
+          tags: git,clone
+          git:
+            repo: ssh://git@gitlab.com/BrightOne/doom-emacs.git
+            dest: ~/.emacs.d
+            update: no
+            accept_hostkey: yes
+        - name: Install doom-emacs
+          tags: long
+          shell: bin/doom refresh
+          register: install_doom_emacs
+          args:
+            chdir: ~/.emacs.d
+          changed_when: "'No packages to install!' not in install_doom_emacs.stdout"
+    - name: Clone passwords
+      tags: git, clone
+      git:
+        repo: ssh://git@gitlab.com/BrightOne/passwords.git
+        dest: ~/.password-store
+        update: no
+        accept_hostkey: yes
+    - name: Set up zsh
+      tags: zsh
+      block:
+        - name: Install zsh
+          package:
+            name: zsh
+        - name: Set up antibody
+          block:
+            - name: Ensure ~/.local/bin exists
+              shell: mkdir -p ~/.local/bin
+              args:
+                creates: ~/.local/bin
+            - name: Download antibody installer
+              get_url:
+                url: https://git.io/antibody
+                dest: /tmp/antibody.sh
+            - name: Install antibody
+              shell: /tmp/antibodyzsh -b ~/.local/bin
+              args:
+                creates: ~/.local/bin/antibody
+            - name: Bundle plugins
+              tags: long
+              shell: zsh -c "antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/plugins.zsh"
+              args:
+                creates: ~/.zsh/plugins.zsh
+    - name: Set up flatpak
+      tags: flatpak
+      block:
+        - name: Install flatpak
+          package:
+            name: flatpak
+            state: present
+        - name: Enable flathub remote
+          flatpak_remote:
+            name: flathub
+            state: present
+            flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        - name: Install flatpaks
+          tags: long
+          flatpak:
+            name: "{{ item }}"
+          loop: "{{ packages.flatpak }}"
+    - name: Set up asdf
+      tags: asdf
+      block:
+        - name: Install asdf
+          tags: git,clone
+          git:
+            repo: https://github.com/asdf-vm/asdf.git
+            dest: ~/.asdf
+            update: no
+            version: v0.7.2
+        - name: Get plugin names from ~/.tool-versions
+          shell: awk '{print $1}' ~/.tool-versions
+          changed_when: false
+          register: asdf_plugin_names
+        - name: Enable asdf plugins
+          shell: asdf plugin-add "{{ item }}"
+          loop: "{{ asdf_plugin_names.stdout_lines }}"
+          register: asdf_plugin_add
+          failed_when: asdf_plugin_add.rc not in [0, 2]
+          changed_when: asdf_plugin_add.rc == 0
+        - name: Run 'asdf install'
+          tags: long
+          shell: asdf install

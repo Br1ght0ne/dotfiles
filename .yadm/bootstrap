@@ -1,57 +1,9 @@
-#!/usr/bin/env ruby
+#!/bin/bash
+set -e
 
-require_relative 'bootstrap_lib'
-
-require 'optparse'
-require 'pathname'
-
-options = {}
-OptionParser.new do |opts|
-  opts.on('-v', '--[no-]verbose', 'Run verbosely') do |v|
-    options[:verbose] = v
-  end
-end.parse!
-
-# rubocop:disable Metrics/BlockLength
-
-Bootstrap.run(options) do
-  category 'yadm' do
-    action 'install envtpl via pip' do
-      install('envtpl', method: :pip, options: ['--user'])
-    end
-  end
-
-  category 'emacs' do
-    action 'clone doom-emacs' do
-      clone 'git@gitlab.com:/BrightOne/doom-emacs.git', '~/.emacs.d'
-    end
-
-    action 'install doom-emacs' do
-      execute 'cd ~/.emacs.d && yes | make install compile-core'
-    end
-  end
-
-  category 'passwords' do
-    action 'clone passwords' do
-      clone 'git@gitlab.com:BrightOne/passwords.git', '~/.password-store'
-    end
-  end
-
-  category 'zsh' do
-    category 'antibody' do
-      action 'install antibody' do
-        if Dir.exist?(File.expand_path('~/.cache/antibody'))
-          debug 'antibody already installed'
-        else
-	  execute 'curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin'
-        end
-      end
-
-      action 'initialize antibody' do
-	execute 'zsh -c "antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/plugins.zsh"'
-      end
-    end
-  end
-end
-
-# rubocop:enable Metrics/BlockLength
+if ! command -v ansible &>/dev/null; then
+    echo "Install ansible first! I don't care how."
+    exit 1
+else
+    ansible-playbook ~/.yadm/bootstrap.yml
+fi
