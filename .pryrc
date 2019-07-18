@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 # === EDITOR ===
-Pry.editor = 'vi'
+Pry.editor = 'vim'
 
 # === PROMPT ===
 Pry.prompt = [
-  ->(_obj, _nest_level, _) { '✎ ' },
+  ->(_obj, _nest_level, _) { 'pry> ' },
   ->(_obj, nest_level, _) { "#{' ' * nest_level}  " }
 ]
 
@@ -55,11 +55,11 @@ end
 # similar to method name colors leading to a "soup"
 # These colors are optimized for use with Solarized scheme
 # for your terminal
-Pry.config.ls.separator = "\count" # new lines between methods
-Pry.config.ls.heading_color = :magenta
-Pry.config.ls.public_method_color = :green
-Pry.config.ls.protected_method_color = :yellow
-Pry.config.ls.private_method_color = :bright_black
+# Pry.config.ls.separator = "\count" # new lines between methods
+# Pry.config.ls.heading_color = :magenta
+# Pry.config.ls.public_method_color = :green
+# Pry.config.ls.protected_method_color = :yellow
+# Pry.config.ls.private_method_color = :bright_black
 
 # == PLUGINS ===
 # awesome_print gem: great syntax colorized printing
@@ -70,30 +70,6 @@ begin
   # and it also enables paging
   Pry.config.print = proc do |output, value|
     Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)
-  end
-
-  # If you want awesome_print without automatic pagination, use the line below
-  module AwesomePrint
-    Formatter.prepend(Module.new do
-      def awesome_self(object, type)
-        if long_string?(object, type)
-          object.inspect
-            .to_s[0..@options[:string_limit]]
-            .then { |o| o + '...' }
-            .then { |o| colorize(o, type) }
-        else
-          super(object, type)
-        end
-      end
-
-      private
-
-      def long_string?(object, type)
-        type == :string &&
-            @options[:string_limit] &&
-            object.inspect.to_s.length > @options[:string_limit]
-      end
-    end)
   end
 
   AwesomePrint.defaults = {
