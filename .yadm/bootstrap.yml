@@ -4,38 +4,59 @@
   connection: local
   vars:
     packages:
-      homebrew:
+      linuxbrew:
+        - bat
+        - curl
+        - diskus
+        - doctl
+        - dust
+        - emacs
         - exa
+        - fd
+        - fselect
+        - gawk
+        - gopass
+        - hexyl
+        - hugo
+        - hyperfine
+        - just
+        - lsd
+        - miniserve
         - ripgrep
+        - sd
+        - shfmt
+        - sk
+        - tealdeer
+        - tokei
+        - xsv
       flatpak:
         - com.slack.Slack
+        - com.discordapp.Discord
+        - com.github.johnfactotum.Foliate
+        - com.skype.Client
+        - com.valvesoftware.Steam
+        - im.riot.Riot
+        - net.lutris.Lutris
         - org.telegram.desktop
-      system:
-        - curl
-        - emacs
-        - gawk
+        - org.kde.kdenlive
+        - org.kde.krita
+        - uz.zoom.Zoom
   tasks:
-    - name: Ensure some basic system packages
-      package:
-        name: "{{ packages.system }}"
+    - name: Ensure Linuxbrew is installed
+      tags: linuxbrew
+      shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
+      args:
+        creates: /home/linuxbrew/.linuxbrew
+    - name: Update Linuxbrew and upgrade all packages
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+    - name: Install Linuxbrew packages
+      tags: long
+      homebrew:
+        name: "{{ item }}"
         state: present
-    - name: Install Homebrew
-      tags: homebrew
-      block:
-        - name: Download Homebrew installer
-          get_url:
-            url: https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh
-            dest: /tmp/brew-install.sh
-        - name: Run Homebrew installer
-          become: true
-          shell: /tmp/brew-install.sh
-          args:
-            creates: /home/linuxbrew/.linuxbrew
-        - name: Install Homebrew packages
-          tags: long
-          homebrew:
-            name: "{{ packages.flatpak }}"
-            state: present
+      loop: "{{ packages.linuxbrew }}"
     - name: Install Rust
       tags: rust
       block:
