@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-fpath=("$HOME/.zsh/completions" $fpath)
+fpath=("$HOME/.zsh/completions" /home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
 
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump* ]]; then
