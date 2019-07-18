@@ -115,12 +115,8 @@
               shell: mkdir -p ~/.local/bin
               args:
                 creates: ~/.local/bin
-            - name: Download antibody installer
-              get_url:
-                url: https://git.io/antibody
-                dest: /tmp/antibody.sh
             - name: Install antibody
-              shell: /tmp/antibodyzsh -b ~/.local/bin
+              shell: curl -sSf /tmp/antibody.sh | sh -s -- -b ~/.local/bin
               args:
                 creates: ~/.local/bin/antibody
             - name: Bundle plugins
