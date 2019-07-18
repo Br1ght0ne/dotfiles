@@ -595,6 +595,12 @@
 #+BEGIN_SRC emacs-lisp
 )
 #+END_SRC
+** Projectile
+*** Search path
+#+BEGIN_SRC emacs-lisp
+(after! projectile
+  (setq projectile-project-search-path '("~/dev" "~/github" "~/git")))
+#+END_SRC
 ** Eshell
 #+BEGIN_SRC emacs-lisp
 ;; (require 'eshell)
@@ -732,6 +738,9 @@
 (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode))
 #+END_SRC
 ** Email
+#+BEGIN_SRC emacs-lisp
+(after! mu4e
+#+END_SRC
 *** Backend
 ~'offlineimap~ or ~'mbsync~.
 
@@ -772,6 +781,10 @@
 
 #+BEGIN_SRC emacs-lisp
 (setq mu4e-html2text-command 'mu4e-shr2text)
+#+END_SRC
+*** Close after
+#+BEGIN_SRC emacs-lisp
+)
 #+END_SRC
 ** Modeline
 *** Major mode icon
