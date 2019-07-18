@@ -56,7 +56,7 @@
           shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
           args:
             creates: /home/linuxbrew/.linuxbrew
-        - name: Full Homebrew cycle (update/install/upgrade)
+        - name: Update Linuxbrew and install necessary packages
           tags: long
           homebrew:
             update_homebrew: yes
