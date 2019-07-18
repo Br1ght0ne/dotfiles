@@ -57,7 +57,7 @@ x pulseaudio -D
 
 # Display and appearance
 
-$HOME/.screenlayout/bspwm.sh  # xrandr configuration
+# $HOME/.screenlayout/bspwm.sh  # xrandr configuration
 xnc bspwm feh --bg-scale $HOME/pics/wallpapers/city1.png  # set wallpaper
 x compton -b  # transparency
 x dunst -config $HOME/.config/dunst/dunstrc.bspwm  # notifications
