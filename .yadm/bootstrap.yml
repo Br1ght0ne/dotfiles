@@ -4,9 +4,10 @@
   connection: local
   vars:
     packages:
+      system:
+        - curl
       linuxbrew:
         - bat
-        - curl
         - diskus
         - doctl
         - dust
@@ -42,37 +43,38 @@
         - org.kde.krita
         - uz.zoom.Zoom
   tasks:
-    - name: Ensure Linuxbrew is installed
-      tags: linuxbrew
-      shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
-      args:
-        creates: /home/linuxbrew/.linuxbrew
-    - name: Update Linuxbrew and upgrade all packages
-      homebrew:
-        update_homebrew: yes
-        upgrade_all: yes
-    - name: Install Linuxbrew packages
-      tags: long
-      homebrew:
+    - name: Ensure critical system packages are installed
+      tags: ensure, system
+      package:
         name: "{{ item }}"
-        state: present
-      loop: "{{ packages.linuxbrew }}"
-    - name: Install Rust
+      loop: "{{ packages.system }}"
+    - name: Linuxbrew
+      tags: brew
+      block:
+        - name: Ensure Linuxbrew is installed
+          tags: ensure
+          shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
+          args:
+            creates: /home/linuxbrew/.linuxbrew
+        - name: Full Homebrew cycle (update/install/upgrade)
+          tags: long
+          homebrew:
+            update_homebrew: yes
+            upgrade_all: yes
+            name: "{{ item }}"
+            state: present
+          loop: "{{ packages.linuxbrew }}"
+    - name: Rust
       tags: rust
       block:
-        - name: Install rustup
-          block:
-            - name: Download rustup installer
-              get_url:
-                url: https://sh.rustup.rs
-                dest: /tmp/rustup.sh
-            - name: Run rustup installer
-              shell: /tmp/rustup.sh -y
-              args:
-                creates: ~/.rustup
+        - name: Ensure rustup is installed
+          tags: ensure
+          shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          args:
+            creates: ~/.rustup
         - name: Install Rust toolchains
           tags: long
-          shell: rustup install {{ item }}
+          shell: rustup install "{{ item }}"
           register: rustup_install
           changed_when: "'unchanged' not in rustup_install.stdout"
           loop:
