@@ -53,7 +53,6 @@
       block:
         - name: Ensure Linuxbrew is installed
           tags: ensure
-          warn: false
           shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
           args:
             creates: /home/linuxbrew/.linuxbrew
@@ -69,7 +68,6 @@
       block:
         - name: Ensure rustup is installed
           tags: ensure
-          warn: false
           shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
           args:
             creates: ~/.rustup
@@ -118,7 +116,6 @@
               args:
                 creates: ~/.local/bin
             - name: Install antibody
-              warn: false
               shell: curl -sSf /tmp/antibody.sh | sh -s -- -b ~/.local/bin
               args:
                 creates: ~/.local/bin/antibody
