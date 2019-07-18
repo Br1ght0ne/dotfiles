@@ -60,7 +60,6 @@
           tags: long
           homebrew:
             update_homebrew: yes
-            upgrade_all: yes
             name: "{{ item }}"
             state: present
           loop: "{{ packages.linuxbrew }}"
