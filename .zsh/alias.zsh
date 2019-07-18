@@ -96,7 +96,21 @@ alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revd
 alias sync-gfu='sudo eix-sync && gfu'
 alias ask-gfu='sudo emerge -auND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
 alias ask-sync-gfu="sudo eix-sync && ask-gfu"
-alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j6 && sudo make -j6 modules_install && sudo make -j6 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
+rebuild-kernel() {
+    (
+        set -e
+        JOBS=${NTHREADS:4}
+
+        cd /usr/src/linux
+        sudo make oldconfig
+        sudo make -j${JOBS}
+        sudo make -j${JOBS} modules_install
+        sudo make -j${JOBS} install
+        sudo grub-mkconfig -o /boot/grub/grub.cfg
+        sudo emerge -v @module-rebuild
+    )
+}
+# alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j4 && sudo make -j4 modules_install && sudo make -j4 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
 
 alias cp='cp --reflink=auto'
 alias doom='~/.emacs.d.doom/bin/doom'
