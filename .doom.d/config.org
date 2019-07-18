@@ -741,7 +741,7 @@
 *** Accounts
 **** Protonmail
 #+BEGIN_SRC emacs-lisp
-(set-email-account! "brightone@protonmail.com"
+(set-email-account! "Protonmail"
                     '((smtpmail-smtp-user . "brightone@protonmail.com")
                       (user-mail-address . "brightone@protonmail.com")
                       (mu4e-maildir . "~/.mail/protonmail")
@@ -751,7 +751,7 @@
 #+END_SRC
 **** Syndicode
 #+BEGIN_SRC emacs-lisp
-(set-email-account! "oleksii.filonenko@syndicode.com"
+(set-email-account! "Syndicode"
                     '((smtpmail-smtp-user . "oleksii.filonenko@syndicode.com")
                       (user-mail-address . "oleksii.filonenko@syndicode.com")
                       (mu4e-maildir . "~/.mail/syndicode")
