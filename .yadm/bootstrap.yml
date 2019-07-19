@@ -5,17 +5,18 @@
   vars:
     packages:
       system:
-        - curl
+        curl:
+        emacs:
+        gawk:
+          Archlinux: awk
       linuxbrew:
         - bat
         - diskus
         - doctl
         - dust
-        - emacs
         - exa
         - fd
         - fselect
-        - gawk
         - gopass
         - hexyl
         - hugo
@@ -46,8 +47,10 @@
     - name: Ensure critical system packages are installed
       tags: ensure, system
       package:
-        name: "{{ item }}"
-      loop: "{{ packages.system }}"
+        name: "{{ item.value[ansible_facts['os_family']] | default(item.key) }}"
+      loop: "{{ packages.system|dict2items }}"
+      loop_control:
+        label: "{{ item.key }}"
     - name: Linuxbrew
       tags: brew
       block:
