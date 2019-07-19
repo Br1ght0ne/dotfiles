@@ -1,7 +1,2 @@
-elixir 1.9.0
-erlang 21.3
-golang 1.12.4
-nodejs 12.1.0
-ruby 2.6.3
 dotnet-core 2.2.105
-lua 5.1
+ruby 2.6.3

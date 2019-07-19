@@ -11,23 +11,35 @@
           Archlinux: awk
       linuxbrew:
         - bat
+        - cargo-completion
+        - direnv
         - diskus
         - doctl
         - dust
+        - elixir
         - exa
+        - exercism
         - fd
         - fselect
+        - go
         - gopass
         - hexyl
+        - httpie
+        - hub
         - hugo
         - hyperfine
         - just
         - lsd
+        - lua
         - miniserve
+        - node
         - ripgrep
+        - rtv
         - sd
+        - shellcheck
         - shfmt
         - sk
+        - speedtest-cli
         - tealdeer
         - tokei
         - xsv
