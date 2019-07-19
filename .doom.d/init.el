@@ -44,7 +44,7 @@
         +icons            ; it's 20XX already, come on!
        )
        electric           ; smarter, keyword-based electric-indent
-       ;; vc              ; version-control and Emacs, sitting in a tree
+       vc                 ; version-control and Emacs, sitting in a tree
 
        :email             ; a thing of beauty
        mu4e               ; AM YOU
