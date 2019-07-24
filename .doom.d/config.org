@@ -545,17 +545,23 @@
 *** Presentations
 **** Org-reveal
 #+BEGIN_SRC emacs-lisp
-(setq +private/reveal-js-version "3.7.0"
-      org-reveal-root (format "file:///home/%s/org/.assets/reveal.js-%s"
-                              user-login-name +private/reveal-js-version)
-      org-reveal-theme "black"
-      org-reveal-transition "none"
-      org-reveal-title-slide "<h2>%t</h2>"
-      org-reveal-default-frag-style "appear"
-      org-export-with-section-numbers nil
-      org-export-with-toc nil
-      org-export-with-todo-keywords nil
-      org-export-time-stamp-file nil)
+(after! ox-reveal
+  (setq +private/reveal-js-use-cdn nil
+        +private/reveal-js-version "3.8.0")
+  (setq org-reveal-root (if +private/reveal-js-use-cdn
+                            (format  "https://cdn.jsdelivr.net/npm/reveal.js@%s/" +private/reveal-js-version)
+                          (format "file://%s.assets/reveal.js-%s"
+                                  (expand-file-name org-directory) +private/reveal-js-version))
+        org-reveal-note-key-char "n"
+        org-reveal-theme "black"
+        org-reveal-transition "none"
+        org-reveal-title-slide "<h2>%t</h2>"
+        org-reveal-default-frag-style "appear"
+        org-export-with-section-numbers nil
+        org-export-with-toc nil
+        org-export-with-todo-keywords nil
+        org-export-time-stamp-file nil)
+  )
 #+END_SRC
 *** Org-habit
 #+BEGIN_SRC emacs-lisp
