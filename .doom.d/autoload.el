@@ -105,3 +105,11 @@
   (if (treemacs-is-treemacs-window-selected?)
       (aw-flip-window)
     (treemacs-select-window)))
+
+;;;###autoload
+(defun +private/yank-project-file-name ()
+  "Yank filename of the current file relative to the project root."
+  (interactive)
+  (if-let* ((filename (or buffer-file-name (bound-and-true-p list-buffers-directory))))
+      (message (kill-new (s-chop-prefix (projectile-project-root) (buffer-file-name))))
+    (error "Couldn't find filename in current buffer")))

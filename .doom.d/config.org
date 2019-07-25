@@ -149,6 +149,7 @@
       :desc "file" :prefix "f"
       :desc "Transfer a file" :n "t" #'+private/transfer-file
       :desc "Transfer this file" :n "T" #'+private/transfer-this-file
+      :desc "Yank project filename" :n "Y" #'+private/yank-project-file-name
       :desc "Config file" :n "c" #'+private/find-config-file
       :desc "Private module" :n "p"
       (λ!
