@@ -113,7 +113,6 @@ rebuild-kernel() {
 # alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j4 && sudo make -j4 modules_install && sudo make -j4 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
 
 alias cp='cp --reflink=auto'
-alias doom='~/.emacs.d.doom/bin/doom'
 alias em='emacsclient -a vim -t'
 alias emc='emacsclient -c -a vim'
 alias tddg="BROWSER=links ddgr"
@@ -152,6 +151,8 @@ alias bus='bundle exec rspec'
 alias abu='antibody bundle < ~/.zsh/plugins.txt >| ~/.zsh/plugins.zsh'
 
 # Docker
+alias dce='docker-compose exec'
+alias dcu='docker-compose up -d'
 docker-sh() {
     docker run -w /src -v $(pwd):/src --rm "$1" ${@:2}
 }
