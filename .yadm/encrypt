@@ -1,3 +1,2 @@
-.ssh/*.key
-.ssh/*.pub
+.ssh/*.pem
 .ssh/id_*
