@@ -598,6 +598,12 @@
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-log-buffer-setup-hook 'evil-insert-state)
 #+END_SRC
+*** Babel
+**** Add languages
+#+BEGIN_SRC emacs-lisp
+(use-package! ob-elixir
+  :after org)
+#+END_SRC
 *** Close after
 #+BEGIN_SRC emacs-lisp
 )

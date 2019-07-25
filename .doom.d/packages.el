@@ -7,3 +7,4 @@
 
 ;; Org
 (package! org-super-agenda)
+(package! ob-elixir)
