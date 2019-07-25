@@ -11,10 +11,6 @@
         +wordnut          ; wordnet (wn) search
         +langtool)        ; a proofreader (grammar/style check) for Emacs
 
-       :collab            ; only professional relationship, I swear!
-       ;; floobits        ; peer programming for a price
-       impatient-mode     ; show off code over HTTP
-
        :completion        ; be lazy, be productive
        (company           ; the ultimate code completion backend
         +auto)            ; as-you-type code completion
