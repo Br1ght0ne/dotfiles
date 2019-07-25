@@ -126,27 +126,27 @@
        (lookup            ; helps you navigate your code and documentation
         +devdocs)         ; ...on devdocs.io online
        lsp                ; a sane way to talk to your editor in charge
-       ;; macos
+       ;; macos           ; a hipster OS, not for the *real* developers.
        (magit             ; the best git porcelain everrr
         +forge)           ; git(hub|lab|gud) at your fingertips
        make               ; $ make your dreams come true  # doesn't work
        pass               ; password manager for nerds
        pdf                ; pdf enhancements
        ;; prodigy         ; FIXME managing external services & code builders
-       ;; rgb             ; creating color strings
-       ;; terraform
+       rgb                ; creating color strings
+       terraform          ; before Mars, start with your ~server~ ROOM AND THE MESS INSIDE
        ;; tmux            ; an API for interacting with tmux
        ;; upload          ; map local to remote projects via ssh/ftp
        wakatime           ; maintaining your illusions of being productive
 
        :ui                ; you can't stare at that console all day, Ronny!
-       ;; deft
+       ;; deft            ; for those who didn't try org-mode
        doom               ; what makes DOOM look the way it does
        doom-dashboard     ; a nifty splash screen for Emacs
        doom-quit          ; DOOM quit-message prompts when you quit Emacs
        fill-column        ; a `fill-column' indicator
        hl-todo            ; highlight TODO/FIXME/NOTE tags
-       ;; indent-guides
+       ;; indent-guides   ; stop counting nesting levels, for god's sake
        modeline           ; snazzy, Atom-inspired modeline, plus API
        nav-flash          ; blink the current line after jumping
        ;; neotree         ; a project drawer, like NERDTree for vim
@@ -167,22 +167,12 @@
        :config            ; configs. configs always change
        literate           ; something something org babel tangle
        (default           ; hlissner's legacy
-        +bindings         ; spacemacs? spacemacs
-        +smartparens      ; parinfer, but actually no
-        +snippets         ; you won't use them anyway
-        +evil-commands)   ; what are those for?
-       )
+         +bindings        ; spacemacs? spacemacs
+         +smartparens     ; parinfer, but actually no
+         +snippets        ; you won't use them anyway
+         +evil-commands)) ; what are those for?
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(wakatime-api-key "d3ced585-ce02-419a-a204-36bf85a09926")
  '(wakatime-cli-path "wakatime")
  '(wakatime-python-bin nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
