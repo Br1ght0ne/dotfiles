@@ -6,7 +6,7 @@ Pry.editor = 'vim'
 # === PROMPT ===
 Pry.prompt = [
   ->(_obj, _nest_level, _) { 'pry> ' },
-  ->(_obj, nest_level, _) { "#{' ' * nest_level}  " }
+  ->(_obj, nest_level, _) { "#{' ' * (nest_level + 5)}" }
 ]
 
 # === COLORS ===
