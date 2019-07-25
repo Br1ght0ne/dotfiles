@@ -37,8 +37,7 @@
        :emacs             ; anything new is enormously patched old
        (dired             ; making dired pretty [functional]
         ;; +ranger        ; you can't forget it, let's be honest
-        +icons            ; it's 20XX already, come on!
-       )
+        +icons)           ; it's 20XX already, come on!
        electric           ; smarter, keyword-based electric-indent
        vc                 ; version-control and Emacs, sitting in a tree
 
