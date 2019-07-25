@@ -107,13 +107,14 @@
 
        :term              ; is this hacking?
        eshell             ; hack the world, one cons at a time
-       term               ; the virgin default terminal
-       ;; vterm           ; the CHAD native-enhanced terminal module
+       ;; shell           ; back to basics
+       ;; term            ; the virgin default terminal (still nice)
+       vterm              ; the CHAD native-enhanced terminal module (doesn't work)
 
        :tools             ; of the trade, and other activities
-       ;; ansible
+       ansible            ; automate all the things, even if it takes more time
        debugger           ; stepping through code, to help you add bugs
-       ;; direnv
+       direnv             ; because long .profile files are bad
        docker             ; ever played buzzword bingo?
        editorconfig       ; let someone else argue about tabs vs spaces
        ;; ein             ; tame Jupyter notebooks with emacs
