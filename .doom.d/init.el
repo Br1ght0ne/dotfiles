@@ -49,10 +49,10 @@
        :lang              ; you either code, or should start coding
        ;; agda
        ;; assembly        ; assembly for fun or debugging
-       (cc                ; C/C++/Obj-C madness
-        +irony)           ; at least it's not Sarcasm++
-       ;;  +rtags         ; I don't need those
-       clojure         ; java with a lisp
+       ;; (cc             ; FIXME C/C++/Obj-C madness
+       ;;  +irony)        ; at least it's not Sarcasm++
+       ;; ;;  +rtags      ; I don't need those
+       clojure            ; java with a lisp
        ;; common-lisp     ; if you've seen one lisp, you've seen them all
        ;; coq
        ;; crystal         ; ruby at the speed of c
