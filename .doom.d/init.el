@@ -9,10 +9,10 @@
        ;; twitter         ; twitter client https://twitter.com/vnought
        (write             ; emacs as a word processor (latex + org + markdown)
         +wordnut          ; wordnet (wn) search
-        +langtool)        ; a proofreader (grammar/style check) for Emacs
+        +lentil)        ; a proofreader (grammar/style check) for Emacs
 
        :completion        ; be lazy, be productive
-       (company           ; the ultimate code completion backend
+       (company           ; the ultimate imperative completion backend
         +auto)            ; as-you-type code completion
        (ivy               ; a search engine for love and life
         +prescient        ; sorting and filtering machinery
@@ -108,8 +108,8 @@
        :term              ; is this hacking?
        eshell             ; hack the world, one cons at a time
        ;; shell           ; back to basics
-       ;; term            ; the virgin default terminal (still nice)
-       vterm              ; the CHAD native-enhanced terminal module (doesn't work)
+       term               ; the virgin default terminal (still nice)
+       ;; vterm           ; the CHAD native-enhanced terminal module (TODO alpha)
 
        :tools             ; of the trade, and other activities
        ansible            ; automate all the things, even if it takes more time

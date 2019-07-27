@@ -572,27 +572,26 @@
 *** ~org-super-agenda~
 #+BEGIN_SRC emacs-lisp
 (after! org
-  (org-super-agenda-mode 1))
-#+END_SRC
-**** Groups
-#+BEGIN_SRC emacs-lisp
-(setq org-super-agenda-groups
-      '(
-        (:name "Today"
-               :time-grid t)
-        (:name "Important"
-               :priority "A")
-        (:name "Inbox"
-               :tag "@inbox")
-        (:name "Home"
-               :tag "@home")
-        (:name "University"
-               :tag "@uni")
-        (:name "Work"
-               :tag "@work")
-        (:name "Habits"
-               :tag "@tickler")
-        ))
+  (org-super-agenda-mode 1)
+  (setq org-super-agenda-groups
+        '(
+          (:name "Today"
+                 :time-grid t)
+          (:name "Important"
+                 :priority "A")
+          (:name "Inbox"
+                 :tag "@inbox")
+          (:name "Home"
+                 :tag "@home")
+          (:name "University"
+                 :tag "@uni")
+          (:name "Work"
+                 :tag "@work")
+          (:name "GitHub contributions"
+                 :tag "@github")
+          (:name "Habits"
+                 :tag "@tickler")
+          )))
 #+END_SRC
 *** Insert state in note buffers (~org-add-note~)
 #+BEGIN_SRC emacs-lisp
