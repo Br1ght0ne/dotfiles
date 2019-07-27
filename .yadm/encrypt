@@ -1,2 +1,3 @@
 .ssh/*.pem
 .ssh/id_*
+.yadm/.decrypted
