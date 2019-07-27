@@ -3,13 +3,12 @@
 (doom! :app               ; what makes Emacs the best OS
        calendar           ; essentials for a modern dweller
        ;; irc             ; how neckbeards socialize
-       regex              ; two problems instead of one
-       (rss               ; emacs as an RSS reader
-        +org)             ; rss + org: born to be together
+       ;; regex           ; FIXME two problems instead of one
+       (rss +org)         ; emacs as an RSS reader
        ;; twitter         ; twitter client https://twitter.com/vnought
-       (write             ; emacs as a word processor (latex + org + markdown)
+       (write             ; emacs for writers (fiction, notes, papers, etc.)
         +wordnut          ; wordnet (wn) search
-        +lentil)        ; a proofreader (grammar/style check) for Emacs
+        +langtool)        ; a proofreader (grammar/style check) for Emacs
 
        :completion        ; be lazy, be productive
        (company           ; the ultimate imperative completion backend
@@ -30,6 +29,7 @@
         +onsave)          ; and don't even think about it.
        lispy              ; the best lisp package ever
        multiple-cursors   ; editing in many places at once
+       ;;objed            ; text object editing for the innocent
        ;; parinfer        ; turn lisp into python, sort of
        rotate-text        ; cycle region at point between text candidates
        snippets           ; my elves. They type so I don't have to
@@ -47,33 +47,30 @@
        ;; wanderlust
 
        :lang              ; you either code, or should start coding
-       ;; agda
+       ;; agda            ; types of types of types of types...
        ;; assembly        ; assembly for fun or debugging
-       ;; (cc             ; FIXME C/C++/Obj-C madness
-       ;;  +irony)        ; at least it's not Sarcasm++
-       ;; ;;  +rtags      ; I don't need those
+       ;; (cc +irony)     ; C/C++/Obj-C madness
        clojure            ; java with a lisp
        ;; common-lisp     ; if you've seen one lisp, you've seen them all
-       ;; coq
+       ;; coq             ; proofs-as-programs
        ;; crystal         ; ruby at the speed of c
        ;; csharp          ; unity, .NET, and mono shenanigans
        data               ; config/data formats
        (elixir +lsp)      ; erlang done right
        ;; elm             ; care for a cup of TEA?
-       emacs-lisp         ; drown in parentheses
        erlang             ; an elegant language for a more civilized age
+       ;; elm             ; care for a cup of TEA?
+       emacs-lisp         ; drown in parentheses
        ;; ess             ; emacs speaks statistics
+       ;; fsharp          ; ML stands for Microsoft's Language
        go                 ; the hipster dialect
-       (haskell           ; a language that's lazier than I am
-        +intero)          ; the best haskell IDE for emacs
+       (haskell +intero)  ; a language that's lazier than I am
        ;; hy              ; readability of scheme w/ speed of python
-       ;; idris
-       (java              ; the poster child for carpal tunnel syndrome
-        +meghanada)       ; the only java server that sucks (a little) less
-       (javascript        ; all(hope(abandon(ye(who(enter(here))))))
-        +lsp)
+       ;; idris           ;
+       (java +meghanada)  ; the poster child for carpal tunnel syndrome
+       (javascript +lsp)  ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia           ; a better, faster MATLAB
-       ;; kotlin          ; better Java, and even more!
+       ;; kotlin          ; a better, slicker Java(Script)
        latex              ; writing papers in Emacs has never been so fun
        ledger             ; an accounting system in Emacs
        lua                ; one-based indices? one-based indices
@@ -82,7 +79,8 @@
        ;; nix             ; I hereby declare "nix geht mehr!"
        ;; ocaml           ; an objective camel
        (org               ; organize your plain life in plain text
-        +gnuplot          ; because a picture is worth... something?
+        +dragndrop        ; file drag & drop support
+        +ipython          ; ipython support for babel
         +pandoc           ; for those *other* pleb formats
         +present)         ; emacs for presentations
        ;; perl            ; write code no one else can comprehend
@@ -98,11 +96,12 @@
        (rust              ; a crabby language
         +lsp)             ; best in class
        ;; scala           ; java, but good
+       ;; scheme          ; a fully conniving family of lisps
        sh                 ; she sells (ba|z)sh shells on the C xor
        ;; solidity        ; do you need a blockchain? No.
        ;; swift           ; who asked for emoji variables?
-       ;; terra
-       ;; vala
+       ;; terra           ; Earth and Moon in alignment for performance.
+       ;; vala            ; GObjective-C
        web                ; the tubes
 
        :term              ; is this hacking?
@@ -146,6 +145,7 @@
        doom-quit          ; DOOM quit-message prompts when you quit Emacs
        fill-column        ; a `fill-column' indicator
        hl-todo            ; highlight TODO/FIXME/NOTE tags
+       hydra              ; a multi-headed snake at your fingertips
        ;; indent-guides   ; stop counting nesting levels, for god's sake
        modeline           ; snazzy, Atom-inspired modeline, plus API
        nav-flash          ; blink the current line after jumping
@@ -168,10 +168,7 @@
        literate           ; something something org babel tangle
        (default           ; hlissner's legacy
          +bindings        ; spacemacs? spacemacs
-         +smartparens     ; parinfer, but actually no
-         +snippets        ; you won't use them anyway
-         +evil-commands)) ; what are those for?
-
+         +smartparens))   ; parinfer, but actually no
 (custom-set-variables
  '(wakatime-api-key "d3ced585-ce02-419a-a204-36bf85a09926")
  '(wakatime-cli-path "wakatime")
