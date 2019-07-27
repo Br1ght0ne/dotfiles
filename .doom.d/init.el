@@ -56,7 +56,7 @@
        ;; common-lisp     ; if you've seen one lisp, you've seen them all
        ;; coq
        ;; crystal         ; ruby at the speed of c
-       csharp             ; unity, .NET, and mono shenanigans
+       ;; csharp          ; unity, .NET, and mono shenanigans
        data               ; config/data formats
        (elixir +lsp)      ; erlang done right
        ;; elm             ; care for a cup of TEA?
@@ -73,7 +73,7 @@
        (javascript        ; all(hope(abandon(ye(who(enter(here))))))
         +lsp)
        ;; julia           ; a better, faster MATLAB
-       kotlin             ; better Java, and even more!
+       ;; kotlin          ; better Java, and even more!
        latex              ; writing papers in Emacs has never been so fun
        ledger             ; an accounting system in Emacs
        lua                ; one-based indices? one-based indices
