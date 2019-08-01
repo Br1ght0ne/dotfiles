@@ -61,7 +61,7 @@
   (require 'anaphora)
   (let ((program (or program (completing-read "Action: "
                                               +private/open-link-with-commands
-                                              nil nil nil nil "mpv"))))
+                                              nil nil nil nil "url-handler"))))
     (cond ((string= program "copy")
            (kill-new link)
            (message "Copied: %s" link))

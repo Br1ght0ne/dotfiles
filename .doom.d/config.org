@@ -682,7 +682,7 @@
 *** ~open-link-with~
 **** Commands
 #+BEGIN_SRC emacs-lisp
-(setq +private/open-link-with-commands '(copy eww mpv url-handler))
+(setq +private/open-link-with-commands '(copy eww url-handler))
 #+END_SRC
 **** Qualities
 #+BEGIN_SRC emacs-lisp
