@@ -1,5 +1,5 @@
 #!/bin/bash
 
 betterlockscreen -l dimblur &
-layous us
+layout us
 sudo pm-suspend
