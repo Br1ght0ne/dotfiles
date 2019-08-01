@@ -8,3 +8,13 @@
 ;; Org
 (package! org-super-agenda)
 (package! ob-elixir)
+(package! org-web-tools)
+
+;; Elisp
+(package! el-patch)
+
+;; Fun
+(package! elcord)
+
+;; Testing
+(package! lsp-treemacs)
