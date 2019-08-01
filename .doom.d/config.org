@@ -224,6 +224,13 @@
           :desc "Compile"          "b" #'flycheck-compile
           :desc "Copy error"       "w" #'flycheck-copy-errors-as-kill)))
 #+END_SRC
+**** LSP code actions
+#+BEGIN_SRC emacs-lisp
+(after! lsp
+  (map! :leader
+        :prefix "c"
+        :desc "Execute code action" "a" #'lsp-execute-code-action))
+#+END_SRC
 ** Elfeed
 *** Filtering
 #+BEGIN_SRC emacs-lisp
