@@ -1,6 +1,7 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; ~/.doom.d/packages.el
 
+;; Libraries
 (package! anaphora)
 (package! dash)
 (package! dash-functional)
@@ -10,11 +11,5 @@
 (package! ob-elixir)
 (package! org-web-tools)
 
-;; Elisp
-(package! el-patch)
-
 ;; Fun
 (package! elcord)
-
-;; Testing
-(package! lsp-treemacs)
