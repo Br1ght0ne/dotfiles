@@ -577,29 +577,22 @@
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)
 #+END_SRC
-*** ~org-super-agenda~
+** ~org-super-agenda~
 #+BEGIN_SRC emacs-lisp
 (after! org
   (org-super-agenda-mode 1)
   (setq org-super-agenda-groups
         '(
-          (:name "Today"
-                 :time-grid t)
-          (:name "Important"
-                 :priority "A")
-          (:name "Inbox"
-                 :tag "@inbox")
-          (:name "Home"
-                 :tag "@home")
-          (:name "University"
-                 :tag "@uni")
-          (:name "Work"
-                 :tag "@work")
-          (:name "GitHub contributions"
-                 :tag "@github")
-          (:name "Habits"
-                 :tag "@tickler")
-          )))
+          (:name "Today" :order 1
+                 :time-grid)
+          (:name "Inbox" :tag "@inbox")
+          (:name "Work"  :tag "@work")
+          (:name "Uni"   :tag "@uni")
+          (:name "Home"  :tag "@home")
+          (:name (:and :tag "@github" :todo t))
+          (:name "Current Reading" :tag "reading" :todo "NEXT")
+          (:name "Habits" :habit t)
+          (:name "Recurring" :tag "@tickler"))))
 #+END_SRC
 *** Insert state in note buffers (~org-add-note~)
 #+BEGIN_SRC emacs-lisp
