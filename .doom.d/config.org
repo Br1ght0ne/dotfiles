@@ -533,7 +533,8 @@
                               ("gw" . "https://wiki.gentoo.org/index.php?search="))
       org-global-properties '(("Effort_ALL" . "1:00 2:00 3:00 4:00 5:00 0:15 0:30 10:00 20:00 40:00")
                               ("COOKIE_DATA" . "recursive"))
-      org-columns-default-format "%TODO(State) %50ITEM(Task) %10Effort{:} %10CLOCKSUM(Clocked)")
+      org-columns-default-format "%TODO(State) %50ITEM(Task) %10Effort{:} %10CLOCKSUM(Clocked)"
+      org-list-allow-alphabetical t)
 #+END_SRC
 **** Habits
 #+BEGIN_SRC emacs-lisp
