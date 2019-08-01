@@ -198,3 +198,7 @@
         - name: Run 'asdf install'
           tags: long
           shell: asdf install
+
+# Local Variables:
+# eval: (+ansible-yaml-mode 1)
+# End:
