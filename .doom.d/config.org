@@ -882,3 +882,13 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . sh-mode))
 #+END_SRC
+** Elcord
+Discord Rich presence
+#+BEGIN_SRC emacs-lisp
+(use-package! elcord
+  :demand t
+  :init
+  (setq elcord-display-buffer-details nil)
+  :config
+  (elcord-mode 1))
+#+END_SRC
