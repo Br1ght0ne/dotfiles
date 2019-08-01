@@ -15,7 +15,7 @@ else
   case classname
   when 'mpv'
     puts 'state=fullscreen'
-  when 'Emacs', 'libreoffice', 'libreoffice-writer', 'Zathura'
+  when /emacs/i, 'libreoffice', 'libreoffice-writer', 'Zathura'
     puts 'state=tiled'
   when 'Pavucontrol', 'st-floating', 'Pinentry'
     puts 'state=floating'
@@ -26,7 +26,7 @@ end
 
 # Desktops
 case classname
-when 'Emacs'
+when /emacs/i
   puts "desktop=一\nfollow=off"
 when 'qutebrowser', 'Firefox'
   puts "desktop=二\nfollow=off"
