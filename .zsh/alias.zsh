@@ -92,9 +92,9 @@ git-branch-current() {
 }
 
 # Gentoo stuff
-alias gfu='sudo emerge -uND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
+alias gfu='sudo emerge -vuND --with-bdeps=y @world && sudo emerge -vc && sudo revdep-rebuild'
 alias sync-gfu='sudo eix-sync && gfu'
-alias ask-gfu='sudo emerge -auND --with-bdeps=y @world && sudo emerge -c && sudo revdep-rebuild'
+alias ask-gfu='sudo emerge -avuND --with-bdeps=y @world && sudo emerge -vc && sudo revdep-rebuild'
 alias ask-sync-gfu="sudo eix-sync && ask-gfu"
 rebuild-kernel() {
     (
@@ -110,7 +110,6 @@ rebuild-kernel() {
         sudo emerge -v @module-rebuild
     )
 }
-# alias rebuild-kernel="cd /usr/src/linux && sudo make oldconfig && sudo make -j4 && sudo make -j4 modules_install && sudo make -j4 install && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo emerge -v @module-rebuild && cd -"
 
 alias cp='cp --reflink=auto'
 alias em='emacsclient -a vim -t'
