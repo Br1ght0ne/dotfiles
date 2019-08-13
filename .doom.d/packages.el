@@ -13,3 +13,6 @@
 
 ;; Fun
 (package! elcord)
+
+;; Testing grounds
+(package! symbol-overlay)

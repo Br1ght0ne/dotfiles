@@ -49,7 +49,7 @@
        :lang              ; you either code, or should start coding
        ;; agda            ; types of types of types of types...
        ;; assembly        ; assembly for fun or debugging
-       ;; (cc +irony)     ; C/C++/Obj-C madness
+       (cc +lsp)          ; C/C++/Obj-C madness
        clojure            ; java with a lisp
        ;; common-lisp     ; if you've seen one lisp, you've seen them all
        ;; coq             ; proofs-as-programs
@@ -85,13 +85,14 @@
         +present)         ; emacs for presentations
        ;; perl            ; write code no one else can comprehend
        ;; php             ; perl's insecure younger brother
-       ;; plantuml        ; diagrams for confusing people more
+       plantuml           ; diagrams for confusing people more
        ;; purescript      ; javascript, but functional
        (python +lsp)      ; beautiful is better than ugly
        ;; qt              ; the 'cutest' gui framework ever
-       ;; racket          ; a DSL for DSLs
-       ;; rest            ; Emacs as a REST client
+       racket             ; a DSL for DSLs
+       rest               ; Emacs as a REST client
        (ruby              ; 1.step { |i| puts "Ruby is #{i.even? ? 'love' : 'life'}"}
+        +lsp
         +rails)           ; convention over head-desk-banging
        (rust              ; a crabby language
         +lsp)             ; best in class
@@ -156,7 +157,7 @@
         +defaults)        ; default popup rules
        (pretty-code       ; replace bits of code with pretty symbols
         +fira)            ; the one true ligature font
-       ;; tabbar          ; FIXME an (incomplete) tab bar for Emacs
+       ;; tabs            ; FIXME an (incomplete) tab bar for Emacs
        treemacs           ; a project drawer, like neotree but cooler
        unicode            ; extended unicode support for various languages
        vc-gutter          ; vcs diff in the fringe

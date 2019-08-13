@@ -577,7 +577,7 @@
 (require 'org-habit)
 (add-to-list 'org-modules 'org-habit)
 #+END_SRC
-** ~org-super-agenda~
+*** ~org-super-agenda~
 #+BEGIN_SRC emacs-lisp
 (after! org
   (org-super-agenda-mode 1)
@@ -585,10 +585,12 @@
         '(
           (:name "Today" :order 1
                  :time-grid)
-          (:name "Inbox" :tag "@inbox")
-          (:name "Work"  :tag "@work")
-          (:name "Uni"   :tag "@uni")
-          (:name "Home"  :tag "@home")
+          (:name "Inbox"  :tag "@inbox")
+          (:name "Work"   :tag "@work")
+          (:name "Money"  :tag "@money")
+          (:name "Uni"    :tag "@uni")
+          (:name "Home"   :tag "@home")
+          (:name "Events" :tag "@event")
           (:name (:and :tag "@github" :todo t))
           (:name "Current Reading" :tag "reading" :todo "NEXT")
           (:name "Habits" :habit t)
@@ -604,6 +606,11 @@
 (use-package! ob-elixir
   :after org)
 #+END_SRC
+*** ~org-web-tools~
+#+BEGIN_SRC emacs-lisp
+(after! org-web-tools
+  (setq org-web-tools-pandoc-sleep-time 5))
+#+END_SRC
 *** Close after
 #+BEGIN_SRC emacs-lisp
 )
@@ -613,6 +620,16 @@
 #+BEGIN_SRC emacs-lisp
 (after! projectile
   (setq projectile-project-search-path '("~/dev" "~/github" "~/git")))
+#+END_SRC
+*** Priorities
+This allows for =exercism=-like setup, where we have language-specific roots
+inside of a Git repo.
+#+BEGIN_SRC emacs-lisp
+(after! projectile
+  (setq projectile-project-root-files-bottom-up
+        (remove ".git" (pushnew "Cargo.toml" projectile-project-root-files-bottom-up)))
+  (setq projectile-project-root-files-top-down-recurring
+        (pushnew ".git" projectile-project-root-files-top-down-recurring)))
 #+END_SRC
 ** Eshell
 #+BEGIN_SRC emacs-lisp
@@ -667,6 +684,11 @@
 #+BEGIN_SRC emacs-lisp
 (after! forge
   (add-to-list 'forge-alist '("gitlab.railsreactor.com" "gitlab.railsreactor.com/api/v4" "gitlab.railsreactor.com" forge-gitlab-repository)))
+#+END_SRC
+*** TODOs
+#+BEGIN_SRC emacs-lisp
+(after! magit-todos
+  (setq magit-todos-auto-group-items 'always))
 #+END_SRC
 
 ** \LaTeX
@@ -800,10 +822,10 @@
 )
 #+END_SRC
 ** Modeline
-*** Major mode icon
 #+BEGIN_SRC emacs-lisp
-(setq doom-modeline-major-mode-icon t
-      doom-modeline-major-mode-color-icon t)
+(after! doom-modeline
+  (setq doom-modeline-major-mode-icon t
+        doom-modeline-major-mode-color-icon t))
 #+END_SRC
 ** Elixir
 *** LSP server executable
@@ -888,7 +910,31 @@ Discord Rich presence
 (use-package! elcord
   :demand t
   :init
-  (setq elcord-display-buffer-details nil)
+  (setq elcord-display-buffer-details t
+        elcord-use-major-mode-as-main-icon t)
   :config
   (elcord-mode 1))
+#+END_SRC
+** Rust
+*** ABRT Disable ~whitespace-mode~
+Should be fixed in [[orgit-rev:~/.emacs.d/::b34a542ca0691345a15bac876cc96fb590200303][0200303]].
+
+#+BEGIN_SRC emacs-lisp :tangle no
+(add-hook 'rustic-mode-local-vars-hook
+          (λ! (set (make-local-variable 'whitespace-mode) nil)))
+#+END_SRC
+
+* Testing grounds
+** TODO Symbol overlay
+[[https://github.com/hlissner/doom-emacs/pull/1646]]
+#+BEGIN_SRC emacs-lisp
+(use-package! symbol-overlay
+  :commands 'symbol-overlay-put
+  :init
+  (map!
+   (:leader
+     :prefix "c"
+     :desc "Put symbol overlay" "o" #'symbol-overlay-put)
+   (:map symbol-overlay-map
+     [escape] #'symbol-overlay-remove-all)))
 #+END_SRC
