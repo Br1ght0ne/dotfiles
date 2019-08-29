@@ -59,6 +59,8 @@
         - org.kde.kdenlive
         - org.kde.krita
         - uz.zoom.Zoom
+      cargo:
+        - ff-profile
   tasks:
     - name: Ensure critical system packages are installed
       tags: ensure, system
@@ -113,6 +115,13 @@
           loop:
             - stable
             - nightly
+        - name: Install Cargo packages
+          tags: long,cargo
+          shell: cargo install "{{ item }}"
+          register: cargo_install
+          failed_when: cargo_install.rc not in [0, 101]
+          changed_when: "'exists' not in cargo_install.stderr"
+          loop: "{{ packages.cargo }}"
     - name: Set up Emacs
       tags: emacs
       block:
@@ -198,7 +207,6 @@
         - name: Run 'asdf install'
           tags: long
           shell: asdf install
-
 # Local Variables:
 # eval: (+ansible-yaml-mode 1)
 # End:
