@@ -352,7 +352,6 @@
         :n "S" #'org-save-all-org-buffers
         :n "t" #'org-todo
         :n ":" #'org-set-tags
-        :n "e" #'org-export-dispatch
         :n "E" #'org-edit-special
         :n "p" #'org-priority
         :desc "Tree to indirect buffer" :n "B" #'org-tree-to-indirect-buffer
@@ -825,7 +824,8 @@ inside of a Git repo.
 #+BEGIN_SRC emacs-lisp
 (after! doom-modeline
   (setq doom-modeline-major-mode-icon t
-        doom-modeline-major-mode-color-icon t))
+        doom-modeline-major-mode-color-icon t
+        doom-modeline-buffer-file-name-style 'truncate-with-project))
 #+END_SRC
 ** Elixir
 *** LSP server executable
