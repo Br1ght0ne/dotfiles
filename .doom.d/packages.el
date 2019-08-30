@@ -7,7 +7,9 @@
 (package! dash-functional)
 
 ;; Org
-(package! org-super-agenda)
+;; ts (for org-super-agenda) is not being found for some reason
+(package! ts :recipe (:host github :repo "alphapapa/ts.el"))
+(package! org-super-agenda :recipe (:host github :repo "alphapapa/org-super-agenda"))
 (package! ob-elixir)
 (package! org-web-tools)
 
