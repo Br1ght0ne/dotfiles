@@ -79,7 +79,6 @@ export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
 export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 
 # Homebrew
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"

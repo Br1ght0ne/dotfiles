@@ -7,3 +7,5 @@ export BROWSER="firefox-bin"
 export PODCAST="$HOME/podcasts"
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+export PATH="/home/linuxbrew/.linuxbrew/bin:$HOME/.local/bin:$PATH"
