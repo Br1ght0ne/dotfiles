@@ -24,6 +24,12 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list '+doom-solaire-themes '(doom-peacock . t))
 #+END_SRC
+*** Treemacs, icons, etc.
+#+BEGIN_SRC emacs-lisp
+(use-package! doom-themes
+  :init
+  (setq doom-themes-treemacs-theme "doom-colors"))
+#+END_SRC
 ** Fonts
 #+BEGIN_SRC emacs-lisp
 (setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13)
