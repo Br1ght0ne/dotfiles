@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-export BROWSER="firefox-bin"
+export BROWSER="firefox"
 
 # Podcast directory for `podcast` - a command-line podcast manager.
 # https://crates.io/crates/podcast
