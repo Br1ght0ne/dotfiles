@@ -1,7 +1,21 @@
-# antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
+zdir=$HOME/.zsh
 
-for f in "$HOME"/.zsh/**/*.zsh; do
-	source "$f"
-done
+. $zdir/env.zsh
 
-[[ $DISPLAY ]] || startx
+[[ -f $zdir/plugins.zsh ]] || \
+	antibody bundle < $zdir/plugins.txt > $zdir/plugins.zsh
+. $zdir/plugins{,-config}.zsh
+
+. $zdir/completions.zsh
+
+. $zdir/aliases.zsh
+. $zdir/bindings.zsh
+
+. $zdir/theme.zsh
+
+. $zdir/hooks.zsh
+
+# (linux && term) -> X
+if command -v startx &>/dev/null; then
+	[[ $DISPLAY ]] || startx
+fi
