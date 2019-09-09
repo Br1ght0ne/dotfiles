@@ -9,7 +9,6 @@
     packages:
       system:
         curl:
-        emacs:
         gawk:
           Archlinux: awk
       linuxbrew:
@@ -64,6 +63,7 @@
   tasks:
     - name: Ensure critical system packages are installed
       tags: ensure, system
+      become: true
       package:
         name: "{{ item.value[ansible_facts['os_family']] | default(item.key) }}"
       loop: "{{ packages.system|dict2items }}"
@@ -207,6 +207,18 @@
         - name: Run 'asdf install'
           tags: long
           shell: asdf install
+    - name: Set up Firefox
+      tags: firefox,app
+      block:
+        - name: Find default Firefox profile
+          shell: ff-profile
+          changed_when: false
+          register: ff_profile
+        - name: Link userChrome.css into the default profile
+          file:
+            src: "~/.yadm/link_sources/userChrome.css"
+            dest: "{{ ff_profile.stdout }}/chrome/userChrome.css"
+            state: link
 # Local Variables:
 # eval: (+ansible-yaml-mode 1)
 # End:
