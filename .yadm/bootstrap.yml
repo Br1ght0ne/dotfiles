@@ -12,6 +12,7 @@
         gawk:
           Archlinux: awk
       linuxbrew:
+        - asdf
         - bat
         - cargo-completion
         - direnv
@@ -187,13 +188,6 @@
     - name: Set up asdf
       tags: asdf
       block:
-        - name: Install asdf
-          tags: git,clone
-          git:
-            repo: https://github.com/asdf-vm/asdf.git
-            dest: ~/.asdf
-            update: no
-            version: v0.7.2
         - name: Get plugin names from ~/.tool-versions
           shell: awk '{print $1}' ~/.tool-versions
           changed_when: false
