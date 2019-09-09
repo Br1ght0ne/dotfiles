@@ -164,7 +164,7 @@
                 creates: ~/.local/bin/antibody
             - name: Bundle plugins
               tags: long
-              shell: zsh -c "antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/plugins.zsh"
+              shell: zsh -c "antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/1_plugins.zsh"
               args:
                 creates: ~/.zsh/plugins.zsh
     - name: Set up flatpak

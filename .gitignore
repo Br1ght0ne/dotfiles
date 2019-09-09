@@ -7,5 +7,6 @@
 /.config/ranger/bookmarks
 
 .zsh/.completions
+.zsh/plugins.zsh
 .weechat/**/*.log
 .yadm/boostrap.retry
