@@ -1,5 +1,7 @@
 .config/cmus/playlists
 .config/cmusfm/cmusfm.conf
+.config/mimeapps.list
+.config/mpv/watch_later/
 .config/mpv/watch_later/
 .config/mpv/scripts/
 /.config/ranger/bookmarks
