@@ -148,6 +148,12 @@
       :desc "open" :prefix "o"
       :desc "Mail" :n "m" #'mu4e)
 #+END_SRC
+**** Magit + yadm
+#+BEGIN_SRC emacs-lisp
+(map! :leader
+      :prefix "o"
+      :desc "Dotfiles (yadm)" "y" (λ! (magit-status "/yadm::")))
+#+END_SRC
 
 *** Files
 #+BEGIN_SRC emacs-lisp
@@ -610,6 +616,10 @@
 #+BEGIN_SRC emacs-lisp
 (use-package! ob-elixir
   :after org)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sql . t)))
 #+END_SRC
 *** ~org-web-tools~
 #+BEGIN_SRC emacs-lisp
@@ -892,12 +902,6 @@ inside of a Git repo.
   "Determines the Phoenix app name."
   (file-name-nondirectory (directory-file-name (alchemist-project-root))))
 #+END_SRC
-** Popup rules
-*** Terminal
-#+BEGIN_SRC emacs-lisp
-(set-popup-rule! "^*doom terminal"
-  :select t :quit nil :side 'bottom :size 0.25)
-#+END_SRC
 ** Ruby
 *** RSpec
 **** Disable Spring
@@ -910,9 +914,9 @@ inside of a Git repo.
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . sh-mode))
 #+END_SRC
-** Elcord
+** COMMENT Elcord
 Discord Rich presence
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
 (use-package! elcord
   :demand t
   :init
@@ -929,8 +933,30 @@ Should be fixed in [[orgit-rev:~/.emacs.d/::b34a542ca0691345a15bac876cc96fb59020
 (add-hook 'rustic-mode-local-vars-hook
           (λ! (set (make-local-variable 'whitespace-mode) nil)))
 #+END_SRC
+** TRAMP
+*** Enable =yadm= method for Magit support
+#+BEGIN_SRC emacs-lisp
+(after! tramp
+  (add-to-list 'tramp-methods
+               '("yadm"
+                 (tramp-login-program "yadm")
+                 (tramp-login-args (("enter")))
+                 (tramp-login-env (("SHELL") ("/bin/sh")))
+                 (tramp-remote-shell "/bin/sh")
+                 (tramp-remote-shell-args ("-c")))))
+#+END_SRC
+** pdf-tools
+*** Disable evil-snipe
+#+BEGIN_SRC emacs-lisp
+(after! pdf-tools
+  (add-hook 'pdf-view-mode-hook (λ! (evil-snipe-local-mode -1))))
+#+END_SRC
 
 * Testing grounds
+#+BEGIN_SRC emacs-lisp
+(after! gif-screencast
+  (message "gs just loaded!"))
+#+END_SRC
 ** TODO Symbol overlay
 [[https://github.com/hlissner/doom-emacs/pull/1646]]
 #+BEGIN_SRC emacs-lisp

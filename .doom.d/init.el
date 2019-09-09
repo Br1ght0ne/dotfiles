@@ -176,6 +176,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   '((TeX-engine . xelatex)
+     (org-cycle-include-plain-lists . integrate)
+     (org-cycle-include-plain-lists quote integrate)
+     (magit-todos-depth . 1)))
  '(wakatime-api-key "d3ced585-ce02-419a-a204-36bf85a09926")
  '(wakatime-cli-path "wakatime")
  '(wakatime-python-bin nil))

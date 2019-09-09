@@ -13,8 +13,6 @@
 (package! ob-elixir)
 (package! org-web-tools)
 
-;; Fun
-(package! elcord)
-
 ;; Testing grounds
-(package! symbol-overlay)
+(package! howdoyou :recipe
+  (:host github :repo "thanhvg/emacs-howdoyou"))
