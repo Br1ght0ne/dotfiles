@@ -847,7 +847,10 @@ inside of a Git repo.
 *** LSP server executable
 #+BEGIN_SRC emacs-lisp
 (after! lsp
-  (setq lsp-clients-elixir-server-executable "elixir-ls"))
+  (setq lsp-clients-elixir-server-executable
+        (+private-try-executable-find "elixir-ls"
+                                      "elixir-language-server"
+                                      "language_server.sh")))
 #+END_SRC
 *** Alchemist
 **** Phoenix project detection
