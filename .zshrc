@@ -4,9 +4,10 @@ setopt auto_cd
 
 . $zdir/env.zsh
 
-[[ -f $zdir/plugins.zsh ]] || \
-	antibody bundle < $zdir/plugins.txt > $zdir/plugins.zsh
-. $zdir/plugins{,-config}.zsh
+[[ -f $zdir/plugins.zsh ]] ||
+	antibody bundle <$zdir/plugins.txt >$zdir/plugins.zsh
+. $zdir/plugins.zsh
+. $zdir/plugins-config.zsh
 
 . $zdir/completions.zsh
 
@@ -18,6 +19,6 @@ setopt auto_cd
 . $zdir/hooks.zsh
 
 # (linux && term) -> X
-if command -v startx &>/dev/null; then
+if command -v startx 2>/dev/null; then
 	[[ $DISPLAY ]] || startx
 fi
