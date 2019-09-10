@@ -15,6 +15,6 @@ ARGV.each do |url|
   when /flatpakref$/
     'alacritty -e flatpak install --user'
   else
-    ENV['BROWSER'] || 'qutebrowser-client'
+    (File.exist?('/usr/bin/open') && 'open') || ENV['BROWSER'] || 'qutebrowser-client'
   end.then { |action| spawn("#{action} '#{url}'") }
 end

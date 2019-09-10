@@ -11,7 +11,9 @@
         curl:
         gawk:
           Archlinux: awk
-      linuxbrew:
+          Darwin: gawk
+      brew:
+        - antibody
         - asdf
         - bat
         - cargo-completion
@@ -19,6 +21,7 @@
         - diskus
         - doctl
         - dust
+        - elixir
         - exa
         - exercism
         - fd
@@ -39,6 +42,7 @@
         - rclone
         - ripgrep
         - rtv
+        - rustup
         - sd
         - shellcheck
         - shfmt
@@ -59,12 +63,42 @@
         - org.kde.kdenlive
         - org.kde.krita
         - uz.zoom.Zoom
+      homebrew_cask:
+        - aware
+        - cheatsheet
+        - discord
+        - docker
+        - dozer
+        - firefox
+        - font-dejavu-sans
+        - font-fira-code
+        - insomnia
+        - iterm2
+        - itsycal
+        - kap
+        - karabiner-elements
+        - katana
+        - kitematic
+        - minikube
+        - rubymine
+        - skype
+        - slack
+        - spectacle
+        - syncthing
+        - telegram
+        - termius
+        - ukelele
+        - virtualbox
+        - virtualbox-extension-pack
+        - xquartz
+        - wine-stable
+        - zoomus
       cargo:
         - ff-profile
   tasks:
     - name: Ensure critical system packages are installed
-      tags: ensure, system
-      become: true
+      tags: ensure,system
+      become: ansible_facts['os_family'] != 'Darwin'
       package:
         name: "{{ item.value[ansible_facts['os_family']] | default(item.key) }}"
       loop: "{{ packages.system|dict2items }}"
@@ -85,27 +119,36 @@
           shell: yadm decrypt
           args:
             creates: ~/.yadm/.decrypted
-    - name: Linuxbrew
+    - name: Brew
       tags: brew
       block:
-        - name: Ensure Linuxbrew is installed
+        - name: Install Brew (Darwin)
           tags: ensure
+          when: ansible_facts['os_family'] == 'Darwin'
+          shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          args:
+            creates: /usr/local/bin/brew
+        - name: Install Brew (Linux)
+          tags: ensure
+          when: ansible_facts['os_family'] != 'Darwin'
           shell: curl https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh
           args:
             creates: /home/linuxbrew/.linuxbrew
-        - name: Update Linuxbrew and install necessary packages
+        - name: Update Brew
           tags: long
           homebrew:
             update_homebrew: yes
+        - name: Install Brew packages
+          tags: long
+          homebrew:
             name: "{{ item }}"
             state: present
-          loop: "{{ packages.linuxbrew }}"
+          loop: "{{ packages.brew }}"
     - name: Rust
       tags: rust
       block:
-        - name: Ensure rustup is installed
-          tags: ensure
-          shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+        - name: Init rustup
+          shell: rustup-init -y
           args:
             creates: ~/.rustup
         - name: Install Rust toolchains
@@ -135,13 +178,12 @@
             accept_hostkey: yes
         - name: Install doom-emacs
           tags: long
-          shell: bin/doom refresh
+          shell: bin/doom -y install --no-config
           register: install_doom_emacs
           args:
             chdir: ~/.emacs.d
-          changed_when: "'No packages to install!' not in install_doom_emacs.stdout"
     - name: Clone passwords
-      tags: git, clone
+      tags: git,clone
       git:
         repo: ssh://git@gitlab.com/BrightOne/passwords.git
         dest: ~/.password-store
@@ -150,41 +192,13 @@
     - name: Set up zsh
       tags: zsh
       block:
-        - name: Install zsh
-          package:
-            name: zsh
         - name: Set up antibody
           block:
-            - name: Ensure ~/.local/bin exists
-              shell: mkdir -p ~/.local/bin
-              args:
-                creates: ~/.local/bin
-            - name: Install antibody
-              shell: curl -sSf /tmp/antibody.sh | sh -s -- -b ~/.local/bin
-              args:
-                creates: ~/.local/bin/antibody
             - name: Bundle plugins
               tags: long
-              shell: zsh -c "antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/1_plugins.zsh"
+              shell: antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/plugins.zsh
               args:
                 creates: ~/.zsh/plugins.zsh
-    - name: Set up flatpak
-      tags: flatpak
-      block:
-        - name: Install flatpak
-          package:
-            name: flatpak
-            state: present
-        - name: Enable flathub remote
-          flatpak_remote:
-            name: flathub
-            state: present
-            flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-        - name: Install flatpaks
-          tags: long
-          flatpak:
-            name: "{{ item }}"
-          loop: "{{ packages.flatpak }}"
     - name: Set up asdf
       tags: asdf
       block:
@@ -201,6 +215,31 @@
         - name: Run 'asdf install'
           tags: long
           shell: asdf install
+          register: asdf_install
+    - name: Set up flatpak
+      when: ansible_facts['os_family'] != 'Darwin'
+      tags: flatpak
+      block:
+        - name: Install flatpak
+          package:
+            name: flatpak
+            state: present
+        - name: Enable flathub remote
+          flatpak_remote:
+            name: flathub
+            state: present
+            flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        - name: Install flatpaks
+          tags: long
+          flatpak:
+            name: "{{ item }}"
+          loop: "{{ packages.flatpak }}"
+    - name: Install Homebrew casks
+      tags: brew,cask
+      when: ansible_facts['os_family'] == 'Darwin'
+      homebrew_cask:
+        name: '{{ item }}'
+      loop: '{{ packages.homebrew_cask }}'
     - name: Set up Firefox
       tags: firefox,app
       block:

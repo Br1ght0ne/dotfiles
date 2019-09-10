@@ -57,8 +57,8 @@
       :alist '(("[ ]" . "☐")
                ("[X]" . "☑")
                ("[-]" . "❍")
-               ("SCHEDULED:" . "")
-               ("DEADLINE:" . "")))))
+               ("SCHEDULED:" . "")
+               ("DEADLINE:" . "")))))
 #+END_SRC
 * Mappings
 ** Global
