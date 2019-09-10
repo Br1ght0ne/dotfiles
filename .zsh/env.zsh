@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # PATH
-export PATH="$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$HOME/.asdf/shims:/usr/local/bin:$PATH"
 
 # Firefox
 export BROWSER="firefox"
