@@ -7,7 +7,7 @@ setopt auto_cd
 [[ -f $zdir/plugins.zsh ]] || \
 	antibody bundle < $zdir/plugins.txt > $zdir/plugins.zsh
 . $zdir/plugins{,-config}.zsh
-bin
+
 . $zdir/completions.zsh
 
 . $zdir/aliases.zsh
