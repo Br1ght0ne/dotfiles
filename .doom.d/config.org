@@ -682,11 +682,13 @@ inside of a Git repo.
 #+BEGIN_SRC emacs-lisp
 ;; (require 'magit)
 #+END_SRC
-*** Repository directories
+
 #+BEGIN_SRC emacs-lisp
-(setq magit-repository-directories '(("~/dev/" . 4)
-                                     ("~/Documents/" . 2)
-                                     ("~/.dotfiles" . 0)))
+(after! magit
+  (setq magit-clone-default-directory (expand-file-name "~/github/")
+        magit-repository-directories '(("~/dev/" . 4)
+                                       ("~/Documents/" . 2)
+                                       ("~/.dotfiles" . 0))))
 #+END_SRC
 *** Commit buffers
 **** Org-mode + insert state
