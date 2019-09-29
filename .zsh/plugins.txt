@@ -1,6 +1,7 @@
+sorin-ionescu/prezto path:modules/completion
 sorin-ionescu/prezto path:modules/git/alias.zsh
 sorin-ionescu/prezto path:modules/git/functions kind:fpath
-sorin-ionescu/prezto path:modules/completion
+sorin-ionescu/prezto path:modules/history
 
 romkatv/powerlevel10k
 
