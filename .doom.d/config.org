@@ -707,6 +707,11 @@ inside of a Git repo.
 (after! magit-todos
   (setq magit-todos-auto-group-items 'always))
 #+END_SRC
+*** Clone via ssh by default
+#+BEGIN_SRC emacs-lisp
+(after! magit
+  (setq +magit-default-clone-url "git@github.com:%s/%s.git"))
+#+END_SRC
 
 ** \LaTeX
 #+BEGIN_SRC emacs-lisp
