@@ -963,10 +963,6 @@ Should be fixed in [[orgit-rev:~/.emacs.d/::b34a542ca0691345a15bac876cc96fb59020
 #+END_SRC
 
 * Testing grounds
-#+BEGIN_SRC emacs-lisp
-(after! gif-screencast
-  (message "gs just loaded!"))
-#+END_SRC
 ** TODO Symbol overlay
 [[https://github.com/hlissner/doom-emacs/pull/1646]]
 #+BEGIN_SRC emacs-lisp
