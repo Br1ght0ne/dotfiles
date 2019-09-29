@@ -178,9 +178,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("001c2ff8afde9c3e707a2eb3e810a0a36fb2b466e96377ac95968e7f8930a7c5" "2878517f049b28342d7a360fd3f4b227086c4be8f8409f32e0f234d129cee925" "e7666261f46e2f4f42fd1f9aa1875bdb81d17cc7a121533cad3e0d724f12faf2" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "70ed3a0f434c63206a23012d9cdfbe6c6d4bb4685ad64154f37f3c15c10f3b90" "cdb3e7a8864cede434b168c9a060bf853eeb5b3f9f758310d2a2e23be41a24ae" default))
  '(mouse-wheel-progressive-speed nil)
  '(safe-local-variable-values
-   '((TeX-engine . xelatex)
+   '((plantuml-default-exec-mode quote jar)
+     (TeX-engine . xelatex)
      (org-cycle-include-plain-lists . integrate)
      (org-cycle-include-plain-lists quote integrate)
      (magit-todos-depth . 1)))
