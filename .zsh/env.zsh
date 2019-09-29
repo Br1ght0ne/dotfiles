@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 
+# Go
+[[ -z $GOPATH ]] && export GOPATH="$HOME/go"
+
 # PATH
-export PATH="$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$HOME/.asdf/shims:/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$HOME/.asdf/shims:$GOPATH/bin:/usr/local/bin:$PATH"
 
 # Locale
 export LC_ALL=en_US.UTF-8
