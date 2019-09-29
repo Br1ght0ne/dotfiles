@@ -14,8 +14,10 @@
        (company           ; the ultimate imperative completion backend
         +auto)            ; as-you-type code completion
        (ivy               ; a search engine for love and life
+        +fuzzy            ; enable fuzzy search backend for ivy
         +prescient        ; sorting and filtering machinery
-        +fuzzy)           ; enable fuzzy search backend for ivy
+        ;; +childframe    ; honey, look! our child is floating
+        +icons)           ; because those are some sweet icons
        ;; helm            ; the *other* search engine for love and life
        ;; +fuzzy          ; enable fuzzy search backend for helm
        ;; ido             ; the other *other* search engine...
