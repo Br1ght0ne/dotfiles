@@ -35,3 +35,14 @@ export ANSIBLE_NOCOWS=1
 # Brew
 export HOMEBREW_AUTO_UPDATE_SECS=86400 # don't update more often than every day
 export HOMEBREW_EDITOR="vim"
+
+# Nix
+nix_profile="$HOME/.nix-profile"
+[[ -d $nix_profile ]] && source $nix_profile/etc/profile.d/nix.sh
+
+# asdf
+[[ ! -f ~/.asdf.sh ]] && ln -s $(brew --prefix asdf)/asdf.sh ~/.asdf.sh
+source ~/.asdf.sh
+
+# hub
+export HUB_PROTOCOL=ssh
