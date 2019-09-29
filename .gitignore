@@ -1,10 +1,11 @@
 .config/cmus/playlists
 .config/cmusfm/cmusfm.conf
+.config/hub
 .config/mimeapps.list
 .config/mpv/watch_later/
 .config/mpv/watch_later/
 .config/mpv/scripts/
-/.config/ranger/bookmarks
+.config/ranger/bookmarks
 
 .zsh/.completions
 .zsh/plugins.zsh
