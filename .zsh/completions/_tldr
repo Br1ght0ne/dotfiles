@@ -1,30 +1,40 @@
 #compdef tldr
 #
 # completion for tealdeer - tldr in Rust
-# tldr version: 1.2.0
+# Updated: 2019-09-26
 
-_arguments -s -S \
-    {-h,--help}"[show help]"                \
-    {-v,--version}"[show version information]" \
-    {-l,--list}"[list all commands in the cache]" \
-    {-f,--render}"[render a specific markdown file]" \
-    {-o,--os}"[override the operating system]:OS:(linux osx sunos windows)" \
-    {-u,--update}"[update the local cache]" \
-    {-c,--clear-cache}"[clear the local cache]" \
-    {-p,--pager}"[use a pager to page output]" \
-    {-q,--quiet}"[suppress informational messages]" \
-    --config-path"[show config file path]" \
-    --seed-config"[create a basic config]" \
-    "(-): :->command" \
-    && return 0
+_applications() {
+  _values 'applications' "${(uonzf)$(tldr --list | sed -e 's/, /\n/g')}"
+}
 
-case $state in
-    (command)
-        _alternative commands:command:"($(tldr --list | sed "s/, /\n/g"))" ;;
-    (os)
-        _describe 'OS' OPERATING_SYSTEMS ;;
-esac
+_tealdeer() {
+    local I="-h --help -v --version"
+    integer ret=1
+    local -a args
+    
+    args+=(
+        "($I -l --list)"{-l,--list}"[List all commands in the cache]"
+	"($I -f --render)"{-f,--render}"[Render a specific markdown file]:file:_files"
+	"($I -o --os)"{-o,--os}'[Override the operating system]:os:((
+             linux
+             osx
+       	     sunos
+	     windows
+        ))'
+	"($I -u --update)"{-u,--update}"[Update the local cache]"
+	"($I -c --clear-cache)"{-c,--clear-cache}"[Clear the local cache]"
+	"($I -p --pager)"{-p,--pager}"[Use a pager to page output]"
+	"($I -q --quiet)"{-q,--quiet}"[Suppress informational messages]"
+	"($I)--config-path[Show config file path]"
+	"($I)--seed-config[Create a basic config]"
+	'(- *)'{-h,--help}'[Display help]'
+    	'(- *)'{-v,--version}'[Show version information]'
+    	'*:file:_files'
+	'1: :_applications'
+    )
+    
+    _arguments $args[@] && ret=0
+    return ret
+}
 
-# Local Variables:
-# mode: sh
-# End:
+_tealdeer
