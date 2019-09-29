@@ -8,5 +8,6 @@ Dir.mktmpdir('rtv') do |dir|
     `curl -L #{url} -o #{path}`
     path
   end.join(' ')
-  `sxiv #{paths}`
+  command = (File.exist?('/usr/bin/open')) && 'open' || 'sxiv'
+  `#{command} #{paths}`
 end
