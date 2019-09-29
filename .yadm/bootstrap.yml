@@ -105,6 +105,7 @@
       loop: "{{ packages.system|dict2items }}"
       loop_control:
         label: "{{ item.key }}"
+
     - name: yadm
       tags: yadm
       block:
@@ -120,6 +121,7 @@
           shell: yadm decrypt
           args:
             creates: ~/.yadm/.decrypted
+
     - name: Brew
       tags: brew
       block:
@@ -145,6 +147,7 @@
             name: "{{ item }}"
             state: present
           loop: "{{ packages.brew }}"
+
     - name: Rust
       tags: rust
       block:
@@ -167,7 +170,8 @@
           failed_when: cargo_install.rc not in [0, 101]
           changed_when: "'exists' not in cargo_install.stderr"
           loop: "{{ packages.cargo }}"
-    - name: Set up Emacs
+
+    - name: Emacs
       tags: emacs
       block:
         - name: Clone doom-emacs
@@ -183,6 +187,7 @@
           register: install_doom_emacs
           args:
             chdir: ~/.emacs.d
+
     - name: Clone passwords
       tags: git,clone
       git:
@@ -190,6 +195,7 @@
         dest: ~/.password-store
         update: no
         accept_hostkey: yes
+
     - name: Set up zsh
       tags: zsh
       block:
@@ -200,6 +206,7 @@
               shell: antibody bundle < ~/.zsh/plugins.txt |> ~/.zsh/plugins.zsh
               args:
                 creates: ~/.zsh/plugins.zsh
+
     - name: Set up asdf
       tags: asdf
       block:
@@ -217,6 +224,7 @@
           tags: long
           shell: asdf install
           register: asdf_install
+
     - name: Set up flatpak
       when: ansible_facts['os_family'] != 'Darwin'
       tags: flatpak
@@ -235,12 +243,14 @@
           flatpak:
             name: "{{ item }}"
           loop: "{{ packages.flatpak }}"
+
     - name: Install Homebrew casks
       tags: brew,cask
       when: ansible_facts['os_family'] == 'Darwin'
       homebrew_cask:
         name: '{{ item }}'
       loop: '{{ packages.homebrew_cask }}'
+
     - name: Set up Firefox
       tags: firefox,app
       block:
@@ -253,6 +263,7 @@
             src: "~/.yadm/link_sources/userChrome.css"
             dest: "{{ ff_profile.stdout }}/chrome/userChrome.css"
             state: link
+
 # Local Variables:
 # eval: (+ansible-yaml-mode 1)
 # End:
