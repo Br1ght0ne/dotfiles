@@ -170,3 +170,6 @@ cdr() {
         cd "$root"
     fi
 }
+
+# Crystal
+alias cr="crystal"
