@@ -976,3 +976,23 @@ Should be fixed in [[orgit-rev:~/.emacs.d/::b34a542ca0691345a15bac876cc96fb59020
    (:map symbol-overlay-map
      [escape] #'symbol-overlay-remove-all)))
 #+END_SRC
+** TODO Dumb jump
+*** TODO NASM
+#+BEGIN_SRC emacs-lisp
+(after! dumb-jump
+  (appendq! dumb-jump-language-file-exts
+            '(:language "asm" :ext "asm" :agtype "asm" :rgtype "asm")
+            '(:language "asm" :ext "s"   :agtype "asm" :rgtype "asm")
+            '(:language "asm" :ext "S"   :agtype "asm" :rgtype "asm"))
+  (add-to-list 'dumb-jump-find-rules
+               '(:type "function" :supports ("ag grep" "rg" "git-grep") :language "asm"
+                       :regex "^\\s*JJJ\\s*:"
+                       :tests "test:" "    test: "
+                       :not "test(arg)")))
+#+END_SRC
+** TODO evil-quick-diff
+#+BEGIN_SRC emacs-lisp
+(use-package! evil-quick-diff
+  :init
+  (evil-quick-diff-install))
+#+END_SRC
