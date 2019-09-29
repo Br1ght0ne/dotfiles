@@ -50,12 +50,12 @@
 
        :lang              ; you either code, or should start coding
        ;; agda            ; types of types of types of types...
-       ;; assembly        ; assembly for fun or debugging
+       assembly           ; assembly for fun or debugging
        (cc +lsp)          ; C/C++/Obj-C madness
        clojure            ; java with a lisp
-       ;; common-lisp     ; if you've seen one lisp, you've seen them all
+       common-lisp        ; if you've seen one lisp, you've seen them all
        ;; coq             ; proofs-as-programs
-       ;; crystal         ; ruby at the speed of c
+       crystal            ; ruby at the speed of c
        ;; csharp          ; unity, .NET, and mono shenanigans
        data               ; config/data formats
        (elixir +lsp)      ; erlang done right
@@ -71,7 +71,7 @@
        ;; idris           ;
        (java +meghanada)  ; the poster child for carpal tunnel syndrome
        (javascript +lsp)  ; all(hope(abandon(ye(who(enter(here))))))
-       ;; julia           ; a better, faster MATLAB
+       julia              ; a better, faster MATLAB
        ;; kotlin          ; a better, slicker Java(Script)
        latex              ; writing papers in Emacs has never been so fun
        ledger             ; an accounting system in Emacs
