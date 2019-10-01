@@ -406,6 +406,10 @@
           :n "g" #'org-clock-goto
           :desc "org-clock-goto-select" :n "G" (λ! (org-clock-goto 'select))
           :n "x" #'org-clock-cancel)
+        (:prefix ("m" . "move")
+          :desc "move (cut)" :n "m" #'org-cut-special
+          :desc "copy"       :n "c" #'org-copy-special
+          :desc "paste"      :n "p" #'org-paste-special)
         :desc "Move around in Org" :n "M"
         (defhydra hydra-org-movement (:color pink :hint nil)
           "
