@@ -520,7 +520,6 @@
       org-default-notes-file (concat org-gtd-directory "gtd.org")
       org-agenda-files (--map (concat org-gtd-directory it ".org")
                               '("inbox" "gtd" "tickler"))
-      org-agenda-span 'week
       org-agenda-include-diary nil
       org-agenda-custom-commands
       (--map
