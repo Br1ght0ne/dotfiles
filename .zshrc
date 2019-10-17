@@ -19,6 +19,6 @@ setopt auto_cd
 . $zdir/hooks.zsh
 
 # (linux && term) -> X
-if command -v startx 2>/dev/null; then
+if command -v startx >/dev/null; then
 	[[ $DISPLAY ]] || startx
 fi
